@@ -47,22 +47,15 @@ def list_sen2token(text, year):
         pickle.dump(alltokens, f)
     return alltokens
 
-def main(year):
+try:
+    year = str(int(input("Please enter the year for which you want to preprocess the data: ")))
     # Load txt data
-    year = str(year)
     with open(rawtext_path+'/renmin'+year+'.txt', 'r') as f:
         data = f.readlines()
-
     # Join the data into a single string
-    text = ''.join(data)
-
+    text = ''.join(data)    
     # Process the text
     list_sen2token(text, year)
 
-
-if __name__ == '__main__':
-    try:
-        year = int(input("Please enter the year for which you want to train the Word2Vec model: "))
-        main(year)
-    except ValueError:
-        print("Invalid input. Please enter a valid year.")
+except ValueError:
+    print("Invalid input. Please enter a valid year.")
