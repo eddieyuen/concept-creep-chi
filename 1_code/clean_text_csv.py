@@ -51,23 +51,19 @@ def list_sen2token(text, year):
 
 year = str(input("Please enter the year for which you want to preprocess the data: "))
 
-# Load txt data
-# with open(rawtext_path+'/renmin'+year+'.txt', 'r') as f:
-#     for line in f:
-#         # put lines into a single string
-#         text += line
-# # Join the data into a single string
-# text = ''.join(data)
-
-# Load 2015 txt data    
-text = ""  # Initialize text variable to accumulate the file content
+# Load txt data    
+text_lines = []  # Initialize a list to store the lines of text
 replacement_char = '�'  # The character used by Python to replace undecodable bytes
 
 with open(rawtext_path+'/renmin'+year+'.txt', 'r', encoding='utf-8', errors='replace') as f:
     for line_number, line in enumerate(f):
         if replacement_char in line:
             print(f"Line {line_number} contains undecodable characters: {line.strip()}")
-        text += line
+        text_lines.append(line)
+
+# Join the lines into a single string
+text = ''.join(text_lines)
+
 # Process the CSV files
 csv_files = glob.glob(rawtext_path + '/people-' + year + '*.csv')
 for file in csv_files:
