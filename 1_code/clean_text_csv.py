@@ -49,27 +49,29 @@ def list_sen2token(text, year):
         pickle.dump(alltokens, f)
     return alltokens
 
-year = str(input("Please enter the year for which you want to preprocess the data: "))
+# Loop through the years from 1979 to 2021
+for year in range(1979, 2022):
+    year = str(year)
 
-# Load txt data    
-text_lines = []  # Initialize a list to store the lines of text
-replacement_char = '�'  # The character used by Python to replace undecodable bytes
+    # Load txt data
+    text_lines = []  # Initialize a list to store the lines of text
+    replacement_char = '�'  # The character used by Python to replace undecodable bytes
 
-with open(rawtext_path+'/renmin'+year+'.txt', 'r', encoding='utf-8', errors='replace') as f:
-    for line_number, line in enumerate(f):
-        if replacement_char in line:
-            print(f"Line {line_number} contains undecodable characters: {line.strip()}")
-        text_lines.append(line)
+    with open(rawtext_path+'/renmin'+year+'.txt', 'r', encoding='utf-8', errors='replace') as f:
+        for line_number, line in enumerate(f):
+            if replacement_char in line:
+                print(f"Line {line_number} contains undecodable characters: {line.strip()}")
+            text_lines.append(line)
 
-# Join the lines into a single string
-text = ''.join(text_lines)
+    # Join the lines into a single string
+    text = ''.join(text_lines)
 
-# Process the CSV files
-csv_files = glob.glob(rawtext_path + '/people-' + year + '*.csv')
-for file in csv_files:
-    df = pd.read_csv(file)
-    for col in df.columns[:4]:
-        text += ' '.join(df[col].dropna().astype(str).tolist())
+    # Process the CSV files
+    csv_files = glob.glob(rawtext_path + '/people-' + year + '*.csv')
+    for file in csv_files:
+        df = pd.read_csv(file)
+        for col in df.columns[:4]:
+            text += ' '.join(df[col].dropna().astype(str).tolist())
 
-# Process the text
-list_sen2token(text, year)
+    # Process the text
+    list_sen2token(text, year)
