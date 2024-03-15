@@ -13,6 +13,9 @@ results = []
 with open('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/concepts.json', 'r') as f:
     concepts = json.load(f)
 
+# Prompt the user for input regarding the naming of the output files
+file_number = input("Enter the filenumber (1st, 2nd, 3rd, 4th, etc.): ")
+
 # Loop through the years from 1979 to 2021
 for year in range(1979, 2022):
     # Load the pretrained Word2Vec model
@@ -91,9 +94,24 @@ for year in range(1979, 2022):
 results_df = pd.DataFrame(results)
 
 # Define the path to the output CSV file
-output_path = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_1st.csv'
+output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/semantic_breadth_{file_number}.csv'
 
 # Save the DataFrame as a CSV file
 results_df.to_csv(output_path, index=False)
 
 print("Output saved to: ", output_path)
+
+# Transposing the CSV file output
+# Read the original CSV file
+df = pd.read_csv(output_path)
+
+# Transpose the DataFrame to have concepts as columns and years as rows
+transposed_df = df.pivot(index='Year', columns='Concept', values=['Mean Cosine Similarity', 'Semantic Breadth'])
+
+# Flatten the column labels
+transposed_df.columns = [f"{col[1]}_{col[0].replace(' ', '_')}" for col in transposed_df.columns]
+
+# Save the transposed DataFrame to a new CSV file
+transposed_df.to_csv(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/semantic_breadth_{file_number}_transposed.csv', index_label='Year')
+
+print("CSV file with the desired structure has been created.")
