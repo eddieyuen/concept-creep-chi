@@ -5,18 +5,9 @@ combined_df = pd.DataFrame()
 
 # Loop through the file numbers from 1 to 10
 for file_number in range(1, 11):
-    # Get the file number suffix (e.g., "st", "nd", "rd", "th")
-    if file_number == 1:
-        suffix = "st"
-    elif file_number == 2:
-        suffix = "nd"
-    elif file_number == 3:
-        suffix = "rd"
-    else:
-        suffix = "th"
     
     # Construct the file name using the suffix
-    file_name = f"semantic_breadth_{file_number}{suffix}_transposed.csv"
+    file_name = f"semantic_breadth_{file_number}_transposed.csv"
     file_path = f"/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/{file_name}"
 
     # Read the transposed CSV file for the corresponding file number
@@ -29,7 +20,7 @@ for file_number in range(1, 11):
 mean_df = combined_df.groupby('Year').mean()
 
 # Define the path to the output CSV file
-output_path = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_mean.csv'
+output_path = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/tmp/semantic_breadth_mean.csv'
 
 # Save the mean values DataFrame as a CSV file
 mean_df.to_csv(output_path)
