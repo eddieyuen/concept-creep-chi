@@ -1,0 +1,40 @@
+Target Concept: 主权_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.8467432950191571
+P-value: 1.349987269193094e-08
+
+Target Concept: 偏见_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.8292282430213463
+P-value: 4.9624452597939146e-08
+
+Target Concept: 分裂_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.7941981390257252
+P-value: 4.5376146990062026e-07
+
+Target Concept: 创伤_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.8719211822660098
+P-value: 1.5204570016753973e-09
+
+Target Concept: 恐怖主义_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.8270388615216201
+P-value: 5.7795411180566074e-08
+
+Target Concept: 欺凌_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.7427476737821566
+P-value: 6.0021137256118706e-06
+
+Target Concept: 精神病_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.7651888341543513
+P-value: 2.107353002291681e-06
+
+Target Concept: 阴谋_Semantic_Breadth
+Number of Complete Cases: 28
+Spearman Correlation: 0.8691844553913519
+P-value: 1.9693523982374e-09
+
