@@ -11,7 +11,7 @@ This research aims to examine the phenomenon of harm-related concept creep withi
 
 ## Methods
 - Word embeddings models for the corpus were trained using the word2vec algorithm in the ‘gensim’ package.
-- Four harm-related concepts are selected as illustrative examples of the concept creep phenomenon in China: “prejudice,” “bullying,” “addiction,” and “trauma”.
+- Four harm-related concepts are selected as illustrative examples of the concept creep phenomenon in China: “prejudice,” “bullying,” “mental disorder,” and “trauma”.
 - To explore whether concept creep extends outside of the political left, four nationalism-related concepts are chosen: “secession,” “conspiracy,” “sovereignty,” and “terrorism.”
 - The simplified Chinese version of Moral Foundation Dictionary will be drawn as proxies of ideology.
 
