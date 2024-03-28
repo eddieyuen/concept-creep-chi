@@ -27,17 +27,18 @@ with open(concepts_file, 'r') as f:
     concepts_data = json.load(f)
 
 # Prepare the header and data for the CSV file
-header = ['Year'] + list(concepts_data.values())
+header = ['Year'] + [concept[0] + '_freq' for concept in concepts_data.values()]  
 data = []
 
 # Extract the frequencies for each token and year
-for year in range(1979, 2022):
+for year in range(1979, 2024):
     row = [year]
     for token_key in concepts_data:
         token = concepts_data[token_key][0]  # Get the first item from the list of tokens
         frequency = extract_token_frequency(token, year)
         row.append(frequency)
     data.append(row)
+    print(f'Frequency data for {year} computed.')
 
 # Write the data to the output CSV file
 with open(output_csv, 'w', newline='') as f:
