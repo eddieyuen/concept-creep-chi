@@ -50,7 +50,7 @@ def list_sen2token(text, year):
 try:
     year = str(int(input("Please enter the year for which you want to preprocess the data: ")))
     # Load txt data
-    with open(rawtext_path+'/renmin'+year+'.txt', 'r') as f:
+    with open(rawtext_path+'/renmin'+year+'.txt', 'r', encoding='utf-8', errors='replace') as f:
         data = f.readlines()
     # Join the data into a single string
     text = ''.join(data)    
