@@ -45,3 +45,32 @@ output_dir = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/3_output/relativefr
 plt.savefig(f'{output_dir}/relativefreq_concepts.png', dpi=300)
 
 print('Plot saved successfully!')
+
+
+'''For moving average plot with window size = 5'''
+
+# Create a new figure and axes for the moving average plot
+fig, ax = plt.subplots(figsize=(10, 8))
+
+# Iterate over each target concept and create line plots
+for i, concepts_column in enumerate(concepts_columns):
+    # Get the English translation for the current concept
+    english_translation = concept_translations.get(concepts_column.split('_')[0])
+    # Get the color for the current concept
+    color = colors[i]
+    # Plot relative frequency values for each concept with a unique color
+    relativefreq = data[concepts_column]
+    ax.plot(years, relativefreq, alpha=0.6, linestyle='dashed',linewidth=0.6, color=color)
+    # Calculate and plot moving average with window=5
+    moving_average = data[concepts_column].rolling(window=5, min_periods=1).mean()
+    ax.plot(years, moving_average, label=f'{english_translation} ({concepts_column.split("_")[0]})', linewidth=2.4, color=color)
+
+ax.set_ylim(bottom=0)
+ax.set_xlabel('Year')
+ax.set_ylabel('Relative Frequency')
+ax.set_title('Relative Frequency of Target Concepts (Moving Average Window = 5)')
+ax.legend()
+
+# Save the moving average plot
+plt.savefig(f'{output_dir}/relativefreq_concepts_moving-avg.png', dpi=300)
+print('Plot for moving average values saved successfully!')
