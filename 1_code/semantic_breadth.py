@@ -6,6 +6,7 @@ import pickle
 from sklearn.metrics.pairwise import cosine_similarity
 import json
 import time
+import csv
 
 # Initialize an empty list to store the results
 results = []
@@ -13,122 +14,123 @@ results = []
 # Initialize an empty dictionary to store the concept usages
 concept_usages_dict = {}
 
+# Initialize an empty list to store the context window lists
+context_window_lists_all = []
+
 # Read the concepts from the JSON file
 with open('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/concepts.json', 'r') as f:
     concepts = json.load(f)
 
-# Prompt the user for input regarding the naming of the output files
-file_number = input("Enter the filenumber (1, 2, 3, 4, etc.): ")
+for file_number in range(1,11):
 
-# Loop through the years from 1979 to 2021
-for year in range(1979, 2022):
+    # Loop through the years from 1979 to 2023
+    for year in range(1979, 2024):
 
-    # Load the pretrained Word2Vec model and cleaned data for the year
-    model_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models/pd_{year}.model'
-    try:
-        model = Word2Vec.load(model_path)
-    except FileNotFoundError:
-        print(f"Model not found for {year}. Skipping...")
-        continue
-
-    cleaned_data_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/cleanedtext/cleaned_{year}.pkl'
-    with open(cleaned_data_path, 'rb') as f:
-        cleaned_data = pickle.load(f)
-
-    # Loop through the concepts and their first items in the list
-    for key, value in concepts.items():
-        concept = value[0]  # Get the first item in the list
-
-        # Step 1: Randomly sample specific usages of a concept from the corpus
-        token_occurrence = [token for sentence in cleaned_data for token in sentence if token == concept]
-        token_frequency = len(token_occurrence)
-        print(f'Frequency for {concept} in {year}: {token_frequency}')
-
-        # Check the population size and adjust the sampling accordingly
-        if token_frequency < 20:
-            print(f"The frequency for '{concept}' in {year} is smaller than 20. Skipping the year.")
-            # Append 'NA' values to the results list for this year and concept
-            results.append({'Year': year, 'Concept': concept, 'Mean Cosine Similarity': 'NA', 'Semantic Breadth': 'NA'})
+        # Load the pretrained Word2Vec model and cleaned data for the year
+        model_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models/pd_{year}.model'
+        try:
+            model = Word2Vec.load(model_path)
+        except FileNotFoundError:
+            print(f"Model not found for {year}. Skipping...")
             continue
-        elif 20 <= token_frequency <= 50:
-            concept_usages = [sentence for sentence in cleaned_data if concept in sentence]
-        else:
-            concept_usages = [sentence for sentence in cleaned_data if concept in sentence]
-            if len(concept_usages) > 50: 
-                random.seed(int(time.time()))
-                random_concept_usages = random.sample(concept_usages, k=50)
-                concept_usages = random_concept_usages
 
-        # Store the concept usages in the dictionary
-        key = (year, concept)
-        concept_usages_dict[str(key)] = concept_usages
-            
-        # Step 2: Compute the context vectors for each specific usage of the concept
-        if 'concept_usages' in locals():
-            context_vectors = []
-            window_size = 9
-            context_window_lists = []  # To store the words within the context window for each specific usage
+        cleaned_data_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/cleanedtext/cleaned_{year}.pkl'
+        with open(cleaned_data_path, 'rb') as f:
+            cleaned_data = pickle.load(f)
 
-            for sentence in concept_usages:
-                context_words = []  # To store the words within the context window
+        # Loop through the concepts and their first items in the list
+        for key, value in concepts.items():
+            concept = value[0]  # Get the first item in the list
 
-                # Find the position of the target concept within the sentence
-                concept_position = [i for i, token in enumerate(sentence) if token == concept]
+            # Step 1: Randomly sample specific usages of a concept from the corpus
+            token_occurrence = [token for sentence in cleaned_data for token in sentence if token == concept]
+            token_frequency = len(token_occurrence)
+            print(f'Frequency for {concept} in {year}: {token_frequency}')
 
-                # For each instance of the target concept, extract the words within the context window
-                for position in concept_position:
-                    start_index = max(0, position - window_size)
-                    end_index = min(len(sentence), position + window_size + 1)
-                    context_words.extend(sentence[start_index:position] + sentence[position + 1:end_index])
+            # Check the population size and adjust the sampling accordingly
+            if token_frequency < 10:
+                print(f"The frequency for '{concept}' in {year} is smaller than 10. Skipping the year.")
+                # Append 'NA' values to the results list for this year and concept
+                results.append({'Year': year, 'Concept': concept, 'Mean Cosine Similarity': 'NA', 'Semantic Breadth': 'NA'})
+                continue
+            elif 10 <= token_frequency <= 50:
+                concept_usages = [sentence for sentence in cleaned_data if concept in sentence]
+            else:
+                concept_usages = [sentence for sentence in cleaned_data if concept in sentence]
+                if len(concept_usages) > 50: 
+                    random.seed(int(time.time()))
+                    random_concept_usages = random.sample(concept_usages, k=50)
+                    concept_usages = random_concept_usages
+                else:
+                    concept_usages = [sentence for sentence in cleaned_data if concept in sentence]
+                
+            # Step 2: Compute the context vectors for each specific usage of the concept
+            if 'concept_usages' in locals():
+                context_vectors = []
+                window_size = 9
 
-                # Get the word vectors for the context words (if available in the Word2Vec model)
-                context_vectors.extend([model.wv[word] for word in context_words if word in model.wv])
+                for j, sentence in enumerate(concept_usages):  
+                    context_words = []  # To store the words within the context window
 
-                # Store the context words in a list for printing
-                context_window_lists.append(context_words)
+                    # Find the position of the target concept within the sentence
+                    concept_position = [i for i, token in enumerate(sentence) if token == concept]
 
-            # Normalize the context vectors
-            context_vectors = np.array(context_vectors)
-            normalized_context_vectors = context_vectors / np.linalg.norm(context_vectors, axis=1, keepdims=True)
+                    # For each instance of the target concept, extract the words within the context window
+                    for position in concept_position:
+                        start_index = max(0, position - window_size)
+                        end_index = min(len(sentence), position + window_size + 1)
+                        context_words.extend(sentence[start_index:position] + sentence[position + 1:end_index])
+                    # Remove the target concept from the context_words list
+                    context_words = [word for word in context_words if word != concept]
 
-            # Step 3: Calculate pairwise cosine similarities among the sampled specific usages
-            pairwise_similarities = cosine_similarity(normalized_context_vectors)
+                    # Get the word vectors for the context words (if available in the Word2Vec model)
+                    context_vectors.extend([model.wv[word] for word in context_words if word in model.wv])
 
-            # Step 4: Calculate semantic breadth index as the inverse of the mean cosine similarity
-            mean_cosine_similarity = np.mean(pairwise_similarities)
-            semantic_breadth = 1 / mean_cosine_similarity
+                    # Store the context window lists for each specific usage in a CSV file
+                    with open(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/context_window_lists_{file_number}.csv', 'a', newline='') as csvfile:
+                        writer = csv.writer(csvfile)
+                        # Check if the file is empty
+                        if csvfile.tell() == 0:
+                            writer.writerow(['Year', 'Target Concept', 'Sentence With Concepts', 'Context Words'])
+                        writer.writerow([year, concept, j+1, context_words])
+                        print(f'CSV line with {year} {concept} {j+1} stored')
 
-            # Append the results to the list
-            results.append({'Year': year, 'Concept': concept, 'Mean Cosine Similarity': mean_cosine_similarity, 'Semantic Breadth':semantic_breadth})
+                # Normalize the context vectors
+                context_vectors = np.array(context_vectors)
+                normalized_context_vectors = context_vectors / np.linalg.norm(context_vectors, axis=1, keepdims=True)
 
-# Convert the results list to a DataFrame
-results_df = pd.DataFrame(results)
+                # Step 3: Calculate pairwise cosine similarities among the sampled specific usages
+                pairwise_similarities = cosine_similarity(normalized_context_vectors)
 
-# Define the path to the output CSV file
-output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/semantic_breadth_{file_number}.csv'
+                # Step 4: Calculate semantic breadth index as the inverse of the mean cosine similarity
+                mean_cosine_similarity = np.mean(pairwise_similarities)
+                semantic_breadth = 1 / mean_cosine_similarity
 
-# Save the DataFrame as a CSV file
-results_df.to_csv(output_path, index=False)
+                # Append the results to the list
+                results.append({'Year': year, 'Concept': concept, 'Mean Cosine Similarity': mean_cosine_similarity, 'Semantic Breadth':semantic_breadth})
 
-print("Semantic breadth output saved to: ", output_path)
+    # Convert the results list to a DataFrame
+    results_df = pd.DataFrame(results)
 
-# Transposing the CSV file output
-# Read the original CSV file
-df = pd.read_csv(output_path)
+    # Define the path to the output CSV file
+    output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_{file_number}.csv'
 
-# Transpose the DataFrame to have concepts as columns and years as rows
-transposed_df = df.pivot(index='Year', columns='Concept', values=['Mean Cosine Similarity', 'Semantic Breadth'])
+    # Save the DataFrame as a CSV file
+    results_df.to_csv(output_path, index=False)
 
-# Flatten the column labels
-transposed_df.columns = [f"{col[1]}_{col[0].replace(' ', '_')}" for col in transposed_df.columns]
+    print("Semantic breadth output saved to: ", output_path)
 
-# Save the transposed DataFrame to a new CSV file
-transposed_df.to_csv(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/semantic_breadth_{file_number}_transposed.csv', index_label='Year')
+    # Transposing the CSV file output
+    # Read the original CSV file
+    df = pd.read_csv(output_path)
 
-print("CSV file with the desired structure has been created.")
+    # Transpose the DataFrame to have concepts as columns and years as rows
+    transposed_df = df.pivot(index='Year', columns='Concept', values=['Mean Cosine Similarity', 'Semantic Breadth'])
 
-# Save the concept usages dictionary as a JSON file
-concept_usages_output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/concept_usages_{file_number}.json'
-with open(concept_usages_output_path, 'w') as f:
-    json.dump(concept_usages_dict, f, indent=4)
-print('Concept usages JSON file saved.')
+    # Flatten the column labels
+    transposed_df.columns = [f"{col[1]}_{col[0].replace(' ', '_')}" for col in transposed_df.columns]
+
+    # Save the transposed DataFrame to a new CSV file
+    transposed_df.to_csv(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_{file_number}_transposed.csv', index_label='Year')
+
+    print(f"CSV file with the desired structure has been created: Filenumber {file_number}")
