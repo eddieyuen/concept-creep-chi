@@ -1,13 +1,13 @@
 import csv
 import pickle
 
-output_csv = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/token_counts.csv'
+output_csv = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/token_counts.csv'
 
 # Initialize the data list to store year and token counts
 data = []
 
-# Loop through the years from 1979 to 2021
-for year in range(1979, 2022):
+# Loop through the years from 1979 to 2023
+for year in range(1979, 2024):
     cleaned_data_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/cleanedtext/cleaned_{year}.pkl'
 
     with open(cleaned_data_path, 'rb') as f:
@@ -17,6 +17,7 @@ for year in range(1979, 2022):
 
     # Append the year and token count to the data list
     data.append([year, total_tokens])
+    print(f'Token counts for {year} appended.')
 
 # Write the data to the output CSV file
 with open(output_csv, 'w', newline='') as f:
