@@ -1,7 +1,7 @@
 import pickle
 from gensim.models import Word2Vec
 
-model_folder_path = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models_tmp'
+model_folder_path = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models'
 cleanedtext_path = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/cleanedtext'
 
 def train_word2vec(year):
@@ -16,5 +16,5 @@ def train_word2vec(year):
 
     print(f'Successfully trained Word2Vec model for the year {year}!')
 
-for year in range(1979, 2022):
+for year in range(1979, 2024):
     train_word2vec(year)
