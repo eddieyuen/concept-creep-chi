@@ -8,20 +8,20 @@ import json
 import time
 import csv
 
-# Initialize an empty list to store the results
-results = []
-
-# Initialize an empty dictionary to store the concept usages
-concept_usages_dict = {}
-
-# Initialize an empty list to store the context window lists
-context_window_lists_all = []
-
-# Read the concepts from the JSON file
-with open('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/concepts.json', 'r') as f:
-    concepts = json.load(f)
-
 for file_number in range(1,11):
+
+    # Initialize an empty list to store the results
+    results = []
+
+    # Initialize an empty dictionary to store the concept usages
+    concept_usages_dict = {}
+
+    # Initialize an empty list to store the context window lists
+    context_window_lists_all = []
+
+    # Read the concepts from the JSON file
+    with open('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/concepts.json', 'r') as f:
+        concepts = json.load(f)
 
     # Loop through the years from 1979 to 2023
     for year in range(1979, 2024):
@@ -93,7 +93,6 @@ for file_number in range(1,11):
                         if csvfile.tell() == 0:
                             writer.writerow(['Year', 'Target Concept', 'Sentence With Concepts', 'Context Words'])
                         writer.writerow([year, concept, j+1, context_words])
-                        print(f'CSV line with {year} {concept} {j+1} stored')
 
                 # Normalize the context vectors
                 context_vectors = np.array(context_vectors)
