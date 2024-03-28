@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import json
 
 # Read the mean semantic breadth file
-mean_data = pd.read_csv('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/tmp/semantic_breadth_mean.csv',index_col='Year')
+mean_data = pd.read_csv('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/tmp/semantic_breadth_mean.csv', index_col='Year')
 
 # Read the concept translations from the dictionary
 with open('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/concepts.json') as f:
@@ -27,33 +27,34 @@ for concept in target_concepts:
     fig, ax = plt.subplots(figsize=(10, 6))
     
     # Read the individual files for the current concept
-    individual_files = [f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/semantic_breadth_{i}_transposed.csv' for i in range(1, 11)]
+    individual_files = [f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_{i}_transposed.csv' for i in range(1, 11)]
     
     # Iterate over each individual file and plot as dashed lines
     for file in individual_files:
-        df = pd.read_csv(file,index_col='Year')
+        df = pd.read_csv(file, index_col='Year')
         semantic_breadth_values = df[concept + '_Semantic_Breadth']
         ax.plot(semantic_breadth_values, linestyle='dashed', alpha=0.5)
     
-    # Plot the mean semantic breadth as a thicker line
+    # Plot the mean semantic breadth as a thicker line with data points
     mean_semantic_breadth = mean_data[concept + '_Semantic_Breadth']
-    ax.plot(mean_semantic_breadth, linewidth=2, color='black', label='Mean')
+    ax.plot(mean_semantic_breadth, linewidth=2, color='black', label='Mean', marker='o', markersize=5)
+    mean_semantic_breadth.interpolate().plot(linewidth=2, color='black', linestyle='dashed', alpha=0.5, label='')
     
-    # Set the x-axis range from 1979 to 2021
-    ax.set_xlim(1979, 2021)
+    # Set the x-axis range from 1979 to 2023
+    ax.set_xlim(1979, 2024)
     
     # Set the x-axis and y-axis labels
     ax.set_xlabel('Year')
     ax.set_ylabel('Semantic Breadth')
     
     # Set the title of the plot
-    ax.set_title(f'Semantic Breadth of Concept: {english_translation} ({concept})')
+    ax.set_title(f'Semantic Breadth of Concept: {english_translation.capitalize()} ({concept})')
     
     # Show the legend
     ax.legend()
     
     # Save the plot to the output directory
-    output_file = output_directory + f'{english_translation}_semantic_breadth.png'
+    output_file = output_directory + f'semantic-breadth_{english_translation}.png'
     plt.savefig(output_file)
 
     # Close the plot
