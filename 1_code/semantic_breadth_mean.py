@@ -8,7 +8,7 @@ for file_number in range(1, 11):
     
     # Construct the file name using the suffix
     file_name = f"semantic_breadth_{file_number}_transposed.csv"
-    file_path = f"/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth/{file_name}"
+    file_path = f"/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/{file_name}"
 
     # Read the transposed CSV file for the corresponding file number
     df = pd.read_csv(file_path, index_col='Year')
