@@ -16,7 +16,7 @@ for foundation in foundations:
 
 plt.xlabel('Year')
 plt.ylabel('Relative Frequency')
-plt.ylim(bottom=20,top=70)
+plt.ylim(bottom=0,top=100)
 plt.title('Cultural Salience of Moral Foundations over Time')
 plt.legend()
 
