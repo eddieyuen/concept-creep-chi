@@ -6,7 +6,7 @@ import csv
 cleanedtext_folder = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/cleanedtext/'
 
 # Path to the MFD
-mfd_file = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/mfd_virvic.json'
+mfd_file = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/mfd_short.json'
 
 # Path to the output CSV file
 output_csv = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/frequency_mfd_items.csv'
@@ -32,7 +32,7 @@ data = []
 print('Header set-up successfully.')
 
 # Extract the frequencies for each token and year
-for year in range(1979, 2022):
+for year in range(1979, 2024):
     row = [year]
     for token_set in mfd_data.values():
         for token in token_set:
