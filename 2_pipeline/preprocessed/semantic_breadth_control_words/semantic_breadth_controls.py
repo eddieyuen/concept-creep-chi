@@ -24,7 +24,7 @@ for file_number in range(1,11):
         concepts = json.load(f)
 
     # Loop through the years from 1979 to 2023
-    for year in range(1979, 2023):
+    for year in range(1979, 2024):
 
         # Load the pretrained Word2Vec model and cleaned data for the year
         model_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models/pd_{year}.model'
@@ -94,25 +94,23 @@ for file_number in range(1,11):
                     
                     # Get the word vectors for the context words (if available in the Word2Vec model)
                     context_vectors.extend([model.wv[word] for word in context_words if word in model.wv])
-
-                    if len(context_vectors) > 1:
-                        # Normalize the context vectors
-                        context_vectors = np.array(context_vectors)
-                        normalized_context_vectors = context_vectors / np.linalg.norm(context_vectors, axis=1, keepdims=True)
-                        # Compute the "contextualized representation" as the normalized sum of the context vectors
-                        contextualized_representation = np.sum(normalized_context_vectors, axis=0)
+                    context_vectors = np.array(context_vectors)
+                    if len(context_vectors) > 0:
+                        # Compute the centroid of the context vectors
+                        contextualized_representation = np.mean(context_vectors, axis=0)
+                        # Append the centroid to the list of contextualized representations
+                        contextualized_representations.append(contextualized_representation)
                     else:
                         continue
-
-                    # Append the "contextualized representation" to the list
-                    contextualized_representations.append(contextualized_representation)
                     
                 # Step 3: Calculate pairwise cosine similarities among the sampled specific usages
                 contextualized_representations = np.array(contextualized_representations)
                 pairwise_similarities = cosine_similarity(contextualized_representations)
+                # Zero out the lower triangular part of the matrix (including the diagonal)
+                pairwise_similarities_upper = np.triu(pairwise_similarities, k=1)
 
                 # Step 4: Calculate semantic breadth index as the inverse of the mean cosine similarity
-                mean_cosine_similarity = np.mean(pairwise_similarities)
+                mean_cosine_similarity = np.mean(pairwise_similarities_upper[pairwise_similarities_upper != 0])
                 semantic_breadth = 1 / mean_cosine_similarity
 
                 # Append the results to the list
