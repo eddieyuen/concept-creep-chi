@@ -66,11 +66,12 @@ for file_number in range(1,11):
                 
             # Step 2: Compute the context vectors for each specific usage of the concept
             if 'concept_usages' in locals():
-                context_vectors = []
+                contextualized_representations = []
                 window_size = 9
 
                 for j, sentence in enumerate(concept_usages):  
                     context_words = []  # To store the words within the context window
+                    context_vectors = []
 
                     # Find the position of the target concept within the sentence
                     concept_position = [i for i, token in enumerate(sentence) if token == concept]
@@ -83,9 +84,6 @@ for file_number in range(1,11):
                     # Remove the target concept from the context_words list
                     context_words = [word for word in context_words if word != concept]
 
-                    # Get the word vectors for the context words (if available in the Word2Vec model)
-                    context_vectors.extend([model.wv[word] for word in context_words if word in model.wv])
-
                     # Store the context window lists for each specific usage in a CSV file
                     with open(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/context_window_lists_{file_number}.csv', 'a', newline='') as csvfile:
                         writer = csv.writer(csvfile)
@@ -94,15 +92,25 @@ for file_number in range(1,11):
                             writer.writerow(['Year', 'Target Concept', 'Sentence With Concepts', 'Context Words'])
                         writer.writerow([year, concept, j+1, context_words])
 
-                # Normalize the context vectors
-                context_vectors = np.array(context_vectors)
-                normalized_context_vectors = context_vectors / np.linalg.norm(context_vectors, axis=1, keepdims=True)
+                    # Get the word vectors for the context words (if available in the Word2Vec model)
+                    context_vectors.extend([model.wv[word] for word in context_words if word in model.wv])
+                    context_vectors = np.array(context_vectors)
+                    if len(context_vectors) > 0:
+                        # Compute the centroid of the context vectors
+                        contextualized_representation = np.mean(context_vectors, axis=0)
+                        # Append the centroid to the list of contextualized representations
+                        contextualized_representations.append(contextualized_representation)
+                    else:
+                        continue
 
                 # Step 3: Calculate pairwise cosine similarities among the sampled specific usages
-                pairwise_similarities = cosine_similarity(normalized_context_vectors)
+                contextualized_representations = np.array(contextualized_representations)
+                pairwise_similarities = cosine_similarity(contextualized_representations)
+                # Zero out the lower triangular part of the matrix (including the diagonal)
+                pairwise_similarities_upper = np.triu(pairwise_similarities, k=1)
 
                 # Step 4: Calculate semantic breadth index as the inverse of the mean cosine similarity
-                mean_cosine_similarity = np.mean(pairwise_similarities)
+                mean_cosine_similarity = np.mean(pairwise_similarities_upper[pairwise_similarities_upper != 0])
                 semantic_breadth = 1 / mean_cosine_similarity
 
                 # Append the results to the list
