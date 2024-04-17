@@ -39,11 +39,11 @@ def read_word2vec_model(model_file):
 
 if __name__ == '__main__':
     years = range(1979, 2024)
-    fname1 = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/evaluation/297.txt'
+    fname1 = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/evaluation/240.txt'
     results = []
 
     for year in years:
-        vec_file = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models/pd_{year}.model'
+        vec_file = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models_aligned/pd_{year}.model'
         pairs = read_wordpair(fname1)
         word_size, embed_dim, dict_word, embeddings = read_word2vec_model(vec_file)
         human_sim = []
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         print(f'Results of year {year} added.')
 
     # Save results to CSV file
-    csv_file = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/3_output/evaluation_sim_297.csv'
+    csv_file = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/3_output/evaluation/aligned_sim_240.csv'
     with open(csv_file, 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['Year', 'cnt_set240', 'Spearman Correlation', 'p-value'])

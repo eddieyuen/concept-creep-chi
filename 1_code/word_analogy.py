@@ -66,7 +66,7 @@ if  __name__ == '__main__':
 
         for year in years:
             ana_file = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/evaluation/analogy.txt'
-            embed_file = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models/pd_{year}.model'
+            embed_file = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi_raw/models_aligned/pd_{year}.model'
 
             capital,state,family = read_word_analogy(ana_file)
             #print(len(capital), len(state), len(family))
@@ -89,7 +89,7 @@ if  __name__ == '__main__':
             print(f'Results of year {year} appended.')
 
         # Save results to CSV file
-        csv_file = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/3_output/evaluation_analogy.csv'
+        csv_file = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/3_output/evaluation/aligned_analogy.csv'
         with open(csv_file, 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['Year', 'Capital_total', 'Capital_in dict', 'Capital_correct',
