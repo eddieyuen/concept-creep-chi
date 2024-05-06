@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import json
 
 # Read the mean semantic breadth file
-mean_data = pd.read_csv('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/tmp/semantic_breadth_mean.csv', index_col='Year')
+mean_data = pd.read_csv('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/tmp/semantic_breadth_mean_window-size-5.csv', index_col='Year')
 
 # Read the concept translations from the dictionary
 with open('/Users/kawaiyuen/nlpworkshop/concept-creep-chi/0_data/wordlist/concepts.json') as f:
@@ -15,7 +15,7 @@ target_concepts = ['主权', '偏见', '分裂', '创伤', '恐怖主义', '欺�
 english_translations = {value[0]: key for key, value in concept_translations.items()}
 
 # Specify the output directory
-output_directory = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/3_output/semantic_breadth/'
+output_directory = '/Users/kawaiyuen/nlpworkshop/concept-creep-chi/3_output/semantic_breadth_window-size-5/'
 
 # Iterate over each target concept and create line plots
 for concept in target_concepts:
@@ -27,7 +27,7 @@ for concept in target_concepts:
     fig, ax = plt.subplots(figsize=(10, 6))
     
     # Read the individual files for the current concept
-    individual_files = [f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_{i}_transposed.csv' for i in range(1, 11)]
+    individual_files = [f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic-breadth_window-size-5/semantic_breadth_{i}_transposed.csv' for i in range(1, 11)]
     
     # Iterate over each individual file and plot as dashed lines
     for file in individual_files:
@@ -42,6 +42,7 @@ for concept in target_concepts:
     
     # Set the x-axis range from 1979 to 2023
     ax.set_xlim(1979, 2024)
+    ax.set_ylim(1.0, 1.8)
     
     # Set the x-axis and y-axis labels
     ax.set_xlabel('Year')
