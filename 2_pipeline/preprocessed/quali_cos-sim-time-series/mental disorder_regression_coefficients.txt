@@ -1,0 +1,32 @@
+Total number of word neighbors: 1642
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 先天性; Mean Similarity: 0.7177908745678988; Standard Deviation: 0.06100582175775499; Valid Cases: 44
+Neighbor: 精神疾病; Mean Similarity: 0.7071887198835611; Standard Deviation: 0.07058702023452067; Valid Cases: 32
+Neighbor: 冠心病; Mean Similarity: 0.7066989974542097; Standard Deviation: 0.0586064957051893; Valid Cases: 44
+Neighbor: 慢性病; Mean Similarity: 0.6986663043498993; Standard Deviation: 0.0732604471607583; Valid Cases: 44
+Neighbor: 肺结核; Mean Similarity: 0.6965908861973069; Standard Deviation: 0.07158592764278382; Valid Cases: 44
+
+Ten largest positive unstandardized regression coefficients for concept mental disorder:
+Neighbor: 医联; Valid Cases: 10; B: 0.021332066008858227; P-value: 0.010799326957315183; Correlation: 0.7596319407024854; P-value: 0.010799326957313754 
+Neighbor: 退行性; Valid Cases: 14; B: 0.014718573424905367; P-value: 0.002761371892787814; Correlation: 0.7347247298495105; P-value: 0.0027613718927875733 
+Neighbor: 重性; Valid Cases: 14; B: 0.010744450808437283; P-value: 0.0071349912949090375; Correlation: 0.6826757755511741; P-value: 0.007134991294908465 
+Neighbor: 智障; Valid Cases: 21; B: 0.010464231998889205; P-value: 0.00015825796049276567; Correlation: 0.7327366055517197; P-value: 0.0001582579604927468 
+Neighbor: 慢阻; Valid Cases: 13; B: 0.008417035746910315; P-value: 0.008805072632936064; Correlation: 0.6917647328782067; P-value: 0.008805072632937266 
+Neighbor: 造口; Valid Cases: 10; B: 0.007948907969057254; P-value: 0.019033617701470634; Correlation: 0.7193231409418266; P-value: 0.01903361770146904 
+Neighbor: 终末期; Valid Cases: 21; B: 0.007727828602719212; P-value: 0.0029816700839367613; Correlation: 0.615416898353949; P-value: 0.0029816700839368606 
+Neighbor: 指征; Valid Cases: 19; B: 0.007671542803020243; P-value: 0.008022114160661563; Correlation: 0.5885921036276782; P-value: 0.008022114160661568 
+Neighbor: 地甲病; Valid Cases: 11; B: 0.007237659640342717; P-value: 0.03775377039544689; Correlation: 0.6299973415743474; P-value: 0.03775377039545497 
+Neighbor: 高血糖; Valid Cases: 21; B: 0.006638157080200746; P-value: 0.028942506514082245; Correlation: 0.47658645874241234; P-value: 0.02894250651408349 
+
+Ten largest negative unstandardized regression coefficients for concept mental disorder:
+Neighbor: 癌症; Valid Cases: 44; B: -0.0016019276538243661;  P-value: 0.02396742336518918; Correlation: -0.3399338229245833; P-value: 0.02396742336518922 
+Neighbor: 切除; Valid Cases: 44; B: -0.001617361544280006;  P-value: 0.03136628223772093; Correlation: -0.32497671221131424; P-value: 0.03136628223772109 
+Neighbor: 怀孕; Valid Cases: 44; B: -0.0016697618720460266;  P-value: 0.018385639819122387; Correlation: -0.35403967967581035; P-value: 0.01838563981912278 
+Neighbor: 儿科; Valid Cases: 44; B: -0.0017146074601861263;  P-value: 0.04909397997158122; Correlation: -0.2984456325573587; P-value: 0.04909397997158067 
+Neighbor: 收容; Valid Cases: 44; B: -0.0017422777664702546;  P-value: 0.02693948308127921; Correlation: -0.3335181737735588; P-value: 0.02693948308127901 
+Neighbor: 健康检查; Valid Cases: 44; B: -0.0017868291642318549;  P-value: 0.013839563440017891; Correlation: -0.36851613583513615; P-value: 0.013839563440018254 
+Neighbor: 伤者; Valid Cases: 43; B: -0.0018192910781984048;  P-value: 0.041269550389107894; Correlation: -0.3125850260025641; P-value: 0.041269550389102176 
+Neighbor: 垂危; Valid Cases: 43; B: -0.0018625401705278637;  P-value: 0.03360574152910733; Correlation: -0.3247542380752418; P-value: 0.03360574152910718 
+Neighbor: 传染; Valid Cases: 44; B: -0.0018719150281412851;  P-value: 0.024105468329317186; Correlation: -0.3396215160797619; P-value: 0.024105468329317738 
+Neighbor: 急诊; Valid Cases: 44; B: -0.0019125037312615807;  P-value: 0.01873135959336741; Correlation: -0.35306786708209936; P-value: 0.018731359593367677 

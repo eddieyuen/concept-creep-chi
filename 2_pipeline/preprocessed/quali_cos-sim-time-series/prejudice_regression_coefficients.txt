@@ -1,0 +1,32 @@
+Total number of word neighbors: 1755
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 成见; Mean Similarity: 0.7089288022222222; Standard Deviation: 0.05775469845746976; Valid Cases: 45
+Neighbor: 无知; Mean Similarity: 0.7089061720000002; Standard Deviation: 0.05042726020730216; Valid Cases: 45
+Neighbor: 傲慢; Mean Similarity: 0.7051962466666667; Standard Deviation: 0.0714380432334793; Valid Cases: 45
+Neighbor: 根深蒂固; Mean Similarity: 0.7038273051111112; Standard Deviation: 0.06459865615776664; Valid Cases: 45
+Neighbor: 狭隘; Mean Similarity: 0.6954092044444444; Standard Deviation: 0.06412983582575323; Valid Cases: 45
+
+Ten largest positive unstandardized regression coefficients for concept prejudice:
+Neighbor: 选边; Valid Cases: 13; B: 0.013872540750347526; P-value: 0.006399272412195371; Correlation: 0.7113579833494694; P-value: 0.006399272412196607 
+Neighbor: 怪象; Valid Cases: 14; B: 0.012155021808959597; P-value: 0.021907736427661095; Correlation: 0.6049317764760838; P-value: 0.021907736427659266 
+Neighbor: 操弄; Valid Cases: 20; B: 0.0060197989577409515; P-value: 0.0001097832948086657; Correlation: 0.7574901444824763; P-value: 0.00010978329480865293 
+Neighbor: 抱持; Valid Cases: 20; B: 0.005094058666107491; P-value: 0.010555551693508237; Correlation: 0.5580692840808111; P-value: 0.010555551693508108 
+Neighbor: 自闭; Valid Cases: 24; B: 0.004682755089793189; P-value: 0.03583460208673728; Correlation: 0.4302850653000448; P-value: 0.03583460208672769 
+Neighbor: 损人不利己; Valid Cases: 26; B: 0.0035822685720971344; P-value: 0.036317936411173486; Correlation: 0.4123505272463027; P-value: 0.03631793641117401 
+Neighbor: 种族主义; Valid Cases: 45; B: 0.003562724204216133; P-value: 3.217716956392995e-05; Correlation: 0.5779520021073028; P-value: 3.217716956393449e-05 
+Neighbor: 极化; Valid Cases: 29; B: 0.0032186949545620616; P-value: 0.0067876943376672955; Correlation: 0.4913943854700604; P-value: 0.006787694337668664 
+Neighbor: 假想敌; Valid Cases: 35; B: 0.003118000394522664; P-value: 0.017630010481289354; Correlation: 0.39883929002714247; P-value: 0.017630010481289357 
+Neighbor: 否认; Valid Cases: 45; B: 0.002898752047430887; P-value: 0.0013784503498218096; Correlation: 0.4625483595575671; P-value: 0.0013784503498219822 
+
+Ten largest negative unstandardized regression coefficients for concept prejudice:
+Neighbor: 误解; Valid Cases: 45; B: -0.0010464802173913103;  P-value: 0.049694019802126885; Correlation: -0.2943312194063548; P-value: 0.04969401980212665 
+Neighbor: 不信任感; Valid Cases: 44; B: -0.0012330913495124034;  P-value: 0.032538925469426785; Correlation: -0.32288241993969546; P-value: 0.032538925469426244 
+Neighbor: 无知; Valid Cases: 45; B: -0.001265913355731247;  P-value: 0.026981683544635204; Correlation: -0.32971078899717365; P-value: 0.02698168354463673 
+Neighbor: 断章取义; Valid Cases: 42; B: -0.0013228231230417078;  P-value: 0.025805851736804428; Correlation: -0.3437769065252394; P-value: 0.025805851736804344 
+Neighbor: 小动作; Valid Cases: 44; B: -0.0013556643313144968;  P-value: 0.04956381759857057; Correlation: -0.2978573418326315; P-value: 0.049563817598570925 
+Neighbor: 尖锐对立; Valid Cases: 42; B: -0.0014274998592870766;  P-value: 0.04460196988664293; Correlation: -0.3115427781795422; P-value: 0.044601969886648905 
+Neighbor: 曲解; Valid Cases: 45; B: -0.0014406193386034254;  P-value: 0.011112024139267327; Correlation: -0.37513582445231164; P-value: 0.011112024139266817 
+Neighbor: 以讹传讹; Valid Cases: 41; B: -0.0014460050374439052;  P-value: 0.024569940126498883; Correlation: -0.3507051962071602; P-value: 0.024569940126498744 
+Neighbor: 有恃无恐; Valid Cases: 44; B: -0.0014611030026079348;  P-value: 0.04309900223788658; Correlation: -0.30638406155134074; P-value: 0.04309900223788648 
+Neighbor: 洪水猛兽; Valid Cases: 40; B: -0.0015178205060084665;  P-value: 0.04542977352079706; Correlation: -0.3181470041850987; P-value: 0.04542977352079698 

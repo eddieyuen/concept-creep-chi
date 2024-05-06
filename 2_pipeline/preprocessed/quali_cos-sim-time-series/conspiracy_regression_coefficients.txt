@@ -1,0 +1,32 @@
+Total number of word neighbors: 1545
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 妄图; Mean Similarity: 0.754227636222222; Standard Deviation: 0.05298817975112092; Valid Cases: 45
+Neighbor: 图谋; Mean Similarity: 0.7504676888888888; Standard Deviation: 0.04172325977770211; Valid Cases: 45
+Neighbor: 倒行逆施; Mean Similarity: 0.7458301071111112; Standard Deviation: 0.06382930716589187; Valid Cases: 45
+Neighbor: 罪恶行径; Mean Similarity: 0.7337476422912196; Standard Deviation: 0.05118293115542955; Valid Cases: 38
+Neighbor: 阴谋活动; Mean Similarity: 0.7264010957309178; Standard Deviation: 0.07357919174493029; Valid Cases: 35
+
+Ten largest positive unstandardized regression coefficients for concept conspiracy:
+Neighbor: 马斯哈多夫; Valid Cases: 12; B: 0.016912873704117953; P-value: 0.000945446039127117; Correlation: 0.8254073119623504; P-value: 0.0009454460391273356 
+Neighbor: 港独; Valid Cases: 10; B: 0.013119555221405947; P-value: 0.013361937110666699; Correlation: 0.7452889799808557; P-value: 0.013361937110668446 
+Neighbor: 恶法; Valid Cases: 14; B: 0.012460746294395742; P-value: 0.02908246618937599; Correlation: 0.5817515578960762; P-value: 0.029082466189377564 
+Neighbor: 以台; Valid Cases: 14; B: 0.011613811699884157; P-value: 0.0006370244359449879; Correlation: 0.7972958589473743; P-value: 0.0006370244359449926 
+Neighbor: 窜访; Valid Cases: 13; B: 0.010882165909918166; P-value: 0.007194103998870727; Correlation: 0.7043410748678247; P-value: 0.007194103998869801 
+Neighbor: 收手; Valid Cases: 20; B: 0.009615423380012823; P-value: 0.001449486944801402; Correlation: 0.6627681158753953; P-value: 0.001449486944801411 
+Neighbor: 唱衰; Valid Cases: 19; B: 0.00915454544314185; P-value: 0.002828986893469794; Correlation: 0.6456352039704039; P-value: 0.002828986893470157 
+Neighbor: 损人害己; Valid Cases: 14; B: 0.00911244713821216; P-value: 0.0028931653721721282; Correlation: 0.7324087323604206; P-value: 0.002893165372172125 
+Neighbor: 搅局; Valid Cases: 21; B: 0.008732590090788; P-value: 0.00497375989276061; Correlation: 0.5888950460923521; P-value: 0.00497375989275853 
+Neighbor: 洗白; Valid Cases: 20; B: 0.008681145711350315; P-value: 4.526239325530904e-05; Correlation: 0.7826578606686749; P-value: 4.526239325530908e-05 
+
+Ten largest negative unstandardized regression coefficients for concept conspiracy:
+Neighbor: 内外交困; Valid Cases: 38; B: -0.0014175833790495264;  P-value: 0.03999423318468264; Correlation: -0.33467552083507857; P-value: 0.039994233184686194 
+Neighbor: 分裂; Valid Cases: 45; B: -0.001472357393939428;  P-value: 0.00957246852719242; Correlation: -0.3821979996658346; P-value: 0.009572468527193508 
+Neighbor: 狡猾; Valid Cases: 44; B: -0.0016172390323528755;  P-value: 0.024492479323507697; Correlation: -0.33875385619053944; P-value: 0.02449247932350744 
+Neighbor: 侵扰; Valid Cases: 45; B: -0.0016345301805006768;  P-value: 0.024864182261028295; Correlation: -0.3341668403480649; P-value: 0.024864182261028798 
+Neighbor: 武装斗争; Valid Cases: 45; B: -0.0017132302226614475;  P-value: 0.04973821582759237; Correlation: -0.2942767907351623; P-value: 0.049738215827597396 
+Neighbor: 预谋; Valid Cases: 43; B: -0.0017133709348803035;  P-value: 0.028112941408187844; Correlation: -0.3349729943441823; P-value: 0.028112941408191473 
+Neighbor: 进步力量; Valid Cases: 43; B: -0.0018507818827110094;  P-value: 0.010686125688490767; Correlation: -0.3854823800154933; P-value: 0.010686125688491747 
+Neighbor: 既成事实; Valid Cases: 43; B: -0.0018746290765815988;  P-value: 0.03307864580481786; Correlation: -0.3256723236538825; P-value: 0.033078645804821345 
+Neighbor: 通缉; Valid Cases: 44; B: -0.0018798414126847544;  P-value: 0.04592657068171921; Correlation: -0.30253513771823803; P-value: 0.04592657068172254 
+Neighbor: 篡党夺权; Valid Cases: 20; B: -0.001880193244472697;  P-value: 0.023506400653024152; Correlation: -0.5038580117721945; P-value: 0.023506400653023517 

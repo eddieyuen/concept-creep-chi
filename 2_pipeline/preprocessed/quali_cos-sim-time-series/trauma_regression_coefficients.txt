@@ -1,0 +1,32 @@
+Total number of word neighbors: 1869
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 医治; Mean Similarity: 0.6538975102222223; Standard Deviation: 0.08570630349323707; Valid Cases: 45
+Neighbor: 后遗症; Mean Similarity: 0.6466214235555554; Standard Deviation: 0.07938397318805267; Valid Cases: 45
+Neighbor: 深重; Mean Similarity: 0.6366418573333332; Standard Deviation: 0.10056368663975741; Valid Cases: 45
+Neighbor: 愈合; Mean Similarity: 0.6347332804444445; Standard Deviation: 0.06761292246404925; Valid Cases: 45
+Neighbor: 并发症; Mean Similarity: 0.6266777433333333; Standard Deviation: 0.056748351670336684; Valid Cases: 45
+
+Ten largest positive unstandardized regression coefficients for concept trauma:
+Neighbor: 北京大学人民医院; Valid Cases: 24; B: 0.008679439671661838; P-value: 0.0007661617030437826; Correlation: 0.6395149203158205; P-value: 0.0007661617030438482 
+Neighbor: 慢阻; Valid Cases: 14; B: 0.008523528060591477; P-value: 1.015524213052843e-05; Correlation: 0.9022790755100341; P-value: 1.0155242130529148e-05 
+Neighbor: 危重症; Valid Cases: 18; B: 0.007414302614207715; P-value: 0.009298408765607825; Correlation: 0.5942918138126827; P-value: 0.009298408765607346 
+Neighbor: 甲流; Valid Cases: 13; B: 0.006829452311277867; P-value: 0.01686408623352257; Correlation: 0.6468898885944973; P-value: 0.01686408623351548 
+Neighbor: 继发; Valid Cases: 30; B: 0.0038682333784444056; P-value: 0.023509423890698194; Correlation: 0.41246087408927323; P-value: 0.023509423890699342 
+Neighbor: 帕金森; Valid Cases: 30; B: 0.0037324770668393822; P-value: 0.0009989262130187583; Correlation: 0.5703601779838934; P-value: 0.000998926213018873 
+Neighbor: 卒; Valid Cases: 45; B: 0.0033221246877470673; P-value: 0.0057929881063041614; Correlation: 0.40494119033633447; P-value: 0.005792988106304312 
+Neighbor: 妇产科; Valid Cases: 45; B: 0.0032144474018445538; P-value: 0.0013558685791658829; Correlation: 0.4631566008242737; P-value: 0.0013558685791658911 
+Neighbor: 外科; Valid Cases: 45; B: 0.003190456034255587; P-value: 0.004042909936301405; Correlation: 0.42032990994668334; P-value: 0.00404290993630104 
+Neighbor: 肿瘤; Valid Cases: 45; B: 0.002943229747035541; P-value: 0.0017224618329410094; Correlation: 0.45423380580456313; P-value: 0.0017224618329407142 
+
+Ten largest negative unstandardized regression coefficients for concept trauma:
+Neighbor: 外伤; Valid Cases: 45; B: -0.0013036899552041922;  P-value: 0.0492888249429143; Correlation: -0.2948320624925436; P-value: 0.0492888249429089 
+Neighbor: 医学知识; Valid Cases: 43; B: -0.001366975199968068;  P-value: 0.03083851045883067; Correlation: -0.32971411234384457; P-value: 0.03083851045883218 
+Neighbor: 左眼; Valid Cases: 45; B: -0.0014839358010540395;  P-value: 0.026886294601461795; Correlation: -0.3299051416339699; P-value: 0.026886294601462808 
+Neighbor: 副作用; Valid Cases: 45; B: -0.0015284273306983257;  P-value: 0.030572984186405607; Correlation: -0.3227785042224517; P-value: 0.030572984186408414 
+Neighbor: 痉挛; Valid Cases: 43; B: -0.0015813751783907769;  P-value: 0.025986020253832304; Correlation: -0.3393792279338965; P-value: 0.025986020253837998 
+Neighbor: 紊乱; Valid Cases: 45; B: -0.0016275894650856493;  P-value: 0.012448351487248443; Correlation: -0.3696563132475509; P-value: 0.012448351487248443 
+Neighbor: 冲击波; Valid Cases: 45; B: -0.0016351844598155678;  P-value: 0.026905835550966754; Correlation: -0.32986528072039434; P-value: 0.026905835550967604 
+Neighbor: 伤病; Valid Cases: 45; B: -0.0016440660974967845;  P-value: 0.04556456379006474; Correlation: -0.29959896245019235; P-value: 0.04556456379007307 
+Neighbor: 肠胃; Valid Cases: 45; B: -0.0016444450632411441;  P-value: 0.04658639238956109; Correlation: -0.29826049866295823; P-value: 0.0465863923895643 
+Neighbor: 电离层; Valid Cases: 38; B: -0.0016673788217094346;  P-value: 0.049617409403357536; Correlation: -0.32072501501567807; P-value: 0.049617409403368146 

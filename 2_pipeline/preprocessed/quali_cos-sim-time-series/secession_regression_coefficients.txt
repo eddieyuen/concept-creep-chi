@@ -1,0 +1,32 @@
+Total number of word neighbors: 1469
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 台独; Mean Similarity: 0.693811379018284; Standard Deviation: 0.09119165020840471; Valid Cases: 42
+Neighbor: 图谋; Mean Similarity: 0.6850862431111111; Standard Deviation: 0.053522424001008595; Valid Cases: 45
+Neighbor: 势力; Mean Similarity: 0.6680935571111111; Standard Deviation: 0.06279336831928384; Valid Cases: 45
+Neighbor: 分裂主义; Mean Similarity: 0.6551822086666667; Standard Deviation: 0.05678505190477615; Valid Cases: 45
+Neighbor: 台湾独立; Mean Similarity: 0.6445786010387332; Standard Deviation: 0.0698008468746534; Valid Cases: 43
+
+Ten largest positive unstandardized regression coefficients for concept secession:
+Neighbor: 执念; Valid Cases: 12; B: 0.01523113875956024; P-value: 0.017493097368931947; Correlation: 0.6684175796740857; P-value: 0.017493097368933425 
+Neighbor: 港独; Valid Cases: 10; B: 0.012664945043855442; P-value: 0.0010482382420343125; Correlation: 0.8705357127085336; P-value: 0.0010482382420343875 
+Neighbor: 疑欧; Valid Cases: 14; B: 0.00887049308441212; P-value: 0.02618149548210289; Correlation: 0.5905424824758178; P-value: 0.026181495482103044 
+Neighbor: 九二; Valid Cases: 44; B: 0.008823300354614537; P-value: 7.200431712255127e-10; Correlation: 0.7739874590857103; P-value: 7.200431712255114e-10 
+Neighbor: 以台; Valid Cases: 14; B: 0.007841413749277016; P-value: 0.005169822338424029; Correlation: 0.701557307726587; P-value: 0.0051698223384240545 
+Neighbor: 搅局; Valid Cases: 21; B: 0.006824626418083031; P-value: 0.015495241882082329; Correlation: 0.5207834416004498; P-value: 0.015495241882076509 
+Neighbor: 三股; Valid Cases: 43; B: 0.005962446096512974; P-value: 1.74017700093595e-08; Correlation: 0.7370579533902806; P-value: 1.7401770009357522e-08 
+Neighbor: 卡萨芒斯; Valid Cases: 12; B: 0.005688662692501262; P-value: 0.02017203623087082; Correlation: 0.657395263233477; P-value: 0.02017203623087076 
+Neighbor: 博科; Valid Cases: 17; B: 0.005120699380921034; P-value: 0.021016391741874935; Correlation: 0.5540407562037926; P-value: 0.021016391741876098 
+Neighbor: 趁乱; Valid Cases: 23; B: 0.005066551768686563; P-value: 0.0011883802888831457; Correlation: 0.6329736251334037; P-value: 0.0011883802888830951 
+
+Ten largest negative unstandardized regression coefficients for concept secession:
+Neighbor: 军阀; Valid Cases: 45; B: -0.0011000994321475898;  P-value: 0.027955973866280355; Correlation: -0.3277577608341095; P-value: 0.02795597386628299 
+Neighbor: 不满情绪; Valid Cases: 45; B: -0.0011549864334650935;  P-value: 0.043410323620024276; Correlation: -0.30250270189806905; P-value: 0.04341032362002431 
+Neighbor: 武力威胁; Valid Cases: 44; B: -0.0011935747035042726;  P-value: 0.008424019881388497; Correlation: -0.3924044409585745; P-value: 0.008424019881388422 
+Neighbor: 法西斯; Valid Cases: 45; B: -0.001197512088274075;  P-value: 0.03360848122307443; Correlation: -0.31742727537482995; P-value: 0.033608481223077656 
+Neighbor: 侵略扩张; Valid Cases: 42; B: -0.0012202554264694652;  P-value: 0.040794146206764643; Correlation: -0.31701923453489156; P-value: 0.04079414620675458 
+Neighbor: 强加; Valid Cases: 45; B: -0.0012399446943346733;  P-value: 0.045805011975891284; Correlation: -0.2992818291134311; P-value: 0.04580501197589361 
+Neighbor: 地区冲突; Valid Cases: 44; B: -0.0012494889882293315;  P-value: 0.03580540479095258; Correlation: -0.31736021424859995; P-value: 0.035805404790952414 
+Neighbor: 内部事务; Valid Cases: 45; B: -0.0012692564044796016;  P-value: 0.009502729947571405; Correlation: -0.3825404414522412; P-value: 0.009502729947572178 
+Neighbor: 罪恶; Valid Cases: 45; B: -0.0012805004440052973;  P-value: 0.020425801804543408; Correlation: -0.34464640373804745; P-value: 0.020425801804545146 
+Neighbor: 半封建社会; Valid Cases: 45; B: -0.0013224184782608937;  P-value: 0.01631750863066207; Correlation: -0.35622151634919785; P-value: 0.016317508630663217 

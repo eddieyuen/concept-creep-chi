@@ -1,0 +1,29 @@
+Total number of word neighbors: 1692
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 极端主义; Mean Similarity: 0.7778115215755644; Standard Deviation: 0.047307703259121814; Valid Cases: 42
+Neighbor: 恐怖活动; Mean Similarity: 0.7529470697777776; Standard Deviation: 0.09334302403655893; Valid Cases: 45
+Neighbor: 分裂主义; Mean Similarity: 0.7377069493333335; Standard Deviation: 0.06124076740676988; Valid Cases: 45
+Neighbor: 恐怖组织; Mean Similarity: 0.7011066052046689; Standard Deviation: 0.06272290113769924; Valid Cases: 44
+Neighbor: 暴力行动; Mean Similarity: 0.6966143800662115; Standard Deviation: 0.11927931762954014; Valid Cases: 39
+
+Ten largest positive unstandardized regression coefficients for concept terrorism:
+Neighbor: 港独; Valid Cases: 10; B: 0.012678958597728987; P-value: 0.005240849819592927; Correlation: 0.8021383944039389; P-value: 0.00524084981959271 
+Neighbor: 欧债; Valid Cases: 12; B: 0.011579771286188343; P-value: 0.015713605685964818; Correlation: 0.676444024882493; P-value: 0.015713605685963396 
+Neighbor: 网络攻击; Valid Cases: 20; B: 0.011414789078740046; P-value: 1.400168680303623e-06; Correlation: 0.85695672175485; P-value: 1.400168680303603e-06 
+Neighbor: 涉恐; Valid Cases: 13; B: 0.007598246888015784; P-value: 0.009451586811660808; Correlation: 0.6872095181432465; P-value: 0.009451586811660282 
+Neighbor: 三股; Valid Cases: 43; B: 0.006950840064711793; P-value: 3.7169707416089507e-07; Correlation: 0.6865615500244336; P-value: 3.7169707416094717e-07 
+Neighbor: 贩运; Valid Cases: 45; B: 0.003029542444005348; P-value: 0.0012523415578820562; Correlation: 0.4660659685991903; P-value: 0.0012523415578822982 
+Neighbor: 打击; Valid Cases: 45; B: 0.0025498595375494032; P-value: 4.437292462150608e-06; Correlation: 0.6250366905785658; P-value: 4.4372924621499916e-06 
+
+Ten largest negative unstandardized regression coefficients for concept terrorism:
+Neighbor: 势力; Valid Cases: 45; B: -0.001238162254281956;  P-value: 0.01681995144685468; Correlation: -0.3546817065694673; P-value: 0.01681995144685464 
+Neighbor: 分裂; Valid Cases: 45; B: -0.001501358131752316;  P-value: 0.0026509018651500985; Correlation: -0.4375306201331766; P-value: 0.0026509018651501054 
+Neighbor: 通货膨胀; Valid Cases: 45; B: -0.0017600959025033038;  P-value: 0.008316213853183409; Correlation: -0.3887258964235497; P-value: 0.008316213853183398 
+Neighbor: 科索沃; Valid Cases: 43; B: -0.0018051803288699226;  P-value: 0.04163772319344825; Correlation: -0.31204856473264597; P-value: 0.04163772319345376 
+Neighbor: 逃税; Valid Cases: 44; B: -0.001839877832011483;  P-value: 0.032793904936330026; Correlation: -0.3224353053795229; P-value: 0.0327939049363283 
+Neighbor: 地区冲突; Valid Cases: 44; B: -0.0019034767976394552;  P-value: 0.001067115325076782; Correlation: -0.4768071222436512; P-value: 0.001067115325076775 
+Neighbor: 情报工作; Valid Cases: 42; B: -0.0019713590219776218;  P-value: 0.016828460356072147; Correlation: -0.3669560866195216; P-value: 0.016828460356074576 
+Neighbor: 军备竞赛; Valid Cases: 45; B: -0.001982106731225315;  P-value: 0.004470700510403475; Correlation: -0.4160973038338315; P-value: 0.00447070051040357 
+Neighbor: 避风港; Valid Cases: 45; B: -0.002005032934123822;  P-value: 0.014842254967917969; Correlation: -0.36098731807990375; P-value: 0.014842254967916137 
+Neighbor: 经济犯罪; Valid Cases: 45; B: -0.002029537077733861;  P-value: 0.005167934679174593; Correlation: -0.4099029774973106; P-value: 0.0051679346791743295 

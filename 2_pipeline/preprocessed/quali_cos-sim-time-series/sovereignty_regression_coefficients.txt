@@ -1,0 +1,32 @@
+Total number of word neighbors: 1605
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 领土完整; Mean Similarity: 0.8040792286666665; Standard Deviation: 0.0593010764663036; Valid Cases: 45
+Neighbor: 国家主权; Mean Similarity: 0.7423915099999999; Standard Deviation: 0.06521006091133069; Valid Cases: 45
+Neighbor: 内部事务; Mean Similarity: 0.6844295615555556; Standard Deviation: 0.07286585721523206; Valid Cases: 45
+Neighbor: 民族尊严; Mean Similarity: 0.6825798364444445; Standard Deviation: 0.06821327555043169; Valid Cases: 45
+Neighbor: 领土; Mean Similarity: 0.6807630415555556; Standard Deviation: 0.05053282828132191; Valid Cases: 45
+
+Ten largest positive unstandardized regression coefficients for concept sovereignty:
+Neighbor: 格鲁吉亚共和国; Valid Cases: 14; B: 0.011364610531391702; P-value: 0.004254880598161195; Correlation: 0.712341558277128; P-value: 0.004254880598161053 
+Neighbor: 选择网络; Valid Cases: 15; B: 0.010721796660254515; P-value: 0.02576314483431199; Correlation: 0.5723678175936553; P-value: 0.025763144834316458 
+Neighbor: 阿人; Valid Cases: 13; B: 0.009610525526843777; P-value: 0.016209900768833194; Correlation: 0.6498325496362019; P-value: 0.016209900768833614 
+Neighbor: 波黑共和国; Valid Cases: 17; B: 0.007946240497224116; P-value: 0.024254404330973523; Correlation: 0.543125212948637; P-value: 0.02425440433097362 
+Neighbor: 九二; Valid Cases: 44; B: 0.006874647571719074; P-value: 5.001954296851739e-07; Correlation: 0.6750876985186178; P-value: 5.001954296851763e-07 
+Neighbor: 涉藏; Valid Cases: 21; B: 0.005950051834148942; P-value: 0.007081608108482454; Correlation: 0.569185821892956; P-value: 0.007081608108483113 
+Neighbor: 竹岛; Valid Cases: 23; B: 0.004095884093321909; P-value: 0.037806903608029255; Correlation: 0.43547209382614294; P-value: 0.03780690360802752 
+Neighbor: 错误做法; Valid Cases: 45; B: 0.0032278550592885202; P-value: 0.0003338557015323952; Correlation: 0.5110697605184861; P-value: 0.0003338557015323492 
+Neighbor: 逃废; Valid Cases: 27; B: 0.00292778417704556; P-value: 0.02039355629750375; Correlation: 0.4438266433353975; P-value: 0.020393556297502786 
+Neighbor: 站队; Valid Cases: 37; B: 0.0027804803950278465; P-value: 0.002683704940573413; Correlation: 0.47935175716247314; P-value: 0.0026837049405736735 
+
+Ten largest negative unstandardized regression coefficients for concept sovereignty:
+Neighbor: 强烈抗议; Valid Cases: 45; B: -0.0010076276297760534;  P-value: 0.01969294329350028; Correlation: -0.3465576047830673; P-value: 0.019692943293503153 
+Neighbor: 毫无根据; Valid Cases: 45; B: -0.001107567114624517;  P-value: 0.0476658300409845; Correlation: -0.2968722138222758; P-value: 0.04766583004098508 
+Neighbor: 事端; Valid Cases: 45; B: -0.0011867655270092225;  P-value: 0.04475894443178915; Correlation: -0.30067152649952195; P-value: 0.04475894443178783 
+Neighbor: 巴政府; Valid Cases: 44; B: -0.001290804231729718;  P-value: 0.04136207983683018; Correlation: -0.3088515305254514; P-value: 0.04136207983683149 
+Neighbor: 平等互利; Valid Cases: 45; B: -0.0013833774071146184;  P-value: 0.012948034616069224; Correlation: -0.3677361111517611; P-value: 0.012948034616068341 
+Neighbor: 外交途径; Valid Cases: 45; B: -0.0013925298748353266;  P-value: 0.002214499784157385; Correlation: -0.44460091013171943; P-value: 0.002214499784157493 
+Neighbor: 集体利益; Valid Cases: 45; B: -0.0013999117944664369;  P-value: 0.020562814858966837; Correlation: -0.3442955120935506; P-value: 0.02056281485896896 
+Neighbor: 领土; Valid Cases: 45; B: -0.001403750798418998;  P-value: 0.013732006563942961; Correlation: -0.3648471515523952; P-value: 0.01373200656394401 
+Neighbor: 奴隶制度; Valid Cases: 29; B: -0.0014343381750453296;  P-value: 0.037797741430367966; Correlation: -0.3875251776647291; P-value: 0.03779774143036804 
+Neighbor: 债权国; Valid Cases: 38; B: -0.0014543679873893012;  P-value: 0.020523158103664715; Correlation: -0.37452619314558727; P-value: 0.020523158103666374 

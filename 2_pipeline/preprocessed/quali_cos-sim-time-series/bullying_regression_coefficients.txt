@@ -1,0 +1,32 @@
+Total number of word neighbors: 1981
+
+Five neighbors with the highest mean cosine similarity across the years:
+Neighbor: 蹂躏; Mean Similarity: 0.7664535704444445; Standard Deviation: 0.12492946657172588; Valid Cases: 45
+Neighbor: 凌辱; Mean Similarity: 0.7641618780114434; Standard Deviation: 0.13418977521359574; Valid Cases: 44
+Neighbor: 奴役; Mean Similarity: 0.7638184660000001; Standard Deviation: 0.12424593652146258; Valid Cases: 45
+Neighbor: 欺侮; Mean Similarity: 0.7551961917252767; Standard Deviation: 0.11701291475566254; Valid Cases: 42
+Neighbor: 屈辱; Mean Similarity: 0.7383994875555555; Standard Deviation: 0.1309539924723737; Valid Cases: 45
+
+Ten largest positive unstandardized regression coefficients for concept bullying:
+Neighbor: 暴恐; Valid Cases: 11; B: 0.01940772343765449; P-value: 0.002994752139883515; Correlation: 0.8017999043807824; P-value: 0.002994752139884326 
+Neighbor: 性侵; Valid Cases: 13; B: 0.017716751321331874; P-value: 0.02250024395299376; Correlation: 0.6245285595844787; P-value: 0.02250024395299048 
+Neighbor: 虐童; Valid Cases: 10; B: 0.015577642019838493; P-value: 0.022200513473817504; Correlation: 0.7071191819913512; P-value: 0.022200513473810312 
+Neighbor: 一盗; Valid Cases: 17; B: 0.01221654710309503; P-value: 0.002305617397631338; Correlation: 0.6871774754197746; P-value: 0.002305617397631182 
+Neighbor: 涉黄; Valid Cases: 18; B: 0.011167078858397255; P-value: 0.002560852083934668; Correlation: 0.665778011623045; P-value: 0.0025608520839345656 
+Neighbor: 腐败体系; Valid Cases: 19; B: 0.010218495316966579; P-value: 0.025747151955827087; Correlation: 0.5098424392472871; P-value: 0.025747151955838845 
+Neighbor: 医闹; Valid Cases: 15; B: 0.00948415508742368; P-value: 0.01780459252684329; Correlation: 0.6010180424880085; P-value: 0.017804592526843036 
+Neighbor: 两抢; Valid Cases: 17; B: 0.00928530735008169; P-value: 0.014423186101996631; Correlation: 0.5811384848761447; P-value: 0.014423186101996863 
+Neighbor: 三假; Valid Cases: 23; B: 0.008851468225424479; P-value: 0.00015399358805179145; Correlation: 0.7086340762182705; P-value: 0.00015399358805178744 
+Neighbor: 超期羁押; Valid Cases: 24; B: 0.008756821800697399; P-value: 0.004014545093770983; Correlation: 0.5650446625032159; P-value: 0.004014545093772431 
+
+Ten largest negative unstandardized regression coefficients for concept bullying:
+Neighbor: 流血事件; Valid Cases: 42; B: -0.001481712698329958;  P-value: 0.04949057633656131; Correlation: -0.30504265431227806; P-value: 0.04949057633655651 
+Neighbor: 法律制裁; Valid Cases: 45; B: -0.0017679889038208253;  P-value: 0.0051084203445925245; Correlation: -0.4104022666913679; P-value: 0.005108420344592443 
+Neighbor: 入侵; Valid Cases: 45; B: -0.0017939727654809306;  P-value: 0.0464042198981201; Correlation: -0.2984973628752983; P-value: 0.0464042198981227 
+Neighbor: 后果严重; Valid Cases: 45; B: -0.0018327707325428051;  P-value: 0.018648700529545637; Correlation: -0.34938709994942024; P-value: 0.018648700529544086 
+Neighbor: 诬陷; Valid Cases: 44; B: -0.0019037516605190793;  P-value: 0.04953141216484965; Correlation: -0.29789777208124935; P-value: 0.049531412164853336 
+Neighbor: 种族主义; Valid Cases: 45; B: -0.0019213785256917237;  P-value: 0.042567688318006065; Correlation: -0.30367050307825205; P-value: 0.04256768831800725 
+Neighbor: 动脉硬化; Valid Cases: 43; B: -0.0019349763667752843;  P-value: 0.0392538548028712; Correlation: -0.31559328667321407; P-value: 0.03925385480287075 
+Neighbor: 绑架; Valid Cases: 45; B: -0.0019523797562582277;  P-value: 0.045333430130010705; Correlation: -0.2999050953351079; P-value: 0.045333430130008574 
+Neighbor: 旷日持久; Valid Cases: 45; B: -0.0020062540619236293;  P-value: 0.017733501684602086; Correlation: -0.35197908156070146; P-value: 0.017733501684603862 
+Neighbor: 不良现象; Valid Cases: 45; B: -0.0020732318998682485;  P-value: 0.02609919195682612; Correlation: -0.33153115207729283; P-value: 0.02609919195682521 
