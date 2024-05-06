@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>mental-disorder_descriptives.htm</title>
+<meta charset="utf-8"/>
+<style>
+.details {visibility:hidden;}
+.workbookSyntaxBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookSyntaxBlock p { margin:0 0;}
+.workbookRichTextBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookRichTextBlock p { margin:0 0;}
+.logItem {margin: 16px 0;font-family: monospace;}
+.procedureTitle{color: #1d3649;font-weight: 600;font-size: 20px;line-height: 24px;font-family: monospace;}
+.pivot{color:#264A60;background-color:#FFFFFF;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#E0E0E0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#F9F9FB;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#F9F9FB;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #AEAEAE;}
+.hDR{border-top:1px none #AEAEAE;}
+.vCR{border-left:1px none #AEAEAE;}
+.vDR{border-left:1px none #AEAEAE;}
+.hCC{border-bottom:1px none #AEAEAE;}
+.hDC{border-bottom:1px none #AEAEAE;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #AEAEAE;}
+.pivot{margin: 80px 0;}
+.pivot thead.tr.th {padding:0px;border-spacing:0px}
+.hal{text-align:left} .hac{text-align:center} .har{text-align:right}
+.val{vertical-align:left} .vac{vertical-align:center} .var{vertical-align:right}
+</style>
+</head>
+<body>
+<p class="procedureTitle"><head><style type="text/css">p{color:0;font-family:SansSerif;font-size:14pt;font-style:normal;font-weight:bold;text-decoration:none}</style></head><BR>Descriptives</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+<div class="itemBody">
+<table summary="Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows" style="width:470px" class="default PivotTable" aria-label="Notes" role="complementary" data-lookName="default" data-rowLabelWidth="2" data-colLabelHeight="0" data-NumRows="13" data-NumCols="1" data-rowLabels="Corner" data-decimal-char="." data-col-labels="" data-row-labels="Output Created ;Comments ;Input Data; Active Dataset; Filter; Weight; Split File; N of Rows in Working Data File;Missing Value Handling Definition of Missing; Cases Used;Syntax ;Resources Processor Time; Elapsed Time" data-layer-dimension="" data-column-dimension="" data-row-dimension="Contents;" data-maxColWidth="162">
+<caption class="title" style="width:470px">Notes<span class="details">Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<th class="rowLabels dataAreaTop role3" colspan="2">Output Created</th>
+<td class=" o dataAreaTop dataAreaLeft">19-APR-2024 00:57:57</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Comments</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&nbsp;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="6">Input</th>
+<th class="rowLabels hCR vCR role3">Data</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">C:\Users\s1155157933\Downloads\mental disorder_cos-sim.csv</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Active Dataset</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">DataSet1</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Filter</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Weight</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Split File</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">N of Rows in Working Data File</th>
+<td class=" e dataAreaLeft hCR">45</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Missing Value Handling</th>
+<th class="rowLabels hCR vCR role3">Definition of Missing</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">User defined missing values are treated as missing.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Cases Used</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">All non-missing data are used.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Syntax</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">DESCRIPTIVES VARIABLES=心脑血管 训诫 结核菌 心理疾病 第六十三条 急诊部 肾衰竭 愈后 罪轻 疟疾 心脏病 肺气肿 急诊科 急性 西医 疑难病症 就诊 分诊台 心理治疗<br>    癌痛 肩周炎 痢疾 余例 所患 气胸 疾患 六万元 医疗事故 较重 新疗法 医师 结膜炎 哮喘 对慢 病原 宣告无罪 肢体 轻症 肥胖者 第九十八条 大病 先心病 搜查证 破伤风 孤残 终末期<br>    马西亚 重危 内外科 弃婴 肺炎 早产 急慢性 急腹症 颅内 甲亢 龋齿 神经官能症 护士长 胃病 耳聋 放射科 疑难病 司法鉴定 少年犯 直肠癌 小儿麻痹 病史 肾结石 被申请人 髓内 脑中风<br>    伤害事故 监护室 肺水肿 支气管炎 糖尿病 瘤 第九十五条 鼻咽癌 脉管炎 癫痫病 脑瘫 马凡氏 骨病 肝功能 湿疹 流产 脑溢血 患有 红斑狼疮 牙痛 主诉 子宫 肛肠病 传染病 脑肿瘤 遗漏<br>    性疾病 复查 但系 取保候审 全身性 骨质增生 近视眼 脑膜炎 丙肝 外治法 贫血症 冠心病 血友病 银屑病 致人 呼吸系统 本人成分 携带者 矫形 脏器 生命垂危 内科 寄生虫 高脂血症 因工<br>    脑血管 更年期 小儿 陈光星 克雅氏症 郑荣熙 脊柱炎 关节炎 痔科 髓系 治愈 病症 传唤 肺纤维化 截肢 精神分裂症 多发性 骨癌 因练 肝脏 迟延 患病 骨髓炎 确系 降压药 职业病 乳腺癌<br>    违禁品 子宫癌 复发 艾滋病毒 糖尿病足 遗传病 医源性 原发性 活动性 精神障碍 求治 血症 麻风 失独 溶液剂 拘留证 胃溃疡 口腔科 缠身 妇科疾病 收留 因患 平义 胰腺炎 妇产科 万例<br>    帕胺片 尘肺病 综合症 病儿 复明 慢阻 死亡者 吲达 肝炎 陈旧性 法布里 盗窃罪 精神疾病 早幼 心脑血管病 弥漫性 寄药 种者 血栓 第六十条 宫颈 恶性肿瘤 嫌疑人 卧病 斜颈 无药 哮喘病<br>    躁狂 肝病 脑出血 胶质瘤 年老体弱 行走不便 腭裂 前列腺癌 强直性 上呼吸道 婴幼儿 单亲 悔改 眼病 肾炎 凝血 胃炎 肺结核病 老年痴呆症 事实清楚 帕金森氏 高血脂 类风湿 七坊 癫痫<br>    前受 诈骗罪 痛风 痔 麻风病人 精神分裂 安乐死 病毒性 网瘾 杀人罪 移植手术 不孕 受刺激 消化系统 放疗 肥胖 牙病 诊所 病毒感染者 自闭症 放射疗法 留守人员 肺癌 未成年人 心血管<br>    阻肺 常见病 癌 梅毒 偏瘫 鉴定结论 低血糖症 行动不便 帕金森 青光眼 体弱 腹泻 孕期 脑血栓 万余例 疑难重症 老年痴呆 妇科 淋病 挂床 先天性 急症 例 妊娠 痴呆 衰竭 胰腺癌 截瘫<br>    基因治疗 入院 难治性 做手术 溃疡 婚后 肾功能 肇祸 原告人 脑炎 八九十岁 风湿病 结核病 绝症 阻塞性 心肌梗死 骨科 风湿性关节炎 合对 呼吸道 气管炎 骨关节 瘘 猥亵 肾病 患儿 人经<br>    外转 脑梗塞 肾癌 轻伤 脑血管病 感染性 医学院校 苯丙酮 朱沱镇 诊病 矫治 个亚 膀胱 治疗师 慢性病 阿尔茨海默 肥胖病 麻风病 误诊 罹患 儿科 压疮 高血压病 未遂 咽痛 老年性 针刺<br>    造口 帕金森氏症 白内障 白癜风 塔宁瓦 康复者 炭疽病 脑瘤 分娩 伪证罪 脑性 股骨头 肾小球 功能障碍 风湿性 外伤 错告 致死 确诊 小儿麻痹症 流行病学 并发症 致残 慢性 孤寡 危重<br>    病患者 牙周病 肾衰 三叉神经痛 疾病 骨髓移植 前列腺炎 胆结石 聋哑 脏乱 保外就医 行为人 康复 五官科 贫血 指征 淋巴细胞 高血压 妇科病 急危重症 合并症 致伤 收治 患过 小病 粒细胞<br>    恢复期 第五十三条 死因 精神病人 精神科 周某 态度恶劣 老年性痴呆 人因 食道癌 脊髓 脑积水 由女 血压高 孕产妇 接治 降薪 拘传 异性 癌症 骨肿瘤 表面抗原 接生 胆囊结石 中风 诊室<br>    弱视 心律失常 身体检查 消化道 动脉硬化 遗传性 中晚期 心肌炎 行为能力 产妇 病区 猝死 继发性 早产儿 脑干 危重病 急诊 后遗症 骨伤 神经症 肠道 前列腺 曾患 皮肤病 第六十七条<br>    脑梗死 碰伤 颈椎病 救治 防治所 孤独症 沙眼 访视 外科 千例 初诊 胸科 高血糖 肥胖症 达省 认知障碍 血源 筛查 阑尾炎 亚急性 关节病 患上 风心病 心功能 腹水 具结悔过 喉癌 肝癌<br>    颅脑 脑卒中 多例 常见疾病 可治 骨关节炎 管圆 类风湿病 铅中毒 肝硬化 肺栓塞 胎儿 脂肪肝 肺结核 重残 黄疸 拘禁 病因 唐氏 膀胱癌 结石 尿毒症 随访 正骨科 白血病 耐多药 不育症<br>    存活率 结肠癌 地方病 伤势 心绞痛 心梗 胃肠 乙肝 供认不讳 受虐 肾脏 病毒感染 肌无力 抑郁症 助视器 监护人 专科医院 眼疾 疥疮 不孕症 两病 芳村 肾移植 病理 患 肢残 血液病 性病<br>    脱残 救护站 肺病 七八位 佝偻病 胃癌 症 儿麻 免疫性 重性 孕妇 心肌梗塞 提不出 该病 专科门诊 故城县 多发病 食源性 牛皮癣 卫生院 脊柱 老年病 精神失常 靶向 判处刑罚 心衰 成瘾<br>    病志 神经科 脑萎缩 尿症 疑似 冒名 所生 此病 住院治疗 心血管病 脑外科 肝肾 乙型 健康检查 感染者 抢救无效 唇腭裂 脑震荡 罚不当罪 痤疮 矽肺病 重症 育龄妇女 转院 口腔 眼部 购枪<br>    心脏外科 气促 淋巴 美子 查无实据 病残 精索 智残 诊治 新生儿 重度 轻度 进行性<br>  /STATISTICS=MEAN STDDEV<br>  /SORT=MEAN (D).</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Resources</th>
+<th class="rowLabels hCR vCR role3">Processor Time</th>
+<td class=" e dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Elapsed Time</th>
+<td class=" o dataAreaLeft hCR">00:00:00.01</td>
+</tr>
+<tr>
+<td  style="width:144px;padding:0px;border-spacing:0px"></td>
+<td  style="width:164px;padding:0px;border-spacing:0px"></td>
+<td  style="width:162px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tbody>
+</table>
+</div><p align="left"><head><style type="text/css">p{color:0;font-family:Monospaced;font-size:12pt;font-style:normal;font-weight:normal;text-decoration:none}</style></head><BR>[DataSet1]&nbsp;</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+
+<div>
+
+<style>
+.pivot{color:#264a60;background-color:#ffffff;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#e0e0e0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#f9f9fb;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#f9f9fb;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #aeaeae;}
+.hDR{border-top:1px none #aeaeae;}
+.vCR{border-left:1px none #aeaeae;}
+.vDR{border-left:1px none #aeaeae;}
+.hCC{border-bottom:1px none #aeaeae;}
+.hDC{border-bottom:1px none #aeaeae;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #aeaeae;}
+</style>
+<table class="pivot" data-rows="1,0,1,589,0,0" data-cols="1,3" data-heights="24,0,20,11780,0" data-widths="106,370" data-curCounts="589,3" data-curSizess="589,3">
+<caption colspan="4">Descriptive Statistics</caption>
+<thead>
+<tr><th class="cornerLabels">&nbsp;</th><th>N</th><th>Mean</th><th>Std. Deviation</th></tr>
+</thead>
+<tbody data-rect="0,588,0,2">
+<tr><th style="min-width:106px">本人成分</th><td class=" har" style="min-width:68px">1</td><td class=" har" style="min-width:98px">.837847054004669</td><td class=" har" style="min-width:98px">.</td></tr>
+<tr><th>帕胺片</th><td class=" har">1</td><td class=" har">.833904683589935</td><td class=" har">.</td></tr>
+<tr><th>吲达</th><td class=" har">1</td><td class=" har">.826092839241028</td><td class=" har">.</td></tr>
+<tr><th>郑荣熙</th><td class=" har">1</td><td class=" har">.799094200134277</td><td class=" har">.</td></tr>
+<tr><th>塔宁瓦</th><td class=" har">1</td><td class=" har">.790038406848908</td><td class=" har">.</td></tr>
+<tr><th>重性</th><td class=" har">14</td><td class=" har">.718695602246693</td><td class=" har">.079818462155334</td></tr>
+<tr><th>先天性</th><td class=" har">44</td><td class=" har">.717790874567899</td><td class=" har">.061005821757755</td></tr>
+<tr><th>管圆</th><td class=" har">1</td><td class=" har">.710017442703247</td><td class=" har">.</td></tr>
+<tr><th>精神疾病</th><td class=" har">32</td><td class=" har">.707188719883561</td><td class=" har">.070587020234521</td></tr>
+<tr><th>冠心病</th><td class=" har">44</td><td class=" har">.706698997454210</td><td class=" har">.058606495705189</td></tr>
+<tr><th>压疮</th><td class=" har">5</td><td class=" har">.703344094753265</td><td class=" har">.121321767033170</td></tr>
+<tr><th>慢性病</th><td class=" har">44</td><td class=" har">.698666304349899</td><td class=" har">.073260447160758</td></tr>
+<tr><th>肺结核</th><td class=" har">44</td><td class=" har">.696590886197307</td><td class=" har">.071585927642784</td></tr>
+<tr><th>尿毒症</th><td class=" har">36</td><td class=" har">.695190300544103</td><td class=" har">.073506084303666</td></tr>
+<tr><th>髓系</th><td class=" har">3</td><td class=" har">.694571375846863</td><td class=" har">.117116054064064</td></tr>
+<tr><th>终末期</th><td class=" har">21</td><td class=" har">.694521813165574</td><td class=" har">.102564598523664</td></tr>
+<tr><th>白血病</th><td class=" har">43</td><td class=" har">.694482753443164</td><td class=" har">.070056275463780</td></tr>
+<tr><th>肺纤维化</th><td class=" har">8</td><td class=" har">.693516910076141</td><td class=" har">.074599222573407</td></tr>
+<tr><th>早幼</th><td class=" har">12</td><td class=" har">.690461625655492</td><td class=" har">.070362437734469</td></tr>
+<tr><th>正骨科</th><td class=" har">1</td><td class=" har">.689993023872376</td><td class=" har">.</td></tr>
+<tr><th>精神分裂症</th><td class=" har">40</td><td class=" har">.689633211493492</td><td class=" har">.062560167694536</td></tr>
+<tr><th>恶性肿瘤</th><td class=" har">44</td><td class=" har">.689051439138976</td><td class=" har">.065720644935594</td></tr>
+<tr><th>心脑血管</th><td class=" har">36</td><td class=" har">.688674295941989</td><td class=" har">.071274698800605</td></tr>
+<tr><th>眼病</th><td class=" har">42</td><td class=" har">.688449235189529</td><td class=" har">.073270969337746</td></tr>
+<tr><th>患有</th><td class=" har">44</td><td class=" har">.687292468818751</td><td class=" har">.065714934872871</td></tr>
+<tr><th>肾病</th><td class=" har">38</td><td class=" har">.686637616471240</td><td class=" har">.066922658517632</td></tr>
+<tr><th>癫痫</th><td class=" har">40</td><td class=" har">.686381044983864</td><td class=" har">.059615522161794</td></tr>
+<tr><th>风湿性关节炎</th><td class=" har">44</td><td class=" har">.686162087050351</td><td class=" har">.059031627218356</td></tr>
+<tr><th>乳腺癌</th><td class=" har">43</td><td class=" har">.685600580171098</td><td class=" har">.052718382963683</td></tr>
+<tr><th>肝病</th><td class=" har">44</td><td class=" har">.685193565081467</td><td class=" har">.065654153203620</td></tr>
+<tr><th>脑瘫</th><td class=" har">35</td><td class=" har">.684775626659393</td><td class=" har">.089451134141587</td></tr>
+<tr><th>心肌梗塞</th><td class=" har">43</td><td class=" har">.684697137322537</td><td class=" har">.060144341536042</td></tr>
+<tr><th>肌无力</th><td class=" har">25</td><td class=" har">.683970820903778</td><td class=" har">.062397140809942</td></tr>
+<tr><th>支气管炎</th><td class=" har">44</td><td class=" har">.683935630050573</td><td class=" har">.075281803079253</td></tr>
+<tr><th>肺癌</th><td class=" har">44</td><td class=" har">.683385964144360</td><td class=" har">.061531177043505</td></tr>
+<tr><th>精神病人</th><td class=" har">43</td><td class=" har">.683083345723707</td><td class=" har">.070528792096589</td></tr>
+<tr><th>中风</th><td class=" har">44</td><td class=" har">.682898180051283</td><td class=" har">.064216341369171</td></tr>
+<tr><th>关节炎</th><td class=" har">44</td><td class=" har">.682596306909215</td><td class=" har">.056662642355306</td></tr>
+<tr><th>肝硬化</th><td class=" har">43</td><td class=" har">.682485386382702</td><td class=" har">.078777767042208</td></tr>
+<tr><th>脑性</th><td class=" har">9</td><td class=" har">.682108951939477</td><td class=" har">.064682578372360</td></tr>
+<tr><th>高血压</th><td class=" har">44</td><td class=" har">.682037990201603</td><td class=" har">.056693314612647</td></tr>
+<tr><th>危重</th><td class=" har">44</td><td class=" har">.681503885171630</td><td class=" har">.068272812355450</td></tr>
+<tr><th>风湿性</th><td class=" har">37</td><td class=" har">.681476808883048</td><td class=" har">.058362822656641</td></tr>
+<tr><th>胃癌</th><td class=" har">44</td><td class=" har">.680119586261836</td><td class=" har">.061667901825135</td></tr>
+<tr><th>脑血栓</th><td class=" har">44</td><td class=" har">.679733394221826</td><td class=" har">.061553954186618</td></tr>
+<tr><th>脑血管</th><td class=" har">44</td><td class=" har">.679390267214992</td><td class=" har">.068106084167754</td></tr>
+<tr><th>肺病</th><td class=" har">42</td><td class=" har">.679244887261164</td><td class=" har">.057535996922267</td></tr>
+<tr><th>急性</th><td class=" har">44</td><td class=" har">.678916584361683</td><td class=" har">.057658141350511</td></tr>
+<tr><th>肝炎</th><td class=" har">43</td><td class=" har">.678694133148637</td><td class=" har">.085216458297202</td></tr>
+<tr><th>眼疾</th><td class=" har">44</td><td class=" har">.678202912211418</td><td class=" har">.063255251676968</td></tr>
+<tr><th>唇腭裂</th><td class=" har">27</td><td class=" har">.676485456802227</td><td class=" har">.068417372333282</td></tr>
+<tr><th>脱残</th><td class=" har">3</td><td class=" har">.676064471403758</td><td class=" har">.101227437571629</td></tr>
+<tr><th>难治性</th><td class=" har">19</td><td class=" har">.675995858092057</td><td class=" har">.056097903938610</td></tr>
+<tr><th>阻塞性</th><td class=" har">24</td><td class=" har">.675863981246948</td><td class=" har">.089838892665592</td></tr>
+<tr><th>偏瘫</th><td class=" har">42</td><td class=" har">.675828159565017</td><td class=" har">.073070979742202</td></tr>
+<tr><th>多发病</th><td class=" har">44</td><td class=" har">.675238326191902</td><td class=" har">.050800180746829</td></tr>
+<tr><th>外伤</th><td class=" har">44</td><td class=" har">.675138296728785</td><td class=" har">.062456507787610</td></tr>
+<tr><th>呼吸系统</th><td class=" har">43</td><td class=" har">.674973769243374</td><td class=" har">.056964154021967</td></tr>
+<tr><th>阻肺</th><td class=" har">3</td><td class=" har">.674614727497101</td><td class=" har">.153763545849819</td></tr>
+<tr><th>皮肤病</th><td class=" har">44</td><td class=" har">.674345758828250</td><td class=" har">.085123789217864</td></tr>
+<tr><th>肺气肿</th><td class=" har">41</td><td class=" har">.673694071246357</td><td class=" har">.065500419032434</td></tr>
+<tr><th>糖尿病</th><td class=" har">44</td><td class=" har">.673393562436104</td><td class=" har">.064544863962687</td></tr>
+<tr><th>慢性</th><td class=" har">44</td><td class=" har">.673376992344856</td><td class=" har">.052871435961909</td></tr>
+<tr><th>常见病</th><td class=" har">44</td><td class=" har">.673282795331695</td><td class=" har">.046915583228512</td></tr>
+<tr><th>帕金森氏</th><td class=" har">20</td><td class=" har">.672696024179459</td><td class=" har">.058398852171087</td></tr>
+<tr><th>心脑血管病</th><td class=" har">32</td><td class=" har">.672513494268060</td><td class=" har">.061605360044813</td></tr>
+<tr><th>哮喘</th><td class=" har">44</td><td class=" har">.671818171035160</td><td class=" har">.069951163764409</td></tr>
+<tr><th>高血脂</th><td class=" har">33</td><td class=" har">.671615438027815</td><td class=" har">.068595537748375</td></tr>
+<tr><th>食道癌</th><td class=" har">43</td><td class=" har">.671460837818856</td><td class=" har">.072808435720571</td></tr>
+<tr><th>脑出血</th><td class=" har">40</td><td class=" har">.671174846589565</td><td class=" har">.074556603776678</td></tr>
+<tr><th>重症</th><td class=" har">43</td><td class=" har">.670693343461946</td><td class=" har">.097172810394377</td></tr>
+<tr><th>不育症</th><td class=" har">21</td><td class=" har">.670450244631086</td><td class=" har">.057356721334336</td></tr>
+<tr><th>精神障碍</th><td class=" har">33</td><td class=" har">.670158859455225</td><td class=" har">.072914095243022</td></tr>
+<tr><th>气管炎</th><td class=" har">42</td><td class=" har">.669643588009335</td><td class=" har">.067113875667204</td></tr>
+<tr><th>血友病</th><td class=" har">32</td><td class=" har">.669561188668013</td><td class=" har">.068369099199942</td></tr>
+<tr><th>肾功能</th><td class=" har">42</td><td class=" har">.669391335476012</td><td class=" har">.075956111184712</td></tr>
+<tr><th>老年性</th><td class=" har">38</td><td class=" har">.669376007820431</td><td class=" har">.075954866426443</td></tr>
+<tr><th>脑血管病</th><td class=" har">39</td><td class=" har">.669178051826282</td><td class=" har">.061266386479531</td></tr>
+<tr><th>收治</th><td class=" har">44</td><td class=" har">.668977770615708</td><td class=" har">.079993436707710</td></tr>
+<tr><th>风湿病</th><td class=" har">44</td><td class=" har">.668588241392916</td><td class=" har">.062740086751245</td></tr>
+<tr><th>甲亢</th><td class=" har">20</td><td class=" har">.668091388046741</td><td class=" har">.066007892578741</td></tr>
+<tr><th>心肌梗死</th><td class=" har">25</td><td class=" har">.667965748310089</td><td class=" har">.071263384643910</td></tr>
+<tr><th>直肠癌</th><td class=" har">43</td><td class=" har">.667904561342195</td><td class=" har">.069653461530196</td></tr>
+<tr><th>病患者</th><td class=" har">44</td><td class=" har">.667585055936467</td><td class=" har">.072470728945871</td></tr>
+<tr><th>斜颈</th><td class=" har">7</td><td class=" har">.667418224470956</td><td class=" har">.045248496789074</td></tr>
+<tr><th>先心病</th><td class=" har">19</td><td class=" har">.667370868356604</td><td class=" har">.069563554771355</td></tr>
+<tr><th>粒细胞</th><td class=" har">35</td><td class=" har">.667192471027374</td><td class=" har">.065111808639855</td></tr>
+<tr><th>小儿麻痹</th><td class=" har">40</td><td class=" har">.667002357542515</td><td class=" har">.080332716426089</td></tr>
+<tr><th>丙肝</th><td class=" har">26</td><td class=" har">.666949838399887</td><td class=" har">.064410907615245</td></tr>
+<tr><th>罹患</th><td class=" har">37</td><td class=" har">.666627848470533</td><td class=" har">.063749773406545</td></tr>
+<tr><th>肝癌</th><td class=" har">44</td><td class=" har">.666526186872612</td><td class=" har">.074049694041504</td></tr>
+<tr><th>挂床</th><td class=" har">10</td><td class=" har">.666494995355606</td><td class=" har">.075197680153208</td></tr>
+<tr><th>抑郁症</th><td class=" har">32</td><td class=" har">.666354805231095</td><td class=" har">.077495310053427</td></tr>
+<tr><th>心脏病</th><td class=" har">44</td><td class=" har">.665900628675114</td><td class=" har">.058510413413430</td></tr>
+<tr><th>原发性</th><td class=" har">40</td><td class=" har">.665808454155922</td><td class=" har">.051292651269090</td></tr>
+<tr><th>慢阻</th><td class=" har">13</td><td class=" har">.665607466147496</td><td class=" har">.088494863717716</td></tr>
+<tr><th>癫痫病</th><td class=" har">40</td><td class=" har">.665464894473553</td><td class=" har">.069561149955425</td></tr>
+<tr><th>疑难病症</th><td class=" har">44</td><td class=" har">.665341204540296</td><td class=" har">.069095347343498</td></tr>
+<tr><th>高脂血症</th><td class=" har">16</td><td class=" har">.664905313402414</td><td class=" har">.082833533142459</td></tr>
+<tr><th>肺栓塞</th><td class=" har">5</td><td class=" har">.664819002151489</td><td class=" har">.055145556275099</td></tr>
+<tr><th>多例</th><td class=" har">43</td><td class=" har">.664484859899033</td><td class=" har">.060803374380368</td></tr>
+<tr><th>急危重症</th><td class=" har">17</td><td class=" har">.664135676973006</td><td class=" har">.060870307380036</td></tr>
+<tr><th>胰腺炎</th><td class=" har">34</td><td class=" har">.663817607304629</td><td class=" har">.074976870583328</td></tr>
+<tr><th>病毒性</th><td class=" har">43</td><td class=" har">.663445190634838</td><td class=" har">.073580799679243</td></tr>
+<tr><th>阑尾炎</th><td class=" har">44</td><td class=" har">.663442052223466</td><td class=" har">.062396850791401</td></tr>
+<tr><th>患儿</th><td class=" har">43</td><td class=" har">.663203840338907</td><td class=" har">.071784979889007</td></tr>
+<tr><th>脑卒中</th><td class=" har">31</td><td class=" har">.663088142871857</td><td class=" har">.075446889107988</td></tr>
+<tr><th>肾衰</th><td class=" har">21</td><td class=" har">.663021111772174</td><td class=" har">.086134199911604</td></tr>
+<tr><th>风心病</th><td class=" har">3</td><td class=" har">.662977735201518</td><td class=" har">.078439837163636</td></tr>
+<tr><th>哮喘病</th><td class=" har">41</td><td class=" har">.662863857862426</td><td class=" har">.081843988513200</td></tr>
+<tr><th>危重病</th><td class=" har">44</td><td class=" har">.662594676017761</td><td class=" har">.059155203849944</td></tr>
+<tr><th>妇科病</th><td class=" har">35</td><td class=" har">.662515463147844</td><td class=" har">.056327846957067</td></tr>
+<tr><th>肥胖症</th><td class=" har">37</td><td class=" har">.662357960198377</td><td class=" har">.064639707384842</td></tr>
+<tr><th>并发症</th><td class=" har">44</td><td class=" har">.662142544984818</td><td class=" har">.069203866823145</td></tr>
+<tr><th>余例</th><td class=" har">39</td><td class=" har">.662022318595495</td><td class=" har">.060634905082335</td></tr>
+<tr><th>脑梗塞</th><td class=" har">30</td><td class=" har">.661984475453695</td><td class=" har">.072781341419868</td></tr>
+<tr><th>儿麻</th><td class=" har">12</td><td class=" har">.661984428763390</td><td class=" har">.063525700528361</td></tr>
+<tr><th>前列腺癌</th><td class=" har">33</td><td class=" har">.661654118335608</td><td class=" har">.067784901626478</td></tr>
+<tr><th>对慢</th><td class=" har">5</td><td class=" har">.661530840396881</td><td class=" har">.122353831086854</td></tr>
+<tr><th>病史</th><td class=" har">42</td><td class=" har">.661071919259571</td><td class=" har">.064791404608049</td></tr>
+<tr><th>妊娠</th><td class=" har">43</td><td class=" har">.660677633313246</td><td class=" har">.059005117779914</td></tr>
+<tr><th>结肠癌</th><td class=" har">39</td><td class=" har">.660558674580012</td><td class=" har">.073496860149970</td></tr>
+<tr><th>胃溃疡</th><td class=" har">41</td><td class=" har">.660448839024800</td><td class=" har">.052650105414430</td></tr>
+<tr><th>类风湿</th><td class=" har">40</td><td class=" har">.660045772790909</td><td class=" har">.064176715258064</td></tr>
+<tr><th>急症</th><td class=" har">43</td><td class=" har">.659884538761405</td><td class=" har">.067206656711800</td></tr>
+<tr><th>糖尿病足</th><td class=" har">7</td><td class=" har">.659698401178632</td><td class=" har">.088485891869492</td></tr>
+<tr><th>耳聋</th><td class=" har">43</td><td class=" har">.659632751414942</td><td class=" har">.076961208159811</td></tr>
+<tr><th>老年病</th><td class=" har">44</td><td class=" har">.659547693350098</td><td class=" har">.067624090120961</td></tr>
+<tr><th>肾炎</th><td class=" har">35</td><td class=" har">.659377179827009</td><td class=" har">.065549209430566</td></tr>
+<tr><th>痴呆</th><td class=" har">38</td><td class=" har">.658894463589317</td><td class=" har">.062108879201427</td></tr>
+<tr><th>血液病</th><td class=" har">43</td><td class=" har">.658558135808900</td><td class=" har">.067931637977119</td></tr>
+<tr><th>此病</th><td class=" har">38</td><td class=" har">.658199987129161</td><td class=" har">.066197066103146</td></tr>
+<tr><th>肾衰竭</th><td class=" har">28</td><td class=" har">.657922106129783</td><td class=" har">.071595557949952</td></tr>
+<tr><th>心绞痛</th><td class=" har">42</td><td class=" har">.657601958939008</td><td class=" har">.072276724315277</td></tr>
+<tr><th>动脉硬化</th><td class=" har">43</td><td class=" har">.657527522985325</td><td class=" har">.064221642456836</td></tr>
+<tr><th>肾脏</th><td class=" har">44</td><td class=" har">.657360857183283</td><td class=" har">.066367551414015</td></tr>
+<tr><th>小儿麻痹症</th><td class=" har">43</td><td class=" har">.657220703224803</td><td class=" har">.065352252691597</td></tr>
+<tr><th>遗传性</th><td class=" har">42</td><td class=" har">.657046526670456</td><td class=" har">.075532761913853</td></tr>
+<tr><th>克雅氏症</th><td class=" har">8</td><td class=" har">.656957395374775</td><td class=" har">.058495409173644</td></tr>
+<tr><th>确诊</th><td class=" har">44</td><td class=" har">.656780086457730</td><td class=" har">.082961843461162</td></tr>
+<tr><th>老年痴呆</th><td class=" har">29</td><td class=" har">.656383031401141</td><td class=" har">.064806451893177</td></tr>
+<tr><th>癌</th><td class=" har">43</td><td class=" har">.656338540620582</td><td class=" har">.063567136306319</td></tr>
+<tr><th>弱视</th><td class=" har">40</td><td class=" har">.656265278905630</td><td class=" har">.084942145862118</td></tr>
+<tr><th>孕妇</th><td class=" har">44</td><td class=" har">.656189764087851</td><td class=" har">.075070872007827</td></tr>
+<tr><th>胃病</th><td class=" har">44</td><td class=" har">.656119975176725</td><td class=" har">.065257350697085</td></tr>
+<tr><th>痢疾</th><td class=" har">42</td><td class=" har">.655478654872803</td><td class=" har">.061699608080703</td></tr>
+<tr><th>疑难重症</th><td class=" har">24</td><td class=" har">.655383892357349</td><td class=" har">.058684415771057</td></tr>
+<tr><th>胆结石</th><td class=" har">40</td><td class=" har">.655320961773396</td><td class=" har">.055982433000920</td></tr>
+<tr><th>外治法</th><td class=" har">7</td><td class=" har">.655094751289913</td><td class=" har">.105920457031155</td></tr>
+<tr><th>住院治疗</th><td class=" har">44</td><td class=" har">.655060152438554</td><td class=" har">.057729410060629</td></tr>
+<tr><th>遗传病</th><td class=" har">44</td><td class=" har">.654961709949103</td><td class=" har">.077775065539278</td></tr>
+<tr><th>老年性痴呆</th><td class=" har">19</td><td class=" har">.654955848267204</td><td class=" har">.072018444947826</td></tr>
+<tr><th>肾移植</th><td class=" har">38</td><td class=" har">.654835470412907</td><td class=" har">.065748668719004</td></tr>
+<tr><th>白内障</th><td class=" har">44</td><td class=" har">.654323615811088</td><td class=" har">.075270968769575</td></tr>
+<tr><th>疾患</th><td class=" har">43</td><td class=" har">.654276178326718</td><td class=" har">.052607877004408</td></tr>
+<tr><th>青光眼</th><td class=" har">41</td><td class=" har">.653821533773004</td><td class=" har">.062048645533738</td></tr>
+<tr><th>病因</th><td class=" har">44</td><td class=" har">.652987664396113</td><td class=" har">.062670278997271</td></tr>
+<tr><th>消化系统</th><td class=" har">42</td><td class=" har">.652777671813965</td><td class=" har">.061553853520774</td></tr>
+<tr><th>尿症</th><td class=" har">10</td><td class=" har">.652617347240448</td><td class=" har">.072658682224421</td></tr>
+<tr><th>上呼吸道</th><td class=" har">29</td><td class=" har">.652164052272665</td><td class=" har">.077284918004327</td></tr>
+<tr><th>指征</th><td class=" har">19</td><td class=" har">.652027381093878</td><td class=" har">.087131209474706</td></tr>
+<tr><th>不孕症</th><td class=" har">27</td><td class=" har">.651831015392586</td><td class=" har">.077508973498713</td></tr>
+<tr><th>误诊</th><td class=" har">40</td><td class=" har">.651502099633217</td><td class=" har">.058532040330080</td></tr>
+<tr><th>轻症</th><td class=" har">17</td><td class=" har">.651494923759909</td><td class=" har">.059259661695696</td></tr>
+<tr><th>溶液剂</th><td class=" har">3</td><td class=" har">.651437540849050</td><td class=" har">.140347882190301</td></tr>
+<tr><th>骨髓炎</th><td class=" har">30</td><td class=" har">.651419911781947</td><td class=" har">.069487588664344</td></tr>
+<tr><th>贫血</th><td class=" har">43</td><td class=" har">.651390784008558</td><td class=" har">.084572196156382</td></tr>
+<tr><th>复发</th><td class=" har">44</td><td class=" har">.651363055137071</td><td class=" har">.074586026524779</td></tr>
+<tr><th>携带者</th><td class=" har">40</td><td class=" har">.651344519853592</td><td class=" har">.067074753648091</td></tr>
+<tr><th>脑炎</th><td class=" har">42</td><td class=" har">.651335500535511</td><td class=" har">.077193934811522</td></tr>
+<tr><th>心梗</th><td class=" har">23</td><td class=" har">.650854390600453</td><td class=" har">.075995905347805</td></tr>
+<tr><th>精神科</th><td class=" har">30</td><td class=" har">.650565421581268</td><td class=" har">.049513132057615</td></tr>
+<tr><th>功能障碍</th><td class=" har">35</td><td class=" har">.650542739459447</td><td class=" har">.069406283044296</td></tr>
+<tr><th>入院</th><td class=" har">43</td><td class=" har">.650283977042797</td><td class=" har">.048728065579730</td></tr>
+<tr><th>脂肪肝</th><td class=" har">24</td><td class=" har">.649861671030521</td><td class=" har">.086601948421773</td></tr>
+<tr><th>疑难病</th><td class=" har">41</td><td class=" har">.649608634594010</td><td class=" har">.068904805289641</td></tr>
+<tr><th>心血管</th><td class=" har">44</td><td class=" har">.649111880497499</td><td class=" har">.064838619656668</td></tr>
+<tr><th>造口</th><td class=" har">10</td><td class=" har">.648998689651489</td><td class=" har">.108122238198499</td></tr>
+<tr><th>新生儿</th><td class=" har">44</td><td class=" har">.648907741362398</td><td class=" har">.058798546204369</td></tr>
+<tr><th>颅脑</th><td class=" har">41</td><td class=" har">.648791090744297</td><td class=" har">.069434646119857</td></tr>
+<tr><th>病毒感染者</th><td class=" har">34</td><td class=" har">.648719947127735</td><td class=" har">.050175250351615</td></tr>
+<tr><th>红斑狼疮</th><td class=" har">32</td><td class=" har">.648673813790083</td><td class=" har">.070382365451871</td></tr>
+<tr><th>产妇</th><td class=" har">44</td><td class=" har">.648638151586056</td><td class=" har">.064712640103139</td></tr>
+<tr><th>腹泻</th><td class=" har">44</td><td class=" har">.648466503078287</td><td class=" har">.068749310702579</td></tr>
+<tr><th>梅毒</th><td class=" har">30</td><td class=" har">.648192113637924</td><td class=" har">.079847345315576</td></tr>
+<tr><th>转院</th><td class=" har">41</td><td class=" har">.648103716896802</td><td class=" har">.054035614949752</td></tr>
+<tr><th>腭裂</th><td class=" har">9</td><td class=" har">.647989849249522</td><td class=" har">.052283219847375</td></tr>
+<tr><th>颈椎病</th><td class=" har">38</td><td class=" har">.647705260076021</td><td class=" har">.076692880794807</td></tr>
+<tr><th>唐氏</th><td class=" har">15</td><td class=" har">.647688110669454</td><td class=" har">.089073049426080</td></tr>
+<tr><th>病症</th><td class=" har">44</td><td class=" har">.647521033883095</td><td class=" har">.069389539318101</td></tr>
+<tr><th>膀胱癌</th><td class=" har">37</td><td class=" har">.647479448769544</td><td class=" har">.066337617364407</td></tr>
+<tr><th>诊治</th><td class=" har">44</td><td class=" har">.647419727661393</td><td class=" har">.077534469008268</td></tr>
+<tr><th>重危</th><td class=" har">14</td><td class=" har">.647406305585589</td><td class=" har">.065722766445696</td></tr>
+<tr><th>高血压病</th><td class=" har">38</td><td class=" har">.647396889172102</td><td class=" har">.070050614649401</td></tr>
+<tr><th>性病</th><td class=" har">40</td><td class=" har">.647217546403408</td><td class=" har">.060096134648746</td></tr>
+<tr><th>脑中风</th><td class=" har">29</td><td class=" har">.647071051186529</td><td class=" har">.070677486240925</td></tr>
+<tr><th>免疫性</th><td class=" har">28</td><td class=" har">.646989735109466</td><td class=" har">.063692986721860</td></tr>
+<tr><th>心衰</th><td class=" har">30</td><td class=" har">.646826746066412</td><td class=" har">.089938457226050</td></tr>
+<tr><th>消化道</th><td class=" har">42</td><td class=" har">.646553459621611</td><td class=" har">.074765848194941</td></tr>
+<tr><th>脑瘤</th><td class=" har">40</td><td class=" har">.646471275389195</td><td class=" har">.064076223705248</td></tr>
+<tr><th>截瘫</th><td class=" har">44</td><td class=" har">.646343826570294</td><td class=" har">.075847957225429</td></tr>
+<tr><th>合并症</th><td class=" har">31</td><td class=" har">.645639044623221</td><td class=" har">.078263930187817</td></tr>
+<tr><th>生命垂危</th><td class=" har">44</td><td class=" har">.645623549141667</td><td class=" har">.063200666368884</td></tr>
+<tr><th>苯丙酮</th><td class=" har">10</td><td class=" har">.645512330532074</td><td class=" har">.069913048291079</td></tr>
+<tr><th>胃炎</th><td class=" har">37</td><td class=" har">.645334901036443</td><td class=" har">.073173704750096</td></tr>
+<tr><th>常见疾病</th><td class=" har">33</td><td class=" har">.644854525725047</td><td class=" har">.070391258986984</td></tr>
+<tr><th>心肌炎</th><td class=" har">30</td><td class=" har">.644632571935654</td><td class=" har">.069409760069204</td></tr>
+<tr><th>高血糖</th><td class=" har">21</td><td class=" har">.644560850801922</td><td class=" har">.095581175531887</td></tr>
+<tr><th>性疾病</th><td class=" har">40</td><td class=" har">.644471506774426</td><td class=" har">.068580432142858</td></tr>
+<tr><th>心血管病</th><td class=" har">44</td><td class=" har">.644269052554261</td><td class=" har">.076522838351590</td></tr>
+<tr><th>感染性</th><td class=" har">39</td><td class=" har">.644120318767352</td><td class=" har">.062169854419159</td></tr>
+<tr><th>致残</th><td class=" har">44</td><td class=" har">.643431572751565</td><td class=" har">.066396377345561</td></tr>
+<tr><th>股骨头</th><td class=" har">34</td><td class=" har">.643396182971842</td><td class=" har">.066230730324971</td></tr>
+<tr><th>脑膜炎</th><td class=" har">42</td><td class=" har">.643228335039956</td><td class=" har">.057439193473682</td></tr>
+<tr><th>马凡氏</th><td class=" har">2</td><td class=" har">.643209010362625</td><td class=" har">.129173642218068</td></tr>
+<tr><th>肺炎</th><td class=" har">44</td><td class=" har">.643205010755496</td><td class=" har">.102872124063766</td></tr>
+<tr><th>综合症</th><td class=" har">25</td><td class=" har">.643193340301514</td><td class=" har">.068038197377175</td></tr>
+<tr><th>老年痴呆症</th><td class=" har">28</td><td class=" har">.643072202801704</td><td class=" har">.081585920070952</td></tr>
+<tr><th>脑梗死</th><td class=" har">17</td><td class=" har">.643043612732607</td><td class=" har">.085902202300822</td></tr>
+<tr><th>矫治</th><td class=" har">42</td><td class=" har">.642641075310253</td><td class=" har">.078886786015547</td></tr>
+<tr><th>鼻咽癌</th><td class=" har">38</td><td class=" har">.642411765299345</td><td class=" har">.075768962137767</td></tr>
+<tr><th>呼吸道</th><td class=" har">44</td><td class=" har">.641883719373833</td><td class=" har">.071652888776796</td></tr>
+<tr><th>移植手术</th><td class=" har">44</td><td class=" har">.641822361133315</td><td class=" har">.057612238505567</td></tr>
+<tr><th>妇科</th><td class=" har">44</td><td class=" har">.641435680741614</td><td class=" har">.084282874166495</td></tr>
+<tr><th>肾结石</th><td class=" har">39</td><td class=" har">.641232330065507</td><td class=" har">.073521271794444</td></tr>
+<tr><th>帕金森氏症</th><td class=" har">11</td><td class=" har">.641180271452124</td><td class=" har">.065895029681003</td></tr>
+<tr><th>肛肠病</th><td class=" har">5</td><td class=" har">.640184938907623</td><td class=" har">.052787924967178</td></tr>
+<tr><th>患上</th><td class=" har">43</td><td class=" har">.640123858701351</td><td class=" har">.074975559085974</td></tr>
+<tr><th>患</th><td class=" har">44</td><td class=" har">.640113212845542</td><td class=" har">.055130235019221</td></tr>
+<tr><th>失独</th><td class=" har">11</td><td class=" har">.639997574416074</td><td class=" har">.084240316986251</td></tr>
+<tr><th>因患</th><td class=" har">44</td><td class=" har">.639909895983609</td><td class=" har">.065847872912285</td></tr>
+<tr><th>孕期</th><td class=" har">43</td><td class=" har">.639819899963778</td><td class=" har">.060709880750380</td></tr>
+<tr><th>该病</th><td class=" har">37</td><td class=" har">.639576634845218</td><td class=" har">.062156176254106</td></tr>
+<tr><th>子宫</th><td class=" har">43</td><td class=" har">.639419841904973</td><td class=" har">.076434435761905</td></tr>
+<tr><th>放射疗法</th><td class=" har">7</td><td class=" har">.639411360025406</td><td class=" har">.083919871190132</td></tr>
+<tr><th>进行性</th><td class=" har">27</td><td class=" har">.639309554188340</td><td class=" har">.088961085841413</td></tr>
+<tr><th>骨质增生</th><td class=" har">35</td><td class=" har">.639221165009907</td><td class=" har">.087457225000553</td></tr>
+<tr><th>心理疾病</th><td class=" har">29</td><td class=" har">.639067421699393</td><td class=" har">.064164838211453</td></tr>
+<tr><th>初诊</th><td class=" har">21</td><td class=" har">.639061385676974</td><td class=" har">.074715429860292</td></tr>
+<tr><th>脑萎缩</th><td class=" har">21</td><td class=" har">.639013883613405</td><td class=" har">.063919363848964</td></tr>
+<tr><th>结膜炎</th><td class=" har">21</td><td class=" har">.638726177669707</td><td class=" har">.087944405796807</td></tr>
+<tr><th>急慢性</th><td class=" har">24</td><td class=" har">.638352567950885</td><td class=" har">.069731336258747</td></tr>
+<tr><th>病毒感染</th><td class=" har">43</td><td class=" har">.638232947782028</td><td class=" har">.059390991119558</td></tr>
+<tr><th>血症</th><td class=" har">36</td><td class=" har">.637922226554818</td><td class=" har">.072357780310754</td></tr>
+<tr><th>接治</th><td class=" har">14</td><td class=" har">.637692591973714</td><td class=" har">.049026762794586</td></tr>
+<tr><th>淋巴细胞</th><td class=" har">41</td><td class=" har">.637631310195458</td><td class=" har">.079826824390664</td></tr>
+<tr><th>乙肝</th><td class=" har">38</td><td class=" har">.637584742746855</td><td class=" har">.070424944711963</td></tr>
+<tr><th>亚急性</th><td class=" har">12</td><td class=" har">.637526045242945</td><td class=" har">.042981504619344</td></tr>
+<tr><th>骨髓移植</th><td class=" har">39</td><td class=" har">.637469019645300</td><td class=" har">.071810786127237</td></tr>
+<tr><th>脊髓</th><td class=" har">44</td><td class=" har">.637086218053644</td><td class=" har">.085953544268929</td></tr>
+<tr><th>胆囊结石</th><td class=" har">8</td><td class=" har">.637018166482449</td><td class=" har">.089298637304641</td></tr>
+<tr><th>脉管炎</th><td class=" har">30</td><td class=" har">.636848475535711</td><td class=" har">.077873340499821</td></tr>
+<tr><th>瘤</th><td class=" har">43</td><td class=" har">.636552747598914</td><td class=" har">.068627278043622</td></tr>
+<tr><th>龋齿</th><td class=" har">40</td><td class=" har">.636319343745709</td><td class=" har">.065756125069757</td></tr>
+<tr><th>万余例</th><td class=" har">29</td><td class=" har">.636076680545149</td><td class=" har">.057871106509057</td></tr>
+<tr><th>白癜风</th><td class=" har">25</td><td class=" har">.635933597087860</td><td class=" har">.059667856162187</td></tr>
+<tr><th>急腹症</th><td class=" har">14</td><td class=" har">.635792540652411</td><td class=" har">.057817965402008</td></tr>
+<tr><th>小儿</th><td class=" har">44</td><td class=" har">.635580463842912</td><td class=" har">.078436089523993</td></tr>
+<tr><th>疥疮</th><td class=" har">14</td><td class=" har">.635231537478311</td><td class=" har">.082731408486362</td></tr>
+<tr><th>治愈</th><td class=" har">44</td><td class=" har">.634414240717888</td><td class=" har">.078817253984785</td></tr>
+<tr><th>三叉神经痛</th><td class=" har">19</td><td class=" har">.634061960797561</td><td class=" har">.071755713302753</td></tr>
+<tr><th>不孕</th><td class=" har">36</td><td class=" har">.633845955133438</td><td class=" har">.062796374977324</td></tr>
+<tr><th>心律失常</th><td class=" har">39</td><td class=" har">.633609767907705</td><td class=" har">.078959855427731</td></tr>
+<tr><th>矽肺病</th><td class=" har">21</td><td class=" har">.633286268938155</td><td class=" har">.079924983995617</td></tr>
+<tr><th>患病</th><td class=" har">44</td><td class=" har">.632865848866376</td><td class=" har">.064959871526869</td></tr>
+<tr><th>喉癌</th><td class=" har">27</td><td class=" har">.632696325028384</td><td class=" har">.086666289695350</td></tr>
+<tr><th>淋病</th><td class=" har">20</td><td class=" har">.632667863368988</td><td class=" har">.060873817234470</td></tr>
+<tr><th>感染者</th><td class=" har">37</td><td class=" har">.632256238847165</td><td class=" har">.071496474931947</td></tr>
+<tr><th>骨关节炎</th><td class=" har">8</td><td class=" har">.632199876010418</td><td class=" har">.081796300954106</td></tr>
+<tr><th>妇科疾病</th><td class=" har">27</td><td class=" har">.632199053411131</td><td class=" har">.059388054934836</td></tr>
+<tr><th>尘肺病</th><td class=" har">27</td><td class=" har">.632071284232316</td><td class=" har">.058692116663598</td></tr>
+<tr><th>脑溢血</th><td class=" har">44</td><td class=" har">.631317118352110</td><td class=" har">.067510314996203</td></tr>
+<tr><th>淋巴</th><td class=" har">35</td><td class=" har">.631109555278506</td><td class=" har">.072539415987949</td></tr>
+<tr><th>胰腺癌</th><td class=" har">40</td><td class=" har">.630919425189495</td><td class=" har">.066356871402914</td></tr>
+<tr><th>骨关节</th><td class=" har">30</td><td class=" har">.630773349603017</td><td class=" har">.087316862480527</td></tr>
+<tr><th>子宫癌</th><td class=" har">18</td><td class=" har">.630450581510862</td><td class=" har">.081317339824567</td></tr>
+<tr><th>专科门诊</th><td class=" har">33</td><td class=" har">.630272565465985</td><td class=" har">.056139336303854</td></tr>
+<tr><th>健康检查</th><td class=" har">44</td><td class=" har">.630219263109294</td><td class=" har">.062475579848699</td></tr>
+<tr><th>骨癌</th><td class=" har">29</td><td class=" har">.629538402475160</td><td class=" har">.064202224164860</td></tr>
+<tr><th>银屑病</th><td class=" har">20</td><td class=" har">.629455541074276</td><td class=" har">.069637759122233</td></tr>
+<tr><th>致伤</th><td class=" har">44</td><td class=" har">.628891202536496</td><td class=" har">.078010543747403</td></tr>
+<tr><th>溃疡</th><td class=" har">43</td><td class=" har">.628747409166292</td><td class=" har">.083136773660029</td></tr>
+<tr><th>猝死</th><td class=" har">41</td><td class=" har">.628734342935609</td><td class=" har">.069910183983171</td></tr>
+<tr><th>所患</th><td class=" har">26</td><td class=" har">.628677193935101</td><td class=" har">.071618615043775</td></tr>
+<tr><th>痔科</th><td class=" har">4</td><td class=" har">.628434792160988</td><td class=" har">.043917794898997</td></tr>
+<tr><th>脑干</th><td class=" har">28</td><td class=" har">.628321871161461</td><td class=" har">.068178320528496</td></tr>
+<tr><th>艾滋病毒</th><td class=" har">35</td><td class=" har">.628294483252934</td><td class=" har">.069774400917302</td></tr>
+<tr><th>颅内</th><td class=" har">42</td><td class=" har">.628203706372352</td><td class=" har">.069866909204881</td></tr>
+<tr><th>肝脏</th><td class=" har">44</td><td class=" har">.628148284148086</td><td class=" har">.068298750521593</td></tr>
+<tr><th>肠道</th><td class=" har">44</td><td class=" har">.627965690060096</td><td class=" har">.071428793852733</td></tr>
+<tr><th>因练</th><td class=" har">4</td><td class=" har">.627952277660370</td><td class=" har">.178795740668819</td></tr>
+<tr><th>全身性</th><td class=" har">23</td><td class=" har">.627646952867508</td><td class=" har">.075460948853625</td></tr>
+<tr><th>眼部</th><td class=" har">31</td><td class=" har">.627535631579738</td><td class=" har">.064259564914363</td></tr>
+<tr><th>病残</th><td class=" har">44</td><td class=" har">.627471329136328</td><td class=" har">.066182606085792</td></tr>
+<tr><th>症</th><td class=" har">44</td><td class=" har">.627455922012979</td><td class=" har">.074530170745069</td></tr>
+<tr><th>肺结核病</th><td class=" har">36</td><td class=" har">.627037164237764</td><td class=" har">.090608203068838</td></tr>
+<tr><th>结石</th><td class=" har">44</td><td class=" har">.626602166755633</td><td class=" har">.071679579543973</td></tr>
+<tr><th>破伤风</th><td class=" har">41</td><td class=" har">.626417172391240</td><td class=" har">.074654917322308</td></tr>
+<tr><th>医源性</th><td class=" har">17</td><td class=" har">.626294504193699</td><td class=" har">.075311076346278</td></tr>
+<tr><th>胎儿</th><td class=" har">44</td><td class=" har">.626152805306695</td><td class=" har">.077140443331555</td></tr>
+<tr><th>继发性</th><td class=" har">23</td><td class=" har">.626106588736824</td><td class=" har">.083400180390108</td></tr>
+<tr><th>脑积水</th><td class=" har">15</td><td class=" har">.626037768522898</td><td class=" har">.063753496997614</td></tr>
+<tr><th>脊柱</th><td class=" har">44</td><td class=" har">.625803301280195</td><td class=" har">.073440118537874</td></tr>
+<tr><th>病理</th><td class=" har">44</td><td class=" har">.625477688556368</td><td class=" har">.062236757972089</td></tr>
+<tr><th>康复者</th><td class=" har">14</td><td class=" har">.625390772308622</td><td class=" har">.085339794938708</td></tr>
+<tr><th>结核病</th><td class=" har">44</td><td class=" har">.625110832804983</td><td class=" har">.081030744995402</td></tr>
+<tr><th>死因</th><td class=" har">43</td><td class=" har">.625080594489741</td><td class=" har">.081347291834689</td></tr>
+<tr><th>但系</th><td class=" har">3</td><td class=" har">.625025928020477</td><td class=" har">.139400412119605</td></tr>
+<tr><th>弃婴</th><td class=" har">36</td><td class=" har">.624991302688917</td><td class=" har">.076197935621288</td></tr>
+<tr><th>癌症</th><td class=" har">44</td><td class=" har">.624578847126528</td><td class=" har">.060720073989551</td></tr>
+<tr><th>访视</th><td class=" har">24</td><td class=" har">.624337852001190</td><td class=" har">.079889629047275</td></tr>
+<tr><th>截肢</th><td class=" har">44</td><td class=" har">.624308859082786</td><td class=" har">.081952596163684</td></tr>
+<tr><th>分诊台</th><td class=" har">6</td><td class=" har">.624300122261047</td><td class=" har">.122601437271077</td></tr>
+<tr><th>肺水肿</th><td class=" har">33</td><td class=" har">.624245271538243</td><td class=" har">.069501493451508</td></tr>
+<tr><th>万例</th><td class=" har">41</td><td class=" har">.623742608035483</td><td class=" har">.068861857335218</td></tr>
+<tr><th>重度</th><td class=" har">41</td><td class=" har">.623321550648387</td><td class=" har">.080527744900268</td></tr>
+<tr><th>认知障碍</th><td class=" har">8</td><td class=" har">.623205374926329</td><td class=" har">.097979069587505</td></tr>
+<tr><th>肾癌</th><td class=" har">29</td><td class=" har">.622924383344321</td><td class=" har">.085857424541757</td></tr>
+<tr><th>精神分裂</th><td class=" har">16</td><td class=" har">.622684685513377</td><td class=" har">.081047526913642</td></tr>
+<tr><th>心理治疗</th><td class=" har">37</td><td class=" har">.622493908211992</td><td class=" har">.065413902161062</td></tr>
+<tr><th>肝功能</th><td class=" har">39</td><td class=" har">.622207520099787</td><td class=" har">.073987465926443</td></tr>
+<tr><th>孤独症</th><td class=" har">22</td><td class=" har">.621695842255246</td><td class=" har">.064076106902697</td></tr>
+<tr><th>类风湿病</th><td class=" har">20</td><td class=" har">.620970539748669</td><td class=" har">.078862689420781</td></tr>
+<tr><th>因工</th><td class=" har">36</td><td class=" har">.620575107634067</td><td class=" har">.070835831276569</td></tr>
+<tr><th>自闭症</th><td class=" har">20</td><td class=" har">.620486995577812</td><td class=" har">.074945573881059</td></tr>
+<tr><th>更年期</th><td class=" har">34</td><td class=" har">.620203343384406</td><td class=" har">.075513996937976</td></tr>
+<tr><th>急诊</th><td class=" har">44</td><td class=" har">.620201141996817</td><td class=" har">.069795571719482</td></tr>
+<tr><th>阿尔茨海默</th><td class=" har">14</td><td class=" har">.619946428707668</td><td class=" har">.094955624009862</td></tr>
+<tr><th>合对</th><td class=" har">6</td><td class=" har">.619312981764476</td><td class=" har">.081926028290782</td></tr>
+<tr><th>筛查</th><td class=" har">29</td><td class=" har">.619207737774685</td><td class=" har">.073456299837339</td></tr>
+<tr><th>做手术</th><td class=" har">44</td><td class=" har">.619127389382232</td><td class=" har">.065337182198866</td></tr>
+<tr><th>黄疸</th><td class=" har">36</td><td class=" har">.619073559840520</td><td class=" har">.072683309327173</td></tr>
+<tr><th>佝偻病</th><td class=" har">23</td><td class=" har">.618894447451053</td><td class=" har">.073649417467547</td></tr>
+<tr><th>患过</th><td class=" har">39</td><td class=" har">.618614744681578</td><td class=" har">.067489068131058</td></tr>
+<tr><th>神经官能症</th><td class=" har">16</td><td class=" har">.618306333199143</td><td class=" har">.079158989175624</td></tr>
+<tr><th>食源性</th><td class=" har">29</td><td class=" har">.618009187024215</td><td class=" har">.068102003722588</td></tr>
+<tr><th>内科</th><td class=" har">44</td><td class=" har">.618007137016817</td><td class=" har">.075096266950967</td></tr>
+<tr><th>重残</th><td class=" har">35</td><td class=" har">.617705489907946</td><td class=" har">.082457833636697</td></tr>
+<tr><th>痛风</th><td class=" har">21</td><td class=" har">.617537292696181</td><td class=" har">.087415621678116</td></tr>
+<tr><th>肇祸</th><td class=" har">15</td><td class=" har">.617311586936315</td><td class=" har">.097125956848432</td></tr>
+<tr><th>治疗师</th><td class=" har">16</td><td class=" har">.617273634299636</td><td class=" har">.096058394212321</td></tr>
+<tr><th>腹水</th><td class=" har">32</td><td class=" har">.616366727277637</td><td class=" har">.080991845475469</td></tr>
+<tr><th>麻风病</th><td class=" har">39</td><td class=" har">.615528338994735</td><td class=" har">.087346907500773</td></tr>
+<tr><th>职业病</th><td class=" har">43</td><td class=" har">.615478196116381</td><td class=" har">.076559830007005</td></tr>
+<tr><th>肥胖</th><td class=" har">44</td><td class=" har">.615374831990762</td><td class=" har">.058736810743498</td></tr>
+<tr><th>行动不便</th><td class=" har">44</td><td class=" har">.614194863221862</td><td class=" har">.068132384619123</td></tr>
+<tr><th>牙周病</th><td class=" har">14</td><td class=" har">.613949300987380</td><td class=" har">.083725617845586</td></tr>
+<tr><th>耐多药</th><td class=" har">11</td><td class=" har">.613893850283189</td><td class=" har">.100769954171198</td></tr>
+<tr><th>气促</th><td class=" har">7</td><td class=" har">.613608866930008</td><td class=" har">.127957468583252</td></tr>
+<tr><th>绝症</th><td class=" har">41</td><td class=" har">.613531705809802</td><td class=" har">.091980324958120</td></tr>
+<tr><th>监护室</th><td class=" har">28</td><td class=" har">.613333803202425</td><td class=" har">.076340774025769</td></tr>
+<tr><th>脏器</th><td class=" har">44</td><td class=" har">.613255295563828</td><td class=" har">.075399704428965</td></tr>
+<tr><th>衰竭</th><td class=" har">44</td><td class=" har">.612516832622615</td><td class=" har">.083329664993107</td></tr>
+<tr><th>贫血症</th><td class=" har">34</td><td class=" har">.612482633660821</td><td class=" har">.067598056931597</td></tr>
+<tr><th>医疗事故</th><td class=" har">42</td><td class=" har">.612382280684653</td><td class=" har">.068304702317526</td></tr>
+<tr><th>近视眼</th><td class=" har">41</td><td class=" har">.612274172829419</td><td class=" har">.098904794886106</td></tr>
+<tr><th>咽痛</th><td class=" har">15</td><td class=" har">.612146298090617</td><td class=" har">.096796207653864</td></tr>
+<tr><th>前列腺炎</th><td class=" har">20</td><td class=" har">.611951357126236</td><td class=" har">.066132777778903</td></tr>
+<tr><th>放疗</th><td class=" har">39</td><td class=" har">.611886606766627</td><td class=" har">.062237032211651</td></tr>
+<tr><th>铅中毒</th><td class=" har">20</td><td class=" har">.611792333424091</td><td class=" har">.072819310077436</td></tr>
+<tr><th>接生</th><td class=" har">44</td><td class=" har">.611732339317148</td><td class=" har">.073622274423778</td></tr>
+<tr><th>平义</th><td class=" har">4</td><td class=" har">.611533179879189</td><td class=" har">.124138258414096</td></tr>
+<tr><th>脑震荡</th><td class=" har">36</td><td class=" har">.611292300952805</td><td class=" har">.071815492202858</td></tr>
+<tr><th>前列腺</th><td class=" har">36</td><td class=" har">.611274477508333</td><td class=" har">.089197384796879</td></tr>
+<tr><th>脑肿瘤</th><td class=" har">21</td><td class=" har">.611043456054869</td><td class=" har">.063478741325450</td></tr>
+<tr><th>髓内</th><td class=" har">4</td><td class=" har">.610767304897308</td><td class=" har">.113434085953156</td></tr>
+<tr><th>口腔</th><td class=" har">44</td><td class=" har">.610742743042382</td><td class=" har">.070134211137118</td></tr>
+<tr><th>寄生虫</th><td class=" har">44</td><td class=" har">.610483111305670</td><td class=" har">.075858934142807</td></tr>
+<tr><th>疟疾</th><td class=" har">44</td><td class=" har">.610389672897079</td><td class=" har">.066315890807820</td></tr>
+<tr><th>曾患</th><td class=" har">14</td><td class=" har">.610256344079971</td><td class=" har">.065617442019715</td></tr>
+<tr><th>脊柱炎</th><td class=" har">24</td><td class=" har">.610193925599257</td><td class=" har">.079830361041423</td></tr>
+<tr><th>肩周炎</th><td class=" har">34</td><td class=" har">.610184119904742</td><td class=" har">.080090458342474</td></tr>
+<tr><th>抢救无效</th><td class=" har">44</td><td class=" har">.610168937932361</td><td class=" har">.056446146800420</td></tr>
+<tr><th>专科医院</th><td class=" har">43</td><td class=" har">.609818433606347</td><td class=" har">.061400964054443</td></tr>
+<tr><th>骨伤</th><td class=" har">38</td><td class=" har">.609737742888300</td><td class=" har">.076606020947042</td></tr>
+<tr><th>成瘾</th><td class=" har">41</td><td class=" har">.609351827604015</td><td class=" har">.066820191126692</td></tr>
+<tr><th>死亡者</th><td class=" har">38</td><td class=" har">.608833200837436</td><td class=" har">.078146104562965</td></tr>
+<tr><th>神经科</th><td class=" har">30</td><td class=" har">.608732132116954</td><td class=" har">.058040748847143</td></tr>
+<tr><th>种者</th><td class=" har">5</td><td class=" har">.608607572317123</td><td class=" har">.124968921562074</td></tr>
+<tr><th>孤寡</th><td class=" har">42</td><td class=" har">.608515305178506</td><td class=" har">.071120355096279</td></tr>
+<tr><th>后遗症</th><td class=" har">44</td><td class=" har">.608310427855362</td><td class=" har">.086324353364127</td></tr>
+<tr><th>放射科</th><td class=" har">39</td><td class=" har">.608046092284032</td><td class=" har">.055742653539901</td></tr>
+<tr><th>病儿</th><td class=" har">28</td><td class=" har">.608017334980624</td><td class=" har">.078233116518508</td></tr>
+<tr><th>致死</th><td class=" har">44</td><td class=" har">.608005628667095</td><td class=" har">.069768470096840</td></tr>
+<tr><th>矫形</th><td class=" har">31</td><td class=" har">.607840959102877</td><td class=" har">.082900904872146</td></tr>
+<tr><th>分娩</th><td class=" har">44</td><td class=" har">.607319653034210</td><td class=" har">.061938215611234</td></tr>
+<tr><th>强直性</th><td class=" har">26</td><td class=" har">.607028378890111</td><td class=" har">.079787408250380</td></tr>
+<tr><th>病志</th><td class=" har">3</td><td class=" har">.606668194135030</td><td class=" har">.100262762677930</td></tr>
+<tr><th>精索</th><td class=" har">2</td><td class=" har">.606465846300125</td><td class=" har">.004142740180681</td></tr>
+<tr><th>表面抗原</th><td class=" har">34</td><td class=" har">.606299158404855</td><td class=" har">.065315262943460</td></tr>
+<tr><th>关节病</th><td class=" har">19</td><td class=" har">.606227967299913</td><td class=" har">.065461984944467</td></tr>
+<tr><th>伤势</th><td class=" har">44</td><td class=" har">.606188856742599</td><td class=" har">.067313156633524</td></tr>
+<tr><th>精神失常</th><td class=" har">39</td><td class=" har">.605768772271964</td><td class=" har">.079317087990491</td></tr>
+<tr><th>胃肠</th><td class=" har">44</td><td class=" har">.605692604726011</td><td class=" har">.078790964640602</td></tr>
+<tr><th>致人</th><td class=" har">44</td><td class=" har">.605634909461845</td><td class=" har">.073355448392786</td></tr>
+<tr><th>口腔科</th><td class=" har">40</td><td class=" har">.605545856058598</td><td class=" har">.066364083514179</td></tr>
+<tr><th>搜查证</th><td class=" har">11</td><td class=" har">.605011652816426</td><td class=" har">.103580110563215</td></tr>
+<tr><th>气胸</th><td class=" har">12</td><td class=" har">.604787878692150</td><td class=" har">.103593722324842</td></tr>
+<tr><th>陈旧性</th><td class=" har">8</td><td class=" har">.604628637433052</td><td class=" har">.116049597153571</td></tr>
+<tr><th>心功能</th><td class=" har">30</td><td class=" har">.603564766049385</td><td class=" har">.074571347202606</td></tr>
+<tr><th>五官科</th><td class=" har">35</td><td class=" har">.603426063060761</td><td class=" har">.078308541588895</td></tr>
+<tr><th>孕产妇</th><td class=" har">40</td><td class=" har">.603232005238533</td><td class=" har">.059695511709824</td></tr>
+<tr><th>躁狂</th><td class=" har">8</td><td class=" har">.602977119386196</td><td class=" har">.113114726205750</td></tr>
+<tr><th>湿疹</th><td class=" har">32</td><td class=" har">.602925531566143</td><td class=" har">.080668040306904</td></tr>
+<tr><th>宫颈</th><td class=" har">23</td><td class=" har">.602884330179380</td><td class=" har">.083591217480246</td></tr>
+<tr><th>胶质瘤</th><td class=" har">25</td><td class=" har">.602871333360672</td><td class=" har">.080033972699358</td></tr>
+<tr><th>早产儿</th><td class=" har">31</td><td class=" har">.602583812129113</td><td class=" har">.074287161662870</td></tr>
+<tr><th>炭疽病</th><td class=" har">17</td><td class=" har">.602416343548719</td><td class=" har">.075250182763314</td></tr>
+<tr><th>弥漫性</th><td class=" har">19</td><td class=" har">.601849116777119</td><td class=" har">.087777492435151</td></tr>
+<tr><th>结核菌</th><td class=" har">17</td><td class=" har">.601384408333722</td><td class=" har">.095680176635792</td></tr>
+<tr><th>瘘</th><td class=" har">33</td><td class=" har">.600952282096400</td><td class=" har">.077254769803387</td></tr>
+<tr><th>肥胖病</th><td class=" har">10</td><td class=" har">.599752578139305</td><td class=" har">.093760111354229</td></tr>
+<tr><th>肝肾</th><td class=" har">33</td><td class=" har">.599674791097641</td><td class=" har">.082243338240733</td></tr>
+<tr><th>复明</th><td class=" har">43</td><td class=" har">.599533539178760</td><td class=" har">.069756608104543</td></tr>
+<tr><th>癌痛</th><td class=" har">8</td><td class=" har">.599525310099125</td><td class=" har">.058837972846705</td></tr>
+<tr><th>新疗法</th><td class=" har">38</td><td class=" har">.599339202046394</td><td class=" har">.073673615096101</td></tr>
+<tr><th>牙病</th><td class=" har">32</td><td class=" har">.599322937428952</td><td class=" har">.086131459810002</td></tr>
+<tr><th>千例</th><td class=" har">27</td><td class=" har">.598662738446836</td><td class=" har">.055909716434035</td></tr>
+<tr><th>地方病</th><td class=" har">44</td><td class=" har">.598236561498859</td><td class=" har">.066359036535133</td></tr>
+<tr><th>育龄妇女</th><td class=" har">43</td><td class=" har">.598161578871483</td><td class=" har">.080414831907814</td></tr>
+<tr><th>脑外科</th><td class=" har">35</td><td class=" har">.597921443837030</td><td class=" har">.071070223710837</td></tr>
+<tr><th>年老体弱</th><td class=" har">44</td><td class=" har">.597877308048985</td><td class=" har">.072467303019215</td></tr>
+<tr><th>单亲</th><td class=" har">32</td><td class=" har">.597840436734259</td><td class=" har">.075590978256597</td></tr>
+<tr><th>血栓</th><td class=" har">44</td><td class=" har">.597743581641804</td><td class=" har">.086992723105383</td></tr>
+<tr><th>早产</th><td class=" har">44</td><td class=" har">.597505109553988</td><td class=" har">.071500727173375</td></tr>
+<tr><th>儿科</th><td class=" har">44</td><td class=" har">.597489964555610</td><td class=" har">.074025824465478</td></tr>
+<tr><th>疾病</th><td class=" har">44</td><td class=" har">.597472501749342</td><td class=" har">.067706029229122</td></tr>
+<tr><th>身体检查</th><td class=" har">39</td><td class=" har">.597371648519467</td><td class=" har">.070165539296314</td></tr>
+<tr><th>乙型</th><td class=" har">37</td><td class=" har">.596932828426361</td><td class=" har">.074918863999529</td></tr>
+<tr><th>寄药</th><td class=" har">9</td><td class=" har">.596261170175341</td><td class=" har">.071406175039782</td></tr>
+<tr><th>两病</th><td class=" har">14</td><td class=" har">.595931855695588</td><td class=" har">.112648927090673</td></tr>
+<tr><th>神经症</th><td class=" har">12</td><td class=" har">.595929009219011</td><td class=" har">.090105668967609</td></tr>
+<tr><th>伤害事故</th><td class=" har">32</td><td class=" har">.595877595245838</td><td class=" har">.068616215126763</td></tr>
+<tr><th>妇产科</th><td class=" har">44</td><td class=" har">.595624929124659</td><td class=" har">.085042511032037</td></tr>
+<tr><th>随访</th><td class=" har">44</td><td class=" har">.595270481976596</td><td class=" har">.078141602311949</td></tr>
+<tr><th>骨病</th><td class=" har">20</td><td class=" har">.594834914803505</td><td class=" har">.059973609947422</td></tr>
+<tr><th>前受</th><td class=" har">5</td><td class=" har">.594367766380310</td><td class=" har">.118334548172078</td></tr>
+<tr><th>骨科</th><td class=" har">44</td><td class=" har">.594254715198820</td><td class=" har">.076507531441252</td></tr>
+<tr><th>救治</th><td class=" har">44</td><td class=" har">.593892984092236</td><td class=" har">.093269856585760</td></tr>
+<tr><th>求治</th><td class=" har">37</td><td class=" har">.593176690307823</td><td class=" har">.075551232711429</td></tr>
+<tr><th>内外科</th><td class=" har">22</td><td class=" har">.592653973536058</td><td class=" har">.085331481412729</td></tr>
+<tr><th>轻度</th><td class=" har">44</td><td class=" har">.591519673439589</td><td class=" har">.086827330922948</td></tr>
+<tr><th>膀胱</th><td class=" har">38</td><td class=" har">.590831396611114</td><td class=" har">.087162238969524</td></tr>
+<tr><th>缠身</th><td class=" har">44</td><td class=" har">.590594803067771</td><td class=" har">.079177428651324</td></tr>
+<tr><th>助视器</th><td class=" har">15</td><td class=" har">.590440114339193</td><td class=" har">.063193249996527</td></tr>
+<tr><th>就诊</th><td class=" har">44</td><td class=" har">.590364358641885</td><td class=" har">.082226774305988</td></tr>
+<tr><th>多发性</th><td class=" har">40</td><td class=" har">.590044889599085</td><td class=" har">.081607142657125</td></tr>
+<tr><th>中晚期</th><td class=" har">36</td><td class=" har">.589794151484966</td><td class=" har">.107991527754195</td></tr>
+<tr><th>帕金森</th><td class=" har">30</td><td class=" har">.589125536878904</td><td class=" har">.119286849934421</td></tr>
+<tr><th>轻伤</th><td class=" har">44</td><td class=" har">.588530953634869</td><td class=" har">.078742182117744</td></tr>
+<tr><th>猥亵</th><td class=" har">41</td><td class=" har">.588209532383012</td><td class=" har">.071444989830645</td></tr>
+<tr><th>受虐</th><td class=" har">14</td><td class=" har">.588158477629934</td><td class=" har">.099952337152369</td></tr>
+<tr><th>罪轻</th><td class=" har">20</td><td class=" har">.588153667747974</td><td class=" har">.102479372684325</td></tr>
+<tr><th>骨肿瘤</th><td class=" har">15</td><td class=" har">.587781973679861</td><td class=" har">.076581441059651</td></tr>
+<tr><th>肾小球</th><td class=" har">10</td><td class=" har">.587586262822151</td><td class=" har">.110028455662247</td></tr>
+<tr><th>诊病</th><td class=" har">42</td><td class=" har">.587347613913672</td><td class=" har">.073713193744988</td></tr>
+<tr><th>罚不当罪</th><td class=" har">6</td><td class=" har">.586082816123962</td><td class=" har">.144294968553873</td></tr>
+<tr><th>例</th><td class=" har">44</td><td class=" har">.585615207525817</td><td class=" har">.080026772195138</td></tr>
+<tr><th>流行病学</th><td class=" har">44</td><td class=" har">.585088732567700</td><td class=" har">.071757724080778</td></tr>
+<tr><th>急诊部</th><td class=" har">9</td><td class=" har">.583867344591353</td><td class=" har">.111907816312129</td></tr>
+<tr><th>网瘾</th><td class=" har">19</td><td class=" har">.583859384059906</td><td class=" har">.066717412677432</td></tr>
+<tr><th>急诊科</th><td class=" har">38</td><td class=" har">.583722364745642</td><td class=" har">.079211484820266</td></tr>
+<tr><th>沙眼</th><td class=" har">30</td><td class=" har">.583642419179281</td><td class=" har">.098439041308147</td></tr>
+<tr><th>行走不便</th><td class=" har">40</td><td class=" har">.583166075497866</td><td class=" har">.069183534579966</td></tr>
+<tr><th>体弱</th><td class=" har">43</td><td class=" har">.582532867442730</td><td class=" har">.076070112436620</td></tr>
+<tr><th>麻风病人</th><td class=" har">25</td><td class=" har">.582108130455017</td><td class=" har">.077153613146146</td></tr>
+<tr><th>病原</th><td class=" har">41</td><td class=" har">.581852794420428</td><td class=" har">.072154506786564</td></tr>
+<tr><th>所生</th><td class=" har">36</td><td class=" har">.581470686528418</td><td class=" har">.078605657746762</td></tr>
+<tr><th>人经</th><td class=" har">32</td><td class=" har">.581263222731650</td><td class=" har">.078592711037402</td></tr>
+<tr><th>降压药</th><td class=" har">25</td><td class=" har">.581063023805618</td><td class=" har">.083318057721494</td></tr>
+<tr><th>肢体</th><td class=" har">44</td><td class=" har">.580545920539986</td><td class=" har">.101394410769376</td></tr>
+<tr><th>聋哑</th><td class=" har">44</td><td class=" har">.580007870766250</td><td class=" har">.081202275069746</td></tr>
+<tr><th>流产</th><td class=" har">43</td><td class=" har">.579493071450744</td><td class=" har">.082312577460896</td></tr>
+<tr><th>牙痛</th><td class=" har">24</td><td class=" har">.579419332245986</td><td class=" har">.052532583733501</td></tr>
+<tr><th>收留</th><td class=" har">44</td><td class=" har">.579226796599952</td><td class=" har">.088373094124897</td></tr>
+<tr><th>少年犯</th><td class=" har">34</td><td class=" har">.578535515595885</td><td class=" har">.074173632230576</td></tr>
+<tr><th>低血糖症</th><td class=" har">3</td><td class=" har">.578174710273743</td><td class=" har">.181766943719862</td></tr>
+<tr><th>可治</th><td class=" har">43</td><td class=" har">.577624314746191</td><td class=" har">.081670877736720</td></tr>
+<tr><th>血压高</th><td class=" har">33</td><td class=" har">.577482983921513</td><td class=" har">.077025506647986</td></tr>
+<tr><th>疑似</th><td class=" har">32</td><td class=" har">.575483948923647</td><td class=" har">.107957653180417</td></tr>
+<tr><th>痤疮</th><td class=" har">15</td><td class=" har">.574191884199778</td><td class=" har">.069639930634264</td></tr>
+<tr><th>孤残</th><td class=" har">38</td><td class=" har">.573080244817232</td><td class=" har">.076108433589040</td></tr>
+<tr><th>肥胖者</th><td class=" har">25</td><td class=" har">.572481940984726</td><td class=" har">.073015447113524</td></tr>
+<tr><th>传染病</th><td class=" har">44</td><td class=" har">.572168653661554</td><td class=" har">.079120297451989</td></tr>
+<tr><th>智残</th><td class=" har">15</td><td class=" har">.571968505779902</td><td class=" har">.078515222031040</td></tr>
+<tr><th>无药</th><td class=" har">26</td><td class=" har">.571861068789776</td><td class=" har">.084066239584105</td></tr>
+<tr><th>人因</th><td class=" har">44</td><td class=" har">.571333184838295</td><td class=" har">.085448017278106</td></tr>
+<tr><th>活动性</th><td class=" har">30</td><td class=" har">.569267343481382</td><td class=" har">.084610671277630</td></tr>
+<tr><th>血源</th><td class=" har">37</td><td class=" har">.569244980812073</td><td class=" har">.066190210706778</td></tr>
+<tr><th>心脏外科</th><td class=" har">37</td><td class=" har">.568103082276680</td><td class=" har">.072949344157448</td></tr>
+<tr><th>愈后</th><td class=" har">19</td><td class=" har">.567801958636234</td><td class=" har">.078008108258060</td></tr>
+<tr><th>胸科</th><td class=" har">29</td><td class=" har">.567206081645242</td><td class=" har">.089428392643315</td></tr>
+<tr><th>行为能力</th><td class=" har">39</td><td class=" har">.567006680445793</td><td class=" har">.088794083566174</td></tr>
+<tr><th>小病</th><td class=" har">44</td><td class=" har">.566282084042376</td><td class=" har">.076948125932217</td></tr>
+<tr><th>防治所</th><td class=" har">27</td><td class=" har">.565785226998506</td><td class=" har">.079192596792947</td></tr>
+<tr><th>判处刑罚</th><td class=" har">40</td><td class=" har">.565758770704269</td><td class=" har">.079941251911527</td></tr>
+<tr><th>监护人</th><td class=" har">44</td><td class=" har">.565640193494883</td><td class=" har">.087798628640069</td></tr>
+<tr><th>痔</th><td class=" har">27</td><td class=" har">.565461706232142</td><td class=" har">.090706067601013</td></tr>
+<tr><th>凝血</th><td class=" har">30</td><td class=" har">.565177580714226</td><td class=" har">.085527025944518</td></tr>
+<tr><th>病区</th><td class=" har">44</td><td class=" har">.564757163551721</td><td class=" har">.090641331899500</td></tr>
+<tr><th>保外就医</th><td class=" har">41</td><td class=" har">.564528870873335</td><td class=" har">.094105943688655</td></tr>
+<tr><th>恢复期</th><td class=" har">34</td><td class=" har">.563646304256776</td><td class=" har">.092786229198176</td></tr>
+<tr><th>牛皮癣</th><td class=" har">39</td><td class=" har">.563001153560785</td><td class=" har">.107358925007536</td></tr>
+<tr><th>态度恶劣</th><td class=" har">39</td><td class=" har">.561791339745888</td><td class=" har">.077233767286149</td></tr>
+<tr><th>具结悔过</th><td class=" har">18</td><td class=" har">.561174261901114</td><td class=" har">.107544982518659</td></tr>
+<tr><th>外科</th><td class=" har">44</td><td class=" har">.560628936372020</td><td class=" har">.081176106108658</td></tr>
+<tr><th>拘留证</th><td class=" har">11</td><td class=" har">.560003952546553</td><td class=" har">.128420870095770</td></tr>
+<tr><th>确系</th><td class=" har">37</td><td class=" har">.559224417080750</td><td class=" har">.072830141553795</td></tr>
+<tr><th>护士长</th><td class=" har">44</td><td class=" har">.559171390804378</td><td class=" har">.076177489602397</td></tr>
+<tr><th>基因治疗</th><td class=" har">33</td><td class=" har">.558941505172036</td><td class=" har">.097530352533498</td></tr>
+<tr><th>供认不讳</th><td class=" har">44</td><td class=" har">.558056042952971</td><td class=" har">.076756598404301</td></tr>
+<tr><th>西医</th><td class=" har">44</td><td class=" har">.557568302208727</td><td class=" har">.076970118349530</td></tr>
+<tr><th>康复</th><td class=" har">44</td><td class=" har">.556228332898834</td><td class=" har">.077126656056012</td></tr>
+<tr><th>主诉</th><td class=" har">21</td><td class=" har">.556195882104692</td><td class=" har">.137481009022291</td></tr>
+<tr><th>拘禁</th><td class=" har">43</td><td class=" har">.556030229773633</td><td class=" har">.075524828636846</td></tr>
+<tr><th>婴幼儿</th><td class=" har">44</td><td class=" har">.553102920678529</td><td class=" har">.115368090162210</td></tr>
+<tr><th>麻风</th><td class=" har">34</td><td class=" har">.552543194854961</td><td class=" har">.114118581055417</td></tr>
+<tr><th>针刺</th><td class=" har">42</td><td class=" har">.552170207103093</td><td class=" har">.088627020223647</td></tr>
+<tr><th>取保候审</th><td class=" har">42</td><td class=" har">.551523077346030</td><td class=" har">.072173398777243</td></tr>
+<tr><th>宣告无罪</th><td class=" har">40</td><td class=" har">.551459202915430</td><td class=" har">.080619977791735</td></tr>
+<tr><th>肢残</th><td class=" har">38</td><td class=" har">.551348033704256</td><td class=" har">.084980731261125</td></tr>
+<tr><th>查无实据</th><td class=" har">17</td><td class=" har">.550337139297934</td><td class=" har">.089568352101273</td></tr>
+<tr><th>卧病</th><td class=" har">31</td><td class=" har">.549705005461170</td><td class=" har">.076871488273880</td></tr>
+<tr><th>诊室</th><td class=" har">43</td><td class=" har">.549300066260404</td><td class=" har">.067250146667822</td></tr>
+<tr><th>由女</th><td class=" har">23</td><td class=" har">.549063682556152</td><td class=" har">.110153563556334</td></tr>
+<tr><th>杀人罪</th><td class=" har">29</td><td class=" har">.548910434903770</td><td class=" har">.081691522117193</td></tr>
+<tr><th>伪证罪</th><td class=" har">14</td><td class=" har">.548612698912621</td><td class=" har">.101250298802982</td></tr>
+<tr><th>悔改</th><td class=" har">43</td><td class=" har">.548326318347177</td><td class=" har">.086154225030008</td></tr>
+<tr><th>医师</th><td class=" har">44</td><td class=" har">.546729045835408</td><td class=" har">.086989562872965</td></tr>
+<tr><th>冒名</th><td class=" har">40</td><td class=" har">.545968478918076</td><td class=" har">.094414640118012</td></tr>
+<tr><th>错告</th><td class=" har">29</td><td class=" har">.545199223633470</td><td class=" har">.090183830490689</td></tr>
+<tr><th>婚后</th><td class=" har">44</td><td class=" har">.544985324821689</td><td class=" har">.082805014504731</td></tr>
+<tr><th>原告人</th><td class=" har">23</td><td class=" har">.544439122728679</td><td class=" har">.104228117460913</td></tr>
+<tr><th>存活率</th><td class=" har">40</td><td class=" har">.544321876764298</td><td class=" har">.084677742286838</td></tr>
+<tr><th>鉴定结论</th><td class=" har">37</td><td class=" har">.543999719458657</td><td class=" har">.087098357340976</td></tr>
+<tr><th>救护站</th><td class=" har">21</td><td class=" har">.542971720298131</td><td class=" har">.084941959189895</td></tr>
+<tr><th>盗窃罪</th><td class=" har">42</td><td class=" har">.541382148152306</td><td class=" har">.082493532685040</td></tr>
+<tr><th>违禁品</th><td class=" har">39</td><td class=" har">.539920223829074</td><td class=" har">.095098343116438</td></tr>
+<tr><th>大病</th><td class=" har">44</td><td class=" har">.537808641791344</td><td class=" har">.079052313774799</td></tr>
+<tr><th>医学院校</th><td class=" har">44</td><td class=" har">.537294903939421</td><td class=" har">.071713862167472</td></tr>
+<tr><th>诊所</th><td class=" har">44</td><td class=" har">.536722580140287</td><td class=" har">.073787858272079</td></tr>
+<tr><th>拘传</th><td class=" har">30</td><td class=" har">.534279112021128</td><td class=" har">.093335877337095</td></tr>
+<tr><th>购枪</th><td class=" har">11</td><td class=" har">.533695559610020</td><td class=" har">.108392772435869</td></tr>
+<tr><th>周某</th><td class=" har">35</td><td class=" har">.531222795588630</td><td class=" har">.097061781692253</td></tr>
+<tr><th>安乐死</th><td class=" har">29</td><td class=" har">.529010227014279</td><td class=" har">.071826485986700</td></tr>
+<tr><th>训诫</th><td class=" har">42</td><td class=" har">.528595485857555</td><td class=" har">.091801184898430</td></tr>
+<tr><th>外转</th><td class=" har">15</td><td class=" har">.528301703929901</td><td class=" har">.101121267751578</td></tr>
+<tr><th>受刺激</th><td class=" har">25</td><td class=" har">.528253934383392</td><td class=" har">.087463061687577</td></tr>
+<tr><th>迟延</th><td class=" har">35</td><td class=" har">.528110076699938</td><td class=" har">.096196469594627</td></tr>
+<tr><th>碰伤</th><td class=" har">31</td><td class=" har">.522969541049773</td><td class=" har">.087458093904931</td></tr>
+<tr><th>异性</th><td class=" har">42</td><td class=" har">.522884824446270</td><td class=" har">.091230352975995</td></tr>
+<tr><th>陈光星</th><td class=" har">2</td><td class=" har">.521107316017151</td><td class=" har">.307665840689644</td></tr>
+<tr><th>靶向</th><td class=" har">22</td><td class=" har">.520870135589079</td><td class=" har">.083386292391696</td></tr>
+<tr><th>八九十岁</th><td class=" har">22</td><td class=" har">.519674986600876</td><td class=" har">.082414751388665</td></tr>
+<tr><th>传唤</th><td class=" har">44</td><td class=" har">.518367068334059</td><td class=" har">.092807206837360</td></tr>
+<tr><th>留守人员</th><td class=" har">29</td><td class=" har">.517816061603612</td><td class=" har">.095286403733008</td></tr>
+<tr><th>被申请人</th><td class=" har">26</td><td class=" har">.515475776333075</td><td class=" har">.100076687213236</td></tr>
+<tr><th>较重</th><td class=" har">44</td><td class=" har">.515444503589110</td><td class=" har">.104251730960062</td></tr>
+<tr><th>达省</th><td class=" har">11</td><td class=" har">.509439332918687</td><td class=" har">.145607427386388</td></tr>
+<tr><th>降薪</th><td class=" har">32</td><td class=" har">.508964258246124</td><td class=" har">.106684394955305</td></tr>
+<tr><th>未遂</th><td class=" har">43</td><td class=" har">.507368148412815</td><td class=" har">.104911904083844</td></tr>
+<tr><th>司法鉴定</th><td class=" har">29</td><td class=" har">.506959420853648</td><td class=" har">.085661565683786</td></tr>
+<tr><th>诈骗罪</th><td class=" har">44</td><td class=" har">.506446228785948</td><td class=" har">.091064291246260</td></tr>
+<tr><th>复查</th><td class=" har">44</td><td class=" har">.502180041914637</td><td class=" har">.081716025290402</td></tr>
+<tr><th>第九十五条</th><td class=" har">36</td><td class=" har">.501746694246928</td><td class=" har">.095041077349260</td></tr>
+<tr><th>遗漏</th><td class=" har">44</td><td class=" har">.498652524568818</td><td class=" har">.092741632784468</td></tr>
+<tr><th>行为人</th><td class=" har">43</td><td class=" har">.494928085526755</td><td class=" har">.093559950802739</td></tr>
+<tr><th>七八位</th><td class=" har">28</td><td class=" har">.489277226584298</td><td class=" har">.102572762863839</td></tr>
+<tr><th>提不出</th><td class=" har">40</td><td class=" har">.489233794435859</td><td class=" har">.101693317241252</td></tr>
+<tr><th>事实清楚</th><td class=" har">44</td><td class=" har">.489216162399812</td><td class=" har">.090140054142466</td></tr>
+<tr><th>第九十八条</th><td class=" har">42</td><td class=" har">.485884740593888</td><td class=" har">.092001279285396</td></tr>
+<tr><th>卫生院</th><td class=" har">44</td><td class=" har">.478368601338430</td><td class=" har">.076540259857533</td></tr>
+<tr><th>第六十三条</th><td class=" har">40</td><td class=" har">.477586677670479</td><td class=" har">.093695040900720</td></tr>
+<tr><th>马西亚</th><td class=" har">4</td><td class=" har">.473752930760384</td><td class=" har">.210109961203930</td></tr>
+<tr><th>朱沱镇</th><td class=" har">5</td><td class=" har">.473349368572235</td><td class=" har">.203660290157719</td></tr>
+<tr><th>未成年人</th><td class=" har">43</td><td class=" har">.472311297821444</td><td class=" har">.125586471575398</td></tr>
+<tr><th>第六十条</th><td class=" har">41</td><td class=" har">.471895683829377</td><td class=" har">.099327433182187</td></tr>
+<tr><th>第六十七条</th><td class=" har">41</td><td class=" har">.470045729381282</td><td class=" har">.099362618703101</td></tr>
+<tr><th>七坊</th><td class=" har">6</td><td class=" har">.462871198852857</td><td class=" har">.169375313777094</td></tr>
+<tr><th>第五十三条</th><td class=" har">42</td><td class=" har">.460588262194679</td><td class=" har">.093516347770382</td></tr>
+<tr><th>故城县</th><td class=" har">26</td><td class=" har">.459747597575188</td><td class=" har">.092937029548727</td></tr>
+<tr><th>个亚</th><td class=" har">6</td><td class=" har">.458237816890081</td><td class=" har">.200397861586361</td></tr>
+<tr><th>法布里</th><td class=" har">13</td><td class=" har">.446255170381986</td><td class=" har">.153931016662866</td></tr>
+<tr><th>美子</th><td class=" har">16</td><td class=" har">.440413882955909</td><td class=" har">.110139968309825</td></tr>
+<tr><th>芳村</th><td class=" har">34</td><td class=" har">.438653096556664</td><td class=" har">.116147548928050</td></tr>
+<tr><th>脏乱</th><td class=" har">44</td><td class=" har">.437090012837540</td><td class=" har">.106605175072897</td></tr>
+<tr><th>嫌疑人</th><td class=" har">39</td><td class=" har">.430951748902981</td><td class=" har">.125047984604298</td></tr>
+<tr><th>六万元</th><td class=" har">31</td><td class=" har">.412728113032156</td><td class=" har">.117950109337889</td></tr>
+<tr><th>Valid N (listwise)</th><td class=" har">0</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

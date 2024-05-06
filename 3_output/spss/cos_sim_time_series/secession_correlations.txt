@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 挟洋谋独; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 以疆; Correlation: 0.9897454317672435; P-value: 0.09124847926311803; Valid Cases: 3
+Neighbor: 神圣同盟; Correlation: 0.9617894789714126; P-value: 0.17655469716678915; Valid Cases: 3
+Neighbor: 港独; Correlation: 0.8705357127085336; P-value: 0.0010482382420343875; Valid Cases: 10
+Neighbor: 制华; Correlation: 0.8197808374280598; P-value: 0.012726708911386981; Valid Cases: 8
+Neighbor: 三股; Correlation: 0.7370579533902806; P-value: 1.7401770009357522e-08; Valid Cases: 43
+Neighbor: 反中; Correlation: 0.7274537152513745; P-value: 0.1636401651969934; Valid Cases: 5
+Neighbor: 坐大; Correlation: 0.7262986854117854; P-value: 0.026694301238652587; Valid Cases: 9
+Neighbor: 以台; Correlation: 0.701557307726587; P-value: 0.0051698223384240545; Valid Cases: 14
+Neighbor: 破坏活动; Correlation: 0.6928669825166803; P-value: 1.3336138061734906e-07; Valid Cases: 45
+Neighbor: 卡萨芒斯; Correlation: 0.657395263233477; P-value: 0.02017203623087076; Valid Cases: 12
+Neighbor: 遏华; Correlation: 0.6187475449423899; P-value: 0.26583147005329527; Valid Cases: 5
+Neighbor: 搞乱; Correlation: 0.6061855671036062; P-value: 1.2951496597322752e-05; Valid Cases: 44
+Neighbor: 渗透颠覆; Correlation: 0.5986587240964015; P-value: 0.02370073074768959; Valid Cases: 14
+Neighbor: 极化; Correlation: 0.5742102582172139; P-value: 0.0011247668623940305; Valid Cases: 29
+Neighbor: 势力; Correlation: 0.5623455334374042; P-value: 5.811943241205038e-05; Valid Cases: 45
+Neighbor: 世达赖; Correlation: 0.5464178807841353; P-value: 0.00147150598557404; Valid Cases: 31
+Neighbor: 任何借口; Correlation: 0.5397874159558711; P-value: 0.00015590623422904518; Valid Cases: 44
+Neighbor: 台独; Correlation: 0.5336276642081421; P-value: 0.0002735172412604871; Valid Cases: 42
+Neighbor: 搅局; Correlation: 0.5207834416004498; P-value: 0.015495241882076509; Valid Cases: 21
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 儒昂岛; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 忘宗; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 以拖待变; Correlation: 0.9436506711408353; P-value: 0.05634932885916477; Valid Cases: 4
+Neighbor: 阴谋活动; Correlation: 0.9125864553844941; P-value: 2.2880099382157197e-14; Valid Cases: 35
+Neighbor: 犹太复国; Correlation: 0.903148268503611; P-value: 9.643841794383252e-06; Valid Cases: 14
+Neighbor: 国共; Correlation: 0.8822787051745205; P-value: 1.1573261466478601e-15; Valid Cases: 45
+Neighbor: 危亡; Correlation: 0.8703469370110604; P-value: 8.149035652913786e-15; Valid Cases: 45
+Neighbor: 长枪; Correlation: 0.8596113057960727; P-value: 1.5796474440718132e-13; Valid Cases: 43
+Neighbor: 疆独; Correlation: 0.8585438460651371; P-value: 0.34273914373275277; Valid Cases: 3
+Neighbor: 永久化; Correlation: 0.8485293425292033; P-value: 1.64732331761774e-09; Valid Cases: 31
+Neighbor: 终将; Correlation: 0.8351771238867249; P-value: 9.81209737396345e-13; Valid Cases: 45
+Neighbor: 皖系; Correlation: 0.8203188791955927; P-value: 0.023799730110434725; Valid Cases: 7
+Neighbor: 积极参与; Correlation: 0.8179312738928348; P-value: 6.9387911480747105e-12; Valid Cases: 45
+Neighbor: 藩篱; Correlation: 0.8131152464261386; P-value: 1.1552997025951875e-11; Valid Cases: 45
+Neighbor: 亲苏; Correlation: 0.8062018187977243; P-value: 0.028522194075108833; Valid Cases: 7
+Neighbor: 三通; Correlation: 0.8035825555528024; P-value: 3.0394651590574905e-11; Valid Cases: 45
+Neighbor: 朝鲜半岛; Correlation: 0.802591767231035; P-value: 3.3508045982579006e-11; Valid Cases: 45
+Neighbor: 非正义; Correlation: 0.802472678024946; P-value: 8.075792595707134e-10; Valid Cases: 39
+Neighbor: 汪伪; Correlation: 0.800982605471712; P-value: 0.0005755031481427953; Valid Cases: 14
+Neighbor: 不宣而战; Correlation: 0.8004895326562391; P-value: 3.8498462436366675e-05; Valid Cases: 19

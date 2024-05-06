@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 援索; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 网赌; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 以毒; Correlation: 0.90818737569974; P-value: 0.09181262430025994; Valid Cases: 4
+Neighbor: 网络攻击; Correlation: 0.85695672175485; P-value: 1.400168680303603e-06; Valid Cases: 20
+Neighbor: 独狼; Correlation: 0.8208697578131242; P-value: 0.012508300130286887; Valid Cases: 8
+Neighbor: 港独; Correlation: 0.8021383944039389; P-value: 0.00524084981959271; Valid Cases: 10
+Neighbor: 三股; Correlation: 0.6865615500244336; P-value: 3.7169707416094717e-07; Valid Cases: 43
+Neighbor: 坐大; Correlation: 0.6421968432856283; P-value: 0.062190780256250716; Valid Cases: 9
+Neighbor: 打击; Correlation: 0.6250366905785658; P-value: 4.4372924621499916e-06; Valid Cases: 45
+Neighbor: 贩运; Correlation: 0.4660659685991903; P-value: 0.0012523415578822982; Valid Cases: 45
+Neighbor: 极端化; Correlation: 0.37191224253137467; P-value: 0.07352635667289599; Valid Cases: 24
+Neighbor: 博科; Correlation: 0.3663513306771251; P-value: 0.14809205117873622; Valid Cases: 17
+Neighbor: 暴恐; Correlation: 0.36277098002009445; P-value: 0.2728655321325671; Valid Cases: 11
+Neighbor: 资恐; Correlation: 0.33933911860448857; P-value: 0.6606608813955115; Valid Cases: 4
+Neighbor: 恐袭; Correlation: 0.32212145863859787; P-value: 0.3979055623751393; Valid Cases: 9
+Neighbor: 东伊运; Correlation: 0.3146809956043776; P-value: 0.2351973565730949; Valid Cases: 16
+Neighbor: 非传统; Correlation: 0.2743047802775359; P-value: 0.07156291319657347; Valid Cases: 44
+Neighbor: 潜出; Correlation: 0.25435329708840015; P-value: 0.58202771373556; Valid Cases: 7
+Neighbor: 涉爆; Correlation: 0.23915600037755866; P-value: 0.2603754417906968; Valid Cases: 24
+Neighbor: 网络色情; Correlation: 0.15391142990063011; P-value: 0.5692781929952634; Valid Cases: 16
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 谬用; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 巴反; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 经济渗透; Correlation: 0.9656558332837128; P-value: 2.3901841982993713e-05; Valid Cases: 9
+Neighbor: 炸机; Correlation: 0.9549399337460567; P-value: 3.848766509301556e-07; Valid Cases: 13
+Neighbor: 匪特; Correlation: 0.9516973201907533; P-value: 0.0034433746435613283; Valid Cases: 6
+Neighbor: 犹太复国; Correlation: 0.9290186300846313; P-value: 1.5825766884487873e-06; Valid Cases: 14
+Neighbor: 苏古; Correlation: 0.9266364375581522; P-value: 1.4784140691822876e-05; Valid Cases: 12
+Neighbor: 殖民政策; Correlation: 0.9170159250174619; P-value: 0.00018751660876821136; Valid Cases: 10
+Neighbor: 复国主义; Correlation: 0.9164531612421735; P-value: 1.3866404972796357e-08; Valid Cases: 20
+Neighbor: 治安机关; Correlation: 0.9161852702830021; P-value: 0.010242967955195288; Valid Cases: 6
+Neighbor: 经济侵略; Correlation: 0.9155618186584902; P-value: 2.5493200350311415e-07; Valid Cases: 17
+Neighbor: 合法性; Correlation: 0.9153215488832547; P-value: 1.3632382286612813e-18; Valid Cases: 45
+Neighbor: 以色列政府; Correlation: 0.9132148663178252; P-value: 5.61828629797015e-18; Valid Cases: 44
+Neighbor: 蓄谋已久; Correlation: 0.910018875580693; P-value: 3.617615981045676e-14; Valid Cases: 35
+Neighbor: 德意; Correlation: 0.9095660561886423; P-value: 3.037554921637989e-10; Valid Cases: 25
+Neighbor: 安哥拉政府; Correlation: 0.9051359924353575; P-value: 2.5749838709100548e-15; Valid Cases: 39
+Neighbor: 千夫所指; Correlation: 0.9020894427585384; P-value: 1.3047351155265548e-10; Valid Cases: 27
+Neighbor: 占领者; Correlation: 0.90072776873415; P-value: 1.7052762282231317e-13; Valid Cases: 35
+Neighbor: 全面禁止; Correlation: 0.8983130489628703; P-value: 5.862515256872618e-17; Valid Cases: 45
+Neighbor: 破坏分子; Correlation: 0.8980061396899802; P-value: 1.4348560217081566e-08; Valid Cases: 22

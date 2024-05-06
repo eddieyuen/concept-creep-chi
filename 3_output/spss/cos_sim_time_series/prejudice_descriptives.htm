@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>prejudice_descriptives.htm</title>
+<meta charset="utf-8"/>
+<style>
+.details {visibility:hidden;}
+.workbookSyntaxBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookSyntaxBlock p { margin:0 0;}
+.workbookRichTextBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookRichTextBlock p { margin:0 0;}
+.logItem {margin: 16px 0;font-family: monospace;}
+.procedureTitle{color: #1d3649;font-weight: 600;font-size: 20px;line-height: 24px;font-family: monospace;}
+.pivot{color:#264A60;background-color:#FFFFFF;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#E0E0E0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#F9F9FB;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#F9F9FB;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #AEAEAE;}
+.hDR{border-top:1px none #AEAEAE;}
+.vCR{border-left:1px none #AEAEAE;}
+.vDR{border-left:1px none #AEAEAE;}
+.hCC{border-bottom:1px none #AEAEAE;}
+.hDC{border-bottom:1px none #AEAEAE;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #AEAEAE;}
+.pivot{margin: 80px 0;}
+.pivot thead.tr.th {padding:0px;border-spacing:0px}
+.hal{text-align:left} .hac{text-align:center} .har{text-align:right}
+.val{vertical-align:left} .vac{vertical-align:center} .var{vertical-align:right}
+</style>
+</head>
+<body>
+<p class="procedureTitle"><head><style type="text/css">p{color:0;font-family:SansSerif;font-size:14pt;font-style:normal;font-weight:bold;text-decoration:none}</style></head><BR>Descriptives</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+<div class="itemBody">
+<table summary="Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows" style="width:470px" class="default PivotTable" aria-label="Notes" role="complementary" data-lookName="default" data-rowLabelWidth="2" data-colLabelHeight="0" data-NumRows="13" data-NumCols="1" data-rowLabels="Corner" data-decimal-char="." data-col-labels="" data-row-labels="Output Created ;Comments ;Input Data; Active Dataset; Filter; Weight; Split File; N of Rows in Working Data File;Missing Value Handling Definition of Missing; Cases Used;Syntax ;Resources Processor Time; Elapsed Time" data-layer-dimension="" data-column-dimension="" data-row-dimension="Contents;" data-maxColWidth="162">
+<caption class="title" style="width:470px">Notes<span class="details">Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<th class="rowLabels dataAreaTop role3" colspan="2">Output Created</th>
+<td class=" o dataAreaTop dataAreaLeft">18-APR-2024 23:44:40</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Comments</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&nbsp;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="6">Input</th>
+<th class="rowLabels hCR vCR role3">Data</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">C:\Users\s1155157933\Downloads\prejudice_cos-sim.csv</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Active Dataset</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">DataSet1</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Filter</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Weight</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Split File</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">N of Rows in Working Data File</th>
+<td class=" e dataAreaLeft hCR">45</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Missing Value Handling</th>
+<th class="rowLabels hCR vCR role3">Definition of Missing</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">User defined missing values are treated as missing.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Cases Used</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">All non-missing data are used.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Syntax</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">DESCRIPTIVES VARIABLES=符号化 遗风 以势压人 革命性 疏远 无知 迁就 外来文化 虚无主义 做派 嘴脸 自负 怨恨 强权 放任 异见 国际背景 左顾右盼 威胁论 民族意识<br>    客观存在 不甚了解 消费主义 正当性 拜金主义 思变 妄加 儒家文化 尖锐对立 标榜 虚伪 妄想 各不相同 义愤 过激 颠倒黑白 与生俱来 自私自利 神学 思想观点 民族压迫 定势 礼教 仇视 谬论<br>    产生误解 讳疾忌医 借题发挥 自恋 悲观失望 误导 宗派主义 先入为主 暴富 封建意识 误读 混淆是非 伪善 偏颇 门第 极左 迷思 抹杀 罔顾 羞辱 歧视 性别歧视 专制制度 抹煞 愚昧无知<br>    崇洋媚外 社会存在 优越感 异化 盲从 思想混乱 媚俗 贬低 双重标准 愚昧 中人 企求 教条 麻木不仁 错误倾向 两面性 妖魔化 情绪化 固步自封 自以为是 见仁见智 工具理性 恶劣行径 见利忘义<br>    禁锢 旧道德 囿于 旧习惯 仇富 神秘主义 厌倦 蔑视 肉体 谎言 排外 政治势力 单凭 站不住脚 彻头彻尾 不尽一致 新闻自由 惯用 鼓吹 思想束缚 求全责备 毒化 心理障碍 恶毒 作祟 男尊女卑<br>    险恶用心 欺压 原罪 倾轧 臆想 个人崇拜 仇恨 指鹿为马 中心主义 个体主义 崇洋 不无关系 恶趣 隔阂 西化 家长制 消于 大行其道 时弊 丑恶 尔虞我诈 人治 不良倾向 迷惘 民粹 狭隘 感知<br>    利害 诬蔑 暧昧 沉迷于 软弱 宿命 种族主义者 嫉贤妒能 本性 根子 仁慈 表面化 猜疑 惯于 是持 论调 孤立主义 谬误 懒惰 愈演愈烈 鄙弃 多福 虚荣心 暴露无遗 夜郎自大 理想主义 崇拜<br>    欺骗性 明里暗里 短视 糊涂思想 沾染上 不信任感 不实之词 嘲笑 无耻 恶行 私心杂念 愚弄 享乐 善恶 国家主义 错误认识 自卑 有意无意 有神论 蛊惑 论者 赤裸裸 惰性 脱离现实 相对主义<br>    目光短浅 以失 妄自尊大 冒犯 文化差异 自由主义 美国式 生活态度 对土 所作所为 蒙蔽 妒嫉 本本主义 言论自由 之徒 算计 被忽视 盲目崇拜 横加指责 反复无常 转移视线 扼杀 地主阶级 无能<br>    捕风捉影 婚恋 民主思想 哥们义气 利己主义 作怪 功利主义 漠视 片面化 浅薄 学术腐败 歧见 攻讦 充斥 思想意识 猎奇 唯我独尊 两个凡是 闭关锁国 保守主义 断章取义 士大夫 甚嚣尘上 助长<br>    新纳粹 客观事实 反民主 从中渔利 嘲弄 道德行为 上常 人权观 陈腐 种族主义 欠债 鄙薄 非人 自由散漫 凡此种种 奴隶制 憎恶 颐指气使 鼓噪 难以克服 滥施 实用主义 自我标榜 不公 揭穿<br>    焦虑 嘲讽 为数不少 似是而非 保守思想 政客 腐朽 事实根据 蒙昧主义 对立面 虚荣 旧思想 文明冲突论 强加于人 神权 道德败坏 宗法 怜悯 错误观点 余悸 其本质 趋之若鹜 雄才大略 怪象<br>    估计不足 家长式 误解 重男轻女 狂妄 剥削阶级 悲观主义 唯心主义 毋庸讳言 武断 鬼神 个人主义 封建残余 遗毒 模糊认识 不怀 旧习 横加 关门主义 没落 他者 中国崛起 小生产者 摈弃<br>    经验主义 安于现状 极少数人 混淆视听 中间状态 因袭 自满情绪 以偏概全 自大 憎恨 无端指责 自私 极端化 冷漠 恶意中伤 倒打一耙 沦丧 封建思想 错误思想 刻板 糊涂认识 畏难情绪 中美间<br>    多子 非西方 被教育者 厌烦 偏激 受旧 政治思潮 忍让 嫉妒 形而上学 非议 偏狭 隔膜 习气 拒斥 愚昧落后 守旧 隔靴搔痒 懦弱 丑陋 避风头 固执己见 只知 闭关政策 荒谬 向钱看 背弃<br>    人本主义 鄙视 功利 凸显 陋习 挑拨 成见 羞耻感 因循守旧 习惯势力 不满情绪 政治化 此消彼长 经院哲学 流毒 自虐 一丝一毫 等级制 说三道四 劣迹 陈规陋习 出自于 轻蔑 伦理 仇外<br>    全盘西化 误会 后现代主义 维护正义 揣测 消极情绪 厌恶 西学 奇谈怪论 对立物 危机意识 傲慢 污蔑 卑劣 物欲 斥之为 意涵 中心论 世俗化 糊涂 逆反心理 无理取闹 滋长 敬畏 理性主义<br>    非理性 容易接受 思想僵化 命令主义 余毒 贼喊捉贼 文化冲突 肤浅 怂恿 良知 门户之见 公理 全盘否定 关系恶化 假想敌 褒贬 有失 妒贤忌能 轻商 人走茶凉 徒劳 论资排辈 官商 附庸<br>    漠然置之 苛责 冷血 唯利是图 好恶 偏执 腐朽没落 喋喋不休 敌视 沉渣泛起 毫无道理 教条式 思想倾向 阴谋论 色厉内荏 排外主义 低人一等 轻视 天诛地灭 栽赃 尊重事实 错觉 拉拢 不加分析<br>    传统观念 一讲 指手划脚 条条框框 陈词滥调 匪夷所思 抱持 信仰主义 片面性 不抱 臆测 批评界 异己 抵触情绪 不能容忍 剥削制度 世俗 专断 杞人忧天 产生矛盾 根深蒂固 有百害而无一利 歧义<br>    唯心史观 组织观念 猜忌 以邻为壑 当政者 教条主义 民族主义 谩骂 市侩 虚伪性 容忍 霸道 诉求 毫无根据 私心 阴暗面 审丑 分野 既得利益 墨守成规 处心积虑 错误做法 否定一切 更不应<br>    脱离生活 屈服于 失当 乘虚而入 制造矛盾 积习 托词 指手画脚 从众 错误观念 劳动化 冷酷 陌生感 敌对 彻底清除 低级趣味 侮辱性 保守派 异质 逆来顺受 自暴自弃 有色眼镜 无政府主义 戒心<br>    疏离 同情心 自相矛盾 品行 贬损 强加于 尖刻 种族歧视 隐私 极个别 曲解 任性 颓废 任何事物 反叛 歪曲事实 理智 贫富悬殊 无所不用其极 敌意 鞭挞 幼稚 病态 责难 吹捧 自卑感<br>    离心离德 批评者 拉帮结伙 无端 混为一谈 居心叵测 怀旧 文人相轻 恶意 自视 铁老大 理念 编造谎言 狂热 恐惧 别有用心 丑化 种族问题 失落感 腐化 教师职业 挑动 消除隔阂 陈旧观念<br>  /STATISTICS=MEAN STDDEV<br>  /SORT=MEAN (D).</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Resources</th>
+<th class="rowLabels hCR vCR role3">Processor Time</th>
+<td class=" e dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Elapsed Time</th>
+<td class=" o dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<td  style="width:144px;padding:0px;border-spacing:0px"></td>
+<td  style="width:164px;padding:0px;border-spacing:0px"></td>
+<td  style="width:162px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+
+<div>
+
+<style>
+.pivot{color:#264a60;background-color:#ffffff;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#e0e0e0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#f9f9fb;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#f9f9fb;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #aeaeae;}
+.hDR{border-top:1px none #aeaeae;}
+.vCR{border-left:1px none #aeaeae;}
+.vDR{border-left:1px none #aeaeae;}
+.hCC{border-bottom:1px none #aeaeae;}
+.hDC{border-bottom:1px none #aeaeae;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #aeaeae;}
+</style>
+<table class="pivot" data-rows="1,0,1,590,0,0" data-cols="1,3" data-heights="24,0,20,11800,0" data-widths="106,370" data-curCounts="590,3" data-curSizess="590,3">
+<caption colspan="4">Descriptive Statistics</caption>
+<thead>
+<tr><th class="cornerLabels">&nbsp;</th><th>N</th><th>Mean</th><th>Std. Deviation</th></tr>
+</thead>
+<tbody data-rect="0,589,0,2">
+<tr><th style="min-width:106px">信仰主义</th><td class=" har" style="min-width:68px">2</td><td class=" har" style="min-width:98px">.751240402460098</td><td class=" har" style="min-width:98px">.140273773416685</td></tr>
+<tr><th>妒贤忌能</th><td class=" har">1</td><td class=" har">.724553823471069</td><td class=" har">.</td></tr>
+<tr><th>成见</th><td class=" har">45</td><td class=" har">.7089288022</td><td class=" har">.05775469846</td></tr>
+<tr><th>无知</th><td class=" har">45</td><td class=" har">.7089061720</td><td class=" har">.05042726021</td></tr>
+<tr><th>傲慢</th><td class=" har">45</td><td class=" har">.7051962467</td><td class=" har">.07143804323</td></tr>
+<tr><th>根深蒂固</th><td class=" har">45</td><td class=" har">.7038273051</td><td class=" har">.06459865616</td></tr>
+<tr><th>劳动化</th><td class=" har">3</td><td class=" har">.696360429128011</td><td class=" har">.059453309954890</td></tr>
+<tr><th>狭隘</th><td class=" har">45</td><td class=" har">.6954092044</td><td class=" har">.06412983583</td></tr>
+<tr><th>习惯势力</th><td class=" har">36</td><td class=" har">.693905994296074</td><td class=" har">.083082179822068</td></tr>
+<tr><th>自私</th><td class=" har">45</td><td class=" har">.6907983204</td><td class=" har">.05947040802</td></tr>
+<tr><th>偏颇</th><td class=" har">45</td><td class=" har">.6906904349</td><td class=" har">.06289241085</td></tr>
+<tr><th>偏激</th><td class=" har">45</td><td class=" har">.6906598971</td><td class=" har">.05950474045</td></tr>
+<tr><th>误解</th><td class=" har">45</td><td class=" har">.6891501120</td><td class=" har">.04669702819</td></tr>
+<tr><th>优越感</th><td class=" har">45</td><td class=" har">.6828075153</td><td class=" har">.05848713625</td></tr>
+<tr><th>仇视</th><td class=" har">45</td><td class=" har">.6811513480</td><td class=" har">.06389313294</td></tr>
+<tr><th>陈腐</th><td class=" har">42</td><td class=" har">.678815562100638</td><td class=" har">.094316273483609</td></tr>
+<tr><th>曲解</th><td class=" har">45</td><td class=" har">.6778972960</td><td class=" har">.05043769719</td></tr>
+<tr><th>虚无主义</th><td class=" har">45</td><td class=" har">.6776414129</td><td class=" har">.08051163316</td></tr>
+<tr><th>鄙视</th><td class=" har">41</td><td class=" har">.676525563728519</td><td class=" har">.081159293019599</td></tr>
+<tr><th>利己主义</th><td class=" har">45</td><td class=" har">.6759944522</td><td class=" har">.07052656035</td></tr>
+<tr><th>封建思想</th><td class=" har">37</td><td class=" har">.675346862625431</td><td class=" har">.085034488362637</td></tr>
+<tr><th>轻商</th><td class=" har">12</td><td class=" har">.673695298532645</td><td class=" har">.098497942235218</td></tr>
+<tr><th>实用主义</th><td class=" har">45</td><td class=" har">.6723376131</td><td class=" har">.07017622024</td></tr>
+<tr><th>猜疑</th><td class=" har">43</td><td class=" har">.670707205007243</td><td class=" har">.052639105483762</td></tr>
+<tr><th>以失</th><td class=" har">1</td><td class=" har">.670607209205628</td><td class=" har">.</td></tr>
+<tr><th>封建意识</th><td class=" har">29</td><td class=" har">.669955255656407</td><td class=" har">.104483176659473</td></tr>
+<tr><th>不怀</th><td class=" har">17</td><td class=" har">.667249928502476</td><td class=" har">.086025486462769</td></tr>
+<tr><th>隔阂</th><td class=" har">45</td><td class=" har">.6672346469</td><td class=" har">.04193479289</td></tr>
+<tr><th>论调</th><td class=" har">45</td><td class=" har">.6662119607</td><td class=" har">.06032414745</td></tr>
+<tr><th>偏执</th><td class=" har">40</td><td class=" har">.664878989756107</td><td class=" har">.055373162834482</td></tr>
+<tr><th>敌意</th><td class=" har">44</td><td class=" har">.664060329849070</td><td class=" har">.061965709205244</td></tr>
+<tr><th>虚伪</th><td class=" har">45</td><td class=" har">.6639890409</td><td class=" har">.06008593888</td></tr>
+<tr><th>世俗</th><td class=" har">45</td><td class=" har">.6634418689</td><td class=" har">.10164010207</td></tr>
+<tr><th>排外</th><td class=" har">45</td><td class=" har">.6633255320</td><td class=" har">.06401022477</td></tr>
+<tr><th>贬低</th><td class=" har">44</td><td class=" har">.663090522993694</td><td class=" har">.062817950954008</td></tr>
+<tr><th>蒙昧主义</th><td class=" har">6</td><td class=" har">.661160270373027</td><td class=" har">.108241430383274</td></tr>
+<tr><th>客观事实</th><td class=" har">45</td><td class=" har">.6610581362</td><td class=" har">.07220849912</td></tr>
+<tr><th>封建残余</th><td class=" har">28</td><td class=" har">.660504264490945</td><td class=" har">.080095394944631</td></tr>
+<tr><th>盲从</th><td class=" har">45</td><td class=" har">.6600391180</td><td class=" har">.07416267021</td></tr>
+<tr><th>功利主义</th><td class=" har">42</td><td class=" har">.659643341388021</td><td class=" har">.067479344688321</td></tr>
+<tr><th>作祟</th><td class=" har">45</td><td class=" har">.6594883656</td><td class=" har">.07375680349</td></tr>
+<tr><th>冷漠</th><td class=" har">45</td><td class=" har">.6587081989</td><td class=" har">.06416078688</td></tr>
+<tr><th>盲目崇拜</th><td class=" har">39</td><td class=" har">.658360841946724</td><td class=" har">.064973581937696</td></tr>
+<tr><th>别有用心</th><td class=" har">45</td><td class=" har">.6576477844</td><td class=" har">.06347561923</td></tr>
+<tr><th>糊涂思想</th><td class=" har">9</td><td class=" har">.657558262348175</td><td class=" har">.051864262511521</td></tr>
+<tr><th>蔑视</th><td class=" har">45</td><td class=" har">.6573608729</td><td class=" har">.06554796130</td></tr>
+<tr><th>低级趣味</th><td class=" har">43</td><td class=" har">.657089711621751</td><td class=" har">.078440315658866</td></tr>
+<tr><th>小生产者</th><td class=" har">24</td><td class=" har">.656615321834882</td><td class=" har">.089373939860487</td></tr>
+<tr><th>错误观点</th><td class=" har">45</td><td class=" har">.6564773996</td><td class=" har">.07033889880</td></tr>
+<tr><th>旧思想</th><td class=" har">35</td><td class=" har">.655786276715142</td><td class=" har">.097552364860538</td></tr>
+<tr><th>受旧</th><td class=" har">17</td><td class=" har">.655643343925476</td><td class=" har">.062424820972882</td></tr>
+<tr><th>中心主义</th><td class=" har">38</td><td class=" har">.655508712718361</td><td class=" har">.053841425858238</td></tr>
+<tr><th>错误认识</th><td class=" har">45</td><td class=" har">.6553058351</td><td class=" har">.07066347343</td></tr>
+<tr><th>厌恶</th><td class=" har">45</td><td class=" har">.6551709707</td><td class=" har">.08230801430</td></tr>
+<tr><th>懒惰</th><td class=" har">42</td><td class=" har">.654896235182172</td><td class=" har">.077845905071113</td></tr>
+<tr><th>自私自利</th><td class=" har">44</td><td class=" har">.654445757920092</td><td class=" har">.068301166402237</td></tr>
+<tr><th>鄙薄</th><td class=" har">36</td><td class=" har">.654283005330298</td><td class=" har">.083466081538867</td></tr>
+<tr><th>作怪</th><td class=" har">44</td><td class=" har">.654195417734710</td><td class=" har">.095052533075923</td></tr>
+<tr><th>颓废</th><td class=" har">44</td><td class=" har">.654002108357169</td><td class=" har">.079281455587233</td></tr>
+<tr><th>个人主义</th><td class=" har">45</td><td class=" har">.6533619973</td><td class=" har">.07116920169</td></tr>
+<tr><th>阴暗面</th><td class=" har">39</td><td class=" har">.652355928451587</td><td class=" har">.072434574899080</td></tr>
+<tr><th>似是而非</th><td class=" har">44</td><td class=" har">.652272229844874</td><td class=" har">.066133843074662</td></tr>
+<tr><th>模糊认识</th><td class=" har">44</td><td class=" har">.651488619771871</td><td class=" har">.053239069833787</td></tr>
+<tr><th>短视</th><td class=" har">44</td><td class=" har">.651366888122125</td><td class=" har">.069642725695263</td></tr>
+<tr><th>本性</th><td class=" har">45</td><td class=" har">.6508575353</td><td class=" har">.06217436613</td></tr>
+<tr><th>错误观念</th><td class=" har">45</td><td class=" har">.6502125198</td><td class=" har">.08890943101</td></tr>
+<tr><th>男尊女卑</th><td class=" har">37</td><td class=" har">.649759637342917</td><td class=" har">.086398823697820</td></tr>
+<tr><th>形而上学</th><td class=" har">44</td><td class=" har">.649714003909718</td><td class=" har">.077895339028493</td></tr>
+<tr><th>文化差异</th><td class=" har">36</td><td class=" har">.649577021598816</td><td class=" har">.056000821744865</td></tr>
+<tr><th>闭关政策</th><td class=" har">8</td><td class=" har">.649519056081772</td><td class=" har">.069206019284161</td></tr>
+<tr><th>唯心主义</th><td class=" har">42</td><td class=" har">.649254508671307</td><td class=" har">.078303319456065</td></tr>
+<tr><th>糊涂认识</th><td class=" har">24</td><td class=" har">.649220510075490</td><td class=" har">.084357403417700</td></tr>
+<tr><th>思想倾向</th><td class=" har">43</td><td class=" har">.649098198081172</td><td class=" har">.081181053680661</td></tr>
+<tr><th>疏离</th><td class=" har">39</td><td class=" har">.648482350202707</td><td class=" har">.072686951236924</td></tr>
+<tr><th>抹杀</th><td class=" har">44</td><td class=" har">.648309756409038</td><td class=" har">.059924207782640</td></tr>
+<tr><th>重男轻女</th><td class=" har">41</td><td class=" har">.647996483779535</td><td class=" har">.100946363247846</td></tr>
+<tr><th>仇外</th><td class=" har">25</td><td class=" har">.647563037872315</td><td class=" har">.059309298471850</td></tr>
+<tr><th>说三道四</th><td class=" har">43</td><td class=" har">.646941396386125</td><td class=" har">.070459122094008</td></tr>
+<tr><th>肤浅</th><td class=" har">45</td><td class=" har">.6469363640</td><td class=" har">.06491934849</td></tr>
+<tr><th>全盘否定</th><td class=" har">43</td><td class=" har">.646644732286764</td><td class=" har">.069259006207534</td></tr>
+<tr><th>崇洋媚外</th><td class=" har">41</td><td class=" har">.646549660985063</td><td class=" har">.081211182792229</td></tr>
+<tr><th>混淆是非</th><td class=" har">38</td><td class=" har">.646242924426731</td><td class=" har">.042856269437544</td></tr>
+<tr><th>经验主义</th><td class=" har">44</td><td class=" har">.646042565053160</td><td class=" har">.075274579584773</td></tr>
+<tr><th>荒谬</th><td class=" har">45</td><td class=" har">.6455528798</td><td class=" har">.06731723180</td></tr>
+<tr><th>社会存在</th><td class=" har">44</td><td class=" har">.645293592052026</td><td class=" har">.064675808317808</td></tr>
+<tr><th>守旧</th><td class=" har">44</td><td class=" har">.645107591694052</td><td class=" har">.086507459799110</td></tr>
+<tr><th>脱离现实</th><td class=" har">43</td><td class=" har">.644966343114542</td><td class=" har">.059303634767296</td></tr>
+<tr><th>片面性</th><td class=" har">44</td><td class=" har">.644798798994585</td><td class=" har">.073878976713682</td></tr>
+<tr><th>愚昧</th><td class=" har">45</td><td class=" har">.6447980800</td><td class=" har">.06770225667</td></tr>
+<tr><th>嘲弄</th><td class=" har">42</td><td class=" har">.644766449928284</td><td class=" har">.078358238746714</td></tr>
+<tr><th>极少数人</th><td class=" har">43</td><td class=" har">.644731573587240</td><td class=" har">.095284503879711</td></tr>
+<tr><th>有意无意</th><td class=" har">44</td><td class=" har">.644688153808767</td><td class=" har">.062891186919726</td></tr>
+<tr><th>习气</th><td class=" har">42</td><td class=" har">.643992702166239</td><td class=" har">.087248810436717</td></tr>
+<tr><th>政客</th><td class=" har">45</td><td class=" har">.6429604222</td><td class=" har">.07727035531</td></tr>
+<tr><th>蒙蔽</th><td class=" har">45</td><td class=" har">.6428543813</td><td class=" har">.05892595423</td></tr>
+<tr><th>唯利是图</th><td class=" har">42</td><td class=" har">.642608902993656</td><td class=" har">.084091730495247</td></tr>
+<tr><th>谬误</th><td class=" har">45</td><td class=" har">.6420584389</td><td class=" har">.06578434323</td></tr>
+<tr><th>敌视</th><td class=" har">45</td><td class=" har">.6420380173</td><td class=" har">.05726049626</td></tr>
+<tr><th>思想意识</th><td class=" har">45</td><td class=" har">.6417057502</td><td class=" har">.10735198177</td></tr>
+<tr><th>偏狭</th><td class=" har">38</td><td class=" har">.641626136083352</td><td class=" har">.080879034384363</td></tr>
+<tr><th>歧视</th><td class=" har">45</td><td class=" har">.6413238322</td><td class=" har">.06653564356</td></tr>
+<tr><th>逆反心理</th><td class=" har">32</td><td class=" har">.641188750043512</td><td class=" har">.073743582329604</td></tr>
+<tr><th>自大</th><td class=" har">45</td><td class=" har">.6404579320</td><td class=" har">.07566287754</td></tr>
+<tr><th>自以为是</th><td class=" har">45</td><td class=" har">.6404440473</td><td class=" har">.07345438301</td></tr>
+<tr><th>戒心</th><td class=" har">38</td><td class=" har">.640213544431485</td><td class=" har">.061517756889339</td></tr>
+<tr><th>漠视</th><td class=" har">45</td><td class=" har">.6400675027</td><td class=" har">.08355130058</td></tr>
+<tr><th>责难</th><td class=" har">44</td><td class=" har">.640019596977667</td><td class=" har">.070371516893623</td></tr>
+<tr><th>臆想</th><td class=" har">45</td><td class=" har">.6398174682</td><td class=" har">.05827851717</td></tr>
+<tr><th>强权</th><td class=" har">45</td><td class=" har">.6397254649</td><td class=" har">.07339731628</td></tr>
+<tr><th>不信任感</th><td class=" har">44</td><td class=" har">.639680683612824</td><td class=" har">.049207876431389</td></tr>
+<tr><th>惰性</th><td class=" har">45</td><td class=" har">.6394725842</td><td class=" har">.07907030064</td></tr>
+<tr><th>摈弃</th><td class=" har">45</td><td class=" har">.6388882378</td><td class=" har">.08035339914</td></tr>
+<tr><th>无政府主义</th><td class=" har">43</td><td class=" har">.638385659040407</td><td class=" har">.078178086402041</td></tr>
+<tr><th>自相矛盾</th><td class=" har">45</td><td class=" har">.6383449647</td><td class=" har">.05642078915</td></tr>
+<tr><th>虚伪性</th><td class=" har">37</td><td class=" har">.638217484628832</td><td class=" har">.063535485915506</td></tr>
+<tr><th>排外主义</th><td class=" har">31</td><td class=" har">.637912456066378</td><td class=" har">.062166544297545</td></tr>
+<tr><th>情绪化</th><td class=" har">32</td><td class=" har">.637784823775292</td><td class=" har">.053280956020554</td></tr>
+<tr><th>嫉贤妒能</th><td class=" har">20</td><td class=" har">.637707173824310</td><td class=" har">.088457627379099</td></tr>
+<tr><th>轻视</th><td class=" har">45</td><td class=" har">.6374669011</td><td class=" har">.08278388051</td></tr>
+<tr><th>功利</th><td class=" har">43</td><td class=" har">.637226748605107</td><td class=" har">.072368068863573</td></tr>
+<tr><th>唯我独尊</th><td class=" har">43</td><td class=" har">.637148097504017</td><td class=" har">.059580768226997</td></tr>
+<tr><th>客观存在</th><td class=" har">45</td><td class=" har">.6369985538</td><td class=" har">.07235165115</td></tr>
+<tr><th>误读</th><td class=" har">32</td><td class=" har">.636965059675276</td><td class=" har">.061867151649302</td></tr>
+<tr><th>病态</th><td class=" har">45</td><td class=" har">.6369279429</td><td class=" har">.07891397982</td></tr>
+<tr><th>否定一切</th><td class=" har">26</td><td class=" har">.636847429550611</td><td class=" har">.086915293867337</td></tr>
+<tr><th>麻木不仁</th><td class=" har">43</td><td class=" har">.636649551779725</td><td class=" har">.077625625471592</td></tr>
+<tr><th>以偏概全</th><td class=" har">45</td><td class=" har">.6366165904</td><td class=" har">.07000582940</td></tr>
+<tr><th>错误思想</th><td class=" har">45</td><td class=" har">.6365099167</td><td class=" har">.08502782669</td></tr>
+<tr><th>谬论</th><td class=" har">45</td><td class=" har">.6364863220</td><td class=" har">.06416813874</td></tr>
+<tr><th>嘲讽</th><td class=" har">43</td><td class=" har">.636339270098265</td><td class=" har">.075362561887343</td></tr>
+<tr><th>自卑</th><td class=" har">45</td><td class=" har">.6363124562</td><td class=" har">.07965357053</td></tr>
+<tr><th>妖魔化</th><td class=" har">26</td><td class=" har">.636157920727363</td><td class=" har">.038902804087520</td></tr>
+<tr><th>抹煞</th><td class=" har">39</td><td class=" har">.635954422828479</td><td class=" har">.072950464257460</td></tr>
+<tr><th>浅薄</th><td class=" har">44</td><td class=" har">.635620145635171</td><td class=" har">.080664562421732</td></tr>
+<tr><th>有神论</th><td class=" har">15</td><td class=" har">.635581517219544</td><td class=" har">.056188385518650</td></tr>
+<tr><th>憎恶</th><td class=" har">40</td><td class=" har">.635378614813089</td><td class=" har">.075445686172163</td></tr>
+<tr><th>保守主义</th><td class=" har">44</td><td class=" har">.635320748795163</td><td class=" har">.080883728243816</td></tr>
+<tr><th>尊重事实</th><td class=" har">44</td><td class=" har">.635306547311219</td><td class=" har">.063113689817764</td></tr>
+<tr><th>脱离生活</th><td class=" har">38</td><td class=" har">.635147829589091</td><td class=" har">.088612563228800</td></tr>
+<tr><th>目光短浅</th><td class=" har">43</td><td class=" har">.634820018396821</td><td class=" har">.084224057480064</td></tr>
+<tr><th>奇谈怪论</th><td class=" har">41</td><td class=" har">.634798462797956</td><td class=" har">.067049826796162</td></tr>
+<tr><th>颠倒黑白</th><td class=" har">44</td><td class=" har">.634670643643899</td><td class=" har">.060235703940997</td></tr>
+<tr><th>迁就</th><td class=" har">44</td><td class=" har">.634600330482830</td><td class=" har">.072220668516180</td></tr>
+<tr><th>传统观念</th><td class=" har">45</td><td class=" har">.6344300513</td><td class=" har">.08949609622</td></tr>
+<tr><th>论者</th><td class=" har">44</td><td class=" har">.634289704940536</td><td class=" har">.073923918929915</td></tr>
+<tr><th>教条主义</th><td class=" har">45</td><td class=" har">.6342593931</td><td class=" har">.10045837384</td></tr>
+<tr><th>过激</th><td class=" har">45</td><td class=" har">.6341885487</td><td class=" har">.06545390233</td></tr>
+<tr><th>指手画脚</th><td class=" har">43</td><td class=" har">.634019682573718</td><td class=" har">.067706082024819</td></tr>
+<tr><th>疏远</th><td class=" har">45</td><td class=" har">.6335897676</td><td class=" har">.07155518930</td></tr>
+<tr><th>沉渣泛起</th><td class=" har">44</td><td class=" har">.633213731375608</td><td class=" har">.062479133441240</td></tr>
+<tr><th>不加分析</th><td class=" har">36</td><td class=" har">.633127099937863</td><td class=" har">.073264739479795</td></tr>
+<tr><th>个体主义</th><td class=" har">5</td><td class=" har">.633080160617828</td><td class=" har">.077992593174104</td></tr>
+<tr><th>丑化</th><td class=" har">45</td><td class=" har">.6329928409</td><td class=" har">.06949195083</td></tr>
+<tr><th>余毒</th><td class=" har">20</td><td class=" har">.632951581478119</td><td class=" har">.121310513744056</td></tr>
+<tr><th>愚昧落后</th><td class=" har">35</td><td class=" har">.632426995038986</td><td class=" har">.083538027952323</td></tr>
+<tr><th>批评者</th><td class=" har">42</td><td class=" har">.632415106608754</td><td class=" har">.058392161943660</td></tr>
+<tr><th>拒斥</th><td class=" har">31</td><td class=" har">.632168683313554</td><td class=" har">.059491288196874</td></tr>
+<tr><th>思想僵化</th><td class=" har">45</td><td class=" har">.6321212100</td><td class=" har">.08810269808</td></tr>
+<tr><th>猜忌</th><td class=" har">41</td><td class=" har">.631972590597664</td><td class=" har">.044896472616216</td></tr>
+<tr><th>先入为主</th><td class=" har">43</td><td class=" har">.631392028442649</td><td class=" har">.061879207018105</td></tr>
+<tr><th>经院哲学</th><td class=" har">8</td><td class=" har">.631144538521767</td><td class=" har">.115840274010421</td></tr>
+<tr><th>愚弄</th><td class=" har">42</td><td class=" har">.631073453596660</td><td class=" har">.078087843123042</td></tr>
+<tr><th>歧见</th><td class=" har">39</td><td class=" har">.630681309944544</td><td class=" har">.064666366794696</td></tr>
+<tr><th>教条</th><td class=" har">45</td><td class=" har">.6304444409</td><td class=" har">.07476563477</td></tr>
+<tr><th>思想混乱</th><td class=" har">42</td><td class=" har">.630438691093808</td><td class=" har">.069580106153165</td></tr>
+<tr><th>拜金主义</th><td class=" har">42</td><td class=" har">.630382405860084</td><td class=" har">.073122018933199</td></tr>
+<tr><th>非议</th><td class=" har">45</td><td class=" har">.6303159416</td><td class=" har">.06711376663</td></tr>
+<tr><th>保守思想</th><td class=" har">35</td><td class=" har">.630268406016486</td><td class=" har">.086867731058424</td></tr>
+<tr><th>嫉妒</th><td class=" har">42</td><td class=" har">.630195091877665</td><td class=" har">.074662981843036</td></tr>
+<tr><th>自由主义</th><td class=" har">45</td><td class=" har">.6301021676</td><td class=" har">.09056246553</td></tr>
+<tr><th>站不住脚</th><td class=" har">45</td><td class=" har">.6297991631</td><td class=" har">.06030149099</td></tr>
+<tr><th>捕风捉影</th><td class=" har">43</td><td class=" har">.629675583783970</td><td class=" har">.048542405896444</td></tr>
+<tr><th>不满情绪</th><td class=" har">45</td><td class=" har">.6296225547</td><td class=" har">.05564676020</td></tr>
+<tr><th>横加指责</th><td class=" har">43</td><td class=" har">.629554855269055</td><td class=" har">.077057283261937</td></tr>
+<tr><th>误会</th><td class=" har">45</td><td class=" har">.6295325753</td><td class=" har">.06322406822</td></tr>
+<tr><th>强加于人</th><td class=" har">45</td><td class=" har">.6294501738</td><td class=" har">.06841426246</td></tr>
+<tr><th>全盘西化</th><td class=" har">39</td><td class=" har">.629404158928455</td><td class=" har">.073762074088959</td></tr>
+<tr><th>教条式</th><td class=" har">37</td><td class=" har">.629378026401675</td><td class=" har">.077381179422741</td></tr>
+<tr><th>异己</th><td class=" har">43</td><td class=" har">.629287415465643</td><td class=" har">.061647020071157</td></tr>
+<tr><th>贬损</th><td class=" har">38</td><td class=" har">.629007358300058</td><td class=" har">.068118387313143</td></tr>
+<tr><th>既得利益</th><td class=" har">45</td><td class=" har">.6289361831</td><td class=" har">.07860450501</td></tr>
+<tr><th>仇恨</th><td class=" har">45</td><td class=" har">.6288163340</td><td class=" har">.07086286447</td></tr>
+<tr><th>无能</th><td class=" har">43</td><td class=" har">.628803017527558</td><td class=" har">.078114913756420</td></tr>
+<tr><th>吹捧</th><td class=" har">45</td><td class=" har">.6287527156</td><td class=" har">.06787967139</td></tr>
+<tr><th>更不应</th><td class=" har">45</td><td class=" har">.6284040736</td><td class=" har">.07339315815</td></tr>
+<tr><th>两面性</th><td class=" har">42</td><td class=" har">.628212156749907</td><td class=" har">.058123239465266</td></tr>
+<tr><th>腐朽没落</th><td class=" har">40</td><td class=" har">.627944803237915</td><td class=" har">.084058826069198</td></tr>
+<tr><th>遗毒</th><td class=" har">31</td><td class=" har">.627833550976169</td><td class=" har">.089450314162603</td></tr>
+<tr><th>甚嚣尘上</th><td class=" har">44</td><td class=" har">.627793208441951</td><td class=" har">.063983585443862</td></tr>
+<tr><th>物欲</th><td class=" har">37</td><td class=" har">.627459806364936</td><td class=" har">.069825000535302</td></tr>
+<tr><th>剥削阶级</th><td class=" har">41</td><td class=" har">.627368134696309</td><td class=" har">.085732619756671</td></tr>
+<tr><th>对立物</th><td class=" har">27</td><td class=" har">.627322307339421</td><td class=" har">.079731146293689</td></tr>
+<tr><th>错误倾向</th><td class=" har">45</td><td class=" har">.6272822829</td><td class=" har">.07776914319</td></tr>
+<tr><th>好恶</th><td class=" har">45</td><td class=" har">.6272315316</td><td class=" har">.06345513421</td></tr>
+<tr><th>向钱看</th><td class=" har">39</td><td class=" har">.627214767994025</td><td class=" har">.081338850230610</td></tr>
+<tr><th>卑劣</th><td class=" har">45</td><td class=" har">.6270107800</td><td class=" har">.06728983028</td></tr>
+<tr><th>崇洋</th><td class=" har">39</td><td class=" har">.626947220319357</td><td class=" har">.072179230086541</td></tr>
+<tr><th>断章取义</th><td class=" har">42</td><td class=" har">.626784892309280</td><td class=" har">.050163086814280</td></tr>
+<tr><th>陈旧观念</th><td class=" har">44</td><td class=" har">.626760746267709</td><td class=" har">.080482122334951</td></tr>
+<tr><th>恐惧</th><td class=" har">45</td><td class=" har">.6264429947</td><td class=" har">.07047012039</td></tr>
+<tr><th>相对主义</th><td class=" har">21</td><td class=" har">.626385985385804</td><td class=" har">.062414878895366</td></tr>
+<tr><th>标榜</th><td class=" har">45</td><td class=" har">.6263188198</td><td class=" har">.06572778256</td></tr>
+<tr><th>外来文化</th><td class=" har">44</td><td class=" har">.625883825800636</td><td class=" har">.072463958502298</td></tr>
+<tr><th>有色眼镜</th><td class=" har">36</td><td class=" har">.625772664944331</td><td class=" har">.063483939501411</td></tr>
+<tr><th>后现代主义</th><td class=" har">32</td><td class=" har">.625747293233871</td><td class=" har">.059058943099867</td></tr>
+<tr><th>自卑感</th><td class=" har">40</td><td class=" har">.625670998543501</td><td class=" har">.077956371097754</td></tr>
+<tr><th>孤立主义</th><td class=" har">34</td><td class=" har">.625658512992017</td><td class=" har">.067396477374566</td></tr>
+<tr><th>理性主义</th><td class=" har">33</td><td class=" har">.625643801508528</td><td class=" har">.062686283538439</td></tr>
+<tr><th>伪善</th><td class=" har">41</td><td class=" har">.625253237602188</td><td class=" har">.065753870115979</td></tr>
+<tr><th>厌倦</th><td class=" har">45</td><td class=" har">.6247593498</td><td class=" har">.08359131728</td></tr>
+<tr><th>求全责备</th><td class=" har">42</td><td class=" har">.624664986417407</td><td class=" har">.085327942519576</td></tr>
+<tr><th>猎奇</th><td class=" har">45</td><td class=" har">.6246509398</td><td class=" har">.06873075561</td></tr>
+<tr><th>愚昧无知</th><td class=" har">35</td><td class=" har">.624237986973354</td><td class=" har">.095564526517567</td></tr>
+<tr><th>固步自封</th><td class=" har">45</td><td class=" har">.6242332436</td><td class=" har">.07761600897</td></tr>
+<tr><th>安于现状</th><td class=" har">45</td><td class=" har">.6241428098</td><td class=" har">.08892162342</td></tr>
+<tr><th>鞭挞</th><td class=" har">43</td><td class=" har">.624083275018736</td><td class=" har">.075386841695780</td></tr>
+<tr><th>威胁论</th><td class=" har">33</td><td class=" har">.624056162256183</td><td class=" har">.059984007915546</td></tr>
+<tr><th>文明冲突论</th><td class=" har">24</td><td class=" har">.624033169200023</td><td class=" har">.073526132198196</td></tr>
+<tr><th>滋长</th><td class=" har">45</td><td class=" har">.6239086278</td><td class=" har">.08097979955</td></tr>
+<tr><th>对立面</th><td class=" har">45</td><td class=" har">.6238785360</td><td class=" har">.06355260224</td></tr>
+<tr><th>理智</th><td class=" har">45</td><td class=" har">.6236964876</td><td class=" har">.06816524484</td></tr>
+<tr><th>隔膜</th><td class=" har">45</td><td class=" har">.6236894040</td><td class=" har">.11397302837</td></tr>
+<tr><th>双重标准</th><td class=" har">37</td><td class=" har">.623375299814585</td><td class=" har">.053229287783552</td></tr>
+<tr><th>民族压迫</th><td class=" har">36</td><td class=" har">.623247519135475</td><td class=" har">.077290693677288</td></tr>
+<tr><th>人权观</th><td class=" har">34</td><td class=" har">.623243471278864</td><td class=" har">.085506941808056</td></tr>
+<tr><th>混淆视听</th><td class=" har">45</td><td class=" har">.6228174740</td><td class=" har">.05757552005</td></tr>
+<tr><th>憎恨</th><td class=" har">43</td><td class=" har">.622604277244834</td><td class=" har">.061859032418860</td></tr>
+<tr><th>指手划脚</th><td class=" har">20</td><td class=" har">.622531433403492</td><td class=" har">.084691921993641</td></tr>
+<tr><th>因袭</th><td class=" har">41</td><td class=" har">.622006935317342</td><td class=" har">.084700957332936</td></tr>
+<tr><th>墨守成规</th><td class=" har">45</td><td class=" har">.6218060771</td><td class=" har">.08642862257</td></tr>
+<tr><th>旧道德</th><td class=" har">20</td><td class=" har">.621793857216835</td><td class=" har">.093659250119031</td></tr>
+<tr><th>禁锢</th><td class=" har">45</td><td class=" har">.6217293371</td><td class=" har">.08071830369</td></tr>
+<tr><th>良知</th><td class=" har">45</td><td class=" har">.6216530624</td><td class=" har">.08895205521</td></tr>
+<tr><th>事实根据</th><td class=" har">44</td><td class=" har">.621225798671896</td><td class=" har">.071489497151293</td></tr>
+<tr><th>抱持</th><td class=" har">20</td><td class=" har">.621196199953556</td><td class=" har">.064875106288616</td></tr>
+<tr><th>混为一谈</th><td class=" har">45</td><td class=" har">.6210857662</td><td class=" har">.08851650117</td></tr>
+<tr><th>武断</th><td class=" har">44</td><td class=" har">.620931095697663</td><td class=" har">.068087388748455</td></tr>
+<tr><th>门户之见</th><td class=" har">38</td><td class=" har">.620888308474892</td><td class=" har">.079154370256002</td></tr>
+<tr><th>幼稚</th><td class=" har">45</td><td class=" har">.6208107602</td><td class=" har">.07530605601</td></tr>
+<tr><th>附庸</th><td class=" har">44</td><td class=" har">.620662245560776</td><td class=" har">.072359413379933</td></tr>
+<tr><th>蛊惑</th><td class=" har">45</td><td class=" har">.6205002571</td><td class=" har">.05572062393</td></tr>
+<tr><th>中心论</th><td class=" har">40</td><td class=" har">.620440058410168</td><td class=" har">.067281347347904</td></tr>
+<tr><th>非理性</th><td class=" har">40</td><td class=" har">.620325399935246</td><td class=" har">.082278826838646</td></tr>
+<tr><th>悲观失望</th><td class=" har">40</td><td class=" har">.620142948627472</td><td class=" har">.096165784429521</td></tr>
+<tr><th>政治势力</th><td class=" har">44</td><td class=" har">.620089547200636</td><td class=" har">.053701121119239</td></tr>
+<tr><th>赤裸裸</th><td class=" har">45</td><td class=" har">.6197274558</td><td class=" har">.06804782533</td></tr>
+<tr><th>厌烦</th><td class=" har">42</td><td class=" har">.619537129998207</td><td class=" har">.072409905976497</td></tr>
+<tr><th>因循守旧</th><td class=" har">45</td><td class=" har">.6194587433</td><td class=" har">.09770441284</td></tr>
+<tr><th>不能容忍</th><td class=" har">43</td><td class=" har">.619431813095891</td><td class=" har">.069541771347450</td></tr>
+<tr><th>抵触情绪</th><td class=" har">45</td><td class=" har">.6193233556</td><td class=" har">.08132249071</td></tr>
+<tr><th>暧昧</th><td class=" har">37</td><td class=" har">.618917447489661</td><td class=" har">.066853611814310</td></tr>
+<tr><th>失落感</th><td class=" har">35</td><td class=" har">.618772118432181</td><td class=" har">.094765713732754</td></tr>
+<tr><th>善恶</th><td class=" har">45</td><td class=" har">.6187031849</td><td class=" har">.07256235163</td></tr>
+<tr><th>性别歧视</th><td class=" har">37</td><td class=" har">.618681817441373</td><td class=" har">.082121076485074</td></tr>
+<tr><th>歪曲事实</th><td class=" har">45</td><td class=" har">.6182353873</td><td class=" har">.06152178606</td></tr>
+<tr><th>同情心</th><td class=" har">44</td><td class=" har">.617981867356734</td><td class=" har">.066111838929216</td></tr>
+<tr><th>关门主义</th><td class=" har">29</td><td class=" har">.617472691782590</td><td class=" har">.102570526244335</td></tr>
+<tr><th>所作所为</th><td class=" har">45</td><td class=" har">.6173938527</td><td class=" har">.06786637928</td></tr>
+<tr><th>异化</th><td class=" har">43</td><td class=" har">.616914399141489</td><td class=" har">.084975415405321</td></tr>
+<tr><th>从众</th><td class=" har">35</td><td class=" har">.616602218151093</td><td class=" har">.091273298535413</td></tr>
+<tr><th>迷惘</th><td class=" har">45</td><td class=" har">.6160597462</td><td class=" har">.07267261510</td></tr>
+<tr><th>错觉</th><td class=" har">45</td><td class=" har">.6160064507</td><td class=" har">.08523595822</td></tr>
+<tr><th>私心杂念</th><td class=" har">44</td><td class=" har">.615973427214406</td><td class=" har">.080662007016818</td></tr>
+<tr><th>毫无根据</th><td class=" har">45</td><td class=" har">.6159551789</td><td class=" har">.06214990914</td></tr>
+<tr><th>颐指气使</th><td class=" har">42</td><td class=" har">.615887174294109</td><td class=" har">.062760329371957</td></tr>
+<tr><th>挑动</th><td class=" har">45</td><td class=" har">.6157305667</td><td class=" har">.07289472520</td></tr>
+<tr><th>人本主义</th><td class=" har">37</td><td class=" har">.615683850404379</td><td class=" har">.070816976055597</td></tr>
+<tr><th>不抱</th><td class=" har">44</td><td class=" har">.615651433440772</td><td class=" har">.089371418033529</td></tr>
+<tr><th>宗派主义</th><td class=" har">40</td><td class=" har">.615588508546353</td><td class=" har">.096109302243720</td></tr>
+<tr><th>市侩</th><td class=" har">31</td><td class=" har">.615572700577397</td><td class=" har">.076497573988147</td></tr>
+<tr><th>虚荣心</th><td class=" har">38</td><td class=" har">.615316391775483</td><td class=" har">.066874742288883</td></tr>
+<tr><th>强加于</th><td class=" har">45</td><td class=" har">.6152517438</td><td class=" har">.07446802945</td></tr>
+<tr><th>分野</th><td class=" har">41</td><td class=" har">.615222061552653</td><td class=" har">.068225558272683</td></tr>
+<tr><th>刻板</th><td class=" har">45</td><td class=" har">.6151825287</td><td class=" har">.05308244126</td></tr>
+<tr><th>鼓噪</th><td class=" har">45</td><td class=" har">.6151231213</td><td class=" har">.06808988268</td></tr>
+<tr><th>产生误解</th><td class=" har">43</td><td class=" har">.615097033423047</td><td class=" har">.064103779799771</td></tr>
+<tr><th>攻讦</th><td class=" har">43</td><td class=" har">.614942662244619</td><td class=" har">.061016517637351</td></tr>
+<tr><th>惯于</th><td class=" har">44</td><td class=" har">.614795748483051</td><td class=" har">.067075000339576</td></tr>
+<tr><th>嘲笑</th><td class=" har">45</td><td class=" har">.6146935187</td><td class=" har">.07637695369</td></tr>
+<tr><th>悲观主义</th><td class=" har">25</td><td class=" har">.614509085416794</td><td class=" har">.087978562317072</td></tr>
+<tr><th>懦弱</th><td class=" har">42</td><td class=" har">.614488526469185</td><td class=" har">.062049379222367</td></tr>
+<tr><th>尔虞我诈</th><td class=" har">39</td><td class=" har">.614267075673128</td><td class=" har">.061598228085683</td></tr>
+<tr><th>条条框框</th><td class=" har">44</td><td class=" har">.614162376658483</td><td class=" har">.089131968010088</td></tr>
+<tr><th>挑拨</th><td class=" har">45</td><td class=" har">.6139568331</td><td class=" har">.06576299648</td></tr>
+<tr><th>褒贬</th><td class=" har">42</td><td class=" har">.613453813251995</td><td class=" har">.075383924456366</td></tr>
+<tr><th>家长制</th><td class=" har">41</td><td class=" har">.613400497087618</td><td class=" har">.095401597220095</td></tr>
+<tr><th>怜悯</th><td class=" har">42</td><td class=" har">.613378991683324</td><td class=" har">.071344230841509</td></tr>
+<tr><th>神权</th><td class=" har">37</td><td class=" har">.613370126969105</td><td class=" har">.087360328413534</td></tr>
+<tr><th>公理</th><td class=" har">45</td><td class=" har">.6132332598</td><td class=" har">.08079289129</td></tr>
+<tr><th>消费主义</th><td class=" har">23</td><td class=" har">.613194346427918</td><td class=" har">.058524805017106</td></tr>
+<tr><th>腐朽</th><td class=" har">45</td><td class=" har">.6131869469</td><td class=" har">.07478538717</td></tr>
+<tr><th>时弊</th><td class=" har">41</td><td class=" har">.613169460034952</td><td class=" har">.085651183573144</td></tr>
+<tr><th>忍让</th><td class=" har">39</td><td class=" har">.613112651384794</td><td class=" har">.066846954445713</td></tr>
+<tr><th>丑恶</th><td class=" har">44</td><td class=" har">.612948261201382</td><td class=" har">.057215607941761</td></tr>
+<tr><th>当政者</th><td class=" har">31</td><td class=" har">.612777515765159</td><td class=" har">.068728911355330</td></tr>
+<tr><th>宗法</th><td class=" har">38</td><td class=" har">.612662505162390</td><td class=" har">.098300960415388</td></tr>
+<tr><th>消极情绪</th><td class=" har">42</td><td class=" har">.612466039402144</td><td class=" har">.078713567453942</td></tr>
+<tr><th>沾染上</th><td class=" har">32</td><td class=" har">.612102443352342</td><td class=" har">.085201854671765</td></tr>
+<tr><th>妄加</th><td class=" har">38</td><td class=" har">.611897761884489</td><td class=" har">.071044192118709</td></tr>
+<tr><th>夜郎自大</th><td class=" har">39</td><td class=" har">.611778438091278</td><td class=" har">.085071359422974</td></tr>
+<tr><th>思想束缚</th><td class=" har">38</td><td class=" har">.611664514008321</td><td class=" har">.092128406886660</td></tr>
+<tr><th>极左</th><td class=" har">41</td><td class=" har">.611497725655393</td><td class=" har">.076518996302577</td></tr>
+<tr><th>本本主义</th><td class=" har">43</td><td class=" har">.611486413451128</td><td class=" har">.073410003379470</td></tr>
+<tr><th>污蔑</th><td class=" har">45</td><td class=" har">.6112070500</td><td class=" har">.05425126465</td></tr>
+<tr><th>丑陋</th><td class=" har">45</td><td class=" har">.6111575371</td><td class=" har">.06310761372</td></tr>
+<tr><th>反民主</th><td class=" har">28</td><td class=" har">.611023291945458</td><td class=" har">.076273847435864</td></tr>
+<tr><th>屈服于</th><td class=" har">45</td><td class=" har">.6108196967</td><td class=" har">.07785916632</td></tr>
+<tr><th>尖锐对立</th><td class=" har">42</td><td class=" har">.610629818269185</td><td class=" har">.060675137252242</td></tr>
+<tr><th>放任</th><td class=" har">45</td><td class=" har">.6097249198</td><td class=" har">.08732947859</td></tr>
+<tr><th>凡此种种</th><td class=" har">45</td><td class=" har">.6090111413</td><td class=" har">.07795825622</td></tr>
+<tr><th>冒犯</th><td class=" har">37</td><td class=" har">.608967531371761</td><td class=" har">.055754096041234</td></tr>
+<tr><th>怨恨</th><td class=" har">44</td><td class=" har">.608503118834712</td><td class=" har">.078281514197067</td></tr>
+<tr><th>见仁见智</th><td class=" har">39</td><td class=" har">.608447573123834</td><td class=" har">.076581681624375</td></tr>
+<tr><th>狂妄</th><td class=" har">44</td><td class=" har">.608195041390983</td><td class=" har">.079268646907612</td></tr>
+<tr><th>倾轧</th><td class=" har">41</td><td class=" har">.608091149388290</td><td class=" har">.057194957344545</td></tr>
+<tr><th>命令主义</th><td class=" har">27</td><td class=" har">.607964005735185</td><td class=" har">.097899590942579</td></tr>
+<tr><th>文化冲突</th><td class=" har">32</td><td class=" har">.607728130184114</td><td class=" har">.059098246167706</td></tr>
+<tr><th>新闻自由</th><td class=" har">44</td><td class=" har">.607511948455464</td><td class=" har">.068962049590874</td></tr>
+<tr><th>陈规陋习</th><td class=" har">45</td><td class=" har">.6074034638</td><td class=" har">.09556232472</td></tr>
+<tr><th>不良倾向</th><td class=" har">45</td><td class=" har">.6072490158</td><td class=" har">.08433348560</td></tr>
+<tr><th>个人崇拜</th><td class=" har">32</td><td class=" har">.607123698107898</td><td class=" har">.104128900640650</td></tr>
+<tr><th>其本质</th><td class=" har">45</td><td class=" har">.6065851838</td><td class=" har">.08244971025</td></tr>
+<tr><th>天诛地灭</th><td class=" har">15</td><td class=" har">.606473251183828</td><td class=" har">.087843983411402</td></tr>
+<tr><th>言论自由</th><td class=" har">45</td><td class=" har">.6062773538</td><td class=" har">.07328834738</td></tr>
+<tr><th>专断</th><td class=" har">42</td><td class=" har">.606098824313709</td><td class=" har">.093578622657489</td></tr>
+<tr><th>冷酷</th><td class=" har">44</td><td class=" har">.606008751825853</td><td class=" har">.076572376787840</td></tr>
+<tr><th>贫富悬殊</th><td class=" har">44</td><td class=" har">.605738488110629</td><td class=" har">.073319335802066</td></tr>
+<tr><th>心理障碍</th><td class=" har">41</td><td class=" har">.605722175865638</td><td class=" har">.096661018092386</td></tr>
+<tr><th>政治化</th><td class=" har">39</td><td class=" har">.605692071792407</td><td class=" har">.073496379846626</td></tr>
+<tr><th>虚荣</th><td class=" har">45</td><td class=" har">.6056468378</td><td class=" har">.07479182822</td></tr>
+<tr><th>私心</th><td class=" har">45</td><td class=" har">.6055216467</td><td class=" har">.08406176355</td></tr>
+<tr><th>妄自尊大</th><td class=" har">41</td><td class=" har">.605069282578259</td><td class=" har">.082939952151333</td></tr>
+<tr><th>自我标榜</th><td class=" har">34</td><td class=" har">.604810804128647</td><td class=" har">.061268938853588</td></tr>
+<tr><th>旧习惯</th><td class=" har">36</td><td class=" har">.604619253012869</td><td class=" har">.119530049042234</td></tr>
+<tr><th>被忽视</th><td class=" har">45</td><td class=" har">.6044492720</td><td class=" har">.08267359322</td></tr>
+<tr><th>唯心史观</th><td class=" har">34</td><td class=" har">.604240051087211</td><td class=" har">.085538292020478</td></tr>
+<tr><th>神秘主义</th><td class=" har">26</td><td class=" har">.604094020449198</td><td class=" har">.081464744698509</td></tr>
+<tr><th>工具理性</th><td class=" har">16</td><td class=" har">.603928864002228</td><td class=" har">.060766332493955</td></tr>
+<tr><th>见利忘义</th><td class=" har">40</td><td class=" har">.603890603780747</td><td class=" har">.071242009449529</td></tr>
+<tr><th>罔顾</th><td class=" har">33</td><td class=" har">.603576879609715</td><td class=" har">.063925951655021</td></tr>
+<tr><th>专制制度</th><td class=" har">36</td><td class=" har">.603496196369330</td><td class=" har">.080906322936902</td></tr>
+<tr><th>霸道</th><td class=" har">45</td><td class=" har">.6034669227</td><td class=" har">.07991855699</td></tr>
+<tr><th>畏难情绪</th><td class=" har">45</td><td class=" har">.6032384209</td><td class=" har">.07456771829</td></tr>
+<tr><th>民族意识</th><td class=" har">43</td><td class=" har">.603231111931247</td><td class=" har">.080217914460268</td></tr>
+<tr><th>歧义</th><td class=" har">35</td><td class=" har">.603077855280467</td><td class=" har">.061911396765089</td></tr>
+<tr><th>肉体</th><td class=" har">44</td><td class=" har">.603005458008159</td><td class=" har">.072975169233908</td></tr>
+<tr><th>软弱</th><td class=" har">45</td><td class=" har">.6029985658</td><td class=" har">.09718950307</td></tr>
+<tr><th>有百害而无一利</th><td class=" har">42</td><td class=" har">.602752315146583</td><td class=" har">.066313608504304</td></tr>
+<tr><th>徒劳</th><td class=" har">45</td><td class=" har">.6026536898</td><td class=" har">.07673472919</td></tr>
+<tr><th>不无关系</th><td class=" har">44</td><td class=" har">.602552516893907</td><td class=" har">.084933413000137</td></tr>
+<tr><th>漠然置之</th><td class=" har">34</td><td class=" har">.602384140386301</td><td class=" har">.071178173430500</td></tr>
+<tr><th>被教育者</th><td class=" har">19</td><td class=" har">.602346241474152</td><td class=" har">.067785449198837</td></tr>
+<tr><th>扼杀</th><td class=" har">45</td><td class=" har">.6022368240</td><td class=" har">.07663520472</td></tr>
+<tr><th>沉迷于</th><td class=" har">42</td><td class=" har">.602086351031349</td><td class=" har">.061597497228344</td></tr>
+<tr><th>横加</th><td class=" har">38</td><td class=" har">.601932020563828</td><td class=" har">.068461917478523</td></tr>
+<tr><th>讳疾忌医</th><td class=" har">43</td><td class=" har">.601676066947538</td><td class=" har">.074285694848222</td></tr>
+<tr><th>借题发挥</th><td class=" har">42</td><td class=" har">.601473791258676</td><td class=" har">.068125177033773</td></tr>
+<tr><th>乘虚而入</th><td class=" har">45</td><td class=" har">.6013263398</td><td class=" har">.06955130510</td></tr>
+<tr><th>自暴自弃</th><td class=" har">42</td><td class=" har">.600984037632034</td><td class=" har">.086290148322834</td></tr>
+<tr><th>不实之词</th><td class=" har">41</td><td class=" har">.600948210169629</td><td class=" har">.063366633954347</td></tr>
+<tr><th>媚俗</th><td class=" har">43</td><td class=" har">.600298929353093</td><td class=" har">.071434153981856</td></tr>
+<tr><th>任何事物</th><td class=" har">44</td><td class=" har">.600138729268855</td><td class=" har">.064515646735157</td></tr>
+<tr><th>哥们义气</th><td class=" har">17</td><td class=" har">.600023693898145</td><td class=" har">.074658771185758</td></tr>
+<tr><th>非西方</th><td class=" har">28</td><td class=" har">.599961940731321</td><td class=" har">.060532426540620</td></tr>
+<tr><th>劣迹</th><td class=" har">45</td><td class=" har">.5999180149</td><td class=" har">.06721029505</td></tr>
+<tr><th>杞人忧天</th><td class=" har">43</td><td class=" har">.599852816310040</td><td class=" har">.072390196646037</td></tr>
+<tr><th>狂热</th><td class=" har">44</td><td class=" har">.599831207232042</td><td class=" har">.079486438998553</td></tr>
+<tr><th>他者</th><td class=" har">23</td><td class=" har">.599707525709401</td><td class=" har">.054382473284616</td></tr>
+<tr><th>妒嫉</th><td class=" har">16</td><td class=" har">.599705504253507</td><td class=" har">.083069803697917</td></tr>
+<tr><th>西化</th><td class=" har">39</td><td class=" har">.599131531440295</td><td class=" har">.066854368408908</td></tr>
+<tr><th>彻头彻尾</th><td class=" har">42</td><td class=" har">.599075041356541</td><td class=" har">.072850949001980</td></tr>
+<tr><th>积习</th><td class=" har">40</td><td class=" har">.598885426670313</td><td class=" har">.101842957171348</td></tr>
+<tr><th>人治</th><td class=" har">36</td><td class=" har">.598879083991051</td><td class=" har">.075734503510302</td></tr>
+<tr><th>以邻为壑</th><td class=" har">44</td><td class=" har">.598857636478814</td><td class=" har">.066948979202447</td></tr>
+<tr><th>地主阶级</th><td class=" har">41</td><td class=" har">.598519460457127</td><td class=" har">.097152232962371</td></tr>
+<tr><th>理想主义</th><td class=" har">42</td><td class=" har">.598480590752193</td><td class=" har">.089225950890283</td></tr>
+<tr><th>恶行</th><td class=" har">42</td><td class=" har">.598464803326698</td><td class=" har">.062083498763623</td></tr>
+<tr><th>闭关锁国</th><td class=" har">42</td><td class=" har">.598352912636030</td><td class=" har">.081093506895134</td></tr>
+<tr><th>无耻</th><td class=" har">43</td><td class=" har">.597984256439431</td><td class=" har">.077460182226065</td></tr>
+<tr><th>世俗化</th><td class=" har">31</td><td class=" har">.597892993880856</td><td class=" har">.076193819516851</td></tr>
+<tr><th>沦丧</th><td class=" har">41</td><td class=" har">.597877623831354</td><td class=" har">.078567325077270</td></tr>
+<tr><th>处心积虑</th><td class=" har">44</td><td class=" har">.597614144737070</td><td class=" har">.064472986663062</td></tr>
+<tr><th>无端指责</th><td class=" har">37</td><td class=" har">.597603323491844</td><td class=" har">.066788204206938</td></tr>
+<tr><th>有失</th><td class=" har">45</td><td class=" har">.5973951951</td><td class=" har">.07988227267</td></tr>
+<tr><th>囿于</th><td class=" har">45</td><td class=" har">.5973918956</td><td class=" har">.10550455485</td></tr>
+<tr><th>两个凡是</th><td class=" har">42</td><td class=" har">.597025958555085</td><td class=" har">.078719925023478</td></tr>
+<tr><th>家长式</th><td class=" har">29</td><td class=" har">.596966447501347</td><td class=" har">.099060341591356</td></tr>
+<tr><th>暴露无遗</th><td class=" har">43</td><td class=" har">.596925251012625</td><td class=" har">.061023041725569</td></tr>
+<tr><th>中人</th><td class=" har">45</td><td class=" har">.5967889142</td><td class=" har">.07143797678</td></tr>
+<tr><th>道德行为</th><td class=" har">42</td><td class=" har">.596448913926170</td><td class=" har">.077573795146898</td></tr>
+<tr><th>表面化</th><td class=" har">43</td><td class=" har">.596398692491443</td><td class=" har">.079907886734892</td></tr>
+<tr><th>文人相轻</th><td class=" har">20</td><td class=" har">.596386146545410</td><td class=" har">.078143677181027</td></tr>
+<tr><th>国家主义</th><td class=" har">26</td><td class=" har">.596192823006557</td><td class=" har">.047741207322992</td></tr>
+<tr><th>不甚了解</th><td class=" har">43</td><td class=" har">.596163986727249</td><td class=" har">.077351427269751</td></tr>
+<tr><th>毫无道理</th><td class=" har">44</td><td class=" har">.595792513679374</td><td class=" har">.079397605393194</td></tr>
+<tr><th>享乐</th><td class=" har">45</td><td class=" har">.5955122353</td><td class=" har">.09315949957</td></tr>
+<tr><th>鄙弃</th><td class=" har">36</td><td class=" har">.595424920320511</td><td class=" har">.080765337521962</td></tr>
+<tr><th>仇富</th><td class=" har">11</td><td class=" har">.595390303568407</td><td class=" har">.054962368476182</td></tr>
+<tr><th>斥之为</th><td class=" har">33</td><td class=" har">.595058451096217</td><td class=" har">.097785695896491</td></tr>
+<tr><th>自虐</th><td class=" har">21</td><td class=" har">.595006434690385</td><td class=" har">.066634177151330</td></tr>
+<tr><th>毒化</th><td class=" har">44</td><td class=" har">.594965751198205</td><td class=" har">.073519763327160</td></tr>
+<tr><th>礼教</th><td class=" har">39</td><td class=" har">.594574345992162</td><td class=" har">.098431680298966</td></tr>
+<tr><th>恶劣行径</th><td class=" har">41</td><td class=" har">.594562900502507</td><td class=" har">.068814739923361</td></tr>
+<tr><th>臆测</th><td class=" har">29</td><td class=" har">.594393775380891</td><td class=" har">.058857335577004</td></tr>
+<tr><th>不尽一致</th><td class=" har">43</td><td class=" har">.594383180141449</td><td class=" har">.087117574454480</td></tr>
+<tr><th>种族歧视</th><td class=" har">45</td><td class=" har">.5939533447</td><td class=" har">.08181028853</td></tr>
+<tr><th>崇拜</th><td class=" har">45</td><td class=" har">.5938969778</td><td class=" har">.09572861165</td></tr>
+<tr><th>生活态度</th><td class=" har">43</td><td class=" har">.593837278526883</td><td class=" har">.078606183105456</td></tr>
+<tr><th>定势</th><td class=" har">38</td><td class=" har">.593378335237503</td><td class=" har">.077185906922029</td></tr>
+<tr><th>制造矛盾</th><td class=" har">28</td><td class=" har">.593145326844283</td><td class=" har">.062593563545011</td></tr>
+<tr><th>妄想</th><td class=" har">45</td><td class=" har">.5931062796</td><td class=" har">.07485315197</td></tr>
+<tr><th>揣测</th><td class=" har">41</td><td class=" har">.592976959013358</td><td class=" har">.065648528629621</td></tr>
+<tr><th>轻蔑</th><td class=" har">38</td><td class=" har">.592738739754024</td><td class=" har">.063267600671971</td></tr>
+<tr><th>士大夫</th><td class=" har">44</td><td class=" har">.592303184623068</td><td class=" har">.092834615206158</td></tr>
+<tr><th>美国式</th><td class=" har">42</td><td class=" har">.592225010905947</td><td class=" har">.078988042902306</td></tr>
+<tr><th>背弃</th><td class=" har">44</td><td class=" har">.592216842553832</td><td class=" har">.057001238784929</td></tr>
+<tr><th>原罪</th><td class=" har">19</td><td class=" har">.592020894351759</td><td class=" har">.070464986524668</td></tr>
+<tr><th>片面化</th><td class=" har">33</td><td class=" har">.591922669699698</td><td class=" har">.068106510019579</td></tr>
+<tr><th>居心叵测</th><td class=" har">38</td><td class=" har">.591544677552424</td><td class=" har">.079255994178765</td></tr>
+<tr><th>难以克服</th><td class=" har">43</td><td class=" har">.591213094633679</td><td class=" har">.078317721454589</td></tr>
+<tr><th>神学</th><td class=" har">44</td><td class=" har">.591184838928960</td><td class=" har">.075624880087141</td></tr>
+<tr><th>陈词滥调</th><td class=" har">35</td><td class=" har">.591009052310671</td><td class=" har">.059424431963751</td></tr>
+<tr><th>不公</th><td class=" har">45</td><td class=" har">.5909432787</td><td class=" har">.07821856335</td></tr>
+<tr><th>谎言</th><td class=" har">45</td><td class=" har">.5907142376</td><td class=" har">.07845215222</td></tr>
+<tr><th>以势压人</th><td class=" har">30</td><td class=" har">.590572957197825</td><td class=" har">.071817499804711</td></tr>
+<tr><th>自视</th><td class=" har">38</td><td class=" har">.589967955099909</td><td class=" har">.073551734020102</td></tr>
+<tr><th>论资排辈</th><td class=" har">45</td><td class=" har">.5898459284</td><td class=" har">.10146728591</td></tr>
+<tr><th>尖刻</th><td class=" har">35</td><td class=" har">.589456344502313</td><td class=" har">.057107132688200</td></tr>
+<tr><th>正当性</th><td class=" har">31</td><td class=" har">.589158544617315</td><td class=" har">.053577825082599</td></tr>
+<tr><th>谩骂</th><td class=" har">45</td><td class=" har">.5888747096</td><td class=" har">.06464029669</td></tr>
+<tr><th>逆来顺受</th><td class=" har">37</td><td class=" har">.588428014839018</td><td class=" har">.085832154394797</td></tr>
+<tr><th>义愤</th><td class=" har">45</td><td class=" har">.5880455604</td><td class=" har">.06772827883</td></tr>
+<tr><th>容易接受</th><td class=" har">45</td><td class=" har">.5880443647</td><td class=" har">.08654395522</td></tr>
+<tr><th>固执己见</th><td class=" har">39</td><td class=" har">.587860176960627</td><td class=" har">.061907730902560</td></tr>
+<tr><th>学术腐败</th><td class=" har">19</td><td class=" har">.586999885345760</td><td class=" har">.063778096696612</td></tr>
+<tr><th>错误做法</th><td class=" har">45</td><td class=" har">.5862027962</td><td class=" har">.06828508263</td></tr>
+<tr><th>险恶用心</th><td class=" har">40</td><td class=" har">.586059512197972</td><td class=" har">.057231465012307</td></tr>
+<tr><th>嘴脸</th><td class=" har">42</td><td class=" har">.585957578250340</td><td class=" har">.075379633076065</td></tr>
+<tr><th>批评界</th><td class=" har">30</td><td class=" har">.585938574870428</td><td class=" har">.076736145140729</td></tr>
+<tr><th>民族主义</th><td class=" har">45</td><td class=" har">.5851628700</td><td class=" har">.10357470308</td></tr>
+<tr><th>腐化</th><td class=" har">45</td><td class=" har">.5848015893</td><td class=" har">.09782694876</td></tr>
+<tr><th>无端</th><td class=" har">45</td><td class=" har">.5845512049</td><td class=" har">.05962054267</td></tr>
+<tr><th>余悸</th><td class=" har">25</td><td class=" har">.584259765148163</td><td class=" har">.091697976565540</td></tr>
+<tr><th>自恋</th><td class=" har">19</td><td class=" har">.584175519253078</td><td class=" har">.062622296261246</td></tr>
+<tr><th>误导</th><td class=" har">36</td><td class=" har">.582925933102767</td><td class=" har">.075683334543018</td></tr>
+<tr><th>编造谎言</th><td class=" har">31</td><td class=" har">.582636288096828</td><td class=" har">.087662241837572</td></tr>
+<tr><th>苛责</th><td class=" har">33</td><td class=" har">.582630216172247</td><td class=" har">.054304150915991</td></tr>
+<tr><th>惯用</th><td class=" har">45</td><td class=" har">.5818670287</td><td class=" har">.06464915718</td></tr>
+<tr><th>种族问题</th><td class=" har">34</td><td class=" har">.581744254511946</td><td class=" har">.091525924387960</td></tr>
+<tr><th>毋庸讳言</th><td class=" har">44</td><td class=" har">.581395973536101</td><td class=" har">.090318414356807</td></tr>
+<tr><th>无理取闹</th><td class=" har">42</td><td class=" har">.581054068037442</td><td class=" har">.061609873501265</td></tr>
+<tr><th>离心离德</th><td class=" har">30</td><td class=" har">.581049857536952</td><td class=" har">.073421096789283</td></tr>
+<tr><th>拉帮结伙</th><td class=" har">31</td><td class=" har">.581010407017123</td><td class=" har">.091141215554572</td></tr>
+<tr><th>托词</th><td class=" har">37</td><td class=" har">.580978946105854</td><td class=" har">.053412283778925</td></tr>
+<tr><th>反叛</th><td class=" har">42</td><td class=" har">.580451345159894</td><td class=" har">.074611612999055</td></tr>
+<tr><th>陌生感</th><td class=" har">36</td><td class=" har">.580011014309194</td><td class=" har">.064521941722404</td></tr>
+<tr><th>宿命</th><td class=" har">34</td><td class=" har">.579772500430836</td><td class=" har">.072901427741839</td></tr>
+<tr><th>容忍</th><td class=" har">45</td><td class=" har">.5796176620</td><td class=" har">.11187916201</td></tr>
+<tr><th>阴谋论</th><td class=" har">12</td><td class=" har">.579563759267330</td><td class=" har">.056767172403578</td></tr>
+<tr><th>低人一等</th><td class=" har">43</td><td class=" har">.579556374355804</td><td class=" har">.090752310823601</td></tr>
+<tr><th>估计不足</th><td class=" har">40</td><td class=" har">.579349388927221</td><td class=" har">.071311616140127</td></tr>
+<tr><th>做派</th><td class=" har">28</td><td class=" har">.579201547162873</td><td class=" har">.061257569443125</td></tr>
+<tr><th>侮辱性</th><td class=" har">35</td><td class=" har">.579046672582626</td><td class=" har">.071622570561619</td></tr>
+<tr><th>思想观点</th><td class=" har">45</td><td class=" har">.5786864429</td><td class=" har">.10737351666</td></tr>
+<tr><th>产生矛盾</th><td class=" har">43</td><td class=" har">.578566567842351</td><td class=" har">.072960107547096</td></tr>
+<tr><th>羞辱</th><td class=" har">44</td><td class=" har">.578537018461661</td><td class=" har">.072708846006907</td></tr>
+<tr><th>剥削制度</th><td class=" har">39</td><td class=" har">.578204613465529</td><td class=" har">.108015009481394</td></tr>
+<tr><th>极个别</th><td class=" har">43</td><td class=" har">.578195902497269</td><td class=" har">.091330732886125</td></tr>
+<tr><th>与生俱来</th><td class=" har">40</td><td class=" har">.578185421228409</td><td class=" har">.097348968506267</td></tr>
+<tr><th>鼓吹</th><td class=" har">45</td><td class=" har">.5777393078</td><td class=" har">.07078090659</td></tr>
+<tr><th>欺压</th><td class=" har">45</td><td class=" har">.5774185100</td><td class=" har">.08948742528</td></tr>
+<tr><th>保守派</th><td class=" har">45</td><td class=" har">.5771164318</td><td class=" har">.07855499146</td></tr>
+<tr><th>明里暗里</th><td class=" har">37</td><td class=" har">.577032414642540</td><td class=" har">.061849374916587</td></tr>
+<tr><th>非人</th><td class=" har">45</td><td class=" har">.5767964509</td><td class=" har">.07899249998</td></tr>
+<tr><th>敌对</th><td class=" har">45</td><td class=" har">.5766004804</td><td class=" har">.06327400243</td></tr>
+<tr><th>民粹</th><td class=" har">20</td><td class=" har">.576125112175941</td><td class=" har">.047958646701514</td></tr>
+<tr><th>诬蔑</th><td class=" har">45</td><td class=" har">.5760065273</td><td class=" har">.07720786787</td></tr>
+<tr><th>政治思潮</th><td class=" har">26</td><td class=" har">.575743709619229</td><td class=" har">.079312527889391</td></tr>
+<tr><th>企求</th><td class=" har">37</td><td class=" har">.575664812648619</td><td class=" har">.089544977229736</td></tr>
+<tr><th>民主思想</th><td class=" har">37</td><td class=" har">.575260757594495</td><td class=" har">.078816448205901</td></tr>
+<tr><th>消除隔阂</th><td class=" har">41</td><td class=" har">.575177646264798</td><td class=" har">.055829666938235</td></tr>
+<tr><th>旧习</th><td class=" har">39</td><td class=" har">.575004070997238</td><td class=" har">.107358105013343</td></tr>
+<tr><th>倒打一耙</th><td class=" har">34</td><td class=" har">.574974003083566</td><td class=" har">.061574315332801</td></tr>
+<tr><th>异见</th><td class=" har">15</td><td class=" har">.574797515074412</td><td class=" har">.050488648786125</td></tr>
+<tr><th>没落</th><td class=" har">45</td><td class=" har">.5739991522</td><td class=" har">.11914621083</td></tr>
+<tr><th>欺骗性</th><td class=" har">45</td><td class=" har">.5738975624</td><td class=" har">.07388216660</td></tr>
+<tr><th>恶毒</th><td class=" har">41</td><td class=" har">.572693233082934</td><td class=" har">.069008218577702</td></tr>
+<tr><th>隔靴搔痒</th><td class=" har">41</td><td class=" har">.572189651611375</td><td class=" har">.066491361654869</td></tr>
+<tr><th>道德败坏</th><td class=" har">41</td><td class=" har">.572107184224013</td><td class=" har">.080016518049768</td></tr>
+<tr><th>审丑</th><td class=" har">23</td><td class=" har">.571786692608958</td><td class=" har">.070407172360789</td></tr>
+<tr><th>大行其道</th><td class=" har">36</td><td class=" har">.570816662576463</td><td class=" har">.094075337645337</td></tr>
+<tr><th>怂恿</th><td class=" har">45</td><td class=" har">.5707604467</td><td class=" har">.07773930790</td></tr>
+<tr><th>是持</th><td class=" har">32</td><td class=" har">.570747925899923</td><td class=" har">.095347613066371</td></tr>
+<tr><th>揭穿</th><td class=" har">44</td><td class=" har">.569430458952080</td><td class=" har">.073783859058442</td></tr>
+<tr><th>自满情绪</th><td class=" har">23</td><td class=" har">.568934628496999</td><td class=" har">.065602043999604</td></tr>
+<tr><th>之徒</th><td class=" har">43</td><td class=" har">.568830949622531</td><td class=" har">.088667544008386</td></tr>
+<tr><th>无所不用其极</th><td class=" har">36</td><td class=" har">.568796879715390</td><td class=" har">.060416466183286</td></tr>
+<tr><th>一丝一毫</th><td class=" har">45</td><td class=" har">.5681291442</td><td class=" har">.09804313353</td></tr>
+<tr><th>转移视线</th><td class=" har">28</td><td class=" har">.566986210644245</td><td class=" har">.071299777295154</td></tr>
+<tr><th>拉拢</th><td class=" har">45</td><td class=" har">.5669570249</td><td class=" har">.07252639198</td></tr>
+<tr><th>极端化</th><td class=" har">24</td><td class=" har">.566525035848220</td><td class=" har">.088349218417664</td></tr>
+<tr><th>种族主义</th><td class=" har">45</td><td class=" har">.5664949951</td><td class=" har">.08096269973</td></tr>
+<tr><th>迷思</th><td class=" har">18</td><td class=" har">.566037770774630</td><td class=" har">.068923119808776</td></tr>
+<tr><th>色厉内荏</th><td class=" har">18</td><td class=" har">.565021122495333</td><td class=" har">.066116777615256</td></tr>
+<tr><th>失当</th><td class=" har">45</td><td class=" har">.5648723467</td><td class=" har">.07603042966</td></tr>
+<tr><th>恶意中伤</th><td class=" har">28</td><td class=" har">.563964728798185</td><td class=" har">.070149567586066</td></tr>
+<tr><th>单凭</th><td class=" har">45</td><td class=" har">.5638212353</td><td class=" har">.10726160664</td></tr>
+<tr><th>指鹿为马</th><td class=" har">25</td><td class=" har">.563214299678803</td><td class=" har">.076918757099382</td></tr>
+<tr><th>门第</th><td class=" har">32</td><td class=" har">.563197155483067</td><td class=" har">.088755912231071</td></tr>
+<tr><th>栽赃</th><td class=" har">32</td><td class=" har">.562606102786958</td><td class=" har">.082912919663297</td></tr>
+<tr><th>喋喋不休</th><td class=" har">40</td><td class=" har">.562512848526240</td><td class=" har">.084663640915852</td></tr>
+<tr><th>流毒</th><td class=" har">44</td><td class=" har">.562418995255774</td><td class=" har">.107620309006651</td></tr>
+<tr><th>人走茶凉</th><td class=" har">17</td><td class=" har">.561708199627259</td><td class=" har">.088464490041094</td></tr>
+<tr><th>恶意</th><td class=" har">45</td><td class=" har">.5609861729</td><td class=" har">.09873404371</td></tr>
+<tr><th>反复无常</th><td class=" har">38</td><td class=" har">.559415182784984</td><td class=" har">.076599080694246</td></tr>
+<tr><th>中国崛起</th><td class=" har">26</td><td class=" har">.558977060593092</td><td class=" har">.084734799549045</td></tr>
+<tr><th>此消彼长</th><td class=" har">36</td><td class=" har">.558296528127458</td><td class=" har">.078782951939593</td></tr>
+<tr><th>滥施</th><td class=" har">40</td><td class=" har">.558066405355930</td><td class=" har">.093795545730564</td></tr>
+<tr><th>国际背景</th><td class=" har">41</td><td class=" har">.557625035687191</td><td class=" har">.086549684523705</td></tr>
+<tr><th>鬼神</th><td class=" har">43</td><td class=" har">.557168597398802</td><td class=" har">.088127440378596</td></tr>
+<tr><th>自由散漫</th><td class=" har">29</td><td class=" har">.556958577756224</td><td class=" har">.101819063714447</td></tr>
+<tr><th>任性</th><td class=" har">45</td><td class=" har">.5565373491</td><td class=" har">.08573120204</td></tr>
+<tr><th>组织观念</th><td class=" har">42</td><td class=" har">.556119421408290</td><td class=" har">.095627189767318</td></tr>
+<tr><th>暴富</th><td class=" har">40</td><td class=" har">.555658993870020</td><td class=" har">.078628022800144</td></tr>
+<tr><th>冷血</th><td class=" har">21</td><td class=" har">.555349757273992</td><td class=" har">.063517323337071</td></tr>
+<tr><th>儒家文化</th><td class=" har">37</td><td class=" har">.553805778155456</td><td class=" har">.116120827859329</td></tr>
+<tr><th>敬畏</th><td class=" har">41</td><td class=" har">.552445276481349</td><td class=" har">.100298577834002</td></tr>
+<tr><th>奴隶制</th><td class=" har">44</td><td class=" har">.551820201629942</td><td class=" har">.087362197868502</td></tr>
+<tr><th>趋之若鹜</th><td class=" har">40</td><td class=" har">.551589502394199</td><td class=" har">.065996051386856</td></tr>
+<tr><th>婚恋</th><td class=" har">40</td><td class=" har">.551338753104210</td><td class=" har">.088023013878176</td></tr>
+<tr><th>羞耻感</th><td class=" har">17</td><td class=" har">.551011497483534</td><td class=" har">.068855422983650</td></tr>
+<tr><th>种族主义者</th><td class=" har">34</td><td class=" har">.550861032570110</td><td class=" har">.077259153637860</td></tr>
+<tr><th>陋习</th><td class=" har">45</td><td class=" har">.5500671073</td><td class=" har">.12902388556</td></tr>
+<tr><th>伦理</th><td class=" har">45</td><td class=" har">.5497722580</td><td class=" har">.10969828856</td></tr>
+<tr><th>糊涂</th><td class=" har">45</td><td class=" har">.5484862089</td><td class=" har">.10626530818</td></tr>
+<tr><th>助长</th><td class=" har">45</td><td class=" har">.5483301309</td><td class=" har">.06666108312</td></tr>
+<tr><th>焦虑</th><td class=" har">45</td><td class=" har">.5483115629</td><td class=" har">.07814656809</td></tr>
+<tr><th>异质</th><td class=" har">38</td><td class=" har">.548311417040072</td><td class=" har">.092482720116058</td></tr>
+<tr><th>隐私</th><td class=" har">42</td><td class=" har">.546711159603936</td><td class=" har">.109259495893331</td></tr>
+<tr><th>维护正义</th><td class=" har">41</td><td class=" har">.545308337705891</td><td class=" har">.074010643038327</td></tr>
+<tr><th>关系恶化</th><td class=" har">45</td><td class=" har">.5451850947</td><td class=" har">.06915580053</td></tr>
+<tr><th>利害</th><td class=" har">45</td><td class=" har">.5439406707</td><td class=" har">.09367212647</td></tr>
+<tr><th>只知</th><td class=" har">43</td><td class=" har">.543881771869438</td><td class=" har">.097613451447934</td></tr>
+<tr><th>仁慈</th><td class=" har">44</td><td class=" har">.543880057605830</td><td class=" har">.110019552873555</td></tr>
+<tr><th>消于</th><td class=" har">4</td><td class=" har">.543008834123611</td><td class=" har">.097484772518107</td></tr>
+<tr><th>彻底清除</th><td class=" har">44</td><td class=" har">.540910558944399</td><td class=" har">.123509683355811</td></tr>
+<tr><th>多子</th><td class=" har">38</td><td class=" har">.539604647379172</td><td class=" har">.120071593021931</td></tr>
+<tr><th>匪夷所思</th><td class=" har">33</td><td class=" har">.538154513546915</td><td class=" har">.065085028333994</td></tr>
+<tr><th>官商</th><td class=" har">41</td><td class=" har">.537328467136476</td><td class=" har">.063929322530873</td></tr>
+<tr><th>为数不少</th><td class=" har">45</td><td class=" har">.5356378642</td><td class=" har">.08937821376</td></tr>
+<tr><th>西学</th><td class=" har">43</td><td class=" har">.534046582704367</td><td class=" har">.106970234174270</td></tr>
+<tr><th>贼喊捉贼</th><td class=" har">23</td><td class=" har">.533705596771577</td><td class=" har">.140979528777868</td></tr>
+<tr><th>算计</th><td class=" har">45</td><td class=" har">.5334090138</td><td class=" har">.06769615886</td></tr>
+<tr><th>怀旧</th><td class=" har">45</td><td class=" har">.5327285971</td><td class=" har">.11052459934</td></tr>
+<tr><th>教师职业</th><td class=" har">38</td><td class=" har">.531594690523649</td><td class=" har">.106910977435441</td></tr>
+<tr><th>新纳粹</th><td class=" har">39</td><td class=" har">.531572532195311</td><td class=" har">.068563230747353</td></tr>
+<tr><th>雄才大略</th><td class=" har">40</td><td class=" har">.530629079788923</td><td class=" har">.090734662959166</td></tr>
+<tr><th>符号化</th><td class=" har">23</td><td class=" har">.530405466971190</td><td class=" har">.063537221145419</td></tr>
+<tr><th>品行</th><td class=" har">45</td><td class=" har">.5292991162</td><td class=" har">.13059926848</td></tr>
+<tr><th>怪象</th><td class=" har">14</td><td class=" har">.528740946735655</td><td class=" har">.084055932128807</td></tr>
+<tr><th>危机意识</th><td class=" har">36</td><td class=" har">.528097966478931</td><td class=" har">.112099056760638</td></tr>
+<tr><th>恶趣</th><td class=" har">3</td><td class=" har">.526671479145686</td><td class=" har">.096677382813812</td></tr>
+<tr><th>出自于</th><td class=" har">35</td><td class=" har">.522429785558156</td><td class=" har">.101428171045727</td></tr>
+<tr><th>意涵</th><td class=" har">19</td><td class=" har">.520962672798257</td><td class=" har">.067780589068630</td></tr>
+<tr><th>等级制</th><td class=" har">33</td><td class=" har">.520117783185208</td><td class=" har">.118271505060832</td></tr>
+<tr><th>中间状态</th><td class=" har">29</td><td class=" har">.519294636002902</td><td class=" har">.096542058876934</td></tr>
+<tr><th>从中渔利</th><td class=" har">42</td><td class=" har">.518891578628903</td><td class=" har">.076641497524924</td></tr>
+<tr><th>各不相同</th><td class=" har">45</td><td class=" har">.5183910616</td><td class=" har">.12430800248</td></tr>
+<tr><th>思变</th><td class=" har">32</td><td class=" har">.517416052520275</td><td class=" har">.113564045920851</td></tr>
+<tr><th>遗风</th><td class=" har">44</td><td class=" har">.516838095404885</td><td class=" har">.109962669631702</td></tr>
+<tr><th>左顾右盼</th><td class=" har">42</td><td class=" har">.516737628550757</td><td class=" har">.092516775643819</td></tr>
+<tr><th>上常</th><td class=" har">31</td><td class=" har">.508447101039271</td><td class=" har">.078088262746192</td></tr>
+<tr><th>根子</th><td class=" har">45</td><td class=" har">.5081891058</td><td class=" har">.13630307697</td></tr>
+<tr><th>愈演愈烈</th><td class=" har">45</td><td class=" har">.5076593627</td><td class=" har">.07819148560</td></tr>
+<tr><th>假想敌</th><td class=" har">35</td><td class=" har">.505714794567653</td><td class=" har">.108321718070662</td></tr>
+<tr><th>充斥</th><td class=" har">45</td><td class=" har">.5034935329</td><td class=" har">.07504674675</td></tr>
+<tr><th>中美间</th><td class=" har">33</td><td class=" har">.498785410866593</td><td class=" har">.097737947713209</td></tr>
+<tr><th>自负</th><td class=" har">45</td><td class=" har">.4940263831</td><td class=" har">.09502508210</td></tr>
+<tr><th>铁老大</th><td class=" har">24</td><td class=" har">.486688523242871</td><td class=" har">.086159525208543</td></tr>
+<tr><th>一讲</th><td class=" har">45</td><td class=" har">.4854744062</td><td class=" har">.13230020320</td></tr>
+<tr><th>感知</th><td class=" har">43</td><td class=" har">.483430787574413</td><td class=" har">.149686023161918</td></tr>
+<tr><th>诉求</th><td class=" har">32</td><td class=" har">.481726271100342</td><td class=" har">.134378820192142</td></tr>
+<tr><th>革命性</th><td class=" har">45</td><td class=" har">.4739781449</td><td class=" har">.13299510104</td></tr>
+<tr><th>理念</th><td class=" har">44</td><td class=" har">.471126662736589</td><td class=" har">.153862852575356</td></tr>
+<tr><th>多福</th><td class=" har">42</td><td class=" har">.470786622592381</td><td class=" har">.172273809215526</td></tr>
+<tr><th>避风头</th><td class=" har">7</td><td class=" har">.468439255441938</td><td class=" har">.104933238387284</td></tr>
+<tr><th>对土</th><td class=" har">30</td><td class=" har">.460079629222552</td><td class=" har">.075547105134848</td></tr>
+<tr><th>凸显</th><td class=" har">30</td><td class=" har">.383817508320014</td><td class=" har">.141807250199760</td></tr>
+<tr><th>欠债</th><td class=" har">45</td><td class=" har">.3636202529</td><td class=" har">.09375358135</td></tr>
+<tr><th>Valid N (listwise)</th><td class=" har">0</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

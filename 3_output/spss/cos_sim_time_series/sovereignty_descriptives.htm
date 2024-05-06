@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sovereignty_descriptives.htm</title>
+<meta charset="utf-8"/>
+<style>
+.details {visibility:hidden;}
+.workbookSyntaxBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookSyntaxBlock p { margin:0 0;}
+.workbookRichTextBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookRichTextBlock p { margin:0 0;}
+.logItem {margin: 16px 0;font-family: monospace;}
+.procedureTitle{color: #1d3649;font-weight: 600;font-size: 20px;line-height: 24px;font-family: monospace;}
+.pivot{color:#264A60;background-color:#FFFFFF;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#E0E0E0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#F9F9FB;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#F9F9FB;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #AEAEAE;}
+.hDR{border-top:1px none #AEAEAE;}
+.vCR{border-left:1px none #AEAEAE;}
+.vDR{border-left:1px none #AEAEAE;}
+.hCC{border-bottom:1px none #AEAEAE;}
+.hDC{border-bottom:1px none #AEAEAE;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #AEAEAE;}
+.pivot{margin: 80px 0;}
+.pivot thead.tr.th {padding:0px;border-spacing:0px}
+.hal{text-align:left} .hac{text-align:center} .har{text-align:right}
+.val{vertical-align:left} .vac{vertical-align:center} .var{vertical-align:right}
+</style>
+</head>
+<body>
+<p class="procedureTitle"><head><style type="text/css">p{color:0;font-family:SansSerif;font-size:14pt;font-style:normal;font-weight:bold;text-decoration:none}</style></head><BR>Descriptives</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+<div class="itemBody">
+<table summary="Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows" style="width:470px" class="default PivotTable" aria-label="Notes" role="complementary" data-lookName="default" data-rowLabelWidth="2" data-colLabelHeight="0" data-NumRows="13" data-NumCols="1" data-rowLabels="Corner" data-decimal-char="." data-col-labels="" data-row-labels="Output Created ;Comments ;Input Data; Active Dataset; Filter; Weight; Split File; N of Rows in Working Data File;Missing Value Handling Definition of Missing; Cases Used;Syntax ;Resources Processor Time; Elapsed Time" data-layer-dimension="" data-column-dimension="" data-row-dimension="Contents;" data-maxColWidth="162">
+<caption class="title" style="width:470px">Notes<span class="details">Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<th class="rowLabels dataAreaTop role3" colspan="2">Output Created</th>
+<td class=" o dataAreaTop dataAreaLeft">19-APR-2024 01:10:40</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Comments</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&nbsp;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="6">Input</th>
+<th class="rowLabels hCR vCR role3">Data</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">C:\Users\s1155157933\Downloads\sovereignty_cos-sim.csv</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Active Dataset</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">DataSet5</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Filter</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Weight</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Split File</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">N of Rows in Working Data File</th>
+<td class=" e dataAreaLeft hCR">45</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Missing Value Handling</th>
+<th class="rowLabels hCR vCR role3">Definition of Missing</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">User defined missing values are treated as missing.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Cases Used</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">All non-missing data are used.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Syntax</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">DESCRIPTIVES VARIABLES=维护和平 核裁军 它国 关税区 核选择 阿对 以色列国 难撼 治伊 军事同盟 上大谈 俄对南 内部事务 破坏者 国际金融组织 竹岛 让渡 海盗行为 军机<br>    希腊政府 租借地 军贸 防御性 否决权 专属 单边制裁 遏阻 钓鱼岛 合众国 塞方为 核能力 涉疆 基本权利 一九九七年 吞并 叙为 评级 重返家园 台澎金马 写为 特迪贝尔 丝毫无损 宪改<br>    慎重处理 弱小民族 塞方 以强凌弱 不持 自顾不暇 爱方 藏独 超国家 罔顾 内政 乌为 和平相处 扩张主义 悍然 中立国家 容许 民族自决 自由民主 千岛群岛 接受国 初中历史 武装挑衅 权益<br>    立法权 互不侵犯 盟友 麦克马洪线 挑衅 巴勒斯坦国 马为 索方 中印 中立区 恶劣行径 民族大义 关系法 无理要求 线内 不选边 英美两国 受援国 世界大国 阿方为 美应 阿拉伯河 司法独立 英侨<br>    阿人 强权政治 割让 无核区 哈方为 私性 运河区 洪方为 国内法 十二海里 弱国 中立政策 并吞 海洋权 无核国家 阴谋活动 沃尔维 合法利益 黄岩岛 合法权利 重债国 挑拨离间 永久中立 声索国<br>    干涉内政 诬蔑 希腊式 押下 再响 领土问题 吞下 马岛 无国界 尊严 国际争端 侵夺 沙方为 国际公法 迪岛 减记 伊对 当事国 承担义务 尊重人权 霸权主义 戈兰高地 对委 前南 柬政府 无耻<br>    保持中立 调降 现行制度 管辖权 巴方为 疆界 台湾独立 行使主权 阿韦斯 正当权利 和平共存 对格 分治 正当权益 行政权 领土 中国教会 基本准则 彻底否定 言论自由 下不受 北方四岛 法理<br>    南欧国家 福克兰群岛 扩张政策 所方 沿岸国 横加指责 克什米尔 民族尊严 非歧视 上不持 直布罗陀 标准普尔公司 武力威胁 平等互惠 普调 平等权利 图兹拉岛 东沙群岛 肆意挑衅 签署国 中华民国<br>    债务国 马约特岛 严正 不结盟 达赖 交还给 誓死捍卫 债务 颐指气使 纯属 祭品 欧洲中央银行 南亚地区 三权分立 发展权 神圣不可 塞浦路斯共和国 国权 债占 银行信用 巴解组织 住民 强加于人<br>    南在 可信性 欧方为 使用暴力 选边 践踏 国可 中华民国政府 正当合理 空间主权 孟方为 恢复主权 无核化 妄称 俄对 仍受 互相承认 司法权 睦邻政策 国际法 委内瑞拉政府 欧元区 始终认为<br>    克里米亚 宗主权 四岛 正义斗争 无端指责 霸权 涉藏 孟方 原则立场 先不谈 染指 归还给 国籍法 公民权利 被占领土 人权宣言 开罗宣言 民族和解 互相攻击 自决 欺小 理所当然 肯尼亚政府<br>    马尔维纳斯 内陆国 民族平等 马尔维纳斯群岛 中美洲地区 主持正义 分裂主义 缔约 保卫国家 国家主权 禁地 合情 五项原则 说三道四 有损于 极权主义 拥有权 傀儡政府 公民自由 绝不允许 冒险性<br>    由全 争议地区 领土完整 国对 失地 对菲 南海诸岛 吉方为 政的 领空 斐方 欧方应 财政危机 不容置疑 正当行为 但吾知 阿布哈兹 捍卫 东突厥 合法性 正当要求 宗教自由 附属国 主权国家<br>    谨电 内除 武装入侵 阿拉伯叙利亚共和国 斯湾 公理 构成威胁 一切权利 界约 合法政府 核不扩散 民族自决权 全面禁止 合理要求 国贼 干涉 核国家 愿向巴 苏方 南沙群岛 互不干涉 希腊族<br>    中央集权 未定论 内水 标普对 别国 托管地 妄加评论 指手划脚 犹太民族 无核武器 民主政体 一贯主张 独岛 乌在 信守 坐视 争端 自治权 叙伊土 雪球 国为 局势稳定 斯方为 生存权 顶回<br>    殖民主义 收复失地 标普给 中立 第五项 一律平等 凌驾于 治权 前南斯拉夫地区 核战略 倘想 独立国家 美债 偏袒 东耶路撒冷 他国 澎湖列岛 豁免权 可据 无可争辩 错误做法 民族利益 横加干涉<br>    声索 相互尊重 诉诸武力 外来干涉 海洋权益 经济命脉 但绝 领海 私相授受 欧猪 债权国 南太 豁免 南为 中沙群岛 尼泊尔政府 划界 底土 东耶 核扩散 正义事业 管治 自决权 统治权 交战国<br>    双边条约 武装侵略 错估 专属经济区 列屿 债信 终审权 圣殿山 外争 但英 自卫权 自由权 代表权 债权人 保障人权 售台 势力范围 台海两岸 西英 苦果 挑动 崇高目标 厚颜无耻<br>  /STATISTICS=MEAN STDDEV<br>  /SORT=MEAN (D).</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Resources</th>
+<th class="rowLabels hCR vCR role3">Processor Time</th>
+<td class=" e dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Elapsed Time</th>
+<td class=" o dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<td  style="width:144px;padding:0px;border-spacing:0px"></td>
+<td  style="width:164px;padding:0px;border-spacing:0px"></td>
+<td  style="width:162px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tbody>
+</table>
+</div><p align="left"><head><style type="text/css">p{color:0;font-family:Monospaced;font-size:12pt;font-style:normal;font-weight:normal;text-decoration:none}</style></head><BR>[DataSet5]&nbsp;</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+
+<div>
+
+<style>
+.pivot{color:#264a60;background-color:#ffffff;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#e0e0e0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#f9f9fb;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#f9f9fb;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #aeaeae;}
+.hDR{border-top:1px none #aeaeae;}
+.vCR{border-left:1px none #aeaeae;}
+.vDR{border-left:1px none #aeaeae;}
+.hCC{border-bottom:1px none #aeaeae;}
+.hDC{border-bottom:1px none #aeaeae;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #aeaeae;}
+</style>
+<table class="pivot" data-rows="1,0,1,418,0,0" data-cols="1,3" data-heights="24,0,20,8360,0" data-widths="122,386" data-curCounts="418,3" data-curSizess="418,3">
+<caption colspan="4">Descriptive Statistics</caption>
+<thead>
+<tr><th class="cornerLabels">&nbsp;</th><th>N</th><th>Mean</th><th>Std. Deviation</th></tr>
+</thead>
+<tbody data-rect="0,417,0,2">
+<tr><th style="min-width:122px">领土完整</th><td class=" har" style="min-width:68px">45</td><td class=" har" style="min-width:98px">.8040792287</td><td class=" har" style="min-width:98px">.05930107647</td></tr>
+<tr><th>英侨</th><td class=" har">1</td><td class=" har">.750749707221985</td><td class=" har">.</td></tr>
+<tr><th>国家主权</th><td class=" har">45</td><td class=" har">.7423915100</td><td class=" har">.06521006091</td></tr>
+<tr><th>迪岛</th><td class=" har">1</td><td class=" har">.720000267028809</td><td class=" har">.</td></tr>
+<tr><th>核选择</th><td class=" har">1</td><td class=" har">.710284173488617</td><td class=" har">.</td></tr>
+<tr><th>内部事务</th><td class=" har">45</td><td class=" har">.6844295616</td><td class=" har">.07286585722</td></tr>
+<tr><th>洪方为</th><td class=" har">1</td><td class=" har">.682929635047913</td><td class=" har">.</td></tr>
+<tr><th>民族尊严</th><td class=" har">45</td><td class=" har">.6825798364</td><td class=" har">.06821327555</td></tr>
+<tr><th>领土</th><td class=" har">45</td><td class=" har">.6807630416</td><td class=" har">.05053282828</td></tr>
+<tr><th>互不侵犯</th><td class=" har">45</td><td class=" har">.6796369693</td><td class=" har">.07356630833</td></tr>
+<tr><th>互不干涉</th><td class=" har">45</td><td class=" har">.6793149324</td><td class=" har">.06152405490</td></tr>
+<tr><th>干涉内政</th><td class=" har">45</td><td class=" har">.6752004447</td><td class=" har">.05774655883</td></tr>
+<tr><th>自决权</th><td class=" har">36</td><td class=" har">.674247420496411</td><td class=" har">.084502454633761</td></tr>
+<tr><th>阿韦斯</th><td class=" har">1</td><td class=" har">.672891497612000</td><td class=" har">.</td></tr>
+<tr><th>内政</th><td class=" har">45</td><td class=" har">.6627709780</td><td class=" har">.06304471466</td></tr>
+<tr><th>民族自决权</th><td class=" har">30</td><td class=" har">.662042507529259</td><td class=" har">.074458880000648</td></tr>
+<tr><th>自决</th><td class=" har">40</td><td class=" har">.658765182644129</td><td class=" har">.102952232286490</td></tr>
+<tr><th>民族自决</th><td class=" har">34</td><td class=" har">.650880578686209</td><td class=" har">.087653887940545</td></tr>
+<tr><th>海洋权益</th><td class=" har">36</td><td class=" har">.650846984651354</td><td class=" har">.057517504929520</td></tr>
+<tr><th>主权国家</th><td class=" har">45</td><td class=" har">.6487589184</td><td class=" har">.06767707040</td></tr>
+<tr><th>特迪贝尔</th><td class=" har">2</td><td class=" har">.646053433418274</td><td class=" har">.095137912556247</td></tr>
+<tr><th>外来干涉</th><td class=" har">45</td><td class=" har">.6450716344</td><td class=" har">.05742665379</td></tr>
+<tr><th>独立国家</th><td class=" har">45</td><td class=" har">.6375153782</td><td class=" har">.08090540840</td></tr>
+<tr><th>马尔维纳斯群岛</th><td class=" har">31</td><td class=" har">.635038737327822</td><td class=" har">.075549263590024</td></tr>
+<tr><th>谨电</th><td class=" har">1</td><td class=" har">.632967591285706</td><td class=" har">.</td></tr>
+<tr><th>海洋权</th><td class=" har">7</td><td class=" har">.628207053456988</td><td class=" har">.061460113371449</td></tr>
+<tr><th>原则立场</th><td class=" har">45</td><td class=" har">.6276879242</td><td class=" har">.06731118896</td></tr>
+<tr><th>正义斗争</th><td class=" har">44</td><td class=" har">.626608548516577</td><td class=" har">.069917486421282</td></tr>
+<tr><th>无可争辩</th><td class=" har">45</td><td class=" har">.6232400036</td><td class=" har">.07094964777</td></tr>
+<tr><th>民族利益</th><td class=" har">45</td><td class=" har">.6207613802</td><td class=" har">.07187869018</td></tr>
+<tr><th>叙伊土</th><td class=" har">2</td><td class=" har">.619323551654816</td><td class=" har">.154320770116336</td></tr>
+<tr><th>无核国家</th><td class=" har">33</td><td class=" har">.616435884526282</td><td class=" har">.072218503062574</td></tr>
+<tr><th>巴勒斯坦国</th><td class=" har">45</td><td class=" har">.6161214822</td><td class=" har">.06872026434</td></tr>
+<tr><th>标普给</th><td class=" har">1</td><td class=" har">.615308284759522</td><td class=" har">.</td></tr>
+<tr><th>无核区</th><td class=" har">36</td><td class=" har">.614801793462700</td><td class=" har">.061062161920964</td></tr>
+<tr><th>中立政策</th><td class=" har">26</td><td class=" har">.614667022457490</td><td class=" har">.075463572960102</td></tr>
+<tr><th>中立区</th><td class=" har">25</td><td class=" har">.614254887104034</td><td class=" har">.081572272817962</td></tr>
+<tr><th>但吾知</th><td class=" har">1</td><td class=" har">.614214301109314</td><td class=" har">.</td></tr>
+<tr><th>正义事业</th><td class=" har">45</td><td class=" har">.6140998393</td><td class=" har">.06242066505</td></tr>
+<tr><th>一贯主张</th><td class=" har">45</td><td class=" har">.6137446240</td><td class=" har">.05195662720</td></tr>
+<tr><th>合法政府</th><td class=" har">45</td><td class=" har">.6133089718</td><td class=" har">.07678041292</td></tr>
+<tr><th>武装侵略</th><td class=" har">29</td><td class=" har">.613006821994124</td><td class=" har">.087918095816796</td></tr>
+<tr><th>上不持</th><td class=" har">7</td><td class=" har">.612657129764557</td><td class=" har">.012492059385460</td></tr>
+<tr><th>声索</th><td class=" har">5</td><td class=" har">.611227595806122</td><td class=" har">.055518253710053</td></tr>
+<tr><th>愿向巴</th><td class=" har">1</td><td class=" har">.608982205390930</td><td class=" har">.</td></tr>
+<tr><th>合法权利</th><td class=" har">45</td><td class=" har">.6064301236</td><td class=" har">.09220259412</td></tr>
+<tr><th>领海</th><td class=" har">45</td><td class=" har">.6062941364</td><td class=" har">.06464556053</td></tr>
+<tr><th>尊重人权</th><td class=" har">45</td><td class=" har">.6062695391</td><td class=" har">.08030939674</td></tr>
+<tr><th>睦邻政策</th><td class=" har">22</td><td class=" har">.602413831786676</td><td class=" har">.082419027772231</td></tr>
+<tr><th>武力威胁</th><td class=" har">44</td><td class=" har">.601857585663145</td><td class=" har">.079009969073553</td></tr>
+<tr><th>台湾独立</th><td class=" har">43</td><td class=" har">.600626745196276</td><td class=" har">.056275749165298</td></tr>
+<tr><th>他国</th><td class=" har">45</td><td class=" har">.6002829462</td><td class=" har">.09573440525</td></tr>
+<tr><th>附属国</th><td class=" har">18</td><td class=" har">.599452379677031</td><td class=" har">.058257662741078</td></tr>
+<tr><th>顶回</th><td class=" har">1</td><td class=" har">.599126279354096</td><td class=" har">.</td></tr>
+<tr><th>神圣不可</th><td class=" har">43</td><td class=" har">.597323780836061</td><td class=" har">.073875346326495</td></tr>
+<tr><th>宗主权</th><td class=" har">5</td><td class=" har">.595144104957581</td><td class=" har">.056994270447389</td></tr>
+<tr><th>别国</th><td class=" har">45</td><td class=" har">.5940436276</td><td class=" har">.06590894121</td></tr>
+<tr><th>当事国</th><td class=" har">44</td><td class=" har">.593433417379856</td><td class=" har">.054806396023699</td></tr>
+<tr><th>干涉</th><td class=" har">45</td><td class=" har">.5904975424</td><td class=" har">.06297785318</td></tr>
+<tr><th>下不受</th><td class=" har">1</td><td class=" har">.590118229389191</td><td class=" har">.</td></tr>
+<tr><th>国内法</th><td class=" har">44</td><td class=" har">.590043109926311</td><td class=" har">.062623751698720</td></tr>
+<tr><th>强权政治</th><td class=" har">45</td><td class=" har">.5886485389</td><td class=" har">.06959267587</td></tr>
+<tr><th>中立国家</th><td class=" har">23</td><td class=" har">.587881541770438</td><td class=" har">.088355058019745</td></tr>
+<tr><th>行使主权</th><td class=" har">44</td><td class=" har">.587880541655150</td><td class=" har">.091204540409994</td></tr>
+<tr><th>承担义务</th><td class=" har">41</td><td class=" har">.587831271857750</td><td class=" har">.101985087179213</td></tr>
+<tr><th>恢复主权</th><td class=" har">14</td><td class=" har">.587583776031222</td><td class=" har">.095868813184309</td></tr>
+<tr><th>诉诸武力</th><td class=" har">44</td><td class=" har">.587136613374407</td><td class=" har">.077617541343313</td></tr>
+<tr><th>并吞</th><td class=" har">20</td><td class=" har">.586651468276978</td><td class=" har">.089629394420521</td></tr>
+<tr><th>保卫国家</th><td class=" har">45</td><td class=" har">.5866498216</td><td class=" har">.06384676654</td></tr>
+<tr><th>国际争端</th><td class=" har">45</td><td class=" har">.5866441627</td><td class=" har">.06474030648</td></tr>
+<tr><th>扩张主义</th><td class=" har">29</td><td class=" har">.586299447150066</td><td class=" har">.077070793304623</td></tr>
+<tr><th>私性</th><td class=" har">2</td><td class=" har">.585309952497482</td><td class=" har">.203089689318413</td></tr>
+<tr><th>霸权</th><td class=" har">45</td><td class=" har">.5845378178</td><td class=" har">.07770013865</td></tr>
+<tr><th>势力范围</th><td class=" har">45</td><td class=" har">.5844934671</td><td class=" har">.06785506848</td></tr>
+<tr><th>一律平等</th><td class=" har">45</td><td class=" har">.5841892622</td><td class=" har">.07261796398</td></tr>
+<tr><th>基本准则</th><td class=" har">45</td><td class=" har">.5830326802</td><td class=" har">.09043666858</td></tr>
+<tr><th>构成威胁</th><td class=" har">45</td><td class=" har">.5820980084</td><td class=" har">.06484417516</td></tr>
+<tr><th>生存权</th><td class=" har">45</td><td class=" har">.5812001207</td><td class=" har">.08944861363</td></tr>
+<tr><th>主持正义</th><td class=" har">42</td><td class=" har">.580832520411128</td><td class=" har">.075984057332385</td></tr>
+<tr><th>国际法</th><td class=" har">45</td><td class=" har">.5802174573</td><td class=" har">.05740976223</td></tr>
+<tr><th>核不扩散</th><td class=" har">37</td><td class=" har">.579533446479488</td><td class=" har">.055236433004419</td></tr>
+<tr><th>捍卫</th><td class=" har">45</td><td class=" har">.5794682869</td><td class=" har">.07303938774</td></tr>
+<tr><th>代表权</th><td class=" har">44</td><td class=" har">.579153131354939</td><td class=" har">.068203851546558</td></tr>
+<tr><th>租借地</th><td class=" har">8</td><td class=" har">.578795954585075</td><td class=" har">.063961405224311</td></tr>
+<tr><th>无核武器</th><td class=" har">44</td><td class=" har">.578791342675686</td><td class=" har">.069965051911152</td></tr>
+<tr><th>政的</th><td class=" har">41</td><td class=" har">.578739499900399</td><td class=" har">.076165535932617</td></tr>
+<tr><th>福克兰群岛</th><td class=" har">14</td><td class=" har">.578704644526754</td><td class=" har">.092950270666805</td></tr>
+<tr><th>一切权利</th><td class=" har">37</td><td class=" har">.578094246419700</td><td class=" har">.092788911410247</td></tr>
+<tr><th>马尔维纳斯</th><td class=" har">12</td><td class=" har">.577670291066170</td><td class=" har">.081223958480022</td></tr>
+<tr><th>管辖权</th><td class=" har">45</td><td class=" har">.5774496024</td><td class=" har">.08449226787</td></tr>
+<tr><th>永久中立</th><td class=" har">31</td><td class=" har">.577107407392994</td><td class=" har">.071702669871305</td></tr>
+<tr><th>核国家</th><td class=" har">38</td><td class=" har">.575210495214713</td><td class=" har">.074962610780855</td></tr>
+<tr><th>武装入侵</th><td class=" har">29</td><td class=" har">.575088245087656</td><td class=" har">.086311572441091</td></tr>
+<tr><th>但英</th><td class=" har">3</td><td class=" har">.574923714001974</td><td class=" har">.122129039827888</td></tr>
+<tr><th>正当权利</th><td class=" har">43</td><td class=" har">.574549690235493</td><td class=" har">.074600105548010</td></tr>
+<tr><th>马岛</th><td class=" har">36</td><td class=" har">.574325910872883</td><td class=" har">.102365145484911</td></tr>
+<tr><th>阿拉伯河</th><td class=" har">12</td><td class=" har">.573953193922838</td><td class=" har">.088038687602384</td></tr>
+<tr><th>领土问题</th><td class=" har">44</td><td class=" har">.573011035268957</td><td class=" har">.050392745702489</td></tr>
+<tr><th>正当要求</th><td class=" har">39</td><td class=" har">.572198899892660</td><td class=" har">.077986510924334</td></tr>
+<tr><th>终审权</th><td class=" har">31</td><td class=" har">.572193470693404</td><td class=" har">.075508636409525</td></tr>
+<tr><th>和平相处</th><td class=" har">45</td><td class=" har">.5719143642</td><td class=" har">.08385637992</td></tr>
+<tr><th>言论自由</th><td class=" har">45</td><td class=" har">.5714574649</td><td class=" har">.07199561416</td></tr>
+<tr><th>被占领土</th><td class=" har">45</td><td class=" har">.5711896062</td><td class=" har">.08072222565</td></tr>
+<tr><th>发展权</th><td class=" har">40</td><td class=" har">.569613640755415</td><td class=" har">.092695846353905</td></tr>
+<tr><th>它国</th><td class=" har">19</td><td class=" har">.569009205228404</td><td class=" har">.101236165317163</td></tr>
+<tr><th>关系法</th><td class=" har">31</td><td class=" har">.567906172044816</td><td class=" har">.063998341002172</td></tr>
+<tr><th>傀儡政府</th><td class=" har">14</td><td class=" har">.567762193935258</td><td class=" har">.078591873029674</td></tr>
+<tr><th>北方四岛</th><td class=" har">37</td><td class=" har">.567515973303769</td><td class=" har">.063837626584815</td></tr>
+<tr><th>霸权主义</th><td class=" har">45</td><td class=" har">.5675104324</td><td class=" har">.07062042845</td></tr>
+<tr><th>相互尊重</th><td class=" har">45</td><td class=" har">.5672718624</td><td class=" har">.09264622373</td></tr>
+<tr><th>挑衅</th><td class=" har">45</td><td class=" har">.5666482700</td><td class=" har">.05455372393</td></tr>
+<tr><th>维护和平</th><td class=" har">45</td><td class=" har">.5655643671</td><td class=" har">.06897028758</td></tr>
+<tr><th>保持中立</th><td class=" har">38</td><td class=" har">.564689270759884</td><td class=" har">.071379514298293</td></tr>
+<tr><th>交战国</th><td class=" har">16</td><td class=" har">.564606893807650</td><td class=" har">.070833702655572</td></tr>
+<tr><th>扩张政策</th><td class=" har">32</td><td class=" har">.564428373239935</td><td class=" har">.088644875935649</td></tr>
+<tr><th>以强凌弱</th><td class=" har">42</td><td class=" har">.564322764674823</td><td class=" har">.083503749333269</td></tr>
+<tr><th>强加于人</th><td class=" har">45</td><td class=" har">.5642620909</td><td class=" har">.05515480880</td></tr>
+<tr><th>不选边</th><td class=" har">6</td><td class=" har">.563930640618007</td><td class=" har">.037606560683415</td></tr>
+<tr><th>治伊</th><td class=" har">6</td><td class=" har">.563583041230838</td><td class=" har">.064802023889872</td></tr>
+<tr><th>戈兰高地</th><td class=" har">40</td><td class=" har">.563373772799969</td><td class=" har">.081158436283305</td></tr>
+<tr><th>领空</th><td class=" har">45</td><td class=" har">.5631120522</td><td class=" har">.06763110436</td></tr>
+<tr><th>极权主义</th><td class=" har">11</td><td class=" har">.562448815865950</td><td class=" har">.067244721605826</td></tr>
+<tr><th>俄对南</th><td class=" har">2</td><td class=" har">.561929702758789</td><td class=" har">.086626440793169</td></tr>
+<tr><th>军事同盟</th><td class=" har">36</td><td class=" har">.561293912430604</td><td class=" har">.057309347705640</td></tr>
+<tr><th>麦克马洪线</th><td class=" har">9</td><td class=" har">.560965849293603</td><td class=" har">.131662847958444</td></tr>
+<tr><th>核扩散</th><td class=" har">45</td><td class=" har">.5604844656</td><td class=" har">.06430912772</td></tr>
+<tr><th>防御性</th><td class=" har">45</td><td class=" har">.5597201440</td><td class=" har">.06052574924</td></tr>
+<tr><th>正当权益</th><td class=" har">45</td><td class=" har">.5596870218</td><td class=" har">.05466636967</td></tr>
+<tr><th>无端指责</th><td class=" har">37</td><td class=" har">.559460648813763</td><td class=" har">.056190532302841</td></tr>
+<tr><th>平等权利</th><td class=" har">44</td><td class=" har">.559154079041698</td><td class=" har">.097097630712602</td></tr>
+<tr><th>公民权利</th><td class=" har">45</td><td class=" har">.5590779944</td><td class=" har">.07230252278</td></tr>
+<tr><th>沙方为</th><td class=" har">2</td><td class=" har">.558938682079315</td><td class=" har">.078003785643719</td></tr>
+<tr><th>基本权利</th><td class=" har">45</td><td class=" har">.5584978098</td><td class=" har">.09377400518</td></tr>
+<tr><th>欧猪</th><td class=" har">3</td><td class=" har">.558476169904073</td><td class=" har">.035657146950725</td></tr>
+<tr><th>五项原则</th><td class=" har">45</td><td class=" har">.5584030322</td><td class=" har">.06737374748</td></tr>
+<tr><th>吞并</th><td class=" har">45</td><td class=" har">.5578957064</td><td class=" har">.07360351127</td></tr>
+<tr><th>专属经济区</th><td class=" har">42</td><td class=" har">.557246262828509</td><td class=" har">.082018646073908</td></tr>
+<tr><th>局势稳定</th><td class=" har">45</td><td class=" har">.5567916673</td><td class=" har">.06580080451</td></tr>
+<tr><th>沿岸国</th><td class=" har">21</td><td class=" har">.555965464739573</td><td class=" har">.065401374372299</td></tr>
+<tr><th>不结盟</th><td class=" har">45</td><td class=" har">.5554769242</td><td class=" har">.08035406245</td></tr>
+<tr><th>缔约</th><td class=" har">44</td><td class=" har">.555274250832471</td><td class=" har">.077359151135008</td></tr>
+<tr><th>合法利益</th><td class=" har">45</td><td class=" har">.5548449591</td><td class=" har">.07293042847</td></tr>
+<tr><th>倘想</th><td class=" har">1</td><td class=" har">.554777204990387</td><td class=" har">.</td></tr>
+<tr><th>自治权</th><td class=" har">45</td><td class=" har">.5543306869</td><td class=" har">.08476098979</td></tr>
+<tr><th>自卫权</th><td class=" har">34</td><td class=" har">.554299306343584</td><td class=" har">.061305408418311</td></tr>
+<tr><th>平等互惠</th><td class=" har">40</td><td class=" har">.553879933059216</td><td class=" har">.070073986392031</td></tr>
+<tr><th>妄加评论</th><td class=" har">33</td><td class=" har">.553852085814332</td><td class=" har">.077764759941571</td></tr>
+<tr><th>阿方为</th><td class=" har">13</td><td class=" har">.553547547413753</td><td class=" har">.067999213461147</td></tr>
+<tr><th>民族和解</th><td class=" har">45</td><td class=" har">.5534124813</td><td class=" har">.06896974401</td></tr>
+<tr><th>践踏</th><td class=" har">45</td><td class=" har">.5528900462</td><td class=" har">.08024517936</td></tr>
+<tr><th>独岛</th><td class=" har">19</td><td class=" har">.552339247967068</td><td class=" har">.093119442822471</td></tr>
+<tr><th>空间主权</th><td class=" har">8</td><td class=" har">.552032615989447</td><td class=" har">.038435281855002</td></tr>
+<tr><th>宗教自由</th><td class=" har">34</td><td class=" har">.551826207076802</td><td class=" har">.060806263803660</td></tr>
+<tr><th>图兹拉岛</th><td class=" har">2</td><td class=" har">.551680624485016</td><td class=" har">.192857488171180</td></tr>
+<tr><th>殖民主义</th><td class=" har">45</td><td class=" har">.5514270076</td><td class=" har">.07046436969</td></tr>
+<tr><th>钓鱼岛</th><td class=" har">35</td><td class=" har">.551178556680679</td><td class=" har">.076848033819796</td></tr>
+<tr><th>阿布哈兹</th><td class=" har">23</td><td class=" har">.551111034725023</td><td class=" har">.062795857516098</td></tr>
+<tr><th>弱小民族</th><td class=" har">20</td><td class=" har">.550166274607182</td><td class=" har">.074522963126663</td></tr>
+<tr><th>争议地区</th><td class=" har">29</td><td class=" har">.549452488792354</td><td class=" har">.045842943546187</td></tr>
+<tr><th>吉方为</th><td class=" har">9</td><td class=" har">.549316124783622</td><td class=" har">.102525299395020</td></tr>
+<tr><th>横加指责</th><td class=" har">43</td><td class=" har">.549266585083895</td><td class=" har">.077128030330856</td></tr>
+<tr><th>弱国</th><td class=" har">42</td><td class=" har">.549224668315479</td><td class=" har">.090655860106432</td></tr>
+<tr><th>正当合理</th><td class=" har">27</td><td class=" har">.548112330613313</td><td class=" har">.056033261751039</td></tr>
+<tr><th>核裁军</th><td class=" har">45</td><td class=" har">.5474571896</td><td class=" har">.05518626935</td></tr>
+<tr><th>民族平等</th><td class=" har">45</td><td class=" har">.5474337409</td><td class=" har">.07908908280</td></tr>
+<tr><th>容许</th><td class=" har">45</td><td class=" har">.5474173993</td><td class=" har">.07112310320</td></tr>
+<tr><th>售台</th><td class=" har">36</td><td class=" har">.547387195958032</td><td class=" har">.049568143022437</td></tr>
+<tr><th>说三道四</th><td class=" har">43</td><td class=" har">.546741435694140</td><td class=" har">.057569716918773</td></tr>
+<tr><th>无核化</th><td class=" har">31</td><td class=" har">.546502434438275</td><td class=" har">.063522583322131</td></tr>
+<tr><th>宪改</th><td class=" har">7</td><td class=" har">.546432614326477</td><td class=" har">.080876137223473</td></tr>
+<tr><th>未定论</th><td class=" har">15</td><td class=" har">.545807635784149</td><td class=" har">.089209905075626</td></tr>
+<tr><th>公民自由</th><td class=" har">37</td><td class=" har">.545700167481964</td><td class=" har">.076275792399495</td></tr>
+<tr><th>欧方为</th><td class=" har">4</td><td class=" har">.544609546661377</td><td class=" har">.043742118276556</td></tr>
+<tr><th>接受国</th><td class=" har">32</td><td class=" har">.544418276287615</td><td class=" har">.088477018534639</td></tr>
+<tr><th>信守</th><td class=" har">45</td><td class=" har">.5434266516</td><td class=" har">.10411628777</td></tr>
+<tr><th>尊严</th><td class=" har">45</td><td class=" har">.5432060887</td><td class=" har">.11206701015</td></tr>
+<tr><th>豁免权</th><td class=" har">43</td><td class=" har">.543138762546140</td><td class=" har">.072989154262510</td></tr>
+<tr><th>前南斯拉夫地区</th><td class=" har">10</td><td class=" har">.542860960960388</td><td class=" har">.090282889710592</td></tr>
+<tr><th>十二海里</th><td class=" har">10</td><td class=" har">.542844113707542</td><td class=" har">.092952429515997</td></tr>
+<tr><th>国对</th><td class=" har">32</td><td class=" har">.542421849444509</td><td class=" har">.079334090882911</td></tr>
+<tr><th>保障人权</th><td class=" har">41</td><td class=" har">.542056707347312</td><td class=" har">.078506895781863</td></tr>
+<tr><th>世界大国</th><td class=" har">43</td><td class=" har">.541806738737018</td><td class=" har">.076067981636994</td></tr>
+<tr><th>司法独立</th><td class=" har">35</td><td class=" har">.541236679043089</td><td class=" har">.068534403739556</td></tr>
+<tr><th>哈方为</th><td class=" har">4</td><td class=" har">.541214749217033</td><td class=" har">.096183739670502</td></tr>
+<tr><th>超国家</th><td class=" har">33</td><td class=" har">.541022942824797</td><td class=" har">.067858599798858</td></tr>
+<tr><th>割让</th><td class=" har">41</td><td class=" har">.540757836365118</td><td class=" har">.082747150296398</td></tr>
+<tr><th>西英</th><td class=" har">9</td><td class=" har">.540605664253235</td><td class=" har">.067538170612843</td></tr>
+<tr><th>欺小</th><td class=" har">37</td><td class=" har">.540583817539988</td><td class=" har">.090811628975561</td></tr>
+<tr><th>武装挑衅</th><td class=" har">17</td><td class=" har">.540340148350772</td><td class=" har">.056965429571874</td></tr>
+<tr><th>司法权</th><td class=" har">43</td><td class=" har">.540088006923365</td><td class=" har">.099833755285310</td></tr>
+<tr><th>公理</th><td class=" har">45</td><td class=" har">.5399841038</td><td class=" har">.06880643554</td></tr>
+<tr><th>南亚地区</th><td class=" har">45</td><td class=" har">.5398419927</td><td class=" har">.07488159369</td></tr>
+<tr><th>澎湖列岛</th><td class=" har">32</td><td class=" har">.539827743545175</td><td class=" har">.065029882923337</td></tr>
+<tr><th>划界</th><td class=" har">45</td><td class=" har">.5398098656</td><td class=" har">.06310230277</td></tr>
+<tr><th>坐视</th><td class=" har">45</td><td class=" har">.5395430849</td><td class=" har">.06426836606</td></tr>
+<tr><th>台海两岸</th><td class=" har">15</td><td class=" har">.538925967613856</td><td class=" har">.051788595629844</td></tr>
+<tr><th>核能力</th><td class=" har">27</td><td class=" har">.538911582143218</td><td class=" har">.067504691292226</td></tr>
+<tr><th>有损于</th><td class=" har">41</td><td class=" har">.538902061014641</td><td class=" har">.085294058329141</td></tr>
+<tr><th>自由权</th><td class=" har">37</td><td class=" har">.537888508390736</td><td class=" har">.060664820885350</td></tr>
+<tr><th>美应</th><td class=" har">26</td><td class=" har">.537581585920774</td><td class=" har">.052475445822655</td></tr>
+<tr><th>法理</th><td class=" har">43</td><td class=" har">.537519453569900</td><td class=" har">.080670025273077</td></tr>
+<tr><th>人权宣言</th><td class=" har">33</td><td class=" har">.536752860654484</td><td class=" har">.082021162821635</td></tr>
+<tr><th>双边条约</th><td class=" har">28</td><td class=" har">.536649733781814</td><td class=" har">.073734376420862</td></tr>
+<tr><th>东耶路撒冷</th><td class=" har">43</td><td class=" har">.536428282427233</td><td class=" har">.073227115211995</td></tr>
+<tr><th>统治权</th><td class=" har">20</td><td class=" har">.536256858706474</td><td class=" har">.090314505954702</td></tr>
+<tr><th>分裂主义</th><td class=" har">45</td><td class=" har">.5360625702</td><td class=" har">.06547775223</td></tr>
+<tr><th>自由民主</th><td class=" har">41</td><td class=" har">.535745704319419</td><td class=" har">.071782035283708</td></tr>
+<tr><th>南太</th><td class=" har">36</td><td class=" har">.535682027538618</td><td class=" har">.096239457116862</td></tr>
+<tr><th>和平共存</th><td class=" har">28</td><td class=" har">.535523339041642</td><td class=" har">.072031069652913</td></tr>
+<tr><th>关税区</th><td class=" har">32</td><td class=" har">.534398709423840</td><td class=" har">.071640707862213</td></tr>
+<tr><th>崇高目标</th><td class=" har">45</td><td class=" har">.5341224396</td><td class=" har">.08844047292</td></tr>
+<tr><th>否决权</th><td class=" har">42</td><td class=" har">.534093473638807</td><td class=" har">.072589264981859</td></tr>
+<tr><th>签署国</th><td class=" har">30</td><td class=" har">.533561410506566</td><td class=" har">.065595056324240</td></tr>
+<tr><th>阴谋活动</th><td class=" har">35</td><td class=" har">.532933815036501</td><td class=" har">.090774627297513</td></tr>
+<tr><th>肆意挑衅</th><td class=" har">4</td><td class=" har">.532419621944428</td><td class=" har">.086905213938476</td></tr>
+<tr><th>非歧视</th><td class=" har">33</td><td class=" har">.532347383824262</td><td class=" har">.054997050522981</td></tr>
+<tr><th>民族大义</th><td class=" har">45</td><td class=" har">.5319262153</td><td class=" har">.07845199712</td></tr>
+<tr><th>列屿</th><td class=" har">2</td><td class=" har">.531281903386116</td><td class=" har">.060603943924755</td></tr>
+<tr><th>四岛</th><td class=" har">26</td><td class=" har">.531009941146924</td><td class=" har">.094271114140720</td></tr>
+<tr><th>始终认为</th><td class=" har">45</td><td class=" har">.5309239684</td><td class=" har">.08462755738</td></tr>
+<tr><th>归还给</th><td class=" har">41</td><td class=" har">.530615614681709</td><td class=" har">.095247760160109</td></tr>
+<tr><th>收复失地</th><td class=" har">44</td><td class=" har">.530237007547509</td><td class=" har">.121683500275098</td></tr>
+<tr><th>凌驾于</th><td class=" har">45</td><td class=" har">.5300234222</td><td class=" har">.07897220025</td></tr>
+<tr><th>阿人</th><td class=" har">13</td><td class=" har">.529273986816406</td><td class=" har">.057595790922658</td></tr>
+<tr><th>盟友</th><td class=" har">45</td><td class=" har">.5291495931</td><td class=" har">.07883643850</td></tr>
+<tr><th>东耶</th><td class=" har">6</td><td class=" har">.529020726680756</td><td class=" har">.111727249762854</td></tr>
+<tr><th>中立</th><td class=" har">45</td><td class=" har">.5289301002</td><td class=" har">.11617410586</td></tr>
+<tr><th>单边制裁</th><td class=" har">16</td><td class=" har">.528712652623653</td><td class=" har">.046627075264013</td></tr>
+<tr><th>斯方为</th><td class=" har">4</td><td class=" har">.528440937399864</td><td class=" har">.051030074132459</td></tr>
+<tr><th>争端</th><td class=" har">45</td><td class=" har">.5284192613</td><td class=" har">.06276298450</td></tr>
+<tr><th>押下</th><td class=" har">2</td><td class=" har">.528371706604958</td><td class=" har">.101875823860562</td></tr>
+<tr><th>巴方为</th><td class=" har">21</td><td class=" har">.528328922532854</td><td class=" har">.068277639650704</td></tr>
+<tr><th>核战略</th><td class=" har">36</td><td class=" har">.528035290539264</td><td class=" har">.061144439465018</td></tr>
+<tr><th>欧方应</th><td class=" har">3</td><td class=" har">.527407199144363</td><td class=" har">.044008450188610</td></tr>
+<tr><th>恶劣行径</th><td class=" har">41</td><td class=" har">.527288595350777</td><td class=" har">.075868707638796</td></tr>
+<tr><th>俄对</th><td class=" har">25</td><td class=" har">.526881357431412</td><td class=" har">.066748483968104</td></tr>
+<tr><th>罔顾</th><td class=" har">33</td><td class=" har">.526035394632455</td><td class=" har">.079232253349222</td></tr>
+<tr><th>开罗宣言</th><td class=" har">35</td><td class=" har">.525754109450749</td><td class=" har">.070820736766337</td></tr>
+<tr><th>偏袒</th><td class=" har">45</td><td class=" har">.5251719916</td><td class=" har">.07587953461</td></tr>
+<tr><th>合众国</th><td class=" har">27</td><td class=" har">.525081195213177</td><td class=" har">.070182295678427</td></tr>
+<tr><th>经济命脉</th><td class=" har">45</td><td class=" har">.5250603291</td><td class=" har">.07011197530</td></tr>
+<tr><th>中华民国政府</th><td class=" har">13</td><td class=" har">.524579747365071</td><td class=" har">.089894786933837</td></tr>
+<tr><th>互相承认</th><td class=" har">27</td><td class=" har">.524423346475319</td><td class=" har">.114446646178718</td></tr>
+<tr><th>合理要求</th><td class=" har">42</td><td class=" har">.524318151530765</td><td class=" har">.093130744424052</td></tr>
+<tr><th>横加干涉</th><td class=" har">42</td><td class=" har">.524253006492342</td><td class=" har">.084021146608173</td></tr>
+<tr><th>重返家园</th><td class=" har">43</td><td class=" har">.523969747299372</td><td class=" har">.120842972769229</td></tr>
+<tr><th>涉疆</th><td class=" har">15</td><td class=" har">.523274318377177</td><td class=" har">.056262569980405</td></tr>
+<tr><th>托管地</th><td class=" har">19</td><td class=" har">.523229972312325</td><td class=" har">.108559611229760</td></tr>
+<tr><th>让渡</th><td class=" har">36</td><td class=" har">.522347001565827</td><td class=" har">.077734019633876</td></tr>
+<tr><th>南沙群岛</th><td class=" har">44</td><td class=" har">.522258511998437</td><td class=" har">.107761706624072</td></tr>
+<tr><th>声索国</th><td class=" har">6</td><td class=" har">.522130911548932</td><td class=" har">.042288560010184</td></tr>
+<tr><th>不容置疑</th><td class=" har">45</td><td class=" har">.5221008976</td><td class=" har">.06007060170</td></tr>
+<tr><th>合法性</th><td class=" har">45</td><td class=" har">.5215446318</td><td class=" har">.10553604334</td></tr>
+<tr><th>对格</th><td class=" har">19</td><td class=" har">.521325832919071</td><td class=" har">.096015566521894</td></tr>
+<tr><th>治权</th><td class=" har">34</td><td class=" har">.520772912046489</td><td class=" har">.127017680893531</td></tr>
+<tr><th>直布罗陀</th><td class=" har">32</td><td class=" har">.520444269292057</td><td class=" har">.121931712706250</td></tr>
+<tr><th>行政权</th><td class=" har">44</td><td class=" har">.520039252259515</td><td class=" har">.079164114603813</td></tr>
+<tr><th>马约特岛</th><td class=" har">9</td><td class=" har">.519522372219298</td><td class=" har">.113200478569713</td></tr>
+<tr><th>克什米尔</th><td class=" har">44</td><td class=" har">.519038149579005</td><td class=" har">.086130479676684</td></tr>
+<tr><th>债权国</th><td class=" har">38</td><td class=" har">.519009789353923</td><td class=" har">.049236622815879</td></tr>
+<tr><th>沃尔维</th><td class=" har">13</td><td class=" har">.518970186893757</td><td class=" har">.143579414158174</td></tr>
+<tr><th>悍然</th><td class=" har">45</td><td class=" har">.5187705740</td><td class=" har">.06451614158</td></tr>
+<tr><th>国可</th><td class=" har">7</td><td class=" har">.518628678151539</td><td class=" har">.073832194756457</td></tr>
+<tr><th>绝不允许</th><td class=" har">45</td><td class=" har">.5183704080</td><td class=" har">.07447901523</td></tr>
+<tr><th>指手划脚</th><td class=" har">20</td><td class=" har">.517624080181122</td><td class=" har">.081754617168409</td></tr>
+<tr><th>乌在</th><td class=" har">18</td><td class=" har">.517581759227647</td><td class=" har">.085820928701747</td></tr>
+<tr><th>犹太民族</th><td class=" har">34</td><td class=" har">.517136611482676</td><td class=" har">.090499093722607</td></tr>
+<tr><th>千岛群岛</th><td class=" har">33</td><td class=" har">.516734047369523</td><td class=" har">.075511099188060</td></tr>
+<tr><th>中美洲地区</th><td class=" har">35</td><td class=" har">.516358913694109</td><td class=" har">.087783425697760</td></tr>
+<tr><th>无理要求</th><td class=" har">44</td><td class=" har">.515899660235102</td><td class=" har">.075831639537831</td></tr>
+<tr><th>民主政体</th><td class=" har">26</td><td class=" har">.515732056819476</td><td class=" har">.080455969065334</td></tr>
+<tr><th>妄称</th><td class=" har">29</td><td class=" har">.515524227043678</td><td class=" har">.062901116127580</td></tr>
+<tr><th>不持</th><td class=" har">20</td><td class=" har">.515515145659447</td><td class=" har">.069493000261771</td></tr>
+<tr><th>竹岛</th><td class=" har">23</td><td class=" har">.515036208474118</td><td class=" har">.102906037888643</td></tr>
+<tr><th>斯湾</th><td class=" har">15</td><td class=" har">.514979600906372</td><td class=" har">.139193591931266</td></tr>
+<tr><th>使用暴力</th><td class=" har">44</td><td class=" har">.514885951172222</td><td class=" har">.080384336260024</td></tr>
+<tr><th>海盗行为</th><td class=" har">11</td><td class=" har">.514855509454554</td><td class=" har">.084338610303025</td></tr>
+<tr><th>债占</th><td class=" har">2</td><td class=" har">.514381676912308</td><td class=" har">.177101689645504</td></tr>
+<tr><th>豁免</th><td class=" har">45</td><td class=" har">.5138791700</td><td class=" har">.08680612205</td></tr>
+<tr><th>挑拨离间</th><td class=" har">39</td><td class=" har">.513729928395687</td><td class=" har">.069334243506987</td></tr>
+<tr><th>阿对</th><td class=" har">10</td><td class=" har">.512309890985489</td><td class=" har">.124848437726701</td></tr>
+<tr><th>慎重处理</th><td class=" har">38</td><td class=" har">.511624088412837</td><td class=" har">.064165052552066</td></tr>
+<tr><th>选边</th><td class=" har">13</td><td class=" har">.510717192521462</td><td class=" har">.061846348207288</td></tr>
+<tr><th>以色列国</th><td class=" har">34</td><td class=" har">.509884204934625</td><td class=" har">.119314310291822</td></tr>
+<tr><th>希腊族</th><td class=" har">29</td><td class=" har">.509858347218612</td><td class=" har">.077255691056127</td></tr>
+<tr><th>黄岩岛</th><td class=" har">14</td><td class=" har">.509828997509820</td><td class=" har">.134431042952156</td></tr>
+<tr><th>标普对</th><td class=" har">2</td><td class=" har">.509508609771729</td><td class=" har">.132122277886739</td></tr>
+<tr><th>中央集权</th><td class=" har">39</td><td class=" har">.509493096516683</td><td class=" har">.064753050592369</td></tr>
+<tr><th>严正</th><td class=" har">45</td><td class=" har">.5086243060</td><td class=" har">.04956856875</td></tr>
+<tr><th>国为</th><td class=" har">44</td><td class=" har">.508516856215217</td><td class=" har">.072271921766853</td></tr>
+<tr><th>受援国</th><td class=" har">45</td><td class=" har">.5081318989</td><td class=" har">.09666891876</td></tr>
+<tr><th>尼泊尔政府</th><td class=" har">41</td><td class=" har">.507901176446822</td><td class=" har">.080349294809170</td></tr>
+<tr><th>柬政府</th><td class=" har">42</td><td class=" har">.507761450040908</td><td class=" har">.074096425090449</td></tr>
+<tr><th>三权分立</th><td class=" har">39</td><td class=" har">.507204745060358</td><td class=" har">.064784370375547</td></tr>
+<tr><th>减记</th><td class=" har">10</td><td class=" har">.506939697265625</td><td class=" har">.063684130951635</td></tr>
+<tr><th>疆界</th><td class=" har">43</td><td class=" har">.505227346752965</td><td class=" har">.104384355381174</td></tr>
+<tr><th>染指</th><td class=" har">43</td><td class=" har">.505076167195343</td><td class=" har">.081365573873079</td></tr>
+<tr><th>诬蔑</th><td class=" har">45</td><td class=" har">.5042129367</td><td class=" har">.07793753714</td></tr>
+<tr><th>藏独</th><td class=" har">22</td><td class=" har">.503371336243369</td><td class=" har">.075643745064344</td></tr>
+<tr><th>肯尼亚政府</th><td class=" har">43</td><td class=" har">.502395624338194</td><td class=" har">.069181736565599</td></tr>
+<tr><th>斐方</th><td class=" har">18</td><td class=" har">.502307900124126</td><td class=" har">.069005780454694</td></tr>
+<tr><th>债务国</th><td class=" har">36</td><td class=" har">.502168797784382</td><td class=" har">.058503543943316</td></tr>
+<tr><th>委内瑞拉政府</th><td class=" har">43</td><td class=" har">.501699837141259</td><td class=" har">.064761823249527</td></tr>
+<tr><th>誓死捍卫</th><td class=" har">24</td><td class=" har">.499231723447641</td><td class=" har">.094183400457245</td></tr>
+<tr><th>叙为</th><td class=" har">4</td><td class=" har">.498821012675762</td><td class=" har">.105618256295193</td></tr>
+<tr><th>爱方</th><td class=" har">26</td><td class=" har">.496964421409827</td><td class=" har">.058858556816077</td></tr>
+<tr><th>正当行为</th><td class=" har">37</td><td class=" har">.496949021880691</td><td class=" har">.058555507978248</td></tr>
+<tr><th>全面禁止</th><td class=" har">45</td><td class=" har">.4966159022</td><td class=" har">.11831318427</td></tr>
+<tr><th>巴解组织</th><td class=" har">36</td><td class=" har">.496316826177968</td><td class=" har">.062142653840981</td></tr>
+<tr><th>国籍法</th><td class=" har">31</td><td class=" har">.496219030311031</td><td class=" har">.075992141967613</td></tr>
+<tr><th>厚颜无耻</th><td class=" har">24</td><td class=" har">.495939475794633</td><td class=" har">.086458236788515</td></tr>
+<tr><th>错估</th><td class=" har">8</td><td class=" har">.494942829012871</td><td class=" har">.076232756362791</td></tr>
+<tr><th>写为</th><td class=" har">6</td><td class=" har">.494461849331856</td><td class=" har">.054932038902400</td></tr>
+<tr><th>希腊政府</th><td class=" har">45</td><td class=" har">.4935543480</td><td class=" har">.06775725332</td></tr>
+<tr><th>重债国</th><td class=" har">15</td><td class=" har">.493469452857971</td><td class=" har">.047449634573070</td></tr>
+<tr><th>挑动</th><td class=" har">45</td><td class=" har">.4934641751</td><td class=" har">.06888985671</td></tr>
+<tr><th>破坏者</th><td class=" har">40</td><td class=" har">.493383064866066</td><td class=" har">.076491236258100</td></tr>
+<tr><th>塞方</th><td class=" har">29</td><td class=" har">.493324612749034</td><td class=" har">.076865483935642</td></tr>
+<tr><th>债权人</th><td class=" har">45</td><td class=" har">.4930710438</td><td class=" har">.06354080506</td></tr>
+<tr><th>财政危机</th><td class=" har">42</td><td class=" har">.492558333845365</td><td class=" har">.050172829722558</td></tr>
+<tr><th>索方</th><td class=" har">9</td><td class=" har">.492449419365989</td><td class=" har">.092075897005838</td></tr>
+<tr><th>遏阻</th><td class=" har">21</td><td class=" har">.492013255755107</td><td class=" har">.084741372999656</td></tr>
+<tr><th>界约</th><td class=" har">5</td><td class=" har">.491326248645782</td><td class=" har">.096691891875375</td></tr>
+<tr><th>涉藏</th><td class=" har">21</td><td class=" har">.491271617866698</td><td class=" har">.069995027809706</td></tr>
+<tr><th>内陆国</th><td class=" har">32</td><td class=" har">.491070718504488</td><td class=" har">.097425462788463</td></tr>
+<tr><th>台澎金马</th><td class=" har">9</td><td class=" har">.490891317526499</td><td class=" har">.131108873545019</td></tr>
+<tr><th>前南</th><td class=" har">22</td><td class=" har">.490726085549051</td><td class=" har">.102730047847194</td></tr>
+<tr><th>国际金融组织</th><td class=" har">42</td><td class=" har">.490569870386805</td><td class=" har">.063427593688295</td></tr>
+<tr><th>南欧国家</th><td class=" har">27</td><td class=" har">.490419378987065</td><td class=" har">.066907977550939</td></tr>
+<tr><th>合情</th><td class=" har">37</td><td class=" har">.488770098299594</td><td class=" har">.075212596978116</td></tr>
+<tr><th>立法权</th><td class=" har">45</td><td class=" har">.4878809247</td><td class=" har">.10318826425</td></tr>
+<tr><th>底土</th><td class=" har">16</td><td class=" har">.487094732001424</td><td class=" har">.103982393713923</td></tr>
+<tr><th>乌为</th><td class=" har">8</td><td class=" har">.486503403633833</td><td class=" har">.114866436057976</td></tr>
+<tr><th>现行制度</th><td class=" har">39</td><td class=" har">.486399033894906</td><td class=" har">.084404587810663</td></tr>
+<tr><th>孟方为</th><td class=" har">2</td><td class=" har">.485506117343903</td><td class=" har">.121627459726435</td></tr>
+<tr><th>先不谈</th><td class=" har">5</td><td class=" har">.484795850515366</td><td class=" har">.150013111110610</td></tr>
+<tr><th>南海诸岛</th><td class=" har">30</td><td class=" har">.484367134173711</td><td class=" har">.084939339567651</td></tr>
+<tr><th>对菲</th><td class=" har">26</td><td class=" har">.484304335254889</td><td class=" har">.057745782129454</td></tr>
+<tr><th>国际公法</th><td class=" har">25</td><td class=" har">.483548398017883</td><td class=" har">.120447555045121</td></tr>
+<tr><th>克里米亚</th><td class=" har">37</td><td class=" har">.483310866194802</td><td class=" har">.067431003624208</td></tr>
+<tr><th>分治</th><td class=" har">45</td><td class=" har">.4832763187</td><td class=" har">.14965658317</td></tr>
+<tr><th>圣殿山</th><td class=" har">17</td><td class=" har">.482917690978331</td><td class=" har">.086598895281938</td></tr>
+<tr><th>军贸</th><td class=" har">14</td><td class=" har">.481858032090323</td><td class=" har">.126553434033902</td></tr>
+<tr><th>可信性</th><td class=" har">43</td><td class=" har">.481743443150853</td><td class=" har">.067611326802595</td></tr>
+<tr><th>东突厥</th><td class=" har">12</td><td class=" har">.481148007015387</td><td class=" har">.082458986436758</td></tr>
+<tr><th>纯属</th><td class=" har">45</td><td class=" har">.4810733507</td><td class=" har">.08220795258</td></tr>
+<tr><th>冒险性</th><td class=" har">20</td><td class=" har">.481029081344605</td><td class=" har">.076707035989236</td></tr>
+<tr><th>互相攻击</th><td class=" har">30</td><td class=" har">.480832667152087</td><td class=" har">.100991524473770</td></tr>
+<tr><th>南在</th><td class=" har">12</td><td class=" har">.479885468880336</td><td class=" har">.120562321732040</td></tr>
+<tr><th>达赖</th><td class=" har">44</td><td class=" har">.479547150433064</td><td class=" har">.073470044101184</td></tr>
+<tr><th>无耻</th><td class=" har">43</td><td class=" har">.476776740578718</td><td class=" har">.082425763111965</td></tr>
+<tr><th>塞浦路斯共和国</th><td class=" har">31</td><td class=" har">.476374270454530</td><td class=" har">.082368153160337</td></tr>
+<tr><th>东沙群岛</th><td class=" har">10</td><td class=" har">.476355037093162</td><td class=" har">.133071988255717</td></tr>
+<tr><th>拥有权</th><td class=" har">12</td><td class=" har">.475506998598576</td><td class=" har">.108892341488085</td></tr>
+<tr><th>管治</th><td class=" har">38</td><td class=" har">.474387027715382</td><td class=" har">.100193873134158</td></tr>
+<tr><th>所方</th><td class=" har">9</td><td class=" har">.473995834589005</td><td class=" har">.095763684215742</td></tr>
+<tr><th>伊对</th><td class=" har">13</td><td class=" har">.473978957304588</td><td class=" har">.108836048509033</td></tr>
+<tr><th>债信</th><td class=" har">11</td><td class=" har">.473519057035446</td><td class=" har">.081108301922674</td></tr>
+<tr><th>美债</th><td class=" har">9</td><td class=" har">.473281919956207</td><td class=" har">.076216455394156</td></tr>
+<tr><th>错误做法</th><td class=" har">45</td><td class=" har">.4729102147</td><td class=" har">.08295229197</td></tr>
+<tr><th>中沙群岛</th><td class=" har">17</td><td class=" har">.472455294693218</td><td class=" har">.110072769923859</td></tr>
+<tr><th>中华民国</th><td class=" har">44</td><td class=" har">.472246205942197</td><td class=" har">.094908581830570</td></tr>
+<tr><th>塞方为</th><td class=" har">4</td><td class=" har">.471928283572197</td><td class=" har">.145762437586336</td></tr>
+<tr><th>希腊式</th><td class=" har">5</td><td class=" har">.471899145841599</td><td class=" har">.102508924872727</td></tr>
+<tr><th>住民</th><td class=" har">10</td><td class=" har">.470156005024910</td><td class=" har">.154254268401416</td></tr>
+<tr><th>英美两国</th><td class=" har">31</td><td class=" har">.469450678556196</td><td class=" har">.066042447090702</td></tr>
+<tr><th>侵夺</th><td class=" har">14</td><td class=" har">.468822792172432</td><td class=" har">.083024016672949</td></tr>
+<tr><th>交还给</th><td class=" har">44</td><td class=" har">.468610116703944</td><td class=" har">.104847136367277</td></tr>
+<tr><th>孟方</th><td class=" har">31</td><td class=" har">.468476219523338</td><td class=" har">.082751170174646</td></tr>
+<tr><th>标准普尔公司</th><td class=" har">17</td><td class=" har">.466947632677415</td><td class=" har">.087820266563890</td></tr>
+<tr><th>内水</th><td class=" har">32</td><td class=" har">.466329175978899</td><td class=" har">.105931365162703</td></tr>
+<tr><th>阿拉伯叙利亚共和国</th><td class=" har">37</td><td class=" har">.465957374991597</td><td class=" har">.080252855985801</td></tr>
+<tr><th>银行信用</th><td class=" har">34</td><td class=" har">.464942542945637</td><td class=" har">.068711517356574</td></tr>
+<tr><th>中国教会</th><td class=" har">15</td><td class=" har">.464877754449844</td><td class=" har">.129604328980813</td></tr>
+<tr><th>对委</th><td class=" har">21</td><td class=" har">.464840341181982</td><td class=" har">.086213603187193</td></tr>
+<tr><th>苏方</th><td class=" har">43</td><td class=" har">.464382991541264</td><td class=" har">.069891305196285</td></tr>
+<tr><th>欧洲中央银行</th><td class=" har">34</td><td class=" har">.464115567067090</td><td class=" har">.074707678555777</td></tr>
+<tr><th>国贼</th><td class=" har">16</td><td class=" har">.458495423197746</td><td class=" har">.099957905643706</td></tr>
+<tr><th>理所当然</th><td class=" har">45</td><td class=" har">.4540856516</td><td class=" har">.07676325663</td></tr>
+<tr><th>中印</th><td class=" har">45</td><td class=" har">.4523074211</td><td class=" har">.07891092351</td></tr>
+<tr><th>上大谈</th><td class=" har">4</td><td class=" har">.451926238834858</td><td class=" har">.121584745598014</td></tr>
+<tr><th>颐指气使</th><td class=" har">42</td><td class=" har">.451818605264028</td><td class=" har">.076955447112331</td></tr>
+<tr><th>私相授受</th><td class=" har">14</td><td class=" har">.450973321284567</td><td class=" har">.089991530388672</td></tr>
+<tr><th>调降</th><td class=" har">17</td><td class=" har">.449483254376580</td><td class=" har">.088473235818417</td></tr>
+<tr><th>权益</th><td class=" har">45</td><td class=" har">.4481994449</td><td class=" har">.09482343907</td></tr>
+<tr><th>普调</th><td class=" har">9</td><td class=" har">.445761776632733</td><td class=" har">.078650964209713</td></tr>
+<tr><th>吞下</th><td class=" har">45</td><td class=" har">.4455138256</td><td class=" har">.10285530815</td></tr>
+<tr><th>彻底否定</th><td class=" har">39</td><td class=" har">.443876671485412</td><td class=" har">.079508438464568</td></tr>
+<tr><th>失地</th><td class=" har">39</td><td class=" har">.443035434071834</td><td class=" har">.151373979016551</td></tr>
+<tr><th>苦果</th><td class=" har">45</td><td class=" har">.4392569724</td><td class=" har">.09499156393</td></tr>
+<tr><th>丝毫无损</th><td class=" har">26</td><td class=" har">.437034503771709</td><td class=" har">.065969930236730</td></tr>
+<tr><th>外争</th><td class=" har">13</td><td class=" har">.433532905120116</td><td class=" har">.101725645385581</td></tr>
+<tr><th>专属</th><td class=" har">44</td><td class=" har">.433206834237684</td><td class=" har">.158525485240481</td></tr>
+<tr><th>自顾不暇</th><td class=" har">22</td><td class=" har">.432266278700395</td><td class=" har">.051949938377401</td></tr>
+<tr><th>禁地</th><td class=" har">34</td><td class=" har">.429375006872065</td><td class=" har">.083361550782829</td></tr>
+<tr><th>运河区</th><td class=" har">38</td><td class=" har">.429262720832699</td><td class=" har">.179001161428492</td></tr>
+<tr><th>欧元区</th><td class=" har">28</td><td class=" har">.428249830646174</td><td class=" har">.065626541683250</td></tr>
+<tr><th>由全</th><td class=" har">20</td><td class=" har">.427911983430386</td><td class=" har">.093579308394729</td></tr>
+<tr><th>但绝</th><td class=" har">9</td><td class=" har">.427238706085417</td><td class=" har">.096185625253646</td></tr>
+<tr><th>仍受</th><td class=" har">37</td><td class=" har">.426489856597540</td><td class=" har">.085377594279571</td></tr>
+<tr><th>无国界</th><td class=" har">41</td><td class=" har">.426351121286066</td><td class=" har">.106171059987039</td></tr>
+<tr><th>内除</th><td class=" har">28</td><td class=" har">.422138388667788</td><td class=" har">.095176963639139</td></tr>
+<tr><th>第五项</th><td class=" har">36</td><td class=" har">.420697020159827</td><td class=" har">.087250757179705</td></tr>
+<tr><th>军机</th><td class=" har">36</td><td class=" har">.415389775815937</td><td class=" har">.083444694565795</td></tr>
+<tr><th>线内</th><td class=" har">13</td><td class=" har">.410113582244286</td><td class=" har">.065576501197254</td></tr>
+<tr><th>南为</th><td class=" har">12</td><td class=" har">.409498538821936</td><td class=" har">.140952061790814</td></tr>
+<tr><th>初中历史</th><td class=" har">4</td><td class=" har">.407479397952557</td><td class=" har">.138753743247090</td></tr>
+<tr><th>评级</th><td class=" har">44</td><td class=" har">.400658551942218</td><td class=" har">.068401043273770</td></tr>
+<tr><th>债务</th><td class=" har">45</td><td class=" har">.3961896711</td><td class=" har">.07578465898</td></tr>
+<tr><th>可据</th><td class=" har">26</td><td class=" har">.394616090334379</td><td class=" har">.081690235409358</td></tr>
+<tr><th>马为</th><td class=" har">19</td><td class=" har">.381902290017981</td><td class=" har">.101171411511088</td></tr>
+<tr><th>再响</th><td class=" har">19</td><td class=" har">.380507334282524</td><td class=" har">.076352574254655</td></tr>
+<tr><th>难撼</th><td class=" har">10</td><td class=" har">.378969162702560</td><td class=" har">.093920490481812</td></tr>
+<tr><th>一九九七年</th><td class=" har">31</td><td class=" har">.365792884761768</td><td class=" har">.152648833750797</td></tr>
+<tr><th>祭品</th><td class=" har">38</td><td class=" har">.345570751710942</td><td class=" har">.096969217580831</td></tr>
+<tr><th>雪球</th><td class=" har">41</td><td class=" har">.328692822558124</td><td class=" har">.086735813919741</td></tr>
+<tr><th>国权</th><td class=" har">43</td><td class=" har">.303586085435263</td><td class=" har">.133504295741311</td></tr>
+<tr><th>Valid N (listwise)</th><td class=" har">0</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

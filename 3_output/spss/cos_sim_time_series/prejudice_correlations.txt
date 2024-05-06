@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 恶趣; Correlation: 0.8546072506127554; P-value: 0.34759586026918887; Valid Cases: 3
+Neighbor: 怪象; Correlation: 0.6049317764760838; P-value: 0.021907736427659266; Valid Cases: 14
+Neighbor: 种族主义; Correlation: 0.5779520021073028; P-value: 3.217716956393449e-05; Valid Cases: 45
+Neighbor: 抱持; Correlation: 0.5580692840808111; P-value: 0.010555551693508108; Valid Cases: 20
+Neighbor: 阴谋论; Correlation: 0.5567985408852273; P-value: 0.060050512411040854; Valid Cases: 12
+Neighbor: 编造谎言; Correlation: 0.4391791736396622; P-value: 0.01344301810337799; Valid Cases: 31
+Neighbor: 敌意; Correlation: 0.4264254178590269; P-value: 0.0038970925448294142; Valid Cases: 44
+Neighbor: 假想敌; Correlation: 0.39883929002714247; P-value: 0.017630010481289357; Valid Cases: 35
+Neighbor: 无端; Correlation: 0.3881469013499511; P-value: 0.008421570601873483; Valid Cases: 45
+Neighbor: 做派; Correlation: 0.3839450421662016; P-value: 0.043687368076022734; Valid Cases: 28
+Neighbor: 无端指责; Correlation: 0.36830566807227816; P-value: 0.02490184480992263; Valid Cases: 37
+Neighbor: 傲慢; Correlation: 0.36254807298058966; P-value: 0.014384459497411682; Valid Cases: 45
+Neighbor: 从中渔利; Correlation: 0.35966681625814456; P-value: 0.019311871694002253; Valid Cases: 42
+Neighbor: 倒打一耙; Correlation: 0.35700175496766284; P-value: 0.03820467950624878; Valid Cases: 34
+Neighbor: 鼓吹; Correlation: 0.3530243044982217; P-value: 0.017375339280726917; Valid Cases: 45
+Neighbor: 避风头; Correlation: 0.3513865146020529; P-value: 0.4396028990843646; Valid Cases: 7
+Neighbor: 关系恶化; Correlation: 0.3497927004254492; P-value: 0.0185029114179914; Valid Cases: 45
+Neighbor: 敌对; Correlation: 0.3483119168138008; P-value: 0.01903986206634861; Valid Cases: 45
+Neighbor: 种族问题; Correlation: 0.34339448000305434; P-value: 0.04677317230692639; Valid Cases: 34
+Neighbor: 充斥; Correlation: 0.32644099008543165; P-value: 0.028629229074024272; Valid Cases: 45
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 信仰主义; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 革命性; Correlation: 0.9254233493383938; P-value: 9.840391910794713e-20; Valid Cases: 45
+Neighbor: 旧思想; Correlation: 0.8959418749691163; P-value: 3.5750266615292593e-13; Valid Cases: 35
+Neighbor: 小生产者; Correlation: 0.8844867467745228; P-value: 9.778430273041115e-09; Valid Cases: 24
+Neighbor: 余毒; Correlation: 0.8829129380813876; P-value: 2.549478768382241e-07; Valid Cases: 20
+Neighbor: 陈腐; Correlation: 0.8827672230040566; P-value: 1.0626249000574368e-14; Valid Cases: 42
+Neighbor: 陈规陋习; Correlation: 0.880375962158237; P-value: 1.6018113357861932e-15; Valid Cases: 45
+Neighbor: 命令主义; Correlation: 0.8757007440782958; P-value: 2.222817476180312e-09; Valid Cases: 27
+Neighbor: 旧习惯; Correlation: 0.8750486211669188; P-value: 2.9728031391500846e-12; Valid Cases: 36
+Neighbor: 多子; Correlation: 0.8722296584119513; P-value: 9.881467640265153e-13; Valid Cases: 38
+Neighbor: 思想僵化; Correlation: 0.8670107368054709; P-value: 1.3590505587060644e-14; Valid Cases: 45
+Neighbor: 论资排辈; Correlation: 0.865096280094219; P-value: 1.8114195777381326e-14; Valid Cases: 45
+Neighbor: 根子; Correlation: 0.8648751142289459; P-value: 1.87202584289705e-14; Valid Cases: 45
+Neighbor: 遗风; Correlation: 0.8607660432830454; P-value: 6.786291220458366e-14; Valid Cases: 44
+Neighbor: 教条; Correlation: 0.85547188218842; P-value: 7.206915333227547e-14; Valid Cases: 45
+Neighbor: 重男轻女; Correlation: 0.8554655193697295; P-value: 1.0517042994955722e-12; Valid Cases: 41
+Neighbor: 家长制; Correlation: 0.8551419968203444; P-value: 1.0952309278383607e-12; Valid Cases: 41
+Neighbor: 沾染上; Correlation: 0.8525180483272057; P-value: 5.910279697847307e-10; Valid Cases: 32
+Neighbor: 求全责备; Correlation: 0.8523171871832118; P-value: 8.029463963801713e-13; Valid Cases: 42
+Neighbor: 两个凡是; Correlation: 0.8517797080162255; P-value: 8.589674889790109e-13; Valid Cases: 42

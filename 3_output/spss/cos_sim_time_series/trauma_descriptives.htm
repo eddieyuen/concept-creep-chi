@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>trauma_descriptives.htm</title>
+<meta charset="utf-8"/>
+<style>
+.details {visibility:hidden;}
+.workbookSyntaxBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookSyntaxBlock p { margin:0 0;}
+.workbookRichTextBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookRichTextBlock p { margin:0 0;}
+.logItem {margin: 16px 0;font-family: monospace;}
+.procedureTitle{color: #1d3649;font-weight: 600;font-size: 20px;line-height: 24px;font-family: monospace;}
+.pivot{color:#264A60;background-color:#FFFFFF;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#E0E0E0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#F9F9FB;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#F9F9FB;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #AEAEAE;}
+.hDR{border-top:1px none #AEAEAE;}
+.vCR{border-left:1px none #AEAEAE;}
+.vDR{border-left:1px none #AEAEAE;}
+.hCC{border-bottom:1px none #AEAEAE;}
+.hDC{border-bottom:1px none #AEAEAE;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #AEAEAE;}
+.pivot{margin: 80px 0;}
+.pivot thead.tr.th {padding:0px;border-spacing:0px}
+.hal{text-align:left} .hac{text-align:center} .har{text-align:right}
+.val{vertical-align:left} .vac{vertical-align:center} .var{vertical-align:right}
+</style>
+</head>
+<body>
+<p class="procedureTitle"><head><style type="text/css">p{color:0;font-family:SansSerif;font-size:14pt;font-style:normal;font-weight:bold;text-decoration:none}</style></head><BR>Descriptives</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+<div class="itemBody">
+<table summary="Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows" style="width:470px" class="default PivotTable" aria-label="Notes" role="complementary" data-lookName="default" data-rowLabelWidth="2" data-colLabelHeight="0" data-NumRows="13" data-NumCols="1" data-rowLabels="Corner" data-decimal-char="." data-col-labels="" data-row-labels="Output Created ;Comments ;Input Data; Active Dataset; Filter; Weight; Split File; N of Rows in Working Data File;Missing Value Handling Definition of Missing; Cases Used;Syntax ;Resources Processor Time; Elapsed Time" data-layer-dimension="" data-column-dimension="" data-row-dimension="Contents;" data-maxColWidth="162">
+<caption class="title" style="width:470px">Notes<span class="details">Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<th class="rowLabels dataAreaTop role3" colspan="2">Output Created</th>
+<td class=" o dataAreaTop dataAreaLeft">19-APR-2024 01:00:37</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Comments</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&nbsp;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="6">Input</th>
+<th class="rowLabels hCR vCR role3">Data</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">C:\Users\s1155157933\Downloads\trauma_cos-sim.csv</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Active Dataset</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">DataSet2</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Filter</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Weight</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Split File</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">N of Rows in Working Data File</th>
+<td class=" e dataAreaLeft hCR">45</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Missing Value Handling</th>
+<th class="rowLabels hCR vCR role3">Definition of Missing</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">User defined missing values are treated as missing.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Cases Used</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">All non-missing data are used.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Syntax</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">DESCRIPTIVES VARIABLES=毒害 心脑血管 葡萄膜 奴役 流血 之果 免遭 劫难 疟疾 肺气肿 心脏病 急性 所受 疑难病症 颌面 心理治疗 泥淖 疾患 无辜者 生灵涂炭 惨痛教训<br>    营养不良 受难者 新疗法 哮喘 给斯 灾难 退行性 康复科 危难 感染 肢体 突发事件 受压迫 弱智 母体 先心病 紊乱 终末期 有形 肝移植 积劳成疾 窘迫 无法弥补 痛苦 颅内 受到感染 耳聋<br>    封建意识 失眠症 不治之症 无法估量 疑难病 愈加 小儿麻痹 埋下 肠 骨折 十年内乱 后失 病患 痊愈 畸形 危在旦夕 脑中风 缺损 霍乱 百花凋零 肺水肿 受到破坏 移植术 病程 帕金森病 扭曲<br>    侵袭 缺血 深渊 幼小 危险性 征象 口腔疾病 子宫颈癌 心肌缺血 鼻咽癌 经济负担 缺血性 重整 打上 骨病 术后 创痛 悲惨 愚昧无知 毁于一旦 湿疹 修补术 磨难 红斑狼疮 脓 战乱 切除<br>    骤停 愚昧 汗腺 矛盾激化 性疾病 特效药 房颤 十年浩劫 耗尽 祸首 触发 内乱 创面 维系 脑膜炎 冠心病 颠沛流离 苏曼 残杀 绒癌 呼吸系统 丧亲 肉体 内忧外患 苦斗 记忆犹新 斜视<br>    无穷的 不白之冤 饱经 食不果腹 脏器 肝 羁绊 透析 心理障碍 结核 脓毒症 生命垂危 缝合 流离 寄生虫 在精神上 脑血管 乳房 更会 肾脏病 小鼠 灾祸 折磨 仇恨 脑部 内分泌 水深火热<br>    食欲 关节炎 民不聊生 灾荒 治愈 生理 切口 自理能力 鼾症 肺纤维化 截肢 难以言状 精神分裂症 癌变 核辐射 心力衰竭 殊死搏斗 致命性 肝脏 旷日持久 神经纤维 痛楚 发育不良 忍受着<br>    肉体上 福音 艾滋病毒 糖尿病足 无谓 发育不全 深重 预后 原发性 无法挽回 精神障碍 小脑 万恶 败血症 后患 粘连 血腥 悲伤 受到冲击 罪孽 断肢 恐非 生殖系统 缠身 牙周 郁闷 肺<br>    精神压力 综合症 精神痛苦 慢阻 忍受 诸多困难 神经系统 恶行 精神疾病 极深 北京大学人民医院 早幼 生长发育 夺去 可逆 必定会 蹂躏 频仍 心肌 血栓 挽救 映秀人 恶性肿瘤 恶果 精神负担<br>    排异 不义 已因 战祸 无药 肝病 脑出血 胶质瘤 衰老 皮肤癌 难以忍受 天灾人祸 忧患 供体 眼病 瘟疫 死亡线 视网膜 染病 达于 肌 及布 癫痫 痛风 无法控制 不遇 扼杀 大灾难 病毒性<br>    坏死 毒瘾 移植手术 造成危害 地治好 解救出来 脑组织 祸患 灾难性 全面战争 消化系统 肥胖 视神经 寄生虫病 失血 恢复健康 肠胃 军事冲突 创伤性 心血管 软组织 致盲 污垢 梅毒 灭顶之灾<br>    耻辱 烙印 偏瘫 脊椎 脑病 胰腺 抚慰 帕金森 非人 太深 综合征 万余例 疑难重症 难以克服 危重症 病变 先天性 惨祸 急症 鼻炎 痴呆 衰竭 血浆 截瘫 生殖 中枢神经 难治性 伤痕 肾功能<br>    戕害 奥斯威辛 重见光明 痛恨 站立起来 饥馑 绝症 心肌梗死 纷乱 深表同情 脾胃 外伤性 风湿性关节炎 呼吸道 毁灭性 操劳 难以预料 灵丹 胸痛 瘘 估计不足 肾病 污泥浊水 农奴制 下肢<br>    消退 核战争 脑血管病 病灶 休克 感染性 饥荒 两败俱伤 不测 估量 仍受 急性期 疼痛 恐慌 治疗师 祸根 放射治疗 腔镜 身体虚弱 麻风病 世界大战 枷锁 短缩 困苦 罹患 器官 内心深处<br>    镇痛 呼吸衰竭 受尽 兵戎相见 浩劫 心肺 耐药 血管 沉沦 医治 消极影响 消化不良 免于 困窘 试剂盒 饥饿 颅底 主动脉 血癌 股骨头 功能障碍 骨肉分离 器官移植 休眠 外伤 饱尝 潜伏着<br>    朱凤雪 小儿麻痹症 并发症 生育能力 胃肠道 整复 人祸 慢性 危重 病患者 伤痛 肾衰 不满情绪 化疗 慰藉 军中 病魔 脑 贫血 灾难深重 雷击 肌体 淋巴细胞 史无前例 肠源性 精神创伤<br>    脑神经 出血热 合并症 急危重症 厌恶 粒细胞 恢复期 历尽艰辛 痛切 器质性 诱发 缺氧 精神科 躯体 万马齐喑 百废待兴 伤寒 高山病 脑积水 主导性 脊髓 负面效应 土两族 颜面 身受 衣食<br>    纤维化 癌症 内镜 上受 免疫系统 中风 自体 药源性 悲剧性 弱视 精神力量 余毒 破坏力 无休止 遗传性 脑损伤 抗毒素 内膜 环境因素 恐惧心理 产妇 烧伤 承受 脑干 危重病 延续下去 饱受<br>    后遗症 免受 肠道 震颤 身心 炎症 惨重 复苏 中受 运动神经元 机能 救治 基因突变 巨大损失 癌前 厄运 千疮百孔 畸变 重负 高血糖 肥胖症 眼球 认知障碍 经济危机 磨灭 荡涤 苦难 煎熬<br>    患上 心功能 应激 冤屈 喉癌 疗治 精神病 严峻考验 肝癌 颅脑 脑卒中 心理压力 常见疾病 内伤 可治 骨关节炎 肝硬化 怪病 肺结核 自然选择 不幸遭遇 传染 结石 尿毒症 遗留 白血病<br>    无可挽回 异体 骇人听闻 危局 心梗 胃肠 恐惧感 梦魇 代谢 肾脏 病毒感染 天灾 肌无力 挤兑 抑郁症 急性病 眼疾 不孕症 肾移植 天花 病理 造福人类 养料 失语 过敏性 愈合 摧残 严酷<br>    乙脑 有限性 湮没 后代人 血液病 药物性 临床实践 击垮 抗药性 人道 肺病 惨痛 冠状动脉 疏离 垂危 妻离子散 脑水肿 撕裂 压迫 抚平 病原体 免疫性 心肌梗塞 不良后果 极度 肺部 脊柱<br>    心肌细胞 疗伤 奋争 烂摊子 病痛 病态 致病 心衰 难以想象 高原病 抗过敏 代谢性 枪弹 不浅 磨砺 衰弱 苦痛 饥寒交迫 宝贵时间 心血管病 溶血性 损伤 壮志未酬 悲惨遭遇 停跳 恐惧<br>    惨绝人寰 乙型 窒息 重压 感染者 转危为安 不良影响 唇腭裂 脑震荡 遗留下 麻醉 重建家园 严重损失 重症 痴呆症 祸害 口腔 味觉 淋巴 系统疾病 耐药性 生存环境 家破人亡 弹道学 诊治<br>    元气 进行性<br>  /STATISTICS=MEAN STDDEV<br>  /SORT=MEAN (D).</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Resources</th>
+<th class="rowLabels hCR vCR role3">Processor Time</th>
+<td class=" e dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Elapsed Time</th>
+<td class=" o dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<td  style="width:144px;padding:0px;border-spacing:0px"></td>
+<td  style="width:164px;padding:0px;border-spacing:0px"></td>
+<td  style="width:162px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tbody>
+</table>
+</div><p align="left"><head><style type="text/css">p{color:0;font-family:Monospaced;font-size:12pt;font-style:normal;font-weight:normal;text-decoration:none}</style></head><BR>[DataSet2]&nbsp;</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+
+<div>
+
+<style>
+.pivot{color:#264a60;background-color:#ffffff;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#e0e0e0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#f9f9fb;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#f9f9fb;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #aeaeae;}
+.hDR{border-top:1px none #aeaeae;}
+.vCR{border-left:1px none #aeaeae;}
+.vDR{border-left:1px none #aeaeae;}
+.hCC{border-bottom:1px none #aeaeae;}
+.hDC{border-bottom:1px none #aeaeae;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #aeaeae;}
+</style>
+<table class="pivot" data-rows="1,0,1,635,0,0" data-cols="1,3" data-heights="24,0,20,12700,0" data-widths="110,374" data-curCounts="635,3" data-curSizess="635,3">
+<caption colspan="4">Descriptive Statistics</caption>
+<thead>
+<tr><th class="cornerLabels">&nbsp;</th><th>N</th><th>Mean</th><th>Std. Deviation</th></tr>
+</thead>
+<tbody data-rect="0,634,0,2">
+<tr><th style="min-width:110px">朱凤雪</th><td class=" har" style="min-width:68px">1</td><td class=" har" style="min-width:98px">.735718250274658</td><td class=" har" style="min-width:98px">.</td></tr>
+<tr><th>弹道学</th><td class=" har">3</td><td class=" har">.677146573861440</td><td class=" har">.008956776251509</td></tr>
+<tr><th>给斯</th><td class=" har">2</td><td class=" har">.663535088300705</td><td class=" har">.006717322568818</td></tr>
+<tr><th>医治</th><td class=" har">45</td><td class=" har">.6538975102</td><td class=" har">.08570630349</td></tr>
+<tr><th>肠源性</th><td class=" har">3</td><td class=" har">.653527875741323</td><td class=" har">.037246179878217</td></tr>
+<tr><th>后遗症</th><td class=" har">45</td><td class=" har">.6466214236</td><td class=" har">.07938397319</td></tr>
+<tr><th>短缩</th><td class=" har">2</td><td class=" har">.643903434276581</td><td class=" har">.043297626062635</td></tr>
+<tr><th>深重</th><td class=" har">45</td><td class=" har">.6366418573</td><td class=" har">.10056368664</td></tr>
+<tr><th>愈合</th><td class=" har">45</td><td class=" har">.6347332804</td><td class=" har">.06761292246</td></tr>
+<tr><th>并发症</th><td class=" har">45</td><td class=" har">.6266777433</td><td class=" har">.05674835167</td></tr>
+<tr><th>折磨</th><td class=" har">45</td><td class=" har">.6259289973</td><td class=" har">.08374718937</td></tr>
+<tr><th>衰竭</th><td class=" har">45</td><td class=" har">.6255115969</td><td class=" har">.06204942204</td></tr>
+<tr><th>摧残</th><td class=" har">45</td><td class=" har">.6220607376</td><td class=" har">.08041999752</td></tr>
+<tr><th>病痛</th><td class=" har">45</td><td class=" har">.6220518964</td><td class=" har">.07547008034</td></tr>
+<tr><th>灾难性</th><td class=" har">45</td><td class=" har">.6107462120</td><td class=" har">.08119193821</td></tr>
+<tr><th>肉体上</th><td class=" har">34</td><td class=" har">.610491979648085</td><td class=" har">.087427642467278</td></tr>
+<tr><th>浩劫</th><td class=" har">45</td><td class=" har">.6094832604</td><td class=" har">.09636525900</td></tr>
+<tr><th>损伤</th><td class=" har">45</td><td class=" har">.6085444480</td><td class=" har">.06031051367</td></tr>
+<tr><th>免疫系统</th><td class=" har">41</td><td class=" har">.603938836876939</td><td class=" har">.066270786294413</td></tr>
+<tr><th>惨重</th><td class=" har">45</td><td class=" har">.6034862300</td><td class=" har">.09422367526</td></tr>
+<tr><th>痛苦</th><td class=" har">45</td><td class=" har">.6023794724</td><td class=" har">.07475802845</td></tr>
+<tr><th>呼吸系统</th><td class=" har">44</td><td class=" har">.600940180773085</td><td class=" har">.059546078351430</td></tr>
+<tr><th>脑部</th><td class=" har">43</td><td class=" har">.599337369203568</td><td class=" har">.058155020578803</td></tr>
+<tr><th>精神创伤</th><td class=" har">26</td><td class=" har">.598839571842781</td><td class=" har">.097887335688689</td></tr>
+<tr><th>应激</th><td class=" har">25</td><td class=" har">.598450226783753</td><td class=" har">.081133923109301</td></tr>
+<tr><th>精神痛苦</th><td class=" har">26</td><td class=" har">.597562200748004</td><td class=" har">.070979354666430</td></tr>
+<tr><th>功能障碍</th><td class=" har">36</td><td class=" har">.596411461631457</td><td class=" har">.063171285339511</td></tr>
+<tr><th>疾患</th><td class=" har">44</td><td class=" har">.596377709372477</td><td class=" har">.071079284167547</td></tr>
+<tr><th>肉体</th><td class=" har">44</td><td class=" har">.596283796836030</td><td class=" har">.093527449021359</td></tr>
+<tr><th>灾祸</th><td class=" har">43</td><td class=" har">.595723192359126</td><td class=" har">.093460424543153</td></tr>
+<tr><th>神经系统</th><td class=" har">45</td><td class=" har">.5954040318</td><td class=" har">.05957132055</td></tr>
+<tr><th>肾功能</th><td class=" har">43</td><td class=" har">.594431798818500</td><td class=" har">.058781407079548</td></tr>
+<tr><th>遗传性</th><td class=" har">43</td><td class=" har">.593696282353512</td><td class=" har">.057807158102284</td></tr>
+<tr><th>及布</th><td class=" har">1</td><td class=" har">.591781497001648</td><td class=" har">.</td></tr>
+<tr><th>肾脏</th><td class=" har">45</td><td class=" har">.5916167927</td><td class=" har">.07227543070</td></tr>
+<tr><th>治愈</th><td class=" har">45</td><td class=" har">.5915367936</td><td class=" har">.06987968864</td></tr>
+<tr><th>忍受着</th><td class=" har">44</td><td class=" har">.591043426909230</td><td class=" har">.088628447587721</td></tr>
+<tr><th>大灾难</th><td class=" har">40</td><td class=" har">.590720596164465</td><td class=" har">.085578541796012</td></tr>
+<tr><th>脊髓</th><td class=" har">45</td><td class=" har">.5904899976</td><td class=" har">.05845497596</td></tr>
+<tr><th>精神压力</th><td class=" har">43</td><td class=" har">.590429783560509</td><td class=" har">.077850498610668</td></tr>
+<tr><th>瘟疫</th><td class=" har">45</td><td class=" har">.5903482469</td><td class=" har">.07102194982</td></tr>
+<tr><th>伤痛</th><td class=" har">45</td><td class=" har">.5902233067</td><td class=" har">.08445914854</td></tr>
+<tr><th>窒息</th><td class=" har">45</td><td class=" har">.5898257353</td><td class=" har">.06993418184</td></tr>
+<tr><th>巨大损失</th><td class=" har">45</td><td class=" har">.5887799189</td><td class=" har">.08271267821</td></tr>
+<tr><th>肺部</th><td class=" har">45</td><td class=" har">.5884636480</td><td class=" har">.05638478419</td></tr>
+<tr><th>衰老</th><td class=" har">45</td><td class=" har">.5881404073</td><td class=" har">.07514205698</td></tr>
+<tr><th>脓毒症</th><td class=" har">11</td><td class=" har">.587627546353774</td><td class=" har">.050032293951347</td></tr>
+<tr><th>无法弥补</th><td class=" har">45</td><td class=" har">.5870332029</td><td class=" har">.07993317509</td></tr>
+<tr><th>灾难</th><td class=" har">45</td><td class=" har">.5869313878</td><td class=" har">.09843798927</td></tr>
+<tr><th>心脑血管</th><td class=" har">37</td><td class=" har">.585954679025186</td><td class=" har">.063504367945424</td></tr>
+<tr><th>抚平</th><td class=" har">41</td><td class=" har">.585890780861785</td><td class=" har">.094543703613117</td></tr>
+<tr><th>免疫性</th><td class=" har">29</td><td class=" har">.583766207612794</td><td class=" har">.051817678835927</td></tr>
+<tr><th>劫难</th><td class=" har">45</td><td class=" har">.5834993722</td><td class=" har">.09975231568</td></tr>
+<tr><th>恐惧</th><td class=" har">45</td><td class=" har">.5823858149</td><td class=" har">.08559251161</td></tr>
+<tr><th>戕害</th><td class=" har">41</td><td class=" har">.581874823424874</td><td class=" har">.077273779214581</td></tr>
+<tr><th>创痛</th><td class=" har">34</td><td class=" har">.581625608836903</td><td class=" har">.081295668533021</td></tr>
+<tr><th>病魔</th><td class=" har">45</td><td class=" har">.5813960153</td><td class=" har">.08058842254</td></tr>
+<tr><th>休克</th><td class=" har">45</td><td class=" har">.5810808702</td><td class=" har">.05611437648</td></tr>
+<tr><th>蹂躏</th><td class=" har">45</td><td class=" har">.5810706042</td><td class=" har">.08895482848</td></tr>
+<tr><th>肝脏</th><td class=" har">45</td><td class=" har">.5810274889</td><td class=" har">.05871587526</td></tr>
+<tr><th>外伤</th><td class=" har">45</td><td class=" har">.5809182507</td><td class=" har">.05807566060</td></tr>
+<tr><th>炎症</th><td class=" har">44</td><td class=" har">.580189260569486</td><td class=" har">.063156726820609</td></tr>
+<tr><th>苦痛</th><td class=" har">45</td><td class=" har">.5799917860</td><td class=" har">.08268625731</td></tr>
+<tr><th>难治性</th><td class=" har">20</td><td class=" har">.579871459305286</td><td class=" har">.059666768992773</td></tr>
+<tr><th>脑血管</th><td class=" har">45</td><td class=" har">.5793564178</td><td class=" har">.07166943944</td></tr>
+<tr><th>退行性</th><td class=" har">15</td><td class=" har">.579257587591807</td><td class=" har">.066049183425161</td></tr>
+<tr><th>眼疾</th><td class=" har">45</td><td class=" har">.5786596658</td><td class=" har">.06492859838</td></tr>
+<tr><th>煎熬</th><td class=" har">45</td><td class=" har">.5779123167</td><td class=" har">.10386932554</td></tr>
+<tr><th>早幼</th><td class=" har">13</td><td class=" har">.577636473453962</td><td class=" har">.052875606719686</td></tr>
+<tr><th>垂危</th><td class=" har">43</td><td class=" har">.577457964420319</td><td class=" har">.073782449398175</td></tr>
+<tr><th>预后</th><td class=" har">34</td><td class=" har">.577362575951745</td><td class=" har">.066146923234275</td></tr>
+<tr><th>药源性</th><td class=" har">6</td><td class=" har">.577098583181699</td><td class=" har">.144331950371993</td></tr>
+<tr><th>惨痛</th><td class=" har">45</td><td class=" har">.5770132589</td><td class=" har">.09082825998</td></tr>
+<tr><th>转危为安</th><td class=" har">45</td><td class=" har">.5767702158</td><td class=" har">.07337932242</td></tr>
+<tr><th>病变</th><td class=" har">45</td><td class=" har">.5766437804</td><td class=" har">.05573004022</td></tr>
+<tr><th>战乱</th><td class=" har">45</td><td class=" har">.5762334093</td><td class=" har">.09069763120</td></tr>
+<tr><th>颅脑</th><td class=" har">42</td><td class=" har">.576156973838806</td><td class=" har">.083256515416047</td></tr>
+<tr><th>败血症</th><td class=" har">34</td><td class=" har">.576094831613933</td><td class=" har">.061446299110677</td></tr>
+<tr><th>营养不良</th><td class=" har">45</td><td class=" har">.5759400242</td><td class=" har">.06553974305</td></tr>
+<tr><th>罹患</th><td class=" har">38</td><td class=" har">.575894555763195</td><td class=" har">.069449855827826</td></tr>
+<tr><th>性疾病</th><td class=" har">41</td><td class=" har">.575464638994961</td><td class=" har">.064254905272847</td></tr>
+<tr><th>饥荒</th><td class=" har">45</td><td class=" har">.5754019298</td><td class=" har">.08469239085</td></tr>
+<tr><th>内分泌</th><td class=" har">43</td><td class=" har">.575129259464353</td><td class=" har">.054350283174542</td></tr>
+<tr><th>肝硬化</th><td class=" har">44</td><td class=" har">.575085734101859</td><td class=" har">.066576836375610</td></tr>
+<tr><th>深表同情</th><td class=" har">39</td><td class=" har">.574894528358411</td><td class=" har">.083084167307398</td></tr>
+<tr><th>排异</th><td class=" har">34</td><td class=" har">.574616452350336</td><td class=" har">.076846955324332</td></tr>
+<tr><th>躯体</th><td class=" har">45</td><td class=" har">.5744853447</td><td class=" har">.07846506773</td></tr>
+<tr><th>衰弱</th><td class=" har">45</td><td class=" har">.5744380984</td><td class=" har">.08245721314</td></tr>
+<tr><th>无法估量</th><td class=" har">45</td><td class=" har">.5744081331</td><td class=" har">.09742662349</td></tr>
+<tr><th>悲惨</th><td class=" har">45</td><td class=" har">.5735000207</td><td class=" har">.09139350004</td></tr>
+<tr><th>贫血</th><td class=" har">44</td><td class=" har">.573481989177791</td><td class=" har">.071008936837142</td></tr>
+<tr><th>耳聋</th><td class=" har">44</td><td class=" har">.573311075568199</td><td class=" har">.067883804765511</td></tr>
+<tr><th>恶果</th><td class=" har">45</td><td class=" har">.5729942744</td><td class=" har">.09572721981</td></tr>
+<tr><th>脊柱</th><td class=" har">45</td><td class=" har">.5729711209</td><td class=" har">.07173553628</td></tr>
+<tr><th>呼吸道</th><td class=" har">45</td><td class=" har">.5728625951</td><td class=" har">.06883584786</td></tr>
+<tr><th>精神负担</th><td class=" har">37</td><td class=" har">.572584919027380</td><td class=" har">.079987593135741</td></tr>
+<tr><th>肺水肿</th><td class=" har">33</td><td class=" har">.572518993507732</td><td class=" har">.059901478794185</td></tr>
+<tr><th>苦难</th><td class=" har">45</td><td class=" har">.5724476087</td><td class=" har">.11303945460</td></tr>
+<tr><th>困苦</th><td class=" har">45</td><td class=" har">.5721596489</td><td class=" har">.10937535888</td></tr>
+<tr><th>肺病</th><td class=" har">43</td><td class=" har">.571997928758000</td><td class=" har">.063215282335952</td></tr>
+<tr><th>无可挽回</th><td class=" har">42</td><td class=" har">.571731378634771</td><td class=" har">.083053370223773</td></tr>
+<tr><th>不白之冤</th><td class=" har">36</td><td class=" har">.571565392116705</td><td class=" har">.091314106827769</td></tr>
+<tr><th>先天性</th><td class=" har">45</td><td class=" har">.5715516080</td><td class=" har">.06629405206</td></tr>
+<tr><th>夺去</th><td class=" har">45</td><td class=" har">.5712756242</td><td class=" har">.07606436900</td></tr>
+<tr><th>难以忍受</th><td class=" har">45</td><td class=" har">.5712367893</td><td class=" har">.10485643175</td></tr>
+<tr><th>癌变</th><td class=" har">42</td><td class=" har">.571133684544336</td><td class=" har">.070765230520387</td></tr>
+<tr><th>磨灭</th><td class=" har">45</td><td class=" har">.5708395069</td><td class=" har">.08712215108</td></tr>
+<tr><th>心肌</th><td class=" har">45</td><td class=" har">.5706470231</td><td class=" har">.06014340302</td></tr>
+<tr><th>皮肤癌</th><td class=" har">33</td><td class=" har">.570449236667518</td><td class=" har">.077729671976071</td></tr>
+<tr><th>危重</th><td class=" har">45</td><td class=" har">.5703796847</td><td class=" har">.06539976057</td></tr>
+<tr><th>视网膜</th><td class=" har">44</td><td class=" har">.569976582445882</td><td class=" har">.055281283624003</td></tr>
+<tr><th>毁灭性</th><td class=" har">45</td><td class=" har">.5698582036</td><td class=" har">.06967413426</td></tr>
+<tr><th>呼吸衰竭</th><td class=" har">28</td><td class=" har">.569842828171594</td><td class=" har">.065882623047236</td></tr>
+<tr><th>灭顶之灾</th><td class=" har">45</td><td class=" har">.5698152124</td><td class=" har">.08517875110</td></tr>
+<tr><th>悲剧性</th><td class=" har">44</td><td class=" har">.569569785486568</td><td class=" har">.083715257524844</td></tr>
+<tr><th>坏死</th><td class=" har">45</td><td class=" har">.5694092080</td><td class=" har">.07540737799</td></tr>
+<tr><th>消极影响</th><td class=" har">45</td><td class=" har">.5689712440</td><td class=" har">.08468700376</td></tr>
+<tr><th>频仍</th><td class=" har">44</td><td class=" har">.568663226609880</td><td class=" har">.079098122002230</td></tr>
+<tr><th>所受</th><td class=" har">44</td><td class=" har">.568633555011316</td><td class=" har">.109667500541507</td></tr>
+<tr><th>脑出血</th><td class=" har">41</td><td class=" har">.568516407071090</td><td class=" har">.067599296111375</td></tr>
+<tr><th>消化系统</th><td class=" har">43</td><td class=" har">.568213430254959</td><td class=" har">.061497485182956</td></tr>
+<tr><th>器质性</th><td class=" har">22</td><td class=" har">.568091918121685</td><td class=" har">.070327225697754</td></tr>
+<tr><th>综合征</th><td class=" har">30</td><td class=" har">.568002865711848</td><td class=" har">.076109198695617</td></tr>
+<tr><th>耐药性</th><td class=" har">28</td><td class=" har">.567682554679257</td><td class=" har">.064797456972654</td></tr>
+<tr><th>癌前</th><td class=" har">17</td><td class=" har">.567648111020818</td><td class=" har">.058337938022700</td></tr>
+<tr><th>抑郁症</th><td class=" har">33</td><td class=" har">.567438049749895</td><td class=" har">.061039350184131</td></tr>
+<tr><th>祸根</th><td class=" har">45</td><td class=" har">.5674220949</td><td class=" har">.09806430586</td></tr>
+<tr><th>后患</th><td class=" har">44</td><td class=" har">.567337392406030</td><td class=" har">.086253388750235</td></tr>
+<tr><th>感染性</th><td class=" har">40</td><td class=" har">.567318908125162</td><td class=" har">.052251421486167</td></tr>
+<tr><th>内伤</th><td class=" har">36</td><td class=" har">.567178421550327</td><td class=" har">.099401013712476</td></tr>
+<tr><th>饱尝</th><td class=" har">45</td><td class=" har">.5670508309</td><td class=" har">.10658641583</td></tr>
+<tr><th>精神疾病</th><td class=" har">33</td><td class=" har">.566922863324483</td><td class=" har">.075267131144203</td></tr>
+<tr><th>缺血性</th><td class=" har">34</td><td class=" har">.566877714851323</td><td class=" har">.070381240334496</td></tr>
+<tr><th>运动神经元</th><td class=" har">9</td><td class=" har">.566865000459883</td><td class=" har">.089633295736763</td></tr>
+<tr><th>终末期</th><td class=" har">22</td><td class=" har">.566695778207346</td><td class=" har">.070605552455855</td></tr>
+<tr><th>惨祸</th><td class=" har">39</td><td class=" har">.566626779544048</td><td class=" har">.089432222882291</td></tr>
+<tr><th>肺纤维化</th><td class=" har">9</td><td class=" har">.566292464733124</td><td class=" har">.091274662166729</td></tr>
+<tr><th>胃肠道</th><td class=" har">40</td><td class=" har">.566178722679615</td><td class=" har">.058811768807233</td></tr>
+<tr><th>癫痫</th><td class=" har">41</td><td class=" har">.566157861453731</td><td class=" har">.072427863411098</td></tr>
+<tr><th>综合症</th><td class=" har">25</td><td class=" har">.566035987138748</td><td class=" har">.063967127641718</td></tr>
+<tr><th>淋巴细胞</th><td class=" har">42</td><td class=" har">.566025505463282</td><td class=" har">.045602718712941</td></tr>
+<tr><th>难以言状</th><td class=" har">21</td><td class=" har">.565940189929236</td><td class=" har">.099894555282906</td></tr>
+<tr><th>恶性肿瘤</th><td class=" har">45</td><td class=" har">.5658247982</td><td class=" har">.06522125380</td></tr>
+<tr><th>骤停</th><td class=" har">34</td><td class=" har">.565790212329696</td><td class=" har">.067202771443281</td></tr>
+<tr><th>心理压力</th><td class=" har">41</td><td class=" har">.565576107036777</td><td class=" har">.071523228197634</td></tr>
+<tr><th>无法挽回</th><td class=" har">42</td><td class=" har">.565461860526176</td><td class=" har">.079246236594393</td></tr>
+<tr><th>精神分裂症</th><td class=" har">41</td><td class=" har">.565299112622331</td><td class=" har">.065036323024052</td></tr>
+<tr><th>饱经</th><td class=" har">45</td><td class=" har">.5652382573</td><td class=" har">.11195055020</td></tr>
+<tr><th>创面</th><td class=" har">42</td><td class=" har">.564749842598325</td><td class=" har">.078302390694077</td></tr>
+<tr><th>肥胖症</th><td class=" har">38</td><td class=" har">.564671835617015</td><td class=" har">.056192006906381</td></tr>
+<tr><th>水深火热</th><td class=" har">44</td><td class=" har">.564573430202224</td><td class=" har">.080988698958641</td></tr>
+<tr><th>脑水肿</th><td class=" har">24</td><td class=" har">.564355753362179</td><td class=" har">.061172674998324</td></tr>
+<tr><th>后失</th><td class=" har">1</td><td class=" har">.564144790172577</td><td class=" har">.</td></tr>
+<tr><th>绒癌</th><td class=" har">14</td><td class=" har">.563608908227512</td><td class=" har">.051041441053318</td></tr>
+<tr><th>严重损失</th><td class=" har">45</td><td class=" har">.5633863647</td><td class=" har">.07018868500</td></tr>
+<tr><th>心力衰竭</th><td class=" har">39</td><td class=" har">.563378617549554</td><td class=" har">.064093718706972</td></tr>
+<tr><th>心理障碍</th><td class=" har">41</td><td class=" har">.563372847510547</td><td class=" har">.070523835555612</td></tr>
+<tr><th>生命垂危</th><td class=" har">45</td><td class=" har">.5633517520</td><td class=" har">.06361486689</td></tr>
+<tr><th>系统疾病</th><td class=" har">26</td><td class=" har">.563170594664720</td><td class=" har">.072869105932156</td></tr>
+<tr><th>抚慰</th><td class=" har">45</td><td class=" har">.5627940189</td><td class=" har">.07320516620</td></tr>
+<tr><th>粒细胞</th><td class=" har">36</td><td class=" har">.562500168879827</td><td class=" har">.054464194784142</td></tr>
+<tr><th>高原病</th><td class=" har">28</td><td class=" har">.562414086290768</td><td class=" har">.071561970575039</td></tr>
+<tr><th>肾衰</th><td class=" har">22</td><td class=" har">.562290178103880</td><td class=" har">.077186864589705</td></tr>
+<tr><th>疟疾</th><td class=" har">45</td><td class=" har">.5622021291</td><td class=" har">.06969239824</td></tr>
+<tr><th>畸形</th><td class=" har">45</td><td class=" har">.5621661969</td><td class=" har">.07546711623</td></tr>
+<tr><th>生灵涂炭</th><td class=" har">38</td><td class=" har">.562050766066501</td><td class=" har">.079246404054822</td></tr>
+<tr><th>术后</th><td class=" har">45</td><td class=" har">.5619473260</td><td class=" har">.06798262200</td></tr>
+<tr><th>脑卒中</th><td class=" har">32</td><td class=" har">.561877450905740</td><td class=" har">.064833171141990</td></tr>
+<tr><th>恢复健康</th><td class=" har">45</td><td class=" har">.5618314293</td><td class=" har">.07103066289</td></tr>
+<tr><th>福音</th><td class=" har">45</td><td class=" har">.5617469787</td><td class=" har">.07726339581</td></tr>
+<tr><th>白血病</th><td class=" har">44</td><td class=" har">.561677587303248</td><td class=" har">.081214504082498</td></tr>
+<tr><th>天灾人祸</th><td class=" har">44</td><td class=" har">.561471208252690</td><td class=" har">.089505838144094</td></tr>
+<tr><th>肺结核</th><td class=" har">45</td><td class=" har">.5612912664</td><td class=" har">.07924791128</td></tr>
+<tr><th>非人</th><td class=" har">45</td><td class=" har">.5611485229</td><td class=" har">.08683297007</td></tr>
+<tr><th>心肌梗塞</th><td class=" har">43</td><td class=" har">.561015389686407</td><td class=" har">.073165647609760</td></tr>
+<tr><th>烧伤</th><td class=" har">45</td><td class=" har">.5605143173</td><td class=" har">.06081595143</td></tr>
+<tr><th>心肌梗死</th><td class=" har">26</td><td class=" har">.560377726188073</td><td class=" har">.063055420835881</td></tr>
+<tr><th>地治好</th><td class=" har">2</td><td class=" har">.560281440615654</td><td class=" har">.192037078691492</td></tr>
+<tr><th>脑干</th><td class=" har">28</td><td class=" har">.560165646885123</td><td class=" har">.067822330971705</td></tr>
+<tr><th>疑难病症</th><td class=" har">45</td><td class=" har">.5599523829</td><td class=" har">.07332310252</td></tr>
+<tr><th>受压迫</th><td class=" har">44</td><td class=" har">.559287646954710</td><td class=" har">.079654227955184</td></tr>
+<tr><th>关节炎</th><td class=" har">45</td><td class=" har">.5592501667</td><td class=" har">.06843888056</td></tr>
+<tr><th>脑损伤</th><td class=" har">20</td><td class=" har">.559093314409256</td><td class=" har">.076387834064834</td></tr>
+<tr><th>脏器</th><td class=" har">45</td><td class=" har">.5590643891</td><td class=" har">.10096296081</td></tr>
+<tr><th>不治之症</th><td class=" har">39</td><td class=" har">.558819194634755</td><td class=" har">.075688199012462</td></tr>
+<tr><th>幼小</th><td class=" har">45</td><td class=" har">.5588174300</td><td class=" har">.10245824319</td></tr>
+<tr><th>生殖系统</th><td class=" har">16</td><td class=" har">.558713827282190</td><td class=" har">.053597376900313</td></tr>
+<tr><th>十年浩劫</th><td class=" har">40</td><td class=" har">.558566176891327</td><td class=" har">.081848313453594</td></tr>
+<tr><th>估量</th><td class=" har">45</td><td class=" har">.5585549987</td><td class=" har">.07169738286</td></tr>
+<tr><th>内乱</th><td class=" har">45</td><td class=" har">.5583523247</td><td class=" har">.10572655625</td></tr>
+<tr><th>中风</th><td class=" har">45</td><td class=" har">.5581473564</td><td class=" har">.07282223587</td></tr>
+<tr><th>胰腺</th><td class=" har">40</td><td class=" har">.558043041080237</td><td class=" har">.059009767836137</td></tr>
+<tr><th>冠心病</th><td class=" har">45</td><td class=" har">.5580045791</td><td class=" har">.06328108073</td></tr>
+<tr><th>心肺</th><td class=" har">45</td><td class=" har">.5577935647</td><td class=" har">.06681210577</td></tr>
+<tr><th>房颤</th><td class=" har">16</td><td class=" har">.557698847725987</td><td class=" har">.057192638229221</td></tr>
+<tr><th>重见光明</th><td class=" har">45</td><td class=" har">.5575474982</td><td class=" har">.06038423079</td></tr>
+<tr><th>帕金森病</th><td class=" har">18</td><td class=" har">.557414990332391</td><td class=" har">.071005780743030</td></tr>
+<tr><th>慰藉</th><td class=" har">45</td><td class=" har">.5572599876</td><td class=" har">.07944422766</td></tr>
+<tr><th>溶血性</th><td class=" har">8</td><td class=" har">.557017371058464</td><td class=" har">.091016536361979</td></tr>
+<tr><th>移植手术</th><td class=" har">45</td><td class=" har">.5569162462</td><td class=" har">.06386880894</td></tr>
+<tr><th>饱受</th><td class=" har">45</td><td class=" har">.5568968471</td><td class=" har">.11880213363</td></tr>
+<tr><th>合并症</th><td class=" har">31</td><td class=" har">.556766563846219</td><td class=" har">.067938016500483</td></tr>
+<tr><th>紊乱</th><td class=" har">45</td><td class=" har">.5565862522</td><td class=" har">.05782841540</td></tr>
+<tr><th>免遭</th><td class=" har">45</td><td class=" har">.5561331991</td><td class=" har">.08955150743</td></tr>
+<tr><th>受尽</th><td class=" har">44</td><td class=" har">.556038741361011</td><td class=" har">.096641757655620</td></tr>
+<tr><th>疼痛</th><td class=" har">45</td><td class=" har">.5557511789</td><td class=" har">.07026579224</td></tr>
+<tr><th>心衰</th><td class=" har">31</td><td class=" har">.555571569550422</td><td class=" har">.078650191290686</td></tr>
+<tr><th>危在旦夕</th><td class=" har">45</td><td class=" har">.5555676313</td><td class=" har">.07665128547</td></tr>
+<tr><th>致病</th><td class=" har">45</td><td class=" har">.5555219984</td><td class=" har">.07023762863</td></tr>
+<tr><th>视神经</th><td class=" har">28</td><td class=" har">.555453745382173</td><td class=" har">.075181725821986</td></tr>
+<tr><th>肠道</th><td class=" har">45</td><td class=" har">.5554517622</td><td class=" har">.05725574676</td></tr>
+<tr><th>磨难</th><td class=" har">45</td><td class=" har">.5552707704</td><td class=" har">.12771551862</td></tr>
+<tr><th>下肢</th><td class=" har">45</td><td class=" har">.5552486249</td><td class=" har">.06499354430</td></tr>
+<tr><th>代谢性</th><td class=" har">21</td><td class=" har">.555099027497428</td><td class=" har">.050749782325270</td></tr>
+<tr><th>恐惧心理</th><td class=" har">39</td><td class=" har">.554954650310370</td><td class=" har">.080734309402878</td></tr>
+<tr><th>心梗</th><td class=" har">24</td><td class=" har">.554905152569214</td><td class=" har">.071503600629806</td></tr>
+<tr><th>哮喘</th><td class=" har">45</td><td class=" har">.5548621284</td><td class=" har">.07021875732</td></tr>
+<tr><th>冠状动脉</th><td class=" har">41</td><td class=" har">.554852066243567</td><td class=" har">.072958354525523</td></tr>
+<tr><th>基因突变</th><td class=" har">31</td><td class=" har">.554831086627899</td><td class=" har">.063035330918111</td></tr>
+<tr><th>十年内乱</th><td class=" har">39</td><td class=" har">.554737343237950</td><td class=" har">.073887928657525</td></tr>
+<tr><th>绝症</th><td class=" har">41</td><td class=" har">.554566371004756</td><td class=" har">.083034751864051</td></tr>
+<tr><th>厄运</th><td class=" har">44</td><td class=" har">.554531802507964</td><td class=" har">.096449347230289</td></tr>
+<tr><th>失眠症</th><td class=" har">20</td><td class=" har">.554431553184986</td><td class=" har">.070406295550696</td></tr>
+<tr><th>眼病</th><td class=" har">43</td><td class=" har">.554361142391382</td><td class=" har">.056285609549873</td></tr>
+<tr><th>极度</th><td class=" har">45</td><td class=" har">.5542120249</td><td class=" har">.11253604362</td></tr>
+<tr><th>肾病</th><td class=" har">39</td><td class=" har">.554070682861866</td><td class=" har">.071375157180040</td></tr>
+<tr><th>偏瘫</th><td class=" har">43</td><td class=" har">.553828731525776</td><td class=" har">.069802195529503</td></tr>
+<tr><th>战祸</th><td class=" har">42</td><td class=" har">.553746917418071</td><td class=" har">.098778731149116</td></tr>
+<tr><th>颅内</th><td class=" har">43</td><td class=" har">.553666126589443</td><td class=" har">.064592024015328</td></tr>
+<tr><th>急危重症</th><td class=" har">18</td><td class=" har">.553649918900596</td><td class=" har">.054392659864679</td></tr>
+<tr><th>肌无力</th><td class=" har">26</td><td class=" har">.553524662668889</td><td class=" har">.061896024569546</td></tr>
+<tr><th>潜伏着</th><td class=" har">39</td><td class=" har">.553396092011378</td><td class=" har">.088545797426366</td></tr>
+<tr><th>耐药</th><td class=" har">26</td><td class=" har">.553295501149618</td><td class=" har">.065453205483128</td></tr>
+<tr><th>病毒感染</th><td class=" har">44</td><td class=" har">.553242227570577</td><td class=" har">.071276009012028</td></tr>
+<tr><th>慢性</th><td class=" har">45</td><td class=" har">.5531580111</td><td class=" har">.06743948634</td></tr>
+<tr><th>过敏性</th><td class=" har">41</td><td class=" har">.552985951667879</td><td class=" har">.062360381211167</td></tr>
+<tr><th>慢阻</th><td class=" har">14</td><td class=" har">.552832448056766</td><td class=" har">.068808397557867</td></tr>
+<tr><th>缺血</th><td class=" har">38</td><td class=" har">.552596269469512</td><td class=" har">.063516282655783</td></tr>
+<tr><th>脑神经</th><td class=" har">35</td><td class=" har">.552541479894093</td><td class=" har">.072659062499217</td></tr>
+<tr><th>救治</th><td class=" har">45</td><td class=" har">.5525345460</td><td class=" har">.08006797730</td></tr>
+<tr><th>尿毒症</th><td class=" har">37</td><td class=" har">.552501998237662</td><td class=" har">.073092839634436</td></tr>
+<tr><th>患上</th><td class=" har">44</td><td class=" har">.552381172098897</td><td class=" har">.080142316551392</td></tr>
+<tr><th>窘迫</th><td class=" har">45</td><td class=" har">.5519070624</td><td class=" har">.08513379818</td></tr>
+<tr><th>颠沛流离</th><td class=" har">44</td><td class=" har">.551371134817600</td><td class=" har">.094743157050556</td></tr>
+<tr><th>外伤性</th><td class=" har">23</td><td class=" har">.551337124212928</td><td class=" har">.054581188528022</td></tr>
+<tr><th>化疗</th><td class=" har">42</td><td class=" har">.551316025711241</td><td class=" har">.069812225368640</td></tr>
+<tr><th>病患</th><td class=" har">40</td><td class=" har">.551266162097454</td><td class=" har">.076418391997315</td></tr>
+<tr><th>不良后果</th><td class=" har">45</td><td class=" har">.5511738347</td><td class=" har">.09076158318</td></tr>
+<tr><th>破坏力</th><td class=" har">44</td><td class=" har">.551143950359388</td><td class=" har">.074770267652138</td></tr>
+<tr><th>创伤性</th><td class=" har">26</td><td class=" har">.551124373307595</td><td class=" har">.065333819778857</td></tr>
+<tr><th>机能</th><td class=" har">45</td><td class=" har">.5509657176</td><td class=" har">.05527496400</td></tr>
+<tr><th>抗药性</th><td class=" har">44</td><td class=" har">.550820184702223</td><td class=" har">.063379537185746</td></tr>
+<tr><th>缠身</th><td class=" har">45</td><td class=" har">.5507567231</td><td class=" har">.07273203384</td></tr>
+<tr><th>生存环境</th><td class=" har">44</td><td class=" har">.550729698755524</td><td class=" har">.091976536943342</td></tr>
+<tr><th>牙周</th><td class=" har">9</td><td class=" har">.550620049238205</td><td class=" har">.074571741986918</td></tr>
+<tr><th>器官</th><td class=" har">45</td><td class=" har">.5505880171</td><td class=" har">.06796382460</td></tr>
+<tr><th>心血管</th><td class=" har">45</td><td class=" har">.5504789024</td><td class=" har">.07576641490</td></tr>
+<tr><th>奴役</th><td class=" har">45</td><td class=" har">.5502999756</td><td class=" har">.08304657145</td></tr>
+<tr><th>肝癌</th><td class=" har">45</td><td class=" har">.5502624573</td><td class=" har">.07863148741</td></tr>
+<tr><th>世界大战</th><td class=" har">45</td><td class=" har">.5501763082</td><td class=" har">.08307349599</td></tr>
+<tr><th>骨肉分离</th><td class=" har">40</td><td class=" har">.549973997473717</td><td class=" har">.088800369056760</td></tr>
+<tr><th>重负</th><td class=" har">41</td><td class=" har">.549953565364931</td><td class=" har">.084488259742784</td></tr>
+<tr><th>纤维化</th><td class=" har">30</td><td class=" har">.549890530109406</td><td class=" har">.057271332326400</td></tr>
+<tr><th>肺气肿</th><td class=" har">41</td><td class=" har">.549664834650552</td><td class=" har">.063119911526438</td></tr>
+<tr><th>惨绝人寰</th><td class=" har">42</td><td class=" har">.549658616383871</td><td class=" har">.082618014254759</td></tr>
+<tr><th>传染</th><td class=" har">45</td><td class=" har">.5496398853</td><td class=" har">.07487363138</td></tr>
+<tr><th>造成危害</th><td class=" har">45</td><td class=" har">.5496127627</td><td class=" har">.07988302137</td></tr>
+<tr><th>肾移植</th><td class=" har">38</td><td class=" har">.549516728834102</td><td class=" har">.063773067535334</td></tr>
+<tr><th>丧亲</th><td class=" har">2</td><td class=" har">.549465417861939</td><td class=" har">.055257552970875</td></tr>
+<tr><th>原发性</th><td class=" har">41</td><td class=" har">.549199825379907</td><td class=" har">.054931947196309</td></tr>
+<tr><th>伤痕</th><td class=" har">45</td><td class=" har">.5489790411</td><td class=" har">.09300647252</td></tr>
+<tr><th>祸害</th><td class=" har">45</td><td class=" har">.5489785200</td><td class=" har">.12137844587</td></tr>
+<tr><th>万恶</th><td class=" har">25</td><td class=" har">.548915212154388</td><td class=" har">.109630634878270</td></tr>
+<tr><th>肝病</th><td class=" har">45</td><td class=" har">.5488536518</td><td class=" har">.06969920301</td></tr>
+<tr><th>脑血管病</th><td class=" har">40</td><td class=" har">.548585294187069</td><td class=" har">.068632743105693</td></tr>
+<tr><th>不良影响</th><td class=" har">45</td><td class=" har">.5485569704</td><td class=" har">.09894901002</td></tr>
+<tr><th>胃肠</th><td class=" har">45</td><td class=" har">.5482918280</td><td class=" har">.07006196498</td></tr>
+<tr><th>骨关节炎</th><td class=" har">9</td><td class=" har">.548197209835053</td><td class=" har">.084521151071116</td></tr>
+<tr><th>精神障碍</th><td class=" har">34</td><td class=" har">.547995215829681</td><td class=" har">.069610722942952</td></tr>
+<tr><th>封建意识</th><td class=" har">29</td><td class=" har">.547929594229007</td><td class=" har">.084745704283598</td></tr>
+<tr><th>饥馑</th><td class=" har">41</td><td class=" har">.547678783899400</td><td class=" har">.109423195835525</td></tr>
+<tr><th>肢体</th><td class=" har">45</td><td class=" har">.5476340671</td><td class=" har">.09007527234</td></tr>
+<tr><th>中枢神经</th><td class=" har">45</td><td class=" har">.5476180169</td><td class=" har">.07165788637</td></tr>
+<tr><th>忍受</th><td class=" har">45</td><td class=" har">.5475746453</td><td class=" har">.10844958525</td></tr>
+<tr><th>民不聊生</th><td class=" har">45</td><td class=" har">.5474662393</td><td class=" har">.08776067469</td></tr>
+<tr><th>软组织</th><td class=" har">44</td><td class=" har">.547287307679653</td><td class=" har">.078153644369332</td></tr>
+<tr><th>急性</th><td class=" har">45</td><td class=" har">.5472501347</td><td class=" har">.06442101601</td></tr>
+<tr><th>缺损</th><td class=" har">45</td><td class=" har">.5471493409</td><td class=" har">.08024985571</td></tr>
+<tr><th>脑中风</th><td class=" har">29</td><td class=" har">.546998256239398</td><td class=" har">.079732200922106</td></tr>
+<tr><th>毒害</th><td class=" har">45</td><td class=" har">.5462686882</td><td class=" har">.09141453216</td></tr>
+<tr><th>小儿麻痹症</th><td class=" har">44</td><td class=" har">.546248322183436</td><td class=" har">.083122188756278</td></tr>
+<tr><th>高血糖</th><td class=" har">22</td><td class=" har">.545778107914058</td><td class=" har">.071644430979274</td></tr>
+<tr><th>难以想象</th><td class=" har">45</td><td class=" har">.5451138178</td><td class=" har">.12317909371</td></tr>
+<tr><th>免受</th><td class=" har">45</td><td class=" har">.5447656984</td><td class=" har">.08036143714</td></tr>
+<tr><th>股骨头</th><td class=" har">35</td><td class=" har">.544660462651934</td><td class=" har">.067656725052049</td></tr>
+<tr><th>罪孽</th><td class=" har">34</td><td class=" har">.544640608570155</td><td class=" har">.079268385048560</td></tr>
+<tr><th>麻醉</th><td class=" har">45</td><td class=" har">.5444868624</td><td class=" har">.08340836686</td></tr>
+<tr><th>病毒性</th><td class=" har">44</td><td class=" har">.544396410611543</td><td class=" har">.081143788915632</td></tr>
+<tr><th>脑震荡</th><td class=" har">37</td><td class=" har">.544078734275457</td><td class=" har">.060502098523738</td></tr>
+<tr><th>灾荒</th><td class=" har">45</td><td class=" har">.5437040951</td><td class=" har">.09018546759</td></tr>
+<tr><th>病程</th><td class=" har">38</td><td class=" har">.543601436050315</td><td class=" har">.051789242620546</td></tr>
+<tr><th>急性期</th><td class=" har">21</td><td class=" har">.543324893429166</td><td class=" har">.075245473398650</td></tr>
+<tr><th>旷日持久</th><td class=" har">45</td><td class=" har">.5431215824</td><td class=" har">.08250445010</td></tr>
+<tr><th>畸变</th><td class=" har">31</td><td class=" har">.542968231824137</td><td class=" har">.072842139725578</td></tr>
+<tr><th>心功能</th><td class=" har">31</td><td class=" har">.542805321754948</td><td class=" har">.060454529155203</td></tr>
+<tr><th>不孕症</th><td class=" har">28</td><td class=" har">.542740241757461</td><td class=" har">.067771222769847</td></tr>
+<tr><th>代谢</th><td class=" har">45</td><td class=" har">.5426617538</td><td class=" har">.04977107071</td></tr>
+<tr><th>疑难重症</th><td class=" har">25</td><td class=" har">.542363739013672</td><td class=" har">.055942969169816</td></tr>
+<tr><th>灾难深重</th><td class=" har">42</td><td class=" har">.542218656057403</td><td class=" har">.097892864120232</td></tr>
+<tr><th>重症</th><td class=" har">44</td><td class=" har">.542117574675517</td><td class=" har">.074719471060551</td></tr>
+<tr><th>困窘</th><td class=" har">44</td><td class=" har">.542107151990587</td><td class=" har">.088349041486971</td></tr>
+<tr><th>急症</th><td class=" har">44</td><td class=" har">.542028311301362</td><td class=" har">.069055693382776</td></tr>
+<tr><th>血栓</th><td class=" har">45</td><td class=" har">.5419994207</td><td class=" har">.07313171726</td></tr>
+<tr><th>进行性</th><td class=" har">27</td><td class=" har">.541934496826596</td><td class=" har">.065262077288251</td></tr>
+<tr><th>内膜</th><td class=" har">32</td><td class=" har">.541890623979270</td><td class=" har">.073279910323567</td></tr>
+<tr><th>颌面</th><td class=" har">16</td><td class=" har">.541468856856227</td><td class=" har">.056227348254729</td></tr>
+<tr><th>家破人亡</th><td class=" har">40</td><td class=" har">.541099439561367</td><td class=" har">.092466407913904</td></tr>
+<tr><th>流血</th><td class=" har">45</td><td class=" har">.5410093984</td><td class=" har">.10245232460</td></tr>
+<tr><th>痛楚</th><td class=" har">43</td><td class=" har">.541002058705618</td><td class=" har">.087200457556053</td></tr>
+<tr><th>侵袭</th><td class=" har">45</td><td class=" har">.5409252142</td><td class=" har">.07706059028</td></tr>
+<tr><th>身受</th><td class=" har">45</td><td class=" har">.5408394471</td><td class=" har">.09164681061</td></tr>
+<tr><th>痴呆症</th><td class=" har">32</td><td class=" har">.540665317326784</td><td class=" har">.070123920510341</td></tr>
+<tr><th>枷锁</th><td class=" har">45</td><td class=" har">.5405343178</td><td class=" har">.09311365397</td></tr>
+<tr><th>口腔疾病</th><td class=" har">19</td><td class=" har">.540502173335929</td><td class=" har">.040592998274046</td></tr>
+<tr><th>梦魇</th><td class=" har">36</td><td class=" har">.540477112763458</td><td class=" har">.080281663246492</td></tr>
+<tr><th>致盲</th><td class=" har">36</td><td class=" har">.540399630864461</td><td class=" har">.060456162277925</td></tr>
+<tr><th>病态</th><td class=" har">45</td><td class=" har">.5403407513</td><td class=" har">.09193703565</td></tr>
+<tr><th>在精神上</th><td class=" har">45</td><td class=" har">.5403012836</td><td class=" har">.11901125334</td></tr>
+<tr><th>饥饿</th><td class=" har">45</td><td class=" har">.5400118260</td><td class=" har">.07865047799</td></tr>
+<tr><th>截瘫</th><td class=" har">45</td><td class=" har">.5399593956</td><td class=" har">.07870574210</td></tr>
+<tr><th>血管</th><td class=" har">45</td><td class=" har">.5395257833</td><td class=" har">.05834476688</td></tr>
+<tr><th>无辜者</th><td class=" har">39</td><td class=" har">.539205065140357</td><td class=" har">.090625920117148</td></tr>
+<tr><th>内忧外患</th><td class=" har">44</td><td class=" har">.538719070228663</td><td class=" har">.104204154947662</td></tr>
+<tr><th>压迫</th><td class=" har">45</td><td class=" har">.5380731678</td><td class=" har">.07510600113</td></tr>
+<tr><th>器官移植</th><td class=" har">40</td><td class=" har">.537810350954533</td><td class=" har">.074152713341778</td></tr>
+<tr><th>新疗法</th><td class=" har">38</td><td class=" har">.537516142192640</td><td class=" har">.075477179571886</td></tr>
+<tr><th>天灾</th><td class=" har">45</td><td class=" har">.5374813804</td><td class=" har">.09955856779</td></tr>
+<tr><th>病患者</th><td class=" har">45</td><td class=" har">.5374139976</td><td class=" har">.07372686042</td></tr>
+<tr><th>自体</th><td class=" har">37</td><td class=" har">.537157478364738</td><td class=" har">.069679523814460</td></tr>
+<tr><th>唇腭裂</th><td class=" har">27</td><td class=" har">.537126576458966</td><td class=" har">.055900774279316</td></tr>
+<tr><th>痴呆</th><td class=" har">38</td><td class=" har">.537056735471675</td><td class=" har">.090285922621790</td></tr>
+<tr><th>肺</th><td class=" har">45</td><td class=" har">.5369140742</td><td class=" har">.07776550919</td></tr>
+<tr><th>疑难病</th><td class=" har">42</td><td class=" har">.536818713659332</td><td class=" har">.064813084250574</td></tr>
+<tr><th>恐惧感</th><td class=" har">39</td><td class=" har">.536775978711935</td><td class=" har">.080911989127048</td></tr>
+<tr><th>诱发</th><td class=" har">45</td><td class=" har">.5366929049</td><td class=" har">.07516600761</td></tr>
+<tr><th>停跳</th><td class=" har">21</td><td class=" har">.536691339243026</td><td class=" har">.066271925109159</td></tr>
+<tr><th>悲伤</th><td class=" har">45</td><td class=" har">.5366575313</td><td class=" har">.08750502887</td></tr>
+<tr><th>肝</th><td class=" har">45</td><td class=" har">.5365485711</td><td class=" har">.07540298181</td></tr>
+<tr><th>心肌缺血</th><td class=" har">23</td><td class=" har">.536521082339080</td><td class=" har">.068693344952343</td></tr>
+<tr><th>鼻咽癌</th><td class=" har">38</td><td class=" har">.536392852663994</td><td class=" har">.081083372780625</td></tr>
+<tr><th>药物性</th><td class=" har">18</td><td class=" har">.536074582073424</td><td class=" har">.062231894111470</td></tr>
+<tr><th>遗留下</th><td class=" har">44</td><td class=" har">.536056214435534</td><td class=" har">.117738872857604</td></tr>
+<tr><th>脑组织</th><td class=" har">34</td><td class=" har">.536047485821387</td><td class=" har">.087478142530014</td></tr>
+<tr><th>小儿麻痹</th><td class=" har">40</td><td class=" har">.536011240631342</td><td class=" har">.083277856807548</td></tr>
+<tr><th>危重症</th><td class=" har">18</td><td class=" har">.535969725913472</td><td class=" har">.071579599393045</td></tr>
+<tr><th>严酷</th><td class=" har">45</td><td class=" har">.5359436060</td><td class=" har">.09737719798</td></tr>
+<tr><th>自理能力</th><td class=" har">43</td><td class=" har">.535783450270808</td><td class=" har">.088489520837272</td></tr>
+<tr><th>风湿性关节炎</th><td class=" har">44</td><td class=" har">.535721568898721</td><td class=" har">.062409945916900</td></tr>
+<tr><th>受到破坏</th><td class=" har">45</td><td class=" har">.5356163298</td><td class=" har">.08256835062</td></tr>
+<tr><th>危重病</th><td class=" har">45</td><td class=" har">.5356074187</td><td class=" har">.06739036923</td></tr>
+<tr><th>常见疾病</th><td class=" har">34</td><td class=" har">.535485071294448</td><td class=" har">.058005125916358</td></tr>
+<tr><th>生育能力</th><td class=" har">34</td><td class=" har">.535013256704106</td><td class=" har">.066077639426441</td></tr>
+<tr><th>痊愈</th><td class=" har">45</td><td class=" har">.5349502373</td><td class=" har">.06741795778</td></tr>
+<tr><th>淋巴</th><td class=" har">36</td><td class=" har">.534944001171324</td><td class=" har">.073135500299855</td></tr>
+<tr><th>耗尽</th><td class=" har">45</td><td class=" har">.5347675493</td><td class=" har">.09139906862</td></tr>
+<tr><th>不满情绪</th><td class=" har">45</td><td class=" har">.5346973162</td><td class=" har">.08854122149</td></tr>
+<tr><th>冤屈</th><td class=" har">42</td><td class=" har">.534695650850024</td><td class=" har">.098707817726876</td></tr>
+<tr><th>截肢</th><td class=" har">45</td><td class=" har">.5346474813</td><td class=" har">.09172196920</td></tr>
+<tr><th>惨痛教训</th><td class=" har">45</td><td class=" har">.5344468049</td><td class=" har">.09778024724</td></tr>
+<tr><th>小脑</th><td class=" har">21</td><td class=" har">.534419427315394</td><td class=" har">.060673088676650</td></tr>
+<tr><th>先心病</th><td class=" har">20</td><td class=" har">.534248483181000</td><td class=" har">.061281101225792</td></tr>
+<tr><th>切除</th><td class=" har">45</td><td class=" har">.5342186582</td><td class=" har">.08228403575</td></tr>
+<tr><th>红斑狼疮</th><td class=" har">33</td><td class=" har">.534018386494030</td><td class=" har">.057588475321740</td></tr>
+<tr><th>难以克服</th><td class=" har">43</td><td class=" har">.533969784891883</td><td class=" har">.095273680140622</td></tr>
+<tr><th>难以预料</th><td class=" har">45</td><td class=" har">.5339204631</td><td class=" har">.08442414130</td></tr>
+<tr><th>心理治疗</th><td class=" har">38</td><td class=" har">.533894714556243</td><td class=" har">.056476243498929</td></tr>
+<tr><th>站立起来</th><td class=" har">43</td><td class=" har">.533703107473462</td><td class=" har">.095576767694882</td></tr>
+<tr><th>毒瘾</th><td class=" har">39</td><td class=" har">.533673958900647</td><td class=" har">.063339422219958</td></tr>
+<tr><th>颅底</th><td class=" har">18</td><td class=" har">.533310620321168</td><td class=" har">.057755468598406</td></tr>
+<tr><th>震颤</th><td class=" har">43</td><td class=" har">.533298786989478</td><td class=" har">.084974111260903</td></tr>
+<tr><th>身心</th><td class=" har">45</td><td class=" har">.5330729498</td><td class=" har">.12512061266</td></tr>
+<tr><th>饥寒交迫</th><td class=" har">43</td><td class=" har">.532968387354252</td><td class=" har">.089416529024034</td></tr>
+<tr><th>深渊</th><td class=" har">45</td><td class=" har">.5328681902</td><td class=" har">.10869376157</td></tr>
+<tr><th>余毒</th><td class=" har">20</td><td class=" har">.532484570890665</td><td class=" har">.125610765974849</td></tr>
+<tr><th>不测</th><td class=" har">43</td><td class=" har">.532481807608937</td><td class=" har">.083082197452901</td></tr>
+<tr><th>悲惨遭遇</th><td class=" har">40</td><td class=" har">.532400140166283</td><td class=" har">.096460309213398</td></tr>
+<tr><th>脑膜炎</th><td class=" har">43</td><td class=" har">.532281982344250</td><td class=" har">.061352425542387</td></tr>
+<tr><th>发育不良</th><td class=" har">35</td><td class=" har">.532067361048290</td><td class=" har">.070297351846967</td></tr>
+<tr><th>不幸遭遇</th><td class=" har">45</td><td class=" har">.5320299936</td><td class=" har">.09649008104</td></tr>
+<tr><th>骨折</th><td class=" har">45</td><td class=" har">.5319441393</td><td class=" har">.06908632783</td></tr>
+<tr><th>失血</th><td class=" har">34</td><td class=" har">.531940166564549</td><td class=" har">.069217153192733</td></tr>
+<tr><th>染病</th><td class=" har">42</td><td class=" har">.531478358876138</td><td class=" har">.080329024891997</td></tr>
+<tr><th>心肌细胞</th><td class=" har">9</td><td class=" har">.530930075380537</td><td class=" har">.098213074525622</td></tr>
+<tr><th>致命性</th><td class=" har">31</td><td class=" har">.530348158651783</td><td class=" har">.075914722649655</td></tr>
+<tr><th>艾滋病毒</th><td class=" har">35</td><td class=" har">.530287880556924</td><td class=" har">.060905630463328</td></tr>
+<tr><th>心脏病</th><td class=" har">45</td><td class=" har">.5301543053</td><td class=" har">.07763014136</td></tr>
+<tr><th>恢复期</th><td class=" har">35</td><td class=" har">.529871620450701</td><td class=" har">.063934548633164</td></tr>
+<tr><th>怪病</th><td class=" har">34</td><td class=" har">.529564485830419</td><td class=" har">.095845125470500</td></tr>
+<tr><th>肌体</th><td class=" har">45</td><td class=" har">.5294754509</td><td class=" har">.11567680950</td></tr>
+<tr><th>中受</th><td class=" har">45</td><td class=" har">.5293955140</td><td class=" har">.09430533517</td></tr>
+<tr><th>鼾症</th><td class=" har">6</td><td class=" har">.529255320628484</td><td class=" har">.114269373593171</td></tr>
+<tr><th>胸痛</th><td class=" har">33</td><td class=" har">.529167829137860</td><td class=" har">.064563824762799</td></tr>
+<tr><th>子宫颈癌</th><td class=" har">17</td><td class=" har">.529005359200870</td><td class=" har">.068281779115107</td></tr>
+<tr><th>发育不全</th><td class=" har">28</td><td class=" har">.528821939868586</td><td class=" har">.061158518375620</td></tr>
+<tr><th>经济负担</th><td class=" har">45</td><td class=" har">.5288110738</td><td class=" har">.06423839628</td></tr>
+<tr><th>愚昧无知</th><td class=" har">35</td><td class=" har">.528629941599709</td><td class=" har">.097569083109331</td></tr>
+<tr><th>肥胖</th><td class=" har">45</td><td class=" har">.5285998273</td><td class=" har">.07169835689</td></tr>
+<tr><th>血腥</th><td class=" har">45</td><td class=" har">.5285429660</td><td class=" har">.07830329340</td></tr>
+<tr><th>肝移植</th><td class=" har">34</td><td class=" har">.528429357444539</td><td class=" har">.071960249959286</td></tr>
+<tr><th>麻风病</th><td class=" har">40</td><td class=" har">.528419364243746</td><td class=" har">.072390346835275</td></tr>
+<tr><th>天花</th><td class=" har">44</td><td class=" har">.528280810199001</td><td class=" har">.072879518949194</td></tr>
+<tr><th>认知障碍</th><td class=" har">9</td><td class=" har">.528154873185688</td><td class=" har">.092346714780472</td></tr>
+<tr><th>精神病</th><td class=" har">44</td><td class=" har">.527864808386023</td><td class=" har">.070977479881524</td></tr>
+<tr><th>仇恨</th><td class=" har">45</td><td class=" har">.5278281667</td><td class=" har">.10119328024</td></tr>
+<tr><th>寄生虫</th><td class=" har">45</td><td class=" har">.5278244816</td><td class=" har">.07308798501</td></tr>
+<tr><th>全面战争</th><td class=" har">31</td><td class=" har">.527794458212391</td><td class=" har">.072737594959178</td></tr>
+<tr><th>撕裂</th><td class=" har">45</td><td class=" har">.5275603349</td><td class=" har">.06129903261</td></tr>
+<tr><th>伤寒</th><td class=" har">45</td><td class=" har">.5275000358</td><td class=" har">.06541899372</td></tr>
+<tr><th>胶质瘤</th><td class=" har">25</td><td class=" har">.527297180891037</td><td class=" har">.056214990154147</td></tr>
+<tr><th>病理</th><td class=" har">45</td><td class=" har">.5270363644</td><td class=" har">.07461504452</td></tr>
+<tr><th>喉癌</th><td class=" har">27</td><td class=" har">.526851760016547</td><td class=" har">.076869072315724</td></tr>
+<tr><th>妻离子散</th><td class=" har">38</td><td class=" har">.526815888913054</td><td class=" har">.083843684184115</td></tr>
+<tr><th>弱视</th><td class=" har">41</td><td class=" har">.526802029551529</td><td class=" har">.064391460086491</td></tr>
+<tr><th>百花凋零</th><td class=" har">10</td><td class=" har">.526681143045425</td><td class=" har">.097481680430253</td></tr>
+<tr><th>异体</th><td class=" har">39</td><td class=" har">.526598963217858</td><td class=" har">.074036448612442</td></tr>
+<tr><th>血癌</th><td class=" har">31</td><td class=" har">.526361357781195</td><td class=" har">.073922327508187</td></tr>
+<tr><th>脊椎</th><td class=" har">45</td><td class=" har">.5261901633</td><td class=" har">.07098096083</td></tr>
+<tr><th>恐慌</th><td class=" har">45</td><td class=" har">.5259508940</td><td class=" har">.10865830566</td></tr>
+<tr><th>毁于一旦</th><td class=" har">45</td><td class=" har">.5257300302</td><td class=" har">.08637622282</td></tr>
+<tr><th>病原体</th><td class=" har">43</td><td class=" har">.525705196136652</td><td class=" har">.068524491857301</td></tr>
+<tr><th>肠胃</th><td class=" har">45</td><td class=" har">.5255929051</td><td class=" har">.07241327332</td></tr>
+<tr><th>人祸</th><td class=" har">37</td><td class=" har">.525452214318353</td><td class=" har">.091699644617567</td></tr>
+<tr><th>脑病</th><td class=" har">37</td><td class=" har">.525221839144423</td><td class=" har">.071278437608947</td></tr>
+<tr><th>疗治</th><td class=" har">21</td><td class=" har">.525083585864022</td><td class=" har">.079393921965396</td></tr>
+<tr><th>透析</th><td class=" har">39</td><td class=" har">.525079595736968</td><td class=" har">.096955213490878</td></tr>
+<tr><th>高山病</th><td class=" har">20</td><td class=" har">.524630495905876</td><td class=" har">.048656356784427</td></tr>
+<tr><th>病灶</th><td class=" har">44</td><td class=" har">.524455156515945</td><td class=" har">.083437830459603</td></tr>
+<tr><th>无休止</th><td class=" har">45</td><td class=" har">.5243995940</td><td class=" har">.08955001490</td></tr>
+<tr><th>急性病</th><td class=" har">30</td><td class=" har">.524317038059234</td><td class=" har">.080415621686321</td></tr>
+<tr><th>危险性</th><td class=" har">45</td><td class=" har">.5239653940</td><td class=" har">.08570614057</td></tr>
+<tr><th>痛风</th><td class=" har">22</td><td class=" har">.523923579942096</td><td class=" har">.083418705208807</td></tr>
+<tr><th>无法控制</th><td class=" har">44</td><td class=" har">.523667864501476</td><td class=" har">.088305578938676</td></tr>
+<tr><th>血液病</th><td class=" har">44</td><td class=" har">.523451504382220</td><td class=" har">.078370413082362</td></tr>
+<tr><th>移植术</th><td class=" har">35</td><td class=" har">.523415968247822</td><td class=" har">.066556806968998</td></tr>
+<tr><th>诊治</th><td class=" har">45</td><td class=" har">.5233112864</td><td class=" har">.06560872007</td></tr>
+<tr><th>征象</th><td class=" har">18</td><td class=" har">.523127847247654</td><td class=" har">.080832824529324</td></tr>
+<tr><th>结石</th><td class=" har">45</td><td class=" har">.5225098251</td><td class=" har">.07634787473</td></tr>
+<tr><th>后代人</th><td class=" har">38</td><td class=" har">.521447383259472</td><td class=" har">.097605447380878</td></tr>
+<tr><th>脑</th><td class=" har">45</td><td class=" har">.5212779267</td><td class=" har">.07745559800</td></tr>
+<tr><th>核辐射</th><td class=" har">43</td><td class=" har">.521237060081127</td><td class=" har">.070998065588698</td></tr>
+<tr><th>脑积水</th><td class=" har">15</td><td class=" har">.520827738444010</td><td class=" har">.081423947660455</td></tr>
+<tr><th>抗毒素</th><td class=" har">7</td><td class=" har">.520827502012253</td><td class=" har">.093223400829611</td></tr>
+<tr><th>癌症</th><td class=" har">45</td><td class=" har">.5207765736</td><td class=" har">.06953679580</td></tr>
+<tr><th>污泥浊水</th><td class=" har">42</td><td class=" har">.520733696364221</td><td class=" har">.107704438219391</td></tr>
+<tr><th>重压</th><td class=" har">45</td><td class=" har">.5206381724</td><td class=" har">.11959442748</td></tr>
+<tr><th>埋下</th><td class=" har">45</td><td class=" har">.5201789047</td><td class=" har">.10084268653</td></tr>
+<tr><th>太深</th><td class=" har">45</td><td class=" har">.5200217213</td><td class=" har">.11756838648</td></tr>
+<tr><th>上受</th><td class=" har">45</td><td class=" har">.5199406824</td><td class=" har">.09976844287</td></tr>
+<tr><th>霍乱</th><td class=" har">44</td><td class=" har">.519919089972973</td><td class=" har">.065353340124431</td></tr>
+<tr><th>矛盾激化</th><td class=" har">45</td><td class=" har">.5198296262</td><td class=" har">.08159649971</td></tr>
+<tr><th>肾脏病</th><td class=" har">34</td><td class=" har">.519805045688854</td><td class=" har">.076254419040206</td></tr>
+<tr><th>骇人听闻</th><td class=" har">44</td><td class=" har">.519336960532448</td><td class=" har">.090604172021648</td></tr>
+<tr><th>万马齐喑</th><td class=" har">26</td><td class=" har">.519275109355266</td><td class=" har">.097571041559180</td></tr>
+<tr><th>经济危机</th><td class=" har">45</td><td class=" har">.5192167549</td><td class=" har">.08933852138</td></tr>
+<tr><th>环境因素</th><td class=" har">45</td><td class=" har">.5190475149</td><td class=" har">.06620368467</td></tr>
+<tr><th>放射治疗</th><td class=" har">38</td><td class=" har">.518723812542464</td><td class=" har">.082188251487917</td></tr>
+<tr><th>极深</th><td class=" har">44</td><td class=" har">.518432336774739</td><td class=" har">.092803670702485</td></tr>
+<tr><th>汗腺</th><td class=" har">17</td><td class=" har">.518277387408649</td><td class=" har">.041165796001939</td></tr>
+<tr><th>糖尿病足</th><td class=" har">7</td><td class=" har">.517783599240439</td><td class=" har">.062324844455632</td></tr>
+<tr><th>扼杀</th><td class=" har">45</td><td class=" har">.5177395349</td><td class=" har">.08941092279</td></tr>
+<tr><th>无药</th><td class=" har">27</td><td class=" har">.517647441890505</td><td class=" har">.077650022643543</td></tr>
+<tr><th>祸患</th><td class=" har">41</td><td class=" har">.517456312731999</td><td class=" har">.091271351443569</td></tr>
+<tr><th>梅毒</th><td class=" har">30</td><td class=" har">.517409282922745</td><td class=" har">.065367367482473</td></tr>
+<tr><th>挽救</th><td class=" har">45</td><td class=" har">.5170975598</td><td class=" har">.08256591335</td></tr>
+<tr><th>军事冲突</th><td class=" har">45</td><td class=" har">.5167424342</td><td class=" har">.07052722539</td></tr>
+<tr><th>危局</th><td class=" har">44</td><td class=" har">.516435300084678</td><td class=" har">.081737381102568</td></tr>
+<tr><th>残杀</th><td class=" har">39</td><td class=" har">.516126367526177</td><td class=" har">.084891009772905</td></tr>
+<tr><th>估计不足</th><td class=" har">40</td><td class=" har">.516003656387329</td><td class=" har">.081811067585315</td></tr>
+<tr><th>沉沦</th><td class=" har">45</td><td class=" har">.5156748220</td><td class=" har">.10523003259</td></tr>
+<tr><th>羁绊</th><td class=" har">45</td><td class=" har">.5156358456</td><td class=" har">.10766049239</td></tr>
+<tr><th>神经纤维</th><td class=" har">21</td><td class=" har">.515391666264761</td><td class=" har">.051157285000751</td></tr>
+<tr><th>死亡线</th><td class=" har">43</td><td class=" har">.515259812737620</td><td class=" har">.085828423416153</td></tr>
+<tr><th>鼻炎</th><td class=" har">37</td><td class=" har">.515187124142776</td><td class=" har">.083680906398543</td></tr>
+<tr><th>特效药</th><td class=" har">45</td><td class=" har">.5151385967</td><td class=" har">.06680697266</td></tr>
+<tr><th>骨病</th><td class=" har">20</td><td class=" har">.515121291577816</td><td class=" har">.082670395959661</td></tr>
+<tr><th>缺氧</th><td class=" har">45</td><td class=" har">.5149145276</td><td class=" har">.08112895921</td></tr>
+<tr><th>兵戎相见</th><td class=" har">45</td><td class=" har">.5149021109</td><td class=" har">.07452680585</td></tr>
+<tr><th>宝贵时间</th><td class=" har">45</td><td class=" har">.5147841947</td><td class=" har">.07943034667</td></tr>
+<tr><th>疏离</th><td class=" har">39</td><td class=" har">.514553741002694</td><td class=" har">.080198326381846</td></tr>
+<tr><th>供体</th><td class=" har">33</td><td class=" har">.513783314011314</td><td class=" har">.071690646047820</td></tr>
+<tr><th>厌恶</th><td class=" har">45</td><td class=" har">.5137697400</td><td class=" har">.09118844664</td></tr>
+<tr><th>核战争</th><td class=" har">45</td><td class=" har">.5136560364</td><td class=" har">.09213757506</td></tr>
+<tr><th>奋争</th><td class=" har">37</td><td class=" har">.513649285645098</td><td class=" har">.086401417236508</td></tr>
+<tr><th>出血热</th><td class=" har">38</td><td class=" har">.513342353858446</td><td class=" har">.060051553532867</td></tr>
+<tr><th>受到感染</th><td class=" har">41</td><td class=" har">.513306810361583</td><td class=" har">.091446593055514</td></tr>
+<tr><th>万余例</th><td class=" har">29</td><td class=" har">.513195328671357</td><td class=" har">.065982659426496</td></tr>
+<tr><th>泥淖</th><td class=" har">41</td><td class=" har">.512270401890685</td><td class=" har">.083268041036966</td></tr>
+<tr><th>两败俱伤</th><td class=" har">42</td><td class=" har">.512091727483840</td><td class=" har">.089043940804397</td></tr>
+<tr><th>湮没</th><td class=" har">45</td><td class=" har">.5120808951</td><td class=" har">.09873200250</td></tr>
+<tr><th>生理</th><td class=" har">45</td><td class=" har">.5119974913</td><td class=" har">.06365866374</td></tr>
+<tr><th>心血管病</th><td class=" har">45</td><td class=" har">.5116747273</td><td class=" har">.07654286253</td></tr>
+<tr><th>食欲</th><td class=" har">45</td><td class=" har">.5115450882</td><td class=" har">.08550308395</td></tr>
+<tr><th>消化不良</th><td class=" har">45</td><td class=" har">.5108767329</td><td class=" har">.08035961943</td></tr>
+<tr><th>触发</th><td class=" har">45</td><td class=" har">.5107989222</td><td class=" har">.09926142680</td></tr>
+<tr><th>更会</th><td class=" har">45</td><td class=" har">.5106676027</td><td class=" har">.10151334922</td></tr>
+<tr><th>愚昧</th><td class=" har">45</td><td class=" har">.5106221553</td><td class=" har">.09461575897</td></tr>
+<tr><th>生长发育</th><td class=" har">45</td><td class=" har">.5102607758</td><td class=" har">.07294247930</td></tr>
+<tr><th>荡涤</th><td class=" har">45</td><td class=" har">.5099503436</td><td class=" har">.10548432924</td></tr>
+<tr><th>寄生虫病</th><td class=" har">40</td><td class=" har">.509670275449753</td><td class=" har">.083503078489309</td></tr>
+<tr><th>流离</th><td class=" har">31</td><td class=" har">.509635882031533</td><td class=" har">.090884432928149</td></tr>
+<tr><th>痛切</th><td class=" har">41</td><td class=" har">.509322433210001</td><td class=" har">.084610459949312</td></tr>
+<tr><th>消退</th><td class=" har">45</td><td class=" har">.5082765380</td><td class=" har">.07783645641</td></tr>
+<tr><th>耻辱</th><td class=" har">45</td><td class=" har">.5081928653</td><td class=" har">.10338152548</td></tr>
+<tr><th>积劳成疾</th><td class=" har">45</td><td class=" har">.5079659451</td><td class=" har">.10055289254</td></tr>
+<tr><th>感染者</th><td class=" har">38</td><td class=" har">.507869321264719</td><td class=" har">.081237455113651</td></tr>
+<tr><th>纷乱</th><td class=" har">45</td><td class=" har">.5077796127</td><td class=" har">.09230944370</td></tr>
+<tr><th>乳房</th><td class=" har">39</td><td class=" har">.507400993353281</td><td class=" har">.080271861327852</td></tr>
+<tr><th>严峻考验</th><td class=" har">45</td><td class=" har">.5071389798</td><td class=" har">.09049014107</td></tr>
+<tr><th>祸首</th><td class=" har">38</td><td class=" har">.506932639761975</td><td class=" har">.068519453632605</td></tr>
+<tr><th>无谓</th><td class=" har">45</td><td class=" har">.5065878182</td><td class=" har">.11440603533</td></tr>
+<tr><th>雷击</th><td class=" har">44</td><td class=" har">.506371474401517</td><td class=" har">.073695813090844</td></tr>
+<tr><th>负面效应</th><td class=" har">31</td><td class=" har">.505141015014341</td><td class=" har">.079452009361192</td></tr>
+<tr><th>农奴制</th><td class=" har">43</td><td class=" har">.504785920298377</td><td class=" har">.100858256978624</td></tr>
+<tr><th>产妇</th><td class=" har">45</td><td class=" har">.5044401887</td><td class=" har">.07786214706</td></tr>
+<tr><th>湿疹</th><td class=" har">33</td><td class=" har">.504101216793060</td><td class=" har">.082922056416575</td></tr>
+<tr><th>解救出来</th><td class=" har">42</td><td class=" har">.503871231561616</td><td class=" har">.094603601552197</td></tr>
+<tr><th>烙印</th><td class=" har">45</td><td class=" har">.5038271780</td><td class=" har">.13184022457</td></tr>
+<tr><th>可治</th><td class=" har">44</td><td class=" har">.503542051396587</td><td class=" har">.068046228694421</td></tr>
+<tr><th>殊死搏斗</th><td class=" har">42</td><td class=" har">.503490991535641</td><td class=" har">.071283844053678</td></tr>
+<tr><th>感染</th><td class=" har">45</td><td class=" har">.5032766978</td><td class=" har">.09973048106</td></tr>
+<tr><th>小鼠</th><td class=" har">42</td><td class=" har">.503274127131417</td><td class=" har">.066977231696454</td></tr>
+<tr><th>断肢</th><td class=" har">32</td><td class=" har">.503267099149525</td><td class=" har">.075578447547397</td></tr>
+<tr><th>治疗师</th><td class=" har">17</td><td class=" har">.502667926690158</td><td class=" har">.069480118712123</td></tr>
+<tr><th>肌</th><td class=" har">44</td><td class=" har">.502582409842448</td><td class=" har">.092279666520037</td></tr>
+<tr><th>葡萄膜</th><td class=" har">7</td><td class=" har">.502089266266142</td><td class=" har">.073000508448861</td></tr>
+<tr><th>斜视</th><td class=" har">33</td><td class=" har">.501826289025220</td><td class=" har">.066480979219004</td></tr>
+<tr><th>脾胃</th><td class=" har">39</td><td class=" har">.501545079243489</td><td class=" har">.075251279915680</td></tr>
+<tr><th>恶行</th><td class=" har">42</td><td class=" har">.501131173400652</td><td class=" har">.076785189086245</td></tr>
+<tr><th>内镜</th><td class=" har">25</td><td class=" har">.500035877227783</td><td class=" har">.071062781971513</td></tr>
+<tr><th>身体虚弱</th><td class=" har">41</td><td class=" har">.500014994202591</td><td class=" har">.076471866895621</td></tr>
+<tr><th>受难者</th><td class=" har">39</td><td class=" har">.499982386827469</td><td class=" har">.088863519608122</td></tr>
+<tr><th>缝合</th><td class=" har">45</td><td class=" har">.4997396471</td><td class=" har">.07829826490</td></tr>
+<tr><th>人道</th><td class=" har">45</td><td class=" har">.4992451316</td><td class=" har">.06937130408</td></tr>
+<tr><th>修补术</th><td class=" har">7</td><td class=" har">.498640771423067</td><td class=" har">.074868979674554</td></tr>
+<tr><th>苦斗</th><td class=" har">42</td><td class=" har">.498071683304651</td><td class=" har">.097095555574099</td></tr>
+<tr><th>镇痛</th><td class=" har">44</td><td class=" har">.497643060304902</td><td class=" har">.067638816386198</td></tr>
+<tr><th>临床实践</th><td class=" har">45</td><td class=" har">.4969003544</td><td class=" har">.08124989715</td></tr>
+<tr><th>乙脑</th><td class=" har">28</td><td class=" har">.496748094047819</td><td class=" har">.062597786757111</td></tr>
+<tr><th>不遇</th><td class=" har">44</td><td class=" har">.496537985449487</td><td class=" har">.071458829277088</td></tr>
+<tr><th>百废待兴</th><td class=" har">45</td><td class=" har">.4962200413</td><td class=" har">.10490445160</td></tr>
+<tr><th>腔镜</th><td class=" har">14</td><td class=" har">.495889621121543</td><td class=" har">.066164685863241</td></tr>
+<tr><th>精神科</th><td class=" har">31</td><td class=" har">.495675071593254</td><td class=" har">.075165689645657</td></tr>
+<tr><th>元气</th><td class=" har">45</td><td class=" har">.4949586293</td><td class=" har">.11265442266</td></tr>
+<tr><th>击垮</th><td class=" har">25</td><td class=" har">.494859687089920</td><td class=" har">.067985910411750</td></tr>
+<tr><th>帕金森</th><td class=" har">30</td><td class=" har">.494733409086863</td><td class=" har">.087467631524616</td></tr>
+<tr><th>粘连</th><td class=" har">45</td><td class=" har">.4940084011</td><td class=" har">.08382295224</td></tr>
+<tr><th>重建家园</th><td class=" har">45</td><td class=" har">.4935845051</td><td class=" har">.09444023247</td></tr>
+<tr><th>养料</th><td class=" har">45</td><td class=" har">.4929739149</td><td class=" har">.09066845825</td></tr>
+<tr><th>生殖</th><td class=" har">45</td><td class=" har">.4925704840</td><td class=" har">.07194726171</td></tr>
+<tr><th>操劳</th><td class=" har">45</td><td class=" har">.4925480820</td><td class=" har">.09773015336</td></tr>
+<tr><th>颜面</th><td class=" har">37</td><td class=" har">.492529876328803</td><td class=" har">.077398630115018</td></tr>
+<tr><th>整复</th><td class=" har">12</td><td class=" har">.492122145990531</td><td class=" har">.090441927229861</td></tr>
+<tr><th>造福人类</th><td class=" har">45</td><td class=" har">.4905412962</td><td class=" har">.09950661601</td></tr>
+<tr><th>有限性</th><td class=" har">33</td><td class=" har">.490448510104960</td><td class=" har">.075190108611154</td></tr>
+<tr><th>失语</th><td class=" har">32</td><td class=" har">.490311007015407</td><td class=" har">.094506020177852</td></tr>
+<tr><th>食不果腹</th><td class=" har">44</td><td class=" har">.489846992899071</td><td class=" har">.089668374443488</td></tr>
+<tr><th>免于</th><td class=" har">45</td><td class=" har">.4894295273</td><td class=" har">.10352720429</td></tr>
+<tr><th>不义</th><td class=" har">40</td><td class=" har">.489405836164951</td><td class=" har">.109532565621588</td></tr>
+<tr><th>无穷的</th><td class=" har">45</td><td class=" har">.4891064413</td><td class=" har">.12104433216</td></tr>
+<tr><th>千疮百孔</th><td class=" har">45</td><td class=" har">.4882870542</td><td class=" har">.08669094967</td></tr>
+<tr><th>不浅</th><td class=" har">41</td><td class=" har">.488105210589199</td><td class=" har">.097747950138439</td></tr>
+<tr><th>味觉</th><td class=" har">41</td><td class=" har">.486591028731044</td><td class=" har">.083265298349273</td></tr>
+<tr><th>污垢</th><td class=" har">45</td><td class=" har">.4864518978</td><td class=" har">.09558224583</td></tr>
+<tr><th>自然选择</th><td class=" har">34</td><td class=" har">.485892054789207</td><td class=" har">.084917237002113</td></tr>
+<tr><th>精神力量</th><td class=" har">45</td><td class=" har">.4849959702</td><td class=" har">.12928859324</td></tr>
+<tr><th>忧患</th><td class=" har">45</td><td class=" har">.4848872273</td><td class=" har">.12205148096</td></tr>
+<tr><th>必定会</th><td class=" har">45</td><td class=" har">.4843598142</td><td class=" har">.09933891078</td></tr>
+<tr><th>可逆</th><td class=" har">36</td><td class=" har">.484261098421282</td><td class=" har">.094624066364745</td></tr>
+<tr><th>口腔</th><td class=" har">45</td><td class=" har">.4842432584</td><td class=" har">.07772547689</td></tr>
+<tr><th>已因</th><td class=" har">30</td><td class=" har">.482783995072047</td><td class=" har">.082760989357989</td></tr>
+<tr><th>承受</th><td class=" har">45</td><td class=" har">.4815791933</td><td class=" har">.09791701669</td></tr>
+<tr><th>乙型</th><td class=" har">38</td><td class=" har">.481007425408614</td><td class=" har">.078428216639357</td></tr>
+<tr><th>抗过敏</th><td class=" har">17</td><td class=" har">.480844532742220</td><td class=" har">.085284080529880</td></tr>
+<tr><th>母体</th><td class=" har">44</td><td class=" har">.480839253826575</td><td class=" har">.087375778339239</td></tr>
+<tr><th>受到冲击</th><td class=" har">45</td><td class=" har">.4791989493</td><td class=" har">.10255423312</td></tr>
+<tr><th>诸多困难</th><td class=" har">38</td><td class=" har">.479153179808667</td><td class=" har">.081439857669218</td></tr>
+<tr><th>历尽艰辛</th><td class=" har">45</td><td class=" har">.4790279962</td><td class=" har">.10074210058</td></tr>
+<tr><th>延续下去</th><td class=" har">45</td><td class=" har">.4789460709</td><td class=" har">.11455931935</td></tr>
+<tr><th>挤兑</th><td class=" har">38</td><td class=" har">.478745131900436</td><td class=" har">.089391889975985</td></tr>
+<tr><th>脓</th><td class=" har">17</td><td class=" har">.474849864840508</td><td class=" har">.085565669445702</td></tr>
+<tr><th>主动脉</th><td class=" har">42</td><td class=" har">.473993373768670</td><td class=" har">.089125712442316</td></tr>
+<tr><th>痛恨</th><td class=" har">45</td><td class=" har">.4729688987</td><td class=" har">.11588576922</td></tr>
+<tr><th>内心深处</th><td class=" har">45</td><td class=" har">.4714806478</td><td class=" har">.12763865438</td></tr>
+<tr><th>仍受</th><td class=" har">37</td><td class=" har">.470730953119897</td><td class=" har">.086834382895776</td></tr>
+<tr><th>映秀人</th><td class=" har">3</td><td class=" har">.469918698072434</td><td class=" har">.119165804379356</td></tr>
+<tr><th>史无前例</th><td class=" har">45</td><td class=" har">.4696337780</td><td class=" har">.12431050342</td></tr>
+<tr><th>打上</th><td class=" har">45</td><td class=" har">.4693124347</td><td class=" har">.10750637841</td></tr>
+<tr><th>肠</th><td class=" har">45</td><td class=" har">.4686647631</td><td class=" har">.09359564234</td></tr>
+<tr><th>血浆</th><td class=" har">44</td><td class=" har">.468395178968256</td><td class=" har">.084055056835139</td></tr>
+<tr><th>瘘</th><td class=" har">33</td><td class=" har">.467377061645190</td><td class=" har">.094748957173811</td></tr>
+<tr><th>烂摊子</th><td class=" har">45</td><td class=" har">.4669757467</td><td class=" har">.08472693257</td></tr>
+<tr><th>扭曲</th><td class=" har">44</td><td class=" har">.465369828722694</td><td class=" har">.117803971663627</td></tr>
+<tr><th>弱智</th><td class=" har">31</td><td class=" har">.462690383195877</td><td class=" har">.081480645006592</td></tr>
+<tr><th>郁闷</th><td class=" har">44</td><td class=" har">.462114483456720</td><td class=" har">.129851921180055</td></tr>
+<tr><th>达于</th><td class=" har">23</td><td class=" har">.459850597640742</td><td class=" har">.095104501028260</td></tr>
+<tr><th>危难</th><td class=" har">45</td><td class=" har">.4592365984</td><td class=" har">.12090157070</td></tr>
+<tr><th>遗留</th><td class=" har">45</td><td class=" har">.4590612380</td><td class=" har">.11891106964</td></tr>
+<tr><th>奥斯威辛</th><td class=" har">15</td><td class=" har">.457840043306351</td><td class=" har">.098533060068685</td></tr>
+<tr><th>壮志未酬</th><td class=" har">38</td><td class=" har">.456868890084718</td><td class=" har">.105638772397350</td></tr>
+<tr><th>磨砺</th><td class=" har">45</td><td class=" har">.4566407076</td><td class=" har">.14585200317</td></tr>
+<tr><th>恐非</th><td class=" har">16</td><td class=" har">.455733744427562</td><td class=" har">.101619177197704</td></tr>
+<tr><th>之果</th><td class=" har">45</td><td class=" har">.4526298380</td><td class=" har">.11825396496</td></tr>
+<tr><th>维系</th><td class=" har">45</td><td class=" har">.4513107173</td><td class=" har">.10555662087</td></tr>
+<tr><th>康复科</th><td class=" har">18</td><td class=" har">.451142484943072</td><td class=" har">.070764053069643</td></tr>
+<tr><th>结核</th><td class=" har">44</td><td class=" har">.450183231722225</td><td class=" har">.069586484365427</td></tr>
+<tr><th>休眠</th><td class=" har">40</td><td class=" har">.449064569175243</td><td class=" har">.094207900421401</td></tr>
+<tr><th>突发事件</th><td class=" har">44</td><td class=" har">.446521298451857</td><td class=" har">.111411820416569</td></tr>
+<tr><th>试剂盒</th><td class=" har">28</td><td class=" har">.446034293089594</td><td class=" har">.067446607980816</td></tr>
+<tr><th>疗伤</th><td class=" har">30</td><td class=" har">.445625097552935</td><td class=" har">.086266381977780</td></tr>
+<tr><th>枪弹</th><td class=" har">42</td><td class=" har">.443663497765859</td><td class=" har">.085623152382148</td></tr>
+<tr><th>土两族</th><td class=" har">21</td><td class=" har">.443257426931745</td><td class=" har">.082321776032501</td></tr>
+<tr><th>衣食</th><td class=" har">45</td><td class=" har">.4423402884</td><td class=" har">.10849699740</td></tr>
+<tr><th>灵丹</th><td class=" har">22</td><td class=" har">.440451792695306</td><td class=" har">.092560382107688</td></tr>
+<tr><th>切口</th><td class=" har">45</td><td class=" har">.43904987589</td><td class=" har">.125211246311</td></tr>
+<tr><th>愈加</th><td class=" har">45</td><td class=" har">.4293936047</td><td class=" har">.14476553337</td></tr>
+<tr><th>复苏</th><td class=" har">45</td><td class=" har">.4269166980</td><td class=" har">.09935906548</td></tr>
+<tr><th>眼球</th><td class=" har">45</td><td class=" har">.4242652518</td><td class=" har">.14924706442</td></tr>
+<tr><th>主导性</th><td class=" har">37</td><td class=" har">.420840496147001</td><td class=" har">.091191421589243</td></tr>
+<tr><th>记忆犹新</th><td class=" har">45</td><td class=" har">.4149164549</td><td class=" har">.16158666769</td></tr>
+<tr><th>北京大学人民医院</th><td class=" har">24</td><td class=" har">.414458795140187</td><td class=" har">.095967904012319</td></tr>
+<tr><th>苏曼</th><td class=" har">5</td><td class=" har">.405216234922409</td><td class=" har">.167040307508710</td></tr>
+<tr><th>重整</th><td class=" har">45</td><td class=" har">.3854888989</td><td class=" har">.14115447005</td></tr>
+<tr><th>军中</th><td class=" har">44</td><td class=" har">.362303394485604</td><td class=" har">.090477513057639</td></tr>
+<tr><th>有形</th><td class=" har">45</td><td class=" har">.35302557520</td><td class=" har">.147818050708</td></tr>
+<tr><th>Valid N (listwise)</th><td class=" har">0</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 俄对南; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 押下; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 孟方为; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 叙伊土; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 列屿; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 初中历史; Correlation: 0.9457896542932265; P-value: 0.05421034570677352; Valid Cases: 4
+Neighbor: 普调; Correlation: 0.775330732473393; P-value: 0.014094964227051011; Valid Cases: 9
+Neighbor: 声索; Correlation: 0.7418530043684419; P-value: 0.15120227822240562; Valid Cases: 5
+Neighbor: 哈方为; Correlation: 0.6623771004018052; P-value: 0.3376228995981947; Valid Cases: 4
+Neighbor: 阿人; Correlation: 0.6498325496362019; P-value: 0.016209900768833614; Valid Cases: 13
+Neighbor: 所方; Correlation: 0.6437226572808373; P-value: 0.0613715757178843; Valid Cases: 9
+Neighbor: 索方; Correlation: 0.5861932735763866; P-value: 0.09713919266918342; Valid Cases: 9
+Neighbor: 涉藏; Correlation: 0.569185821892956; P-value: 0.007081608108483113; Valid Cases: 21
+Neighbor: 难撼; Correlation: 0.5148963899896852; P-value: 0.12777424070252494; Valid Cases: 10
+Neighbor: 错误做法; Correlation: 0.5110697605184861; P-value: 0.0003338557015323492; Valid Cases: 45
+Neighbor: 竹岛; Correlation: 0.43547209382614294; P-value: 0.03780690360802752; Valid Cases: 23
+Neighbor: 不持; Correlation: 0.43458292922146957; P-value: 0.055521004112246274; Valid Cases: 20
+Neighbor: 上大谈; Correlation: 0.3952904451774738; P-value: 0.6047095548225263; Valid Cases: 4
+Neighbor: 阿拉伯叙利亚共和国; Correlation: 0.3456170882651861; P-value: 0.036152943950286155; Valid Cases: 37
+Neighbor: 苦果; Correlation: 0.3409289180733454; P-value: 0.02191710207294146; Valid Cases: 45
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 特迪贝尔; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 私性; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 沙方为; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 图兹拉岛; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 债占; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 标普对; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 宗主权; Correlation: 0.9287859830641917; P-value: 0.022567721342784928; Valid Cases: 5
+Neighbor: 合法性; Correlation: 0.9130780037129641; P-value: 2.3378092690480193e-18; Valid Cases: 45
+Neighbor: 运河区; Correlation: 0.8945585766529578; P-value: 3.7644509551715257e-14; Valid Cases: 38
+Neighbor: 海洋权; Correlation: 0.88336860613236; P-value: 0.00837149967631169; Valid Cases: 7
+Neighbor: 欧猪; Correlation: 0.881554027826066; P-value: 0.31299559089464646; Valid Cases: 3
+Neighbor: 沃尔维; Correlation: 0.8794272883127914; P-value: 7.444529950834602e-05; Valid Cases: 13
+Neighbor: 南亚地区; Correlation: 0.8713119753367891; P-value: 7.009852125717037e-15; Valid Cases: 45
+Neighbor: 内陆国; Correlation: 0.8700664032960524; P-value: 9.991416661759941e-11; Valid Cases: 32
+Neighbor: 中立政策; Correlation: 0.8699761691663473; P-value: 7.814315941681095e-09; Valid Cases: 26
+Neighbor: 全面禁止; Correlation: 0.8665110998017109; P-value: 1.4655035566411036e-14; Valid Cases: 45
+Neighbor: 中立区; Correlation: 0.8660811509665081; P-value: 2.2261688400304063e-08; Valid Cases: 25
+Neighbor: 相互尊重; Correlation: 0.8652172949733025; P-value: 1.7790487191002514e-14; Valid Cases: 45
+Neighbor: 专属; Correlation: 0.8597488660396435; P-value: 7.825539388708429e-14; Valid Cases: 44
+Neighbor: 诉诸武力; Correlation: 0.8573160311364576; P-value: 1.09541382062988e-13; Valid Cases: 44

@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 皇民; Correlation: 0.9509697405150028; P-value: 0.20017869349500847; Valid Cases: 3
+Neighbor: 第三股; Correlation: 0.9040090669700902; P-value: 0.2812205557541334; Valid Cases: 3
+Neighbor: 制华; Correlation: 0.8694528924683615; P-value: 0.005031766299179142; Valid Cases: 8
+Neighbor: 国用; Correlation: 0.8565492069791483; P-value: 0.0293912204924604; Valid Cases: 6
+Neighbor: 马斯哈多夫; Correlation: 0.8254073119623504; P-value: 0.0009454460391273356; Valid Cases: 12
+Neighbor: 遏华; Correlation: 0.825220497166494; P-value: 0.08537738141533963; Valid Cases: 5
+Neighbor: 虐俘; Correlation: 0.808080303423443; P-value: 0.40101340358880966; Valid Cases: 3
+Neighbor: 以台; Correlation: 0.7972958589473743; P-value: 0.0006370244359449926; Valid Cases: 14
+Neighbor: 洗白; Correlation: 0.7826578606686749; P-value: 4.526239325530908e-05; Valid Cases: 20
+Neighbor: 皇国; Correlation: 0.7724340762689446; P-value: 0.04179402259348013; Valid Cases: 7
+Neighbor: 异教徒; Correlation: 0.7661077620391158; P-value: 2.0288450723048846e-05; Valid Cases: 23
+Neighbor: 挑事; Correlation: 0.7637192692000707; P-value: 0.002377470628746464; Valid Cases: 13
+Neighbor: 萨达姆; Correlation: 0.7561879978785704; P-value: 4.522016935207702e-09; Valid Cases: 43
+Neighbor: 肆意攻击; Correlation: 0.7535943373407717; P-value: 0.001176942766546843; Valid Cases: 15
+Neighbor: 车臣; Correlation: 0.7201383992983167; P-value: 2.2837487984557935e-05; Valid Cases: 27
+Neighbor: 诬称; Correlation: 0.7178560777494696; P-value: 0.0002482402805186814; Valid Cases: 21
+Neighbor: 搞乱; Correlation: 0.7144403059801867; P-value: 5.139834360907427e-08; Valid Cases: 44
+Neighbor: 反智; Correlation: 0.7123642194568014; P-value: 0.04739739343276679; Valid Cases: 8
+Neighbor: 犯有; Correlation: 0.7047651758327458; P-value: 6.527161441684854e-08; Valid Cases: 45
+Neighbor: 恶行; Correlation: 0.692363371017471; P-value: 3.7834026154929486e-07; Valid Cases: 42
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 惨酷; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 乱港谋; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 打伊; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 忘宗; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 苏修; Correlation: 0.9545844749788122; P-value: 0.1925993389551685; Valid Cases: 3
+Neighbor: 策划; Correlation: 0.9333061712272763; P-value: 9.650382460107709e-21; Valid Cases: 45
+Neighbor: 疆独; Correlation: 0.9090027689614881; P-value: 0.273689963037354; Valid Cases: 3
+Neighbor: 精心策划; Correlation: 0.780972215111732; P-value: 4.0111615324575764e-10; Valid Cases: 44
+Neighbor: 阴谋活动; Correlation: 0.7740934857102013; P-value: 4.9043395447255037e-08; Valid Cases: 35
+Neighbor: 两府; Correlation: 0.7531630708497801; P-value: 0.0029573366124478816; Valid Cases: 13
+Neighbor: 骗局; Correlation: 0.7221179101804558; P-value: 2.1575640508428656e-08; Valid Cases: 45
+Neighbor: 恐怖主义; Correlation: 0.6897393079646779; P-value: 1.6001789401200056e-07; Valid Cases: 45
+Neighbor: 同谋者; Correlation: 0.6441764983228271; P-value: 0.03241629060106078; Valid Cases: 11
+Neighbor: 颠覆; Correlation: 0.5931369589259279; P-value: 1.7570977812148128e-05; Valid Cases: 45
+Neighbor: 永久化; Correlation: 0.5928596362661472; P-value: 0.00044049525008928587; Valid Cases: 31
+Neighbor: 扩张政策; Correlation: 0.5705524429680062; P-value: 0.0006503465624901627; Valid Cases: 32
+Neighbor: 投靠; Correlation: 0.5091535752411881; P-value: 0.00041625795461289135; Valid Cases: 44
+Neighbor: 篡党夺权; Correlation: 0.5038580117721945; P-value: 0.023506400653023517; Valid Cases: 20
+Neighbor: 篡权; Correlation: 0.49099185118604827; P-value: 0.06309791744594712; Valid Cases: 15
+Neighbor: 伊阵; Correlation: 0.4836552165033084; P-value: 0.5163447834966917; Valid Cases: 4

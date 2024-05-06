@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>conspiracy_descriptives.htm</title>
+<meta charset="utf-8"/>
+<style>
+.details {visibility:hidden;}
+.workbookSyntaxBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookSyntaxBlock p { margin:0 0;}
+.workbookRichTextBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookRichTextBlock p { margin:0 0;}
+.logItem {margin: 16px 0;font-family: monospace;}
+.procedureTitle{color: #1d3649;font-weight: 600;font-size: 20px;line-height: 24px;font-family: monospace;}
+.pivot{color:#264A60;background-color:#FFFFFF;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#E0E0E0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#F9F9FB;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#F9F9FB;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #AEAEAE;}
+.hDR{border-top:1px none #AEAEAE;}
+.vCR{border-left:1px none #AEAEAE;}
+.vDR{border-left:1px none #AEAEAE;}
+.hCC{border-bottom:1px none #AEAEAE;}
+.hDC{border-bottom:1px none #AEAEAE;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #AEAEAE;}
+.pivot{margin: 80px 0;}
+.pivot thead.tr.th {padding:0px;border-spacing:0px}
+.hal{text-align:left} .hac{text-align:center} .har{text-align:right}
+.val{vertical-align:left} .vac{vertical-align:center} .var{vertical-align:right}
+</style>
+</head>
+<body>
+<p class="procedureTitle"><head><style type="text/css">p{color:0;font-family:SansSerif;font-size:14pt;font-style:normal;font-weight:bold;text-decoration:none}</style></head><BR>Descriptives</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+<div class="itemBody">
+<table summary="Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows" style="width:470px" class="default PivotTable" aria-label="Notes" role="complementary" data-lookName="default" data-rowLabelWidth="2" data-colLabelHeight="0" data-NumRows="13" data-NumCols="1" data-rowLabels="Corner" data-decimal-char="." data-col-labels="" data-row-labels="Output Created ;Comments ;Input Data; Active Dataset; Filter; Weight; Split File; N of Rows in Working Data File;Missing Value Handling Definition of Missing; Cases Used;Syntax ;Resources Processor Time; Elapsed Time" data-layer-dimension="" data-column-dimension="" data-row-dimension="Contents;" data-maxColWidth="162">
+<caption class="title" style="width:470px">Notes<span class="details">Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<th class="rowLabels dataAreaTop role3" colspan="2">Output Created</th>
+<td class=" o dataAreaTop dataAreaLeft">19-APR-2024 01:08:00</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Comments</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&nbsp;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="6">Input</th>
+<th class="rowLabels hCR vCR role3">Data</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">C:\Users\s1155157933\Downloads\conspiracy_cos-sim.csv</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Active Dataset</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">DataSet4</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Filter</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Weight</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Split File</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">N of Rows in Working Data File</th>
+<td class=" e dataAreaLeft hCR">45</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Missing Value Handling</th>
+<th class="rowLabels hCR vCR role3">Definition of Missing</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">User defined missing values are treated as missing.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Cases Used</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">All non-missing data are used.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Syntax</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">DESCRIPTIVES VARIABLES=叛徒 帝国主义者 倒行逆施 入侵者 策划者 奴役 公开场合 灭绝人性 动武 未能得逞 嘴脸 叫嚷 攘外必先安内 煽风点火 胡拉 必遭 恐乱华 卖国贼<br>    痛斥 机会主义 反党 揭批 精心策划 妄动 军国主义 虐俘 图谋 口实 野心家 诬称 以疆 煽动 猖狂进攻 得逞 篡党夺权 唱衰 挫败 萨达姆 妄想 背信弃义 杀戮 卵翼 刺杀 滥杀无辜 邪恶势力<br>    遏阻 颠倒黑白 仇视 和平过渡 傀儡 车臣 称霸世界 民团 吞并 谬论 胡言乱语 反华 惨无人道 好为人师 军事政变 反扑 使朝 妄图 二次革命 宪改 叫嚣 离间 夺权 屠杀 炸机 混淆是非 伪善<br>    潜回 军事挑衅 穷凶极恶 皇国 豢养 藏独 防备 既成事实 扩张主义 爱尔兰共和军 悍然 气焰 逆流 密谋策划 巴激进 利比亚人 蓄意 自欺欺人 捣乱 殖民主义者 之能事 核科学家 丑恶嘴脸<br>    暴力手段 独裁政权 君主制 美蒋 激进主义 镇压 劫狱 剿灭 挑衅 反苏 复辟 恫吓 仆从 抹黑 恐怖主义 日右翼 内乱 妖魔化 不值一驳 恶劣行径 心虚 巴萨耶夫 罪行 黎巴嫩真主党 占领者 残杀<br>    反共 同穆 制华 策动 张目 反中 政治势力 彻头彻尾 事端 伊阵 痴心妄想 枉费心机 同谋者 文字游戏 恶毒 美帝 反古 高官厚禄 抵赖 伎俩 翻案 四一二 哥伦比亚革命武装力量 歪理邪说 皇民<br>    险恶用心 颠倒是非 欺压 发难 诋毁 挑衅性 唆使 以台 一中一台 壮胆 反越 拷打 恐怖事件 聒噪 阴谋活动 卖身投靠 打垮 炮制 抵抗运动 变本加厉 软硬兼施 大肆宣扬 诬蔑 玩火自焚 破坏活动<br>    相勾结 极端主义 血腥 主义者 自卫战争 妄言 灭绝种族 疆独 作恶多端 民族主义者 右倾 叛乱 阿美军 追随者 不实之词 无耻 恶行 叛国 官僚资本主义 愚弄 助纣为虐 罪魁祸首 侵略者 流血事件<br>    诡计 派兵 严重错误 司马昭之心 筹码 迫害 亡灵 胆敢 台湾独立 大跌眼镜 蹂躏 苏修 非正义 三原色 莫须有 轴心国 空袭 冒天下之大不韪 极端派 沉重打击 反侵略 第三股 全斗焕 走狗 之词<br>    自杀性 亲帝 日寇 扩张政策 和平演变 野蛮暴行 涂脂抹粉 袁世凯 险恶 肢解 反革命 报复性 侵略战争 转移视线 武力威胁 地主阶级 反智 篡党 戳穿 反动 法西斯主义 全面战争 悬崖勒马<br>    政治腐败 真主党 不堪一击 台独分子 犯下 牺牲品 幕后策划 罪名 新纳粹 亚洲版 侵略扩张 清王朝 达赖 造谣 种族主义 投靠 激进分子 惨酷 称霸全球 作乱 造谣惑众 法西斯 鼓噪 国用 残暴<br>    马斯哈多夫 蓄谋已久 匪徒 反动分子 揭穿 祸国殃民 严刑拷打 卑鄙 帝国主义 人质事件 不得人心 革命党人 亲日派 死硬 趁火打劫 斩首 暴乱 犹太 加害 恶法 空难事件 使用暴力 猖狂 吴佩孚<br>    狂妄 怒不可遏 高压政策 祸教 乘人之危 核战争 不思悔改 推波助澜 手无寸铁 劝降 托派 腐败无能 谋杀 反抗 欺世盗名 狼狈为奸 纳粹 洗白 正义斗争 反以 恐怖活动 阴谋诡计 混淆视听<br>    极少数人 段祺瑞 永久化 政治阴谋 真面目 仇杀 无端指责 罪恶行径 反动集团 罄竹难书 冷漠 速战速决 挟洋 倒打一耙 伪君子 受尽 臭名昭著 不肖子孙 罪大恶极 主谋 深表遗憾 染指 张国焘<br>    元凶 独裁统治 非法行为 骗局 汉奸 武装集团 嚣张气焰 种族灭绝 遏华 抵抗力量 劫掠 剿共 抢掠 分裂主义 挑拨 牵制 核讹诈 异教徒 祸心 暴行 网罗 复国主义 害人害己 汪精卫 篡权 声讨<br>    之流 现政权 乱港谋 制造事端 统治集团 封建主义 玩弄 花招 野蛮 犹太复国 逃亡 处决 侵华 一小撮 恐怖行动 心理战 剪除 美帝国主义 污蔑 铁蹄 当炮灰 游行示威 权是 卑劣 密谋 自存<br>    报复 特雷姆萨镇 卖国 罪恶 沆瀣一气 出兵 不容置疑 玩火 犯有 非暴力 美谋独 篡夺 以一国 占领军 严辞 暴政 侵略军 肆意攻击 拼凑 帮凶 严刑 武装入侵 贼喊捉贼 怂恿 发动者 颠覆 批驳<br>    反攻大陆 铁的事实 政变 挑唆 台独 军阀 宣传煽动 分离主义 酷刑 徒劳 伺机 极右 令人发指 穷兵黩武 爪牙 敌对势力 独裁 暴力行为 制造舆论 敌视 兄弟会 谋私利 勾结 挑事 矛头 民族败类<br>    纳粹主义 划清界线 行刺 拉拢 行径 极端分子 反动派 匪夷所思 野心 劣根性 两国论 谋害 索摩查 打伊 专制 一意孤行 反动势力 臆测 坐视 忘宗 异己 大屠杀 推卸责任 预谋 入法<br>    有百害而无一利 暗杀 回击 杀害 殖民主义 先发制人 以战养战 两府 为谋 搞乱 顽固 合法化 营垒 走卒 招魂 滔天罪行 赶下台 右派 毫无根据 第一枪 扣帽子 雇佣兵 敏感时期 狼子野心<br>    处心积虑 现政府 祸港 德意 徒劳无功 自取其辱 数典忘祖 屈服于 反党集团 锐利武器 冒险主义 头子 恐怖分子 贻笑大方 开火 胜利者 蓄谋 俘虏 遮羞布 突然袭击 祸 敌对 保守派 和平主义<br>    居心 无政府主义 罪责 背叛 复燃 顽固派 朴正熙 丧心病狂 昭然若揭 瓦解 诱压 凶残 不能允许 美梦 反叛 傀儡政权 无所不用其极 陷害 雇佣军 武装侵略 病态 假面具 投敌 分化瓦解 用心险恶<br>    以图 永保 拉帮结伙 倒戈 无端 强硬派 策划 居心叵测 内讧 罪行累累 暴力行动 圣战 进步力量 武装起义 发动战争 塞岛 马前卒 兴风作浪 所为 别有用心 迫击炮 军国主义者 北洋军阀 对黎笋<br>    叛变 诱降 政治野心 恐怖组织 阴险 要犯 挑动<br>  /STATISTICS=MEAN STDDEV<br>  /SORT=MEAN (D).</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Resources</th>
+<th class="rowLabels hCR vCR role3">Processor Time</th>
+<td class=" e dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Elapsed Time</th>
+<td class=" o dataAreaLeft hCR">00:00:00.01</td>
+</tr>
+<tr>
+<td  style="width:144px;padding:0px;border-spacing:0px"></td>
+<td  style="width:164px;padding:0px;border-spacing:0px"></td>
+<td  style="width:162px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tbody>
+</table>
+</div><p align="left"><head><style type="text/css">p{color:0;font-family:Monospaced;font-size:12pt;font-style:normal;font-weight:normal;text-decoration:none}</style></head><BR>[DataSet4]&nbsp;</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+
+<div>
+
+<style>
+.pivot{color:#264a60;background-color:#ffffff;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#e0e0e0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#f9f9fb;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#f9f9fb;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child td{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #aeaeae;}
+.hDR{border-top:1px none #aeaeae;}
+.vCR{border-left:1px none #aeaeae;}
+.vDR{border-left:1px none #aeaeae;}
+.hCC{border-bottom:1px none #aeaeae;}
+.hDC{border-bottom:1px none #aeaeae;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #aeaeae;}
+</style>
+<table class="pivot" data-rows="1,0,1,573,0,0" data-cols="1,3" data-heights="24,0,20,11460,0" data-widths="134,398" data-curCounts="573,3" data-curSizess="573,3">
+<caption colspan="4">Descriptive Statistics</caption>
+<thead>
+<tr><th class="cornerLabels">&nbsp;</th><th>N</th><th>Mean</th><th>Std. Deviation</th></tr>
+</thead>
+<tbody data-rect="0,572,0,2">
+<tr><th style="min-width:134px">以疆</th><td class=" har" style="min-width:68px">3</td><td class=" har" style="min-width:98px">.833004216353099</td><td class=" har" style="min-width:98px">.028053976031176</td></tr>
+<tr><th>美谋独</th><td class=" har">3</td><td class=" har">.809566636880239</td><td class=" har">.035859707478261</td></tr>
+<tr><th>乱港谋</th><td class=" har">2</td><td class=" har">.794812798500061</td><td class=" har">.005607216725889</td></tr>
+<tr><th>恐乱华</th><td class=" har">1</td><td class=" har">.789666175842285</td><td class=" har">.</td></tr>
+<tr><th>遏华</th><td class=" har">5</td><td class=" har">.762228500843048</td><td class=" har">.074047010367709</td></tr>
+<tr><th>妄图</th><td class=" har">45</td><td class=" har">.7542276362</td><td class=" har">.05298817975</td></tr>
+<tr><th>图谋</th><td class=" har">45</td><td class=" har">.7504676889</td><td class=" har">.04172325978</td></tr>
+<tr><th>倒行逆施</th><td class=" har">45</td><td class=" har">.7458301071</td><td class=" har">.06382930717</td></tr>
+<tr><th>罪恶行径</th><td class=" har">38</td><td class=" har">.733747642291220</td><td class=" har">.051182931155430</td></tr>
+<tr><th>阴谋活动</th><td class=" har">35</td><td class=" har">.726401095730918</td><td class=" har">.073579191744930</td></tr>
+<tr><th>亲帝</th><td class=" har">8</td><td class=" har">.716378018260002</td><td class=" har">.063641174910735</td></tr>
+<tr><th>独裁</th><td class=" har">43</td><td class=" har">.716250803581504</td><td class=" har">.060412701673319</td></tr>
+<tr><th>蓄意</th><td class=" har">45</td><td class=" har">.7151920887</td><td class=" har">.07168639696</td></tr>
+<tr><th>策动</th><td class=" har">45</td><td class=" har">.7133530500</td><td class=" har">.06828618447</td></tr>
+<tr><th>叛乱</th><td class=" har">45</td><td class=" har">.7129572078</td><td class=" har">.05696223803</td></tr>
+<tr><th>反中</th><td class=" har">5</td><td class=" har">.711797094345093</td><td class=" har">.065948036308734</td></tr>
+<tr><th>残暴</th><td class=" har">44</td><td class=" har">.711793581870469</td><td class=" har">.060780024292068</td></tr>
+<tr><th>罪恶</th><td class=" har">45</td><td class=" har">.7108228040</td><td class=" har">.04889519452</td></tr>
+<tr><th>特雷姆萨镇</th><td class=" har">1</td><td class=" har">.709187150001526</td><td class=" har">.</td></tr>
+<tr><th>祸港</th><td class=" har">4</td><td class=" har">.707869514822960</td><td class=" har">.068954913389350</td></tr>
+<tr><th>顽固派</th><td class=" har">42</td><td class=" har">.707560124851409</td><td class=" har">.064472969906663</td></tr>
+<tr><th>诬蔑</th><td class=" har">45</td><td class=" har">.7056155511</td><td class=" har">.07385294722</td></tr>
+<tr><th>悍然</th><td class=" har">45</td><td class=" har">.7050980673</td><td class=" har">.06243772530</td></tr>
+<tr><th>挫败</th><td class=" har">45</td><td class=" har">.7046640582</td><td class=" har">.04740991094</td></tr>
+<tr><th>得逞</th><td class=" har">45</td><td class=" har">.7044570156</td><td class=" har">.06249317268</td></tr>
+<tr><th>反动势力</th><td class=" har">43</td><td class=" har">.704425784044488</td><td class=" har">.062257334190516</td></tr>
+<tr><th>行径</th><td class=" har">45</td><td class=" har">.7030814918</td><td class=" har">.05091465653</td></tr>
+<tr><th>反动派</th><td class=" har">45</td><td class=" har">.7021396691</td><td class=" har">.06952306103</td></tr>
+<tr><th>挑衅</th><td class=" har">45</td><td class=" har">.7019061620</td><td class=" har">.06377717472</td></tr>
+<tr><th>藏独</th><td class=" har">22</td><td class=" har">.701378185640682</td><td class=" har">.061957633602610</td></tr>
+<tr><th>险恶用心</th><td class=" har">40</td><td class=" har">.701215305924416</td><td class=" har">.080305003348288</td></tr>
+<tr><th>打伊</th><td class=" har">2</td><td class=" har">.701199114322662</td><td class=" har">.087495930277949</td></tr>
+<tr><th>反共</th><td class=" har">45</td><td class=" har">.7011940089</td><td class=" har">.07000518439</td></tr>
+<tr><th>制造事端</th><td class=" har">45</td><td class=" har">.7009260984</td><td class=" har">.06532338584</td></tr>
+<tr><th>破坏活动</th><td class=" har">45</td><td class=" har">.7003090382</td><td class=" har">.06402437488</td></tr>
+<tr><th>独裁统治</th><td class=" har">42</td><td class=" har">.700285108316512</td><td class=" har">.064410530653914</td></tr>
+<tr><th>用心险恶</th><td class=" har">14</td><td class=" har">.698259945426668</td><td class=" har">.093706468143349</td></tr>
+<tr><th>祸教</th><td class=" har">4</td><td class=" har">.694940462708473</td><td class=" har">.060119500609778</td></tr>
+<tr><th>犯下</th><td class=" har">45</td><td class=" har">.6947922964</td><td class=" har">.05186565234</td></tr>
+<tr><th>事端</th><td class=" har">45</td><td class=" har">.6934304484</td><td class=" har">.06548081445</td></tr>
+<tr><th>气焰</th><td class=" har">44</td><td class=" har">.692967046390880</td><td class=" har">.062325117322280</td></tr>
+<tr><th>回击</th><td class=" har">45</td><td class=" har">.6926888309</td><td class=" har">.05208057402</td></tr>
+<tr><th>血腥</th><td class=" har">45</td><td class=" har">.6925550220</td><td class=" har">.06029155527</td></tr>
+<tr><th>暗杀</th><td class=" har">45</td><td class=" har">.6910753891</td><td class=" har">.06504646730</td></tr>
+<tr><th>分裂主义</th><td class=" har">45</td><td class=" har">.6910305913</td><td class=" har">.06958300897</td></tr>
+<tr><th>污蔑</th><td class=" har">45</td><td class=" har">.6905416436</td><td class=" har">.05978066238</td></tr>
+<tr><th>皇民</th><td class=" har">3</td><td class=" har">.690009991327922</td><td class=" har">.101164214415204</td></tr>
+<tr><th>一小撮</th><td class=" har">44</td><td class=" har">.689849751239473</td><td class=" har">.086086342445567</td></tr>
+<tr><th>政变</th><td class=" har">45</td><td class=" har">.6894281156</td><td class=" har">.06820224182</td></tr>
+<tr><th>叫嚣</th><td class=" har">43</td><td class=" har">.689347964386607</td><td class=" har">.067918594905352</td></tr>
+<tr><th>挟洋</th><td class=" har">17</td><td class=" har">.689240301356596</td><td class=" har">.104462914308347</td></tr>
+<tr><th>法西斯主义</th><td class=" har">42</td><td class=" har">.688885316962288</td><td class=" har">.064036882763960</td></tr>
+<tr><th>反华</th><td class=" har">45</td><td class=" har">.6871708358</td><td class=" har">.06826506461</td></tr>
+<tr><th>仇视</th><td class=" har">45</td><td class=" har">.6871496173</td><td class=" har">.06302804606</td></tr>
+<tr><th>野心</th><td class=" har">45</td><td class=" har">.6865036331</td><td class=" har">.06808016785</td></tr>
+<tr><th>暴行</th><td class=" har">45</td><td class=" har">.6861375907</td><td class=" har">.06539791193</td></tr>
+<tr><th>妄想</th><td class=" har">45</td><td class=" har">.6860885631</td><td class=" har">.08291393151</td></tr>
+<tr><th>卖国</th><td class=" har">43</td><td class=" har">.685159524512845</td><td class=" har">.090817883922270</td></tr>
+<tr><th>分离主义</th><td class=" har">41</td><td class=" har">.684963384779488</td><td class=" har">.057482343352789</td></tr>
+<tr><th>谬论</th><td class=" har">45</td><td class=" har">.6843969796</td><td class=" har">.06742145392</td></tr>
+<tr><th>惨无人道</th><td class=" har">44</td><td class=" har">.683737435124137</td><td class=" har">.058471100620898</td></tr>
+<tr><th>煽动</th><td class=" har">45</td><td class=" har">.6828300740</td><td class=" har">.06323798468</td></tr>
+<tr><th>侵略战争</th><td class=" har">45</td><td class=" har">.6827540933</td><td class=" har">.06396925332</td></tr>
+<tr><th>挑拨</th><td class=" har">45</td><td class=" har">.6826486776</td><td class=" har">.06013646701</td></tr>
+<tr><th>政治阴谋</th><td class=" har">25</td><td class=" har">.681946477890015</td><td class=" har">.067621455954986</td></tr>
+<tr><th>制华</th><td class=" har">8</td><td class=" har">.681892052292824</td><td class=" har">.157348862621792</td></tr>
+<tr><th>不得人心</th><td class=" har">45</td><td class=" har">.6818039251</td><td class=" har">.06475817449</td></tr>
+<tr><th>未能得逞</th><td class=" har">28</td><td class=" har">.681748828717641</td><td class=" har">.068172535889008</td></tr>
+<tr><th>背叛</th><td class=" har">45</td><td class=" har">.6816596873</td><td class=" har">.07504128480</td></tr>
+<tr><th>杀戮</th><td class=" har">45</td><td class=" har">.6813586318</td><td class=" har">.07390995222</td></tr>
+<tr><th>极端分子</th><td class=" har">44</td><td class=" har">.681182415647940</td><td class=" har">.075893113635101</td></tr>
+<tr><th>篡党夺权</th><td class=" har">20</td><td class=" har">.680925968289375</td><td class=" har">.052372261108015</td></tr>
+<tr><th>叛国</th><td class=" har">42</td><td class=" har">.680327028036118</td><td class=" har">.077204460641434</td></tr>
+<tr><th>敌视</th><td class=" har">45</td><td class=" har">.6790917929</td><td class=" har">.06639238355</td></tr>
+<tr><th>卑劣</th><td class=" har">45</td><td class=" har">.6790054222</td><td class=" har">.08601950805</td></tr>
+<tr><th>美帝国主义</th><td class=" har">36</td><td class=" har">.678912618921863</td><td class=" har">.080723453207464</td></tr>
+<tr><th>武装侵略</th><td class=" har">29</td><td class=" har">.678761886111621</td><td class=" har">.076579743428112</td></tr>
+<tr><th>变本加厉</th><td class=" har">45</td><td class=" har">.6783513818</td><td class=" har">.06938840713</td></tr>
+<tr><th>蓄谋已久</th><td class=" har">35</td><td class=" har">.678208913121905</td><td class=" har">.068423671771141</td></tr>
+<tr><th>发动战争</th><td class=" har">43</td><td class=" har">.677485188772512</td><td class=" har">.072785304014085</td></tr>
+<tr><th>法西斯</th><td class=" har">45</td><td class=" har">.6772949027</td><td class=" har">.05989772357</td></tr>
+<tr><th>丑恶嘴脸</th><td class=" har">24</td><td class=" har">.676989674568176</td><td class=" har">.075550159394113</td></tr>
+<tr><th>令人发指</th><td class=" har">45</td><td class=" har">.6767854556</td><td class=" har">.07401746089</td></tr>
+<tr><th>现政权</th><td class=" har">39</td><td class=" har">.676334741788033</td><td class=" har">.064870115208949</td></tr>
+<tr><th>军国主义</th><td class=" har">45</td><td class=" har">.6757705644</td><td class=" har">.05864615080</td></tr>
+<tr><th>反革命</th><td class=" har">45</td><td class=" har">.6757232169</td><td class=" har">.06037518622</td></tr>
+<tr><th>屠杀</th><td class=" har">45</td><td class=" har">.6750756100</td><td class=" har">.07828328049</td></tr>
+<tr><th>攘外必先安内</th><td class=" har">29</td><td class=" har">.674542762082199</td><td class=" har">.048439148884689</td></tr>
+<tr><th>帝国主义者</th><td class=" har">36</td><td class=" har">.674358478850789</td><td class=" har">.067632671809464</td></tr>
+<tr><th>极右</th><td class=" har">42</td><td class=" har">.674049774805705</td><td class=" har">.067150539223632</td></tr>
+<tr><th>种族灭绝</th><td class=" har">38</td><td class=" har">.673956370667407</td><td class=" har">.045498392673595</td></tr>
+<tr><th>敌对</th><td class=" har">45</td><td class=" har">.6734996613</td><td class=" har">.06118744691</td></tr>
+<tr><th>蹂躏</th><td class=" har">45</td><td class=" har">.6734905936</td><td class=" har">.06314139838</td></tr>
+<tr><th>统治集团</th><td class=" har">44</td><td class=" har">.672969585792585</td><td class=" har">.062820625212704</td></tr>
+<tr><th>诋毁</th><td class=" har">45</td><td class=" har">.6729668073</td><td class=" har">.06041537573</td></tr>
+<tr><th>侵略扩张</th><td class=" har">42</td><td class=" har">.672941625118256</td><td class=" har">.059715702875832</td></tr>
+<tr><th>吞并</th><td class=" har">45</td><td class=" har">.6726322327</td><td class=" har">.07960050455</td></tr>
+<tr><th>颠倒黑白</th><td class=" har">44</td><td class=" har">.672357792204077</td><td class=" har">.066510450524800</td></tr>
+<tr><th>主义者</th><td class=" har">45</td><td class=" har">.6723056464</td><td class=" har">.05775998343</td></tr>
+<tr><th>沉重打击</th><td class=" har">45</td><td class=" har">.6718013524</td><td class=" har">.05298031243</td></tr>
+<tr><th>暴政</th><td class=" har">41</td><td class=" har">.671637793866599</td><td class=" har">.063841480868829</td></tr>
+<tr><th>敌对势力</th><td class=" har">45</td><td class=" har">.6706916253</td><td class=" har">.05771377721</td></tr>
+<tr><th>挑动</th><td class=" har">45</td><td class=" har">.6704642311</td><td class=" har">.06074040354</td></tr>
+<tr><th>处心积虑</th><td class=" har">44</td><td class=" har">.670207489620556</td><td class=" har">.067060278690874</td></tr>
+<tr><th>反动集团</th><td class=" har">25</td><td class=" har">.669713461399079</td><td class=" har">.067670268474821</td></tr>
+<tr><th>滥杀无辜</th><td class=" har">33</td><td class=" har">.669681198669202</td><td class=" har">.074956080030286</td></tr>
+<tr><th>反动</th><td class=" har">45</td><td class=" har">.6694922364</td><td class=" har">.07979845559</td></tr>
+<tr><th>暴力行动</th><td class=" har">39</td><td class=" har">.669400236545465</td><td class=" har">.059573627546409</td></tr>
+<tr><th>伊阵</th><td class=" har">4</td><td class=" har">.669197186827660</td><td class=" har">.073322159904128</td></tr>
+<tr><th>鼓噪</th><td class=" har">45</td><td class=" har">.6688375049</td><td class=" har">.09060936065</td></tr>
+<tr><th>嚣张气焰</th><td class=" har">45</td><td class=" har">.6675170424</td><td class=" har">.06465112312</td></tr>
+<tr><th>滔天罪行</th><td class=" har">39</td><td class=" har">.667430390150119</td><td class=" har">.061770099330360</td></tr>
+<tr><th>伎俩</th><td class=" har">45</td><td class=" har">.6656894213</td><td class=" har">.08717879711</td></tr>
+<tr><th>一意孤行</th><td class=" har">45</td><td class=" har">.6656544144</td><td class=" har">.06670545515</td></tr>
+<tr><th>武力威胁</th><td class=" har">44</td><td class=" har">.664987978610125</td><td class=" har">.063696206984175</td></tr>
+<tr><th>别有用心</th><td class=" har">45</td><td class=" har">.6643974656</td><td class=" har">.06678700948</td></tr>
+<tr><th>复国主义</th><td class=" har">20</td><td class=" har">.663929423689842</td><td class=" har">.059489268208373</td></tr>
+<tr><th>篡夺</th><td class=" har">26</td><td class=" har">.663440032647206</td><td class=" har">.050401758023598</td></tr>
+<tr><th>暴乱</th><td class=" har">45</td><td class=" har">.6631082073</td><td class=" har">.07051574292</td></tr>
+<tr><th>反动分子</th><td class=" har">27</td><td class=" har">.663091445410693</td><td class=" har">.072272203230991</td></tr>
+<tr><th>政治势力</th><td class=" har">44</td><td class=" har">.662850507958369</td><td class=" har">.065616452861672</td></tr>
+<tr><th>官僚资本主义</th><td class=" har">45</td><td class=" har">.6626011076</td><td class=" har">.05615138787</td></tr>
+<tr><th>镇压</th><td class=" har">45</td><td class=" har">.6623373718</td><td class=" har">.10286017209</td></tr>
+<tr><th>恐怖行动</th><td class=" har">36</td><td class=" har">.662319312493006</td><td class=" har">.064080783324647</td></tr>
+<tr><th>声讨</th><td class=" har">42</td><td class=" har">.662180177512623</td><td class=" har">.071231764271477</td></tr>
+<tr><th>武装入侵</th><td class=" har">29</td><td class=" har">.662169524307909</td><td class=" har">.065873453053684</td></tr>
+<tr><th>台湾独立</th><td class=" har">43</td><td class=" har">.661374979240950</td><td class=" har">.075208575363061</td></tr>
+<tr><th>军阀</th><td class=" har">45</td><td class=" har">.6613121533</td><td class=" har">.07112869445</td></tr>
+<tr><th>非正义</th><td class=" har">39</td><td class=" har">.661063996645120</td><td class=" har">.063955832477385</td></tr>
+<tr><th>走卒</th><td class=" har">13</td><td class=" har">.660760203233132</td><td class=" har">.138934850758119</td></tr>
+<tr><th>恫吓</th><td class=" har">44</td><td class=" har">.660599257458340</td><td class=" har">.077176372604602</td></tr>
+<tr><th>莫须有</th><td class=" har">45</td><td class=" har">.6602049958</td><td class=" har">.07667064409</td></tr>
+<tr><th>妖魔化</th><td class=" har">26</td><td class=" har">.659872259084995</td><td class=" har">.066587032792100</td></tr>
+<tr><th>张国焘</th><td class=" har">43</td><td class=" har">.659322770529015</td><td class=" har">.074380122543863</td></tr>
+<tr><th>痛斥</th><td class=" har">45</td><td class=" har">.6592367113</td><td class=" har">.07992855603</td></tr>
+<tr><th>一中一台</th><td class=" har">41</td><td class=" har">.659192771446414</td><td class=" har">.065303558925095</td></tr>
+<tr><th>混淆视听</th><td class=" har">45</td><td class=" har">.6590264753</td><td class=" har">.07705807619</td></tr>
+<tr><th>怂恿</th><td class=" har">45</td><td class=" har">.6587838020</td><td class=" har">.08150308139</td></tr>
+<tr><th>背信弃义</th><td class=" har">43</td><td class=" har">.658771243206290</td><td class=" har">.066216345483367</td></tr>
+<tr><th>巴激进</th><td class=" har">11</td><td class=" har">.658724026246504</td><td class=" har">.057514165221896</td></tr>
+<tr><th>颠覆</th><td class=" har">45</td><td class=" har">.6586611136</td><td class=" har">.10884453662</td></tr>
+<tr><th>反抗</th><td class=" har">45</td><td class=" har">.6585124484</td><td class=" har">.08540962456</td></tr>
+<tr><th>肆意攻击</th><td class=" har">15</td><td class=" har">.658407566944758</td><td class=" har">.070123249312541</td></tr>
+<tr><th>无耻</th><td class=" har">43</td><td class=" har">.658361695533575</td><td class=" har">.082625101782443</td></tr>
+<tr><th>篡党</th><td class=" har">5</td><td class=" har">.658053064346314</td><td class=" har">.058159814698840</td></tr>
+<tr><th>皇国</th><td class=" har">7</td><td class=" har">.658020649637495</td><td class=" har">.090369331709915</td></tr>
+<tr><th>灭绝人性</th><td class=" har">33</td><td class=" har">.657863267443397</td><td class=" har">.066901097679629</td></tr>
+<tr><th>侵略者</th><td class=" har">45</td><td class=" har">.6572363436</td><td class=" har">.07534543839</td></tr>
+<tr><th>顽固</th><td class=" har">45</td><td class=" har">.6572279342</td><td class=" har">.06779324390</td></tr>
+<tr><th>复辟</th><td class=" har">41</td><td class=" har">.656572976490346</td><td class=" har">.076694232597483</td></tr>
+<tr><th>军国主义者</th><td class=" har">37</td><td class=" har">.656458606591096</td><td class=" har">.085565038146112</td></tr>
+<tr><th>卑鄙</th><td class=" har">43</td><td class=" har">.656191678934319</td><td class=" har">.080786167019829</td></tr>
+<tr><th>狼子野心</th><td class=" har">9</td><td class=" har">.655617939101325</td><td class=" har">.086746009732940</td></tr>
+<tr><th>新纳粹</th><td class=" har">39</td><td class=" har">.655599690400637</td><td class=" har">.061645539912475</td></tr>
+<tr><th>煽风点火</th><td class=" har">33</td><td class=" har">.655206224232009</td><td class=" har">.102744895951738</td></tr>
+<tr><th>离间</th><td class=" har">39</td><td class=" har">.655046646411602</td><td class=" har">.049723478166050</td></tr>
+<tr><th>臭名昭著</th><td class=" har">45</td><td class=" har">.6545922598</td><td class=" har">.07690015279</td></tr>
+<tr><th>揭穿</th><td class=" har">44</td><td class=" har">.654495780440894</td><td class=" har">.076032369640674</td></tr>
+<tr><th>屈服于</th><td class=" har">45</td><td class=" har">.6544871224</td><td class=" har">.06765556931</td></tr>
+<tr><th>挑衅性</th><td class=" har">42</td><td class=" har">.654051445779346</td><td class=" har">.058371071815567</td></tr>
+<tr><th>虐俘</th><td class=" har">3</td><td class=" har">.654031991958618</td><td class=" har">.136945839069093</td></tr>
+<tr><th>台独分子</th><td class=" har">15</td><td class=" har">.653650196393331</td><td class=" har">.064535972975553</td></tr>
+<tr><th>恐怖组织</th><td class=" har">44</td><td class=" har">.653478936715560</td><td class=" har">.061147197335419</td></tr>
+<tr><th>混淆是非</th><td class=" har">38</td><td class=" har">.653218785398885</td><td class=" har">.077664749703882</td></tr>
+<tr><th>纳粹主义</th><td class=" har">30</td><td class=" har">.653029400110245</td><td class=" har">.062168858602711</td></tr>
+<tr><th>两国论</th><td class=" har">17</td><td class=" har">.652839632595287</td><td class=" har">.066692596139819</td></tr>
+<tr><th>扩张主义</th><td class=" har">29</td><td class=" har">.652829723111514</td><td class=" har">.069921138739134</td></tr>
+<tr><th>圣战</th><td class=" har">43</td><td class=" har">.652745041043259</td><td class=" har">.066207131412162</td></tr>
+<tr><th>军事政变</th><td class=" har">44</td><td class=" har">.651230110363527</td><td class=" har">.057208779109845</td></tr>
+<tr><th>唆使</th><td class=" har">45</td><td class=" har">.6510932978</td><td class=" har">.06937395629</td></tr>
+<tr><th>专制</th><td class=" har">45</td><td class=" har">.6509874324</td><td class=" har">.08364098127</td></tr>
+<tr><th>猖狂进攻</th><td class=" har">18</td><td class=" har">.650386896398332</td><td class=" har">.058676711306624</td></tr>
+<tr><th>反苏</th><td class=" har">21</td><td class=" har">.650016275190172</td><td class=" har">.062964554599772</td></tr>
+<tr><th>走狗</th><td class=" har">34</td><td class=" har">.649727056131644</td><td class=" har">.086933299955574</td></tr>
+<tr><th>犹太复国</th><td class=" har">14</td><td class=" har">.649462069783892</td><td class=" har">.057530803817294</td></tr>
+<tr><th>军事挑衅</th><td class=" har">29</td><td class=" har">.649366689139399</td><td class=" har">.061487776684804</td></tr>
+<tr><th>殖民主义</th><td class=" har">45</td><td class=" har">.6490296182</td><td class=" har">.07489464685</td></tr>
+<tr><th>预谋</th><td class=" har">43</td><td class=" har">.648983243592950</td><td class=" har">.064631720506880</td></tr>
+<tr><th>戳穿</th><td class=" har">45</td><td class=" har">.6484105893</td><td class=" har">.10210824864</td></tr>
+<tr><th>傀儡政权</th><td class=" har">30</td><td class=" har">.648230620225271</td><td class=" har">.064464557953288</td></tr>
+<tr><th>相勾结</th><td class=" har">41</td><td class=" har">.648120890303356</td><td class=" har">.075485977860816</td></tr>
+<tr><th>凶残</th><td class=" har">44</td><td class=" har">.648099693385037</td><td class=" har">.064813902348407</td></tr>
+<tr><th>迫害</th><td class=" har">45</td><td class=" har">.6479803244</td><td class=" har">.08752608756</td></tr>
+<tr><th>毫无根据</th><td class=" har">45</td><td class=" har">.6478276840</td><td class=" har">.07898149343</td></tr>
+<tr><th>恐怖活动</th><td class=" har">45</td><td class=" har">.6477652369</td><td class=" har">.07200221288</td></tr>
+<tr><th>激进分子</th><td class=" har">39</td><td class=" har">.647542832753597</td><td class=" har">.075786223139968</td></tr>
+<tr><th>篡权</th><td class=" har">15</td><td class=" har">.647539043426514</td><td class=" har">.073270174118866</td></tr>
+<tr><th>恶毒</th><td class=" har">41</td><td class=" har">.647388251816354</td><td class=" har">.078211770794200</td></tr>
+<tr><th>反党</th><td class=" har">39</td><td class=" har">.647341619699429</td><td class=" har">.067584726192590</td></tr>
+<tr><th>暴力行为</th><td class=" har">44</td><td class=" har">.647334579717029</td><td class=" har">.080338809836148</td></tr>
+<tr><th>阴谋诡计</th><td class=" har">30</td><td class=" har">.647319209575653</td><td class=" har">.073277597827221</td></tr>
+<tr><th>美帝</th><td class=" har">18</td><td class=" har">.647288564178679</td><td class=" har">.055452102104449</td></tr>
+<tr><th>亲日派</th><td class=" har">25</td><td class=" har">.647240561246872</td><td class=" har">.070523471629060</td></tr>
+<tr><th>昭然若揭</th><td class=" har">38</td><td class=" har">.646996225181379</td><td class=" har">.102138026337761</td></tr>
+<tr><th>猖狂</th><td class=" har">43</td><td class=" har">.646557563959166</td><td class=" har">.056114096640451</td></tr>
+<tr><th>流血事件</th><td class=" har">42</td><td class=" har">.646426353426207</td><td class=" har">.066587925961353</td></tr>
+<tr><th>疆独</th><td class=" har">3</td><td class=" har">.646351059277852</td><td class=" har">.074499286306285</td></tr>
+<tr><th>民族败类</th><td class=" har">23</td><td class=" har">.646085487759632</td><td class=" har">.088064943121611</td></tr>
+<tr><th>玩弄</th><td class=" har">45</td><td class=" har">.6454445656</td><td class=" har">.06859395862</td></tr>
+<tr><th>四一二</th><td class=" har">34</td><td class=" har">.645193596096600</td><td class=" har">.083310425340134</td></tr>
+<tr><th>机会主义</th><td class=" har">43</td><td class=" har">.644993184610855</td><td class=" har">.068807942001118</td></tr>
+<tr><th>极端主义</th><td class=" har">42</td><td class=" har">.644563831034161</td><td class=" har">.078019361179518</td></tr>
+<tr><th>徒劳</th><td class=" har">45</td><td class=" har">.6443743593</td><td class=" har">.08818720578</td></tr>
+<tr><th>罪责</th><td class=" har">44</td><td class=" har">.644349205900322</td><td class=" har">.070634536515517</td></tr>
+<tr><th>无端指责</th><td class=" har">37</td><td class=" har">.644071171412597</td><td class=" har">.083941449589388</td></tr>
+<tr><th>冒天下之大不韪</th><td class=" har">40</td><td class=" har">.644037768244744</td><td class=" har">.082172667785535</td></tr>
+<tr><th>宣传煽动</th><td class=" har">14</td><td class=" har">.644025764295033</td><td class=" har">.060277333997093</td></tr>
+<tr><th>独裁政权</th><td class=" har">32</td><td class=" har">.643817116506398</td><td class=" har">.064560561694771</td></tr>
+<tr><th>口实</th><td class=" har">39</td><td class=" har">.643489677172441</td><td class=" har">.068217873337626</td></tr>
+<tr><th>翻案</th><td class=" har">40</td><td class=" har">.643446256220341</td><td class=" har">.087573704152512</td></tr>
+<tr><th>奴役</th><td class=" har">45</td><td class=" har">.6433219551</td><td class=" har">.06408508754</td></tr>
+<tr><th>灭绝种族</th><td class=" har">24</td><td class=" har">.642981455971797</td><td class=" har">.057866935471490</td></tr>
+<tr><th>谋杀</th><td class=" har">45</td><td class=" har">.6428600373</td><td class=" har">.07850731463</td></tr>
+<tr><th>矛头</th><td class=" har">45</td><td class=" har">.6427634111</td><td class=" har">.06454024968</td></tr>
+<tr><th>恐怖事件</th><td class=" har">41</td><td class=" har">.641960457330797</td><td class=" har">.064219168080885</td></tr>
+<tr><th>制造舆论</th><td class=" har">38</td><td class=" har">.641493269487431</td><td class=" har">.078564435888004</td></tr>
+<tr><th>穷兵黩武</th><td class=" har">34</td><td class=" har">.641450428787400</td><td class=" har">.096008856365732</td></tr>
+<tr><th>轴心国</th><td class=" har">11</td><td class=" har">.641002476215363</td><td class=" har">.069237164091821</td></tr>
+<tr><th>正义斗争</th><td class=" har">44</td><td class=" har">.640938252887943</td><td class=" har">.068149802315839</td></tr>
+<tr><th>右倾</th><td class=" har">44</td><td class=" har">.640654704787515</td><td class=" har">.080460519873133</td></tr>
+<tr><th>转移视线</th><td class=" har">28</td><td class=" har">.640624257070677</td><td class=" har">.071517023666612</td></tr>
+<tr><th>野蛮暴行</th><td class=" har">18</td><td class=" har">.640604767534468</td><td class=" har">.068635175056455</td></tr>
+<tr><th>种族主义</th><td class=" har">45</td><td class=" har">.6404530529</td><td class=" har">.09074765952</td></tr>
+<tr><th>占领者</th><td class=" har">35</td><td class=" har">.640269878080913</td><td class=" har">.074503917003370</td></tr>
+<tr><th>挑唆</th><td class=" har">35</td><td class=" har">.639839012282235</td><td class=" har">.082047158811023</td></tr>
+<tr><th>宪改</th><td class=" har">7</td><td class=" har">.639798164367676</td><td class=" har">.049844333111103</td></tr>
+<tr><th>诱降</th><td class=" har">27</td><td class=" har">.639315104043042</td><td class=" har">.066587802383412</td></tr>
+<tr><th>恶劣行径</th><td class=" har">41</td><td class=" har">.639287817042048</td><td class=" har">.094623064534600</td></tr>
+<tr><th>罄竹难书</th><td class=" har">28</td><td class=" har">.639226472803525</td><td class=" har">.095586390866196</td></tr>
+<tr><th>称霸世界</th><td class=" har">31</td><td class=" har">.639188331942404</td><td class=" har">.066088312441931</td></tr>
+<tr><th>叛变</th><td class=" har">43</td><td class=" har">.638957798480988</td><td class=" har">.077837684921163</td></tr>
+<tr><th>陷害</th><td class=" har">44</td><td class=" har">.638911623169076</td><td class=" har">.081032576892208</td></tr>
+<tr><th>卖国贼</th><td class=" har">36</td><td class=" har">.638908321658770</td><td class=" har">.078569019699658</td></tr>
+<tr><th>拉拢</th><td class=" har">45</td><td class=" har">.6388721878</td><td class=" har">.06435532222</td></tr>
+<tr><th>真面目</th><td class=" har">45</td><td class=" har">.6388282822</td><td class=" har">.09198056409</td></tr>
+<tr><th>颠倒是非</th><td class=" har">38</td><td class=" har">.638442637889009</td><td class=" har">.085153301191249</td></tr>
+<tr><th>残杀</th><td class=" har">39</td><td class=" har">.638155396168049</td><td class=" har">.077182761505629</td></tr>
+<tr><th>彻头彻尾</th><td class=" har">42</td><td class=" har">.637741998547600</td><td class=" har">.086435940197465</td></tr>
+<tr><th>卵翼</th><td class=" har">9</td><td class=" har">.637722134590149</td><td class=" har">.064043390841091</td></tr>
+<tr><th>牺牲品</th><td class=" har">44</td><td class=" har">.637570479376750</td><td class=" har">.061826250033066</td></tr>
+<tr><th>使用暴力</th><td class=" har">44</td><td class=" har">.637508757412433</td><td class=" har">.067141881352325</td></tr>
+<tr><th>暴力手段</th><td class=" har">43</td><td class=" har">.637410139621690</td><td class=" har">.080448289088358</td></tr>
+<tr><th>打垮</th><td class=" har">45</td><td class=" har">.6373358316</td><td class=" har">.05799913034</td></tr>
+<tr><th>张目</th><td class=" har">39</td><td class=" har">.637076717156630</td><td class=" har">.117910912910516</td></tr>
+<tr><th>狂妄</th><td class=" har">44</td><td class=" har">.636978383768689</td><td class=" har">.082819448215382</td></tr>
+<tr><th>密谋</th><td class=" har">43</td><td class=" har">.636977536040683</td><td class=" har">.074441493491862</td></tr>
+<tr><th>叛徒</th><td class=" har">45</td><td class=" har">.6369208064</td><td class=" har">.06857355356</td></tr>
+<tr><th>汉奸</th><td class=" har">42</td><td class=" har">.636808602582841</td><td class=" har">.080350540305160</td></tr>
+<tr><th>帝国主义</th><td class=" har">45</td><td class=" har">.6367597904</td><td class=" har">.06409834704</td></tr>
+<tr><th>内乱</th><td class=" har">45</td><td class=" har">.6359649842</td><td class=" har">.06972620172</td></tr>
+<tr><th>北洋军阀</th><td class=" har">42</td><td class=" har">.635884157248906</td><td class=" har">.096511723644250</td></tr>
+<tr><th>追随者</th><td class=" har">45</td><td class=" har">.6358683891</td><td class=" har">.07716281953</td></tr>
+<tr><th>出兵</th><td class=" har">45</td><td class=" har">.6357501547</td><td class=" har">.08093255919</td></tr>
+<tr><th>反叛</th><td class=" har">42</td><td class=" har">.635674040941965</td><td class=" har">.066486487176148</td></tr>
+<tr><th>瓦解</th><td class=" har">45</td><td class=" har">.6354410378</td><td class=" har">.06587599965</td></tr>
+<tr><th>反攻大陆</th><td class=" har">11</td><td class=" har">.635392384095626</td><td class=" har">.076026849938220</td></tr>
+<tr><th>高压政策</th><td class=" har">31</td><td class=" har">.634894553692110</td><td class=" har">.056687922887223</td></tr>
+<tr><th>捣乱</th><td class=" har">45</td><td class=" har">.6346963218</td><td class=" har">.10262242671</td></tr>
+<tr><th>批驳</th><td class=" har">45</td><td class=" har">.6344340000</td><td class=" har">.06350558619</td></tr>
+<tr><th>帮凶</th><td class=" har">44</td><td class=" har">.634099685332992</td><td class=" har">.083669624548473</td></tr>
+<tr><th>和平演变</th><td class=" har">31</td><td class=" har">.633937710715879</td><td class=" har">.077997002459469</td></tr>
+<tr><th>突然袭击</th><td class=" har">44</td><td class=" har">.633630605583841</td><td class=" har">.059941437362213</td></tr>
+<tr><th>以战养战</th><td class=" har">9</td><td class=" har">.633405559592777</td><td class=" har">.077582226390799</td></tr>
+<tr><th>反侵略</th><td class=" har">44</td><td class=" har">.633306054906412</td><td class=" har">.074147981473911</td></tr>
+<tr><th>殖民主义者</th><td class=" har">42</td><td class=" har">.632765422974314</td><td class=" har">.071469406523589</td></tr>
+<tr><th>罪行</th><td class=" har">45</td><td class=" har">.6325494136</td><td class=" har">.07184444152</td></tr>
+<tr><th>蓄谋</th><td class=" har">21</td><td class=" har">.632326780330567</td><td class=" har">.067725166955899</td></tr>
+<tr><th>索摩查</th><td class=" har">14</td><td class=" har">.631876264299665</td><td class=" har">.079790926507930</td></tr>
+<tr><th>入侵者</th><td class=" har">42</td><td class=" har">.631859414634251</td><td class=" har">.067423876283415</td></tr>
+<tr><th>大屠杀</th><td class=" har">45</td><td class=" har">.6310794776</td><td class=" har">.07773066128</td></tr>
+<tr><th>永久化</th><td class=" har">31</td><td class=" har">.630932742549527</td><td class=" har">.084498901525801</td></tr>
+<tr><th>胆敢</th><td class=" har">43</td><td class=" har">.630823397359183</td><td class=" har">.087030879367612</td></tr>
+<tr><th>异己</th><td class=" har">43</td><td class=" har">.630664498306984</td><td class=" har">.070201329540305</td></tr>
+<tr><th>分化瓦解</th><td class=" har">32</td><td class=" har">.629390938207507</td><td class=" har">.061096625487791</td></tr>
+<tr><th>苏修</th><td class=" har">3</td><td class=" har">.628885885079702</td><td class=" har">.071018932241237</td></tr>
+<tr><th>强硬派</th><td class=" har">40</td><td class=" har">.628786116838455</td><td class=" har">.062966981427737</td></tr>
+<tr><th>自取其辱</th><td class=" har">17</td><td class=" har">.628620452740613</td><td class=" har">.105264442623040</td></tr>
+<tr><th>铁蹄</th><td class=" har">45</td><td class=" har">.6284229360</td><td class=" har">.05495042296</td></tr>
+<tr><th>反古</th><td class=" har">15</td><td class=" har">.628356484572093</td><td class=" har">.088508557916140</td></tr>
+<tr><th>反党集团</th><td class=" har">26</td><td class=" har">.628040691980949</td><td class=" har">.055025320292688</td></tr>
+<tr><th>策划者</th><td class=" har">45</td><td class=" har">.6278751071</td><td class=" har">.07124393171</td></tr>
+<tr><th>侵略军</th><td class=" har">43</td><td class=" har">.627661300953044</td><td class=" har">.084427424536510</td></tr>
+<tr><th>兴风作浪</th><td class=" har">45</td><td class=" har">.6272714713</td><td class=" har">.08913511467</td></tr>
+<tr><th>非暴力</th><td class=" har">42</td><td class=" har">.627257712540173</td><td class=" har">.074639229868721</td></tr>
+<tr><th>夺权</th><td class=" har">42</td><td class=" har">.626943841576576</td><td class=" har">.084663284462268</td></tr>
+<tr><th>伪善</th><td class=" har">41</td><td class=" har">.626890426001898</td><td class=" har">.082467717649288</td></tr>
+<tr><th>侵华</th><td class=" har">45</td><td class=" har">.6264654751</td><td class=" har">.06356570519</td></tr>
+<tr><th>以一国</th><td class=" har">5</td><td class=" har">.626215696334839</td><td class=" har">.110178231232031</td></tr>
+<tr><th>邪恶势力</th><td class=" har">36</td><td class=" har">.626149758696556</td><td class=" har">.063695763719470</td></tr>
+<tr><th>真主党</th><td class=" har">35</td><td class=" har">.625958471638816</td><td class=" har">.068732325076612</td></tr>
+<tr><th>激进主义</th><td class=" har">21</td><td class=" har">.625597264085497</td><td class=" har">.079580920073946</td></tr>
+<tr><th>腐败无能</th><td class=" har">34</td><td class=" har">.625579868169392</td><td class=" har">.074013965034096</td></tr>
+<tr><th>欺压</th><td class=" har">45</td><td class=" har">.6254533593</td><td class=" har">.07744484169</td></tr>
+<tr><th>美蒋</th><td class=" har">17</td><td class=" har">.625093074405895</td><td class=" har">.064278842501218</td></tr>
+<tr><th>现政府</th><td class=" har">44</td><td class=" har">.624783706935969</td><td class=" har">.063379033525253</td></tr>
+<tr><th>全面战争</th><td class=" har">31</td><td class=" har">.624696432582794</td><td class=" har">.071058474140887</td></tr>
+<tr><th>造谣</th><td class=" har">45</td><td class=" har">.6246952936</td><td class=" har">.08925015732</td></tr>
+<tr><th>坐视</th><td class=" har">45</td><td class=" har">.6243981002</td><td class=" har">.09420597599</td></tr>
+<tr><th>雇佣军</th><td class=" har">37</td><td class=" har">.624346291696703</td><td class=" har">.073770993164018</td></tr>
+<tr><th>反扑</th><td class=" har">44</td><td class=" har">.624050441113385</td><td class=" har">.059693764892783</td></tr>
+<tr><th>马前卒</th><td class=" har">31</td><td class=" har">.623826432612635</td><td class=" har">.119618049475407</td></tr>
+<tr><th>酷刑</th><td class=" har">45</td><td class=" har">.6237860816</td><td class=" har">.06916987517</td></tr>
+<tr><th>汪精卫</th><td class=" har">40</td><td class=" har">.623639500141144</td><td class=" har">.073511571472981</td></tr>
+<tr><th>极端派</th><td class=" har">15</td><td class=" har">.623559017976125</td><td class=" har">.062088709079866</td></tr>
+<tr><th>异教徒</th><td class=" har">23</td><td class=" har">.623547503481741</td><td class=" har">.090561966302989</td></tr>
+<tr><th>占领军</th><td class=" har">38</td><td class=" har">.623419957725625</td><td class=" har">.081754238060690</td></tr>
+<tr><th>野心家</th><td class=" har">32</td><td class=" har">.623219239525497</td><td class=" har">.069567282055535</td></tr>
+<tr><th>狼狈为奸</th><td class=" har">31</td><td class=" har">.623107493885102</td><td class=" har">.094761749254767</td></tr>
+<tr><th>阴险</th><td class=" har">41</td><td class=" har">.622821387721271</td><td class=" har">.105246397320336</td></tr>
+<tr><th>祸国殃民</th><td class=" har">38</td><td class=" har">.622805243259982</td><td class=" har">.067143818334521</td></tr>
+<tr><th>日寇</th><td class=" har">45</td><td class=" har">.6227311760</td><td class=" har">.06363583353</td></tr>
+<tr><th>右派</th><td class=" har">43</td><td class=" har">.622703017190445</td><td class=" har">.078769593432010</td></tr>
+<tr><th>炸机</th><td class=" har">13</td><td class=" har">.622251244691702</td><td class=" har">.094668144781678</td></tr>
+<tr><th>动武</th><td class=" har">44</td><td class=" har">.622234068133614</td><td class=" har">.083102815977714</td></tr>
+<tr><th>冒险主义</th><td class=" har">36</td><td class=" har">.622048866417673</td><td class=" har">.060633616420408</td></tr>
+<tr><th>既成事实</th><td class=" har">43</td><td class=" har">.621919695721116</td><td class=" har">.072511880822173</td></tr>
+<tr><th>赶下台</th><td class=" har">31</td><td class=" har">.621815747791721</td><td class=" har">.070224082288059</td></tr>
+<tr><th>袁世凯</th><td class=" har">42</td><td class=" har">.621772989630699</td><td class=" har">.078337325692073</td></tr>
+<tr><th>铁的事实</th><td class=" har">41</td><td class=" har">.621239893320130</td><td class=" har">.083099409427912</td></tr>
+<tr><th>日右翼</th><td class=" har">11</td><td class=" har">.620663967999545</td><td class=" har">.115811948270903</td></tr>
+<tr><th>诬称</th><td class=" har">21</td><td class=" har">.620357980330785</td><td class=" har">.086449739097373</td></tr>
+<tr><th>歪理邪说</th><td class=" har">20</td><td class=" har">.620257481932640</td><td class=" har">.080333849571518</td></tr>
+<tr><th>清王朝</th><td class=" har">44</td><td class=" har">.620112857358022</td><td class=" har">.063349278266501</td></tr>
+<tr><th>死硬</th><td class=" har">18</td><td class=" har">.619824618101120</td><td class=" har">.091501945781634</td></tr>
+<tr><th>恶行</th><td class=" har">42</td><td class=" har">.619604603165672</td><td class=" har">.092852567226636</td></tr>
+<tr><th>派兵</th><td class=" har">43</td><td class=" har">.619461898886880</td><td class=" har">.055716122270262</td></tr>
+<tr><th>倒打一耙</th><td class=" har">34</td><td class=" har">.619390499942443</td><td class=" har">.096579657244732</td></tr>
+<tr><th>先发制人</th><td class=" har">44</td><td class=" har">.618649512529373</td><td class=" har">.074106277074428</td></tr>
+<tr><th>黎巴嫩真主党</th><td class=" har">33</td><td class=" har">.618476027792150</td><td class=" har">.066910783089563</td></tr>
+<tr><th>染指</th><td class=" har">43</td><td class=" har">.618259947660357</td><td class=" har">.086911930182083</td></tr>
+<tr><th>之流</th><td class=" har">44</td><td class=" har">.618097776716406</td><td class=" har">.083937336345627</td></tr>
+<tr><th>不能允许</th><td class=" har">45</td><td class=" har">.6180433591</td><td class=" har">.07831372369</td></tr>
+<tr><th>头子</th><td class=" har">39</td><td class=" har">.617779270960734</td><td class=" har">.093822728420433</td></tr>
+<tr><th>傀儡</th><td class=" har">39</td><td class=" har">.617495552087442</td><td class=" har">.092184040620557</td></tr>
+<tr><th>纳粹</th><td class=" har">43</td><td class=" har">.617279270360636</td><td class=" har">.079012169770913</td></tr>
+<tr><th>挑事</th><td class=" har">13</td><td class=" har">.617148243463956</td><td class=" har">.097178814333198</td></tr>
+<tr><th>恶法</th><td class=" har">14</td><td class=" har">.616243873323713</td><td class=" har">.133216228553917</td></tr>
+<tr><th>自杀性</th><td class=" har">27</td><td class=" har">.616169823540582</td><td class=" har">.060752634582045</td></tr>
+<tr><th>仇杀</th><td class=" har">31</td><td class=" har">.616158687299298</td><td class=" har">.081365769355704</td></tr>
+<tr><th>嘴脸</th><td class=" har">42</td><td class=" har">.616076067799613</td><td class=" har">.104987763582887</td></tr>
+<tr><th>发动者</th><td class=" har">31</td><td class=" har">.615976023097192</td><td class=" har">.082668303624939</td></tr>
+<tr><th>沆瀣一气</th><td class=" har">44</td><td class=" har">.615693543444980</td><td class=" har">.092461610531240</td></tr>
+<tr><th>同谋者</th><td class=" har">11</td><td class=" har">.615519794550809</td><td class=" har">.070830959489020</td></tr>
+<tr><th>恐怖分子</th><td class=" har">45</td><td class=" har">.6154915758</td><td class=" har">.06928029061</td></tr>
+<tr><th>幕后策划</th><td class=" har">31</td><td class=" har">.615095284677321</td><td class=" har">.069415066457219</td></tr>
+<tr><th>无所不用其极</th><td class=" har">36</td><td class=" har">.614993679026762</td><td class=" har">.089201108721587</td></tr>
+<tr><th>手无寸铁</th><td class=" har">43</td><td class=" har">.614618041487627</td><td class=" har">.070221023272507</td></tr>
+<tr><th>报复性</th><td class=" har">43</td><td class=" har">.614586127358814</td><td class=" har">.072654791340694</td></tr>
+<tr><th>保守派</th><td class=" har">45</td><td class=" har">.6140063282</td><td class=" har">.07811100958</td></tr>
+<tr><th>自卫战争</th><td class=" har">20</td><td class=" har">.613834589719772</td><td class=" har">.067831705281857</td></tr>
+<tr><th>仆从</th><td class=" har">14</td><td class=" har">.613025371517454</td><td class=" har">.082893270603223</td></tr>
+<tr><th>玩火自焚</th><td class=" har">12</td><td class=" har">.612859802941481</td><td class=" har">.102855811699604</td></tr>
+<tr><th>祸心</th><td class=" har">17</td><td class=" har">.612802682554021</td><td class=" har">.106507126477315</td></tr>
+<tr><th>悬崖勒马</th><td class=" har">44</td><td class=" har">.612639902667566</td><td class=" har">.101333863669604</td></tr>
+<tr><th>罪行累累</th><td class=" har">14</td><td class=" har">.611437297293118</td><td class=" har">.082377769757267</td></tr>
+<tr><th>牵制</th><td class=" har">45</td><td class=" har">.6111350818</td><td class=" har">.06289222067</td></tr>
+<tr><th>封建主义</th><td class=" har">45</td><td class=" har">.6109513887</td><td class=" har">.08821312033</td></tr>
+<tr><th>核讹诈</th><td class=" har">24</td><td class=" har">.610365197062492</td><td class=" har">.061049720839340</td></tr>
+<tr><th>政治野心</th><td class=" har">19</td><td class=" har">.610171790185727</td><td class=" har">.097237833745760</td></tr>
+<tr><th>报复</th><td class=" har">45</td><td class=" har">.6101346698</td><td class=" har">.06873511945</td></tr>
+<tr><th>合法化</th><td class=" har">45</td><td class=" har">.6100949529</td><td class=" har">.09066234881</td></tr>
+<tr><th>伺机</th><td class=" har">45</td><td class=" har">.6100293629</td><td class=" har">.07027454126</td></tr>
+<tr><th>勾结</th><td class=" har">45</td><td class=" har">.6096133813</td><td class=" har">.07460600651</td></tr>
+<tr><th>台独</th><td class=" har">42</td><td class=" har">.609510383435658</td><td class=" har">.077252405464291</td></tr>
+<tr><th>剿共</th><td class=" har">29</td><td class=" har">.609433637610797</td><td class=" har">.080803618503682</td></tr>
+<tr><th>无端</th><td class=" har">45</td><td class=" har">.6093680753</td><td class=" har">.07499904075</td></tr>
+<tr><th>抵抗运动</th><td class=" har">44</td><td class=" har">.609284608201547</td><td class=" har">.068605415946864</td></tr>
+<tr><th>穷凶极恶</th><td class=" har">44</td><td class=" har">.609250399199399</td><td class=" har">.074436601085924</td></tr>
+<tr><th>内讧</th><td class=" har">39</td><td class=" har">.609214859895217</td><td class=" har">.072582586616646</td></tr>
+<tr><th>诡计</th><td class=" har">32</td><td class=" har">.609172243624926</td><td class=" har">.089727664863842</td></tr>
+<tr><th>托派</th><td class=" har">18</td><td class=" har">.608874822656314</td><td class=" har">.089365564506171</td></tr>
+<tr><th>搞乱</th><td class=" har">44</td><td class=" har">.608867915516550</td><td class=" har">.099162742277712</td></tr>
+<tr><th>严刑拷打</th><td class=" har">39</td><td class=" har">.608426236189329</td><td class=" har">.074283746115162</td></tr>
+<tr><th>丧心病狂</th><td class=" har">40</td><td class=" har">.608342263102532</td><td class=" har">.080678091873951</td></tr>
+<tr><th>反智</th><td class=" har">8</td><td class=" har">.607569657266140</td><td class=" har">.119988127790312</td></tr>
+<tr><th>对黎笋</th><td class=" har">4</td><td class=" har">.607485324144363</td><td class=" har">.069253731484395</td></tr>
+<tr><th>花招</th><td class=" har">43</td><td class=" har">.607333928346634</td><td class=" har">.099356397570919</td></tr>
+<tr><th>主谋</th><td class=" har">37</td><td class=" har">.606784762562932</td><td class=" har">.066508594913831</td></tr>
+<tr><th>大肆宣扬</th><td class=" har">35</td><td class=" har">.606754225492478</td><td class=" har">.081218831582406</td></tr>
+<tr><th>巴萨耶夫</th><td class=" har">9</td><td class=" har">.606298194991218</td><td class=" har">.069105474817661</td></tr>
+<tr><th>诱压</th><td class=" har">6</td><td class=" har">.605423818031947</td><td class=" har">.086040933293474</td></tr>
+<tr><th>恐怖主义</th><td class=" har">45</td><td class=" har">.6053863807</td><td class=" har">.08520321049</td></tr>
+<tr><th>唱衰</th><td class=" har">19</td><td class=" har">.605160982985246</td><td class=" har">.095042301296701</td></tr>
+<tr><th>不实之词</th><td class=" har">41</td><td class=" har">.605059251552675</td><td class=" har">.085656344187433</td></tr>
+<tr><th>愚弄</th><td class=" har">42</td><td class=" har">.604859928290049</td><td class=" har">.087731771948968</td></tr>
+<tr><th>扩张政策</th><td class=" har">32</td><td class=" har">.604474810883403</td><td class=" har">.100023895595208</td></tr>
+<tr><th>加害</th><td class=" har">35</td><td class=" har">.603974860906601</td><td class=" har">.086350236781478</td></tr>
+<tr><th>两府</th><td class=" har">13</td><td class=" har">.603142464390168</td><td class=" har">.149576509941710</td></tr>
+<tr><th>匪徒</th><td class=" har">41</td><td class=" har">.603128306022505</td><td class=" har">.065745809701052</td></tr>
+<tr><th>刺杀</th><td class=" har">45</td><td class=" har">.6024709149</td><td class=" har">.09452306352</td></tr>
+<tr><th>痴心妄想</th><td class=" har">32</td><td class=" har">.602187601849437</td><td class=" har">.108466705475523</td></tr>
+<tr><th>野蛮</th><td class=" har">45</td><td class=" har">.6020700569</td><td class=" har">.08572865750</td></tr>
+<tr><th>抵赖</th><td class=" har">38</td><td class=" har">.602066058861582</td><td class=" har">.083126664122039</td></tr>
+<tr><th>深表遗憾</th><td class=" har">42</td><td class=" har">.601779164302917</td><td class=" har">.061764903125450</td></tr>
+<tr><th>谋害</th><td class=" har">30</td><td class=" har">.601729104916255</td><td class=" har">.063970889724601</td></tr>
+<tr><th>进步力量</th><td class=" har">43</td><td class=" har">.601249922846639</td><td class=" har">.064391606387174</td></tr>
+<tr><th>惨酷</th><td class=" har">2</td><td class=" har">.600990653038025</td><td class=" har">.214369408238535</td></tr>
+<tr><th>抵抗力量</th><td class=" har">31</td><td class=" har">.600825922143075</td><td class=" har">.079853181974242</td></tr>
+<tr><th>数典忘祖</th><td class=" har">34</td><td class=" har">.600337478167870</td><td class=" har">.100724885446068</td></tr>
+<tr><th>罪大恶极</th><td class=" har">35</td><td class=" har">.600294932297298</td><td class=" har">.062440648641319</td></tr>
+<tr><th>揭批</th><td class=" har">38</td><td class=" har">.599696071524369</td><td class=" har">.096472569331083</td></tr>
+<tr><th>居心叵测</th><td class=" har">38</td><td class=" har">.599647712550665</td><td class=" har">.084989206009077</td></tr>
+<tr><th>民族主义者</th><td class=" har">34</td><td class=" har">.599533969865126</td><td class=" har">.080536344506801</td></tr>
+<tr><th>逆流</th><td class=" har">45</td><td class=" har">.5990592998</td><td class=" har">.09191350359</td></tr>
+<tr><th>居心</th><td class=" har">35</td><td class=" har">.598835484470640</td><td class=" har">.079475806387359</td></tr>
+<tr><th>杀害</th><td class=" har">45</td><td class=" har">.5986789847</td><td class=" har">.07334178447</td></tr>
+<tr><th>要犯</th><td class=" har">44</td><td class=" har">.598224309357730</td><td class=" har">.088589807637806</td></tr>
+<tr><th>哥伦比亚革命武装力量</th><td class=" har">18</td><td class=" har">.598056765066253</td><td class=" har">.075107556963594</td></tr>
+<tr><th>极少数人</th><td class=" har">43</td><td class=" har">.597855644863705</td><td class=" har">.080872282805415</td></tr>
+<tr><th>必遭</th><td class=" har">31</td><td class=" har">.597767861620073</td><td class=" har">.119756211908056</td></tr>
+<tr><th>作乱</th><td class=" har">34</td><td class=" har">.597706963034237</td><td class=" har">.104610335215186</td></tr>
+<tr><th>叫嚷</th><td class=" har">42</td><td class=" har">.597491272858211</td><td class=" har">.092413033816051</td></tr>
+<tr><th>密谋策划</th><td class=" har">22</td><td class=" har">.597327902913094</td><td class=" har">.089649278036605</td></tr>
+<tr><th>软硬兼施</th><td class=" har">43</td><td class=" har">.597288072109222</td><td class=" har">.091890510846792</td></tr>
+<tr><th>投敌</th><td class=" har">26</td><td class=" har">.597261474682735</td><td class=" har">.085402360195388</td></tr>
+<tr><th>倒戈</th><td class=" har">36</td><td class=" har">.597225460741255</td><td class=" har">.063100291999417</td></tr>
+<tr><th>德意</th><td class=" har">25</td><td class=" har">.596756402254105</td><td class=" har">.086981381092051</td></tr>
+<tr><th>萨达姆</th><td class=" har">43</td><td class=" har">.596586802671122</td><td class=" har">.112763707306166</td></tr>
+<tr><th>罪名</th><td class=" har">45</td><td class=" har">.5961401831</td><td class=" har">.08834831334</td></tr>
+<tr><th>游行示威</th><td class=" har">45</td><td class=" har">.5957944078</td><td class=" har">.08036648969</td></tr>
+<tr><th>劫狱</th><td class=" har">16</td><td class=" har">.595584131777287</td><td class=" har">.068127784804684</td></tr>
+<tr><th>逃亡</th><td class=" har">43</td><td class=" har">.594765452451484</td><td class=" har">.082409933290107</td></tr>
+<tr><th>无政府主义</th><td class=" har">43</td><td class=" har">.594554478345916</td><td class=" har">.084767736828557</td></tr>
+<tr><th>核战争</th><td class=" har">45</td><td class=" har">.5942163702</td><td class=" har">.07832283692</td></tr>
+<tr><th>劝降</th><td class=" har">34</td><td class=" har">.594076294232817</td><td class=" har">.069268296868651</td></tr>
+<tr><th>称霸全球</th><td class=" har">13</td><td class=" har">.593870300513048</td><td class=" har">.072190298340325</td></tr>
+<tr><th>爱尔兰共和军</th><td class=" har">28</td><td class=" har">.593646108039788</td><td class=" har">.064347628422450</td></tr>
+<tr><th>俘虏</th><td class=" har">45</td><td class=" har">.5932288158</td><td class=" har">.08946876151</td></tr>
+<tr><th>犯有</th><td class=" har">45</td><td class=" har">.5929141998</td><td class=" har">.09309653190</td></tr>
+<tr><th>不思悔改</th><td class=" har">29</td><td class=" har">.592629030860704</td><td class=" har">.101512367344095</td></tr>
+<tr><th>造谣惑众</th><td class=" har">30</td><td class=" har">.592270690202713</td><td class=" har">.096608868552181</td></tr>
+<tr><th>罪魁祸首</th><td class=" har">45</td><td class=" har">.5914214011</td><td class=" har">.08676997499</td></tr>
+<tr><th>肢解</th><td class=" har">41</td><td class=" har">.590768511702375</td><td class=" har">.085964613397659</td></tr>
+<tr><th>劫掠</th><td class=" har">44</td><td class=" har">.590683895078572</td><td class=" har">.081883923479525</td></tr>
+<tr><th>处决</th><td class=" har">44</td><td class=" har">.590250721709295</td><td class=" har">.070183203408232</td></tr>
+<tr><th>玩火</th><td class=" har">43</td><td class=" har">.589967426172523</td><td class=" har">.103697568780595</td></tr>
+<tr><th>枉费心机</th><td class=" har">23</td><td class=" har">.589934137852296</td><td class=" har">.087426663680223</td></tr>
+<tr><th>受尽</th><td class=" har">44</td><td class=" har">.589878581464291</td><td class=" har">.081086804686985</td></tr>
+<tr><th>遏阻</th><td class=" har">21</td><td class=" har">.589850407271158</td><td class=" har">.096900947344271</td></tr>
+<tr><th>政治腐败</th><td class=" har">38</td><td class=" har">.589458376169205</td><td class=" har">.080813497159312</td></tr>
+<tr><th>达赖</th><td class=" har">44</td><td class=" har">.589304760098457</td><td class=" har">.085554287050415</td></tr>
+<tr><th>地主阶级</th><td class=" har">41</td><td class=" har">.589286409500169</td><td class=" har">.078104845010017</td></tr>
+<tr><th>严重错误</th><td class=" har">45</td><td class=" har">.5889690451</td><td class=" har">.08965965092</td></tr>
+<tr><th>拷打</th><td class=" har">33</td><td class=" har">.588657043196938</td><td class=" har">.085640771854678</td></tr>
+<tr><th>和平过渡</th><td class=" har">21</td><td class=" har">.588482655230023</td><td class=" har">.048461771409574</td></tr>
+<tr><th>妄动</th><td class=" har">15</td><td class=" har">.588030153512955</td><td class=" har">.091220633948731</td></tr>
+<tr><th>吴佩孚</th><td class=" har">25</td><td class=" har">.587011272907257</td><td class=" har">.095392229793036</td></tr>
+<tr><th>营垒</th><td class=" har">39</td><td class=" har">.586465747692646</td><td class=" har">.065620207051977</td></tr>
+<tr><th>高官厚禄</th><td class=" har">37</td><td class=" har">.585791771476333</td><td class=" har">.082285487431756</td></tr>
+<tr><th>贼喊捉贼</th><td class=" har">23</td><td class=" har">.585780451965073</td><td class=" har">.171326722391977</td></tr>
+<tr><th>之能事</th><td class=" har">43</td><td class=" har">.585732854382936</td><td class=" har">.090100367104287</td></tr>
+<tr><th>严辞</th><td class=" har">36</td><td class=" har">.585180516872141</td><td class=" har">.071312141809277</td></tr>
+<tr><th>剿灭</th><td class=" har">34</td><td class=" har">.584906256374191</td><td class=" har">.090530603307367</td></tr>
+<tr><th>欺世盗名</th><td class=" har">36</td><td class=" har">.584835810793771</td><td class=" har">.099161471511275</td></tr>
+<tr><th>和平主义</th><td class=" har">31</td><td class=" har">.584706318955268</td><td class=" har">.066954472539248</td></tr>
+<tr><th>心理战</th><td class=" har">37</td><td class=" har">.583387605241827</td><td class=" har">.071178625855418</td></tr>
+<tr><th>发难</th><td class=" har">43</td><td class=" har">.583100876835890</td><td class=" har">.088543577603486</td></tr>
+<tr><th>抢掠</th><td class=" har">33</td><td class=" har">.582628285342997</td><td class=" har">.078619282778258</td></tr>
+<tr><th>武装集团</th><td class=" har">39</td><td class=" har">.582327561500745</td><td class=" har">.072473617248921</td></tr>
+<tr><th>革命党人</th><td class=" har">30</td><td class=" har">.581568564971288</td><td class=" har">.062871297639831</td></tr>
+<tr><th>车臣</th><td class=" har">27</td><td class=" har">.580815123187171</td><td class=" har">.101562012550499</td></tr>
+<tr><th>遮羞布</th><td class=" har">34</td><td class=" har">.580722188248354</td><td class=" har">.103948277850672</td></tr>
+<tr><th>马斯哈多夫</th><td class=" har">12</td><td class=" har">.580674099425475</td><td class=" har">.073878959480820</td></tr>
+<tr><th>防备</th><td class=" har">44</td><td class=" har">.580392524600029</td><td class=" har">.071418161316141</td></tr>
+<tr><th>速战速决</th><td class=" har">41</td><td class=" har">.580177608786560</td><td class=" har">.099772445498739</td></tr>
+<tr><th>开火</th><td class=" har">44</td><td class=" har">.579841141673652</td><td class=" har">.062222525532123</td></tr>
+<tr><th>卖身投靠</th><td class=" har">13</td><td class=" har">.578749420551153</td><td class=" har">.101766124429423</td></tr>
+<tr><th>严刑</th><td class=" har">31</td><td class=" har">.578463721659876</td><td class=" har">.081635447692126</td></tr>
+<tr><th>利比亚人</th><td class=" har">32</td><td class=" har">.577324968762696</td><td class=" har">.075311247223304</td></tr>
+<tr><th>君主制</th><td class=" har">30</td><td class=" har">.576815544565519</td><td class=" har">.074565769508402</td></tr>
+<tr><th>行刺</th><td class=" har">24</td><td class=" har">.576084561645985</td><td class=" har">.066077323315362</td></tr>
+<tr><th>民团</th><td class=" har">35</td><td class=" har">.575919715847288</td><td class=" har">.068327528550983</td></tr>
+<tr><th>司马昭之心</th><td class=" har">16</td><td class=" har">.575651425868273</td><td class=" har">.106598376362587</td></tr>
+<tr><th>反以</th><td class=" har">37</td><td class=" har">.574393348113911</td><td class=" har">.112964797093116</td></tr>
+<tr><th>以图</th><td class=" har">44</td><td class=" har">.574323989450932</td><td class=" har">.072411466662865</td></tr>
+<tr><th>空难事件</th><td class=" har">24</td><td class=" har">.573769219219685</td><td class=" har">.081071364231708</td></tr>
+<tr><th>趁火打劫</th><td class=" har">34</td><td class=" har">.573295641471358</td><td class=" har">.110940560568416</td></tr>
+<tr><th>第一枪</th><td class=" har">45</td><td class=" har">.5732921998</td><td class=" har">.09485938996</td></tr>
+<tr><th>兄弟会</th><td class=" har">25</td><td class=" har">.573123326301575</td><td class=" har">.069860161929707</td></tr>
+<tr><th>臆测</th><td class=" har">29</td><td class=" har">.573055506780230</td><td class=" har">.096392024239857</td></tr>
+<tr><th>二次革命</th><td class=" har">26</td><td class=" har">.573021519642610</td><td class=" har">.083745365879143</td></tr>
+<tr><th>妄言</th><td class=" har">38</td><td class=" har">.572626306822425</td><td class=" har">.105102001723646</td></tr>
+<tr><th>全斗焕</th><td class=" har">19</td><td class=" har">.572247015802484</td><td class=" har">.075237571830438</td></tr>
+<tr><th>不值一驳</th><td class=" har">28</td><td class=" har">.571917407214642</td><td class=" har">.081877125659184</td></tr>
+<tr><th>当炮灰</th><td class=" har">7</td><td class=" har">.571540551526206</td><td class=" har">.090028401587697</td></tr>
+<tr><th>敏感时期</th><td class=" har">22</td><td class=" har">.570731041106311</td><td class=" har">.059368834424711</td></tr>
+<tr><th>假面具</th><td class=" har">31</td><td class=" har">.570699566794980</td><td class=" har">.115218567388197</td></tr>
+<tr><th>雇佣兵</th><td class=" har">19</td><td class=" har">.570603434976779</td><td class=" har">.074273268672958</td></tr>
+<tr><th>抹黑</th><td class=" har">45</td><td class=" har">.5700523971</td><td class=" har">.08092198313</td></tr>
+<tr><th>骗局</th><td class=" har">45</td><td class=" har">.5699385369</td><td class=" har">.10451201736</td></tr>
+<tr><th>段祺瑞</th><td class=" har">28</td><td class=" har">.568907535501889</td><td class=" har">.097192748614938</td></tr>
+<tr><th>作恶多端</th><td class=" har">31</td><td class=" har">.567713964369989</td><td class=" har">.078686765660515</td></tr>
+<tr><th>划清界线</th><td class=" har">24</td><td class=" har">.567315382262071</td><td class=" har">.089099963717853</td></tr>
+<tr><th>自欺欺人</th><td class=" har">45</td><td class=" har">.5666245451</td><td class=" har">.09827686027</td></tr>
+<tr><th>空袭</th><td class=" har">45</td><td class=" har">.5657116453</td><td class=" har">.06367252999</td></tr>
+<tr><th>人质事件</th><td class=" har">29</td><td class=" har">.565619682443553</td><td class=" har">.068949271591486</td></tr>
+<tr><th>元凶</th><td class=" har">44</td><td class=" har">.565181322395802</td><td class=" har">.076684112056267</td></tr>
+<tr><th>爪牙</th><td class=" har">24</td><td class=" har">.564985979348421</td><td class=" har">.087657336607510</td></tr>
+<tr><th>推卸责任</th><td class=" har">45</td><td class=" har">.5624950184</td><td class=" har">.09195221203</td></tr>
+<tr><th>非法行为</th><td class=" har">45</td><td class=" har">.5621729033</td><td class=" har">.08446500338</td></tr>
+<tr><th>招魂</th><td class=" har">39</td><td class=" har">.560671764306533</td><td class=" har">.116203125429108</td></tr>
+<tr><th>朴正熙</th><td class=" har">17</td><td class=" har">.559397530906341</td><td class=" har">.080452870160704</td></tr>
+<tr><th>豢养</th><td class=" har">37</td><td class=" har">.559090487860345</td><td class=" har">.103535889865986</td></tr>
+<tr><th>徒劳无功</th><td class=" har">28</td><td class=" har">.558807452874524</td><td class=" har">.108282453236513</td></tr>
+<tr><th>助纣为虐</th><td class=" har">34</td><td class=" har">.558720265241230</td><td class=" har">.081092197754030</td></tr>
+<tr><th>胡言乱语</th><td class=" har">35</td><td class=" har">.558059407983508</td><td class=" har">.073962392176607</td></tr>
+<tr><th>武装起义</th><td class=" har">45</td><td class=" har">.5572719089</td><td class=" har">.06606214816</td></tr>
+<tr><th>犹太</th><td class=" har">45</td><td class=" har">.5568595524</td><td class=" har">.08948698895</td></tr>
+<tr><th>以台</th><td class=" har">14</td><td class=" har">.556048757263592</td><td class=" har">.177317663317269</td></tr>
+<tr><th>筹码</th><td class=" har">45</td><td class=" har">.5556904442</td><td class=" har">.09624555389</td></tr>
+<tr><th>拉帮结伙</th><td class=" har">31</td><td class=" har">.554315691032717</td><td class=" har">.115725886756371</td></tr>
+<tr><th>洗白</th><td class=" har">20</td><td class=" har">.554215602576733</td><td class=" har">.132823733971315</td></tr>
+<tr><th>险恶</th><td class=" har">45</td><td class=" har">.5527525960</td><td class=" har">.09853986734</td></tr>
+<tr><th>塞岛</th><td class=" har">24</td><td class=" har">.552432864904404</td><td class=" har">.079698440332503</td></tr>
+<tr><th>劣根性</th><td class=" har">32</td><td class=" har">.552001244388521</td><td class=" har">.079647563957043</td></tr>
+<tr><th>阿美军</th><td class=" har">19</td><td class=" har">.551864357371079</td><td class=" har">.093374207512200</td></tr>
+<tr><th>不堪一击</th><td class=" har">43</td><td class=" har">.551277470450069</td><td class=" har">.084882029756302</td></tr>
+<tr><th>第三股</th><td class=" har">3</td><td class=" har">.551251848538717</td><td class=" har">.152340589014223</td></tr>
+<tr><th>害人害己</th><td class=" har">39</td><td class=" har">.549899462706003</td><td class=" har">.103500923927927</td></tr>
+<tr><th>反越</th><td class=" har">29</td><td class=" har">.548550940793136</td><td class=" har">.083979636327446</td></tr>
+<tr><th>涂脂抹粉</th><td class=" har">38</td><td class=" har">.548427424148509</td><td class=" har">.091104701467777</td></tr>
+<tr><th>乘人之危</th><td class=" har">32</td><td class=" har">.548014612868428</td><td class=" har">.067211394561755</td></tr>
+<tr><th>炮制</th><td class=" har">45</td><td class=" har">.5470864309</td><td class=" har">.10975042524</td></tr>
+<tr><th>好为人师</th><td class=" har">9</td><td class=" har">.546840753820207</td><td class=" har">.126101869294699</td></tr>
+<tr><th>有百害而无一利</th><td class=" har">42</td><td class=" har">.546106867137409</td><td class=" har">.094213587152598</td></tr>
+<tr><th>不容置疑</th><td class=" har">45</td><td class=" har">.5436631709</td><td class=" har">.08168798659</td></tr>
+<tr><th>公开场合</th><td class=" har">44</td><td class=" har">.540737175806002</td><td class=" har">.071842282521263</td></tr>
+<tr><th>胜利者</th><td class=" har">45</td><td class=" har">.5395003984</td><td class=" har">.08296101243</td></tr>
+<tr><th>自存</th><td class=" har">18</td><td class=" har">.539377171132300</td><td class=" har">.119697385016886</td></tr>
+<tr><th>潜回</th><td class=" har">38</td><td class=" har">.536849762264051</td><td class=" har">.063367950964294</td></tr>
+<tr><th>伪君子</th><td class=" har">29</td><td class=" har">.536323545307949</td><td class=" har">.090938072873831</td></tr>
+<tr><th>同穆</th><td class=" har">6</td><td class=" har">.534908230106036</td><td class=" har">.138653605843081</td></tr>
+<tr><th>忘宗</th><td class=" har">2</td><td class=" har">.534136056900024</td><td class=" har">.106744648873965</td></tr>
+<tr><th>美梦</th><td class=" har">44</td><td class=" har">.533143865113909</td><td class=" har">.091450429643047</td></tr>
+<tr><th>锐利武器</th><td class=" har">41</td><td class=" har">.532987292946839</td><td class=" har">.066822056412715</td></tr>
+<tr><th>投靠</th><td class=" har">44</td><td class=" har">.531789846718312</td><td class=" har">.146851980646385</td></tr>
+<tr><th>斩首</th><td class=" har">30</td><td class=" har">.531605874498685</td><td class=" har">.099087928542744</td></tr>
+<tr><th>之词</th><td class=" har">44</td><td class=" har">.530275021764365</td><td class=" har">.087033137224490</td></tr>
+<tr><th>亡灵</th><td class=" har">39</td><td class=" har">.529768535724053</td><td class=" har">.083450646111970</td></tr>
+<tr><th>为谋</th><td class=" har">7</td><td class=" har">.529231518507004</td><td class=" har">.125113113766634</td></tr>
+<tr><th>文字游戏</th><td class=" har">39</td><td class=" har">.527386671457535</td><td class=" har">.085143256809226</td></tr>
+<tr><th>推波助澜</th><td class=" har">45</td><td class=" har">.5269209320</td><td class=" har">.09681790006</td></tr>
+<tr><th>剪除</th><td class=" har">31</td><td class=" har">.523211341711783</td><td class=" har">.092276151933269</td></tr>
+<tr><th>复燃</th><td class=" har">36</td><td class=" har">.520792256626818</td><td class=" har">.087702831402963</td></tr>
+<tr><th>精心策划</th><td class=" har">44</td><td class=" har">.520667805590413</td><td class=" har">.144336018316821</td></tr>
+<tr><th>拼凑</th><td class=" har">45</td><td class=" har">.5189160513</td><td class=" har">.09853732326</td></tr>
+<tr><th>贻笑大方</th><td class=" har">31</td><td class=" har">.518401341092202</td><td class=" har">.091216851775238</td></tr>
+<tr><th>核科学家</th><td class=" har">16</td><td class=" har">.516215061768889</td><td class=" har">.094926434044478</td></tr>
+<tr><th>心虚</th><td class=" har">43</td><td class=" har">.515708827002104</td><td class=" har">.088447805209368</td></tr>
+<tr><th>谋私利</th><td class=" har">45</td><td class=" har">.5131219927</td><td class=" har">.09873018671</td></tr>
+<tr><th>迫击炮</th><td class=" har">44</td><td class=" har">.512695529921488</td><td class=" har">.097894333634799</td></tr>
+<tr><th>聒噪</th><td class=" har">27</td><td class=" har">.512596601689303</td><td class=" har">.108356555533976</td></tr>
+<tr><th>怒不可遏</th><td class=" har">31</td><td class=" har">.511362762220444</td><td class=" har">.079275442628450</td></tr>
+<tr><th>胡拉</th><td class=" har">9</td><td class=" har">.508530706167221</td><td class=" har">.100506143547665</td></tr>
+<tr><th>不肖子孙</th><td class=" har">13</td><td class=" har">.506715203707035</td><td class=" har">.065388044738071</td></tr>
+<tr><th>扣帽子</th><td class=" har">35</td><td class=" har">.505508624655860</td><td class=" har">.080239220783584</td></tr>
+<tr><th>祸</th><td class=" har">45</td><td class=" har">.5050412524</td><td class=" har">.09409202922</td></tr>
+<tr><th>所为</th><td class=" har">37</td><td class=" har">.504155653554040</td><td class=" har">.093490155281074</td></tr>
+<tr><th>策划</th><td class=" har">45</td><td class=" har">.5024679989</td><td class=" har">.17726749763</td></tr>
+<tr><th>病态</th><td class=" har">45</td><td class=" har">.4975109829</td><td class=" har">.10457147748</td></tr>
+<tr><th>国用</th><td class=" har">6</td><td class=" har">.496938268343608</td><td class=" har">.143961684998698</td></tr>
+<tr><th>大跌眼镜</th><td class=" har">29</td><td class=" har">.495968743644912</td><td class=" har">.104148482838982</td></tr>
+<tr><th>亚洲版</th><td class=" har">14</td><td class=" har">.493200676781791</td><td class=" har">.126585222977159</td></tr>
+<tr><th>壮胆</th><td class=" har">44</td><td class=" har">.492329646240581</td><td class=" har">.109653144476937</td></tr>
+<tr><th>权是</th><td class=" har">38</td><td class=" har">.479518444130295</td><td class=" har">.098172911495416</td></tr>
+<tr><th>永保</th><td class=" har">29</td><td class=" har">.478931437278616</td><td class=" har">.086808952171540</td></tr>
+<tr><th>冷漠</th><td class=" har">45</td><td class=" har">.4735130371</td><td class=" har">.10757955833</td></tr>
+<tr><th>匪夷所思</th><td class=" har">33</td><td class=" har">.472452305483096</td><td class=" har">.099297777535447</td></tr>
+<tr><th>网罗</th><td class=" har">43</td><td class=" har">.467244831628578</td><td class=" har">.117384827684646</td></tr>
+<tr><th>使朝</th><td class=" har">9</td><td class=" har">.464672658178541</td><td class=" har">.080334161679089</td></tr>
+<tr><th>三原色</th><td class=" har">16</td><td class=" har">.454049902036786</td><td class=" har">.130353453435081</td></tr>
+<tr><th>入法</th><td class=" har">20</td><td class=" har">.443680110573769</td><td class=" har">.109606480413455</td></tr>
+<tr><th>Valid N (listwise)</th><td class=" har">0</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 肠源性; Correlation: 0.9766942521042621; P-value: 0.13771261759376727; Valid Cases: 3
+Neighbor: 慢阻; Correlation: 0.9022790755100341; P-value: 1.0155242130529148e-05; Valid Cases: 14
+Neighbor: 弹道学; Correlation: 0.7067769811730539; P-value: 0.5002968551323577; Valid Cases: 3
+Neighbor: 认知障碍; Correlation: 0.6527205718344076; P-value: 0.056679136125383424; Valid Cases: 9
+Neighbor: 北京大学人民医院; Correlation: 0.6395149203158205; P-value: 0.0007661617030438482; Valid Cases: 24
+Neighbor: 危重症; Correlation: 0.5942918138126827; P-value: 0.009298408765607346; Valid Cases: 18
+Neighbor: 帕金森; Correlation: 0.5703601779838934; P-value: 0.000998926213018873; Valid Cases: 30
+Neighbor: 抗毒素; Correlation: 0.533920985609226; P-value: 0.21705408585732625; Valid Cases: 7
+Neighbor: 霍乱; Correlation: 0.4624128318803602; P-value: 0.0015764368124118874; Valid Cases: 44
+Neighbor: 糖尿病足; Correlation: 0.4241690851562486; P-value: 0.34289961698083676; Valid Cases: 7
+Neighbor: 癌症; Correlation: 0.3808209010217851; P-value: 0.009857377364644499; Valid Cases: 45
+Neighbor: 康复科; Correlation: 0.37854315894132917; P-value: 0.12137461482922804; Valid Cases: 18
+Neighbor: 牙周; Correlation: 0.373343025906658; P-value: 0.32232707082485645; Valid Cases: 9
+Neighbor: 退行性; Correlation: 0.3705174323762804; P-value: 0.17398866619240347; Valid Cases: 15
+Neighbor: 心脏病; Correlation: 0.36363666487152246; P-value: 0.014072315293359915; Valid Cases: 45
+Neighbor: 早幼; Correlation: 0.3575938133691834; P-value: 0.23029907464953467; Valid Cases: 13
+Neighbor: 病理; Correlation: 0.34596256309161977; P-value: 0.019918702080568746; Valid Cases: 45
+Neighbor: 脑卒中; Correlation: 0.33939622633747907; P-value: 0.057384301188214776; Valid Cases: 32
+Neighbor: 肺纤维化; Correlation: 0.3389132202684194; P-value: 0.37228976145345133; Valid Cases: 9
+Neighbor: 血液病; Correlation: 0.33567140306626714; P-value: 0.025909578664321874; Valid Cases: 44
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 给斯; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 丧亲; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 地治好; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 短缩; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 精神力量; Correlation: 0.9124717412959946; P-value: 2.6978809530826164e-18; Valid Cases: 45
+Neighbor: 记忆犹新; Correlation: 0.8962417707744267; P-value: 8.853629989662799e-17; Valid Cases: 45
+Neighbor: 肌体; Correlation: 0.883767447025452; P-value: 8.939441131539919e-16; Valid Cases: 45
+Neighbor: 烙印; Correlation: 0.8719504199421972; P-value: 6.340951024195246e-15; Valid Cases: 45
+Neighbor: 愈加; Correlation: 0.8692696464807983; P-value: 9.627142409085048e-15; Valid Cases: 45
+Neighbor: 磨砺; Correlation: 0.8637208018550495; P-value: 2.220767505588814e-14; Valid Cases: 45
+Neighbor: 在精神上; Correlation: 0.8573830023315825; P-value: 5.5227650590987676e-14; Valid Cases: 45
+Neighbor: 重整; Correlation: 0.8557944566179048; P-value: 6.892154513208674e-14; Valid Cases: 45
+Neighbor: 身心; Correlation: 0.8555561297144779; P-value: 7.123421670754246e-14; Valid Cases: 45
+Neighbor: 无穷的; Correlation: 0.8549872154887103; P-value: 7.705514327139216e-14; Valid Cases: 45
+Neighbor: 饱受; Correlation: 0.849081961246553; P-value: 1.7082895979956074e-13; Valid Cases: 45
+Neighbor: 危难; Correlation: 0.8362158295585036; P-value: 8.659817646621298e-13; Valid Cases: 45
+Neighbor: 荡涤; Correlation: 0.8343175112324672; P-value: 1.0873720973095854e-12; Valid Cases: 45
+Neighbor: 忧患; Correlation: 0.8297507642294035; P-value: 1.8587641671379634e-12; Valid Cases: 45
+Neighbor: 之果; Correlation: 0.8287642055874506; P-value: 2.082691549383533e-12; Valid Cases: 45
+Neighbor: 史无前例; Correlation: 0.8276979944268984; P-value: 2.3532239015501637e-12; Valid Cases: 45

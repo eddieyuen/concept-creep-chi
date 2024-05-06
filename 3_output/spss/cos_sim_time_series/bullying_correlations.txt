@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 闹医; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 毒地; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 黄师; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 玻利尼; Correlation: 0.9976254004710684; P-value: 0.04388097680196123; Valid Cases: 3
+Neighbor: 饭圈; Correlation: 0.7737546531720786; P-value: 0.22624534682792152; Valid Cases: 4
+Neighbor: 虐童; Correlation: 0.7071191819913512; P-value: 0.022200513473810312; Valid Cases: 10
+Neighbor: 涉毒; Correlation: 0.6450989365702021; P-value: 0.00028015982659930196; Valid Cases: 27
+Neighbor: 性侵; Correlation: 0.6245285595844787; P-value: 0.02250024395299048; Valid Cases: 13
+Neighbor: 医闹; Correlation: 0.6010180424880085; P-value: 0.017804592526843036; Valid Cases: 15
+Neighbor: 黄赌; Correlation: 0.5881699299987344; P-value: 0.16483048606151546; Valid Cases: 7
+Neighbor: 两抢; Correlation: 0.5811384848761447; P-value: 0.014423186101996863; Valid Cases: 17
+Neighbor: 超期羁押; Correlation: 0.5650446625032159; P-value: 0.004014545093772431; Valid Cases: 24
+Neighbor: 网游; Correlation: 0.5334110682507508; P-value: 0.015433889471262171; Valid Cases: 20
+Neighbor: 家暴; Correlation: 0.48637488232193515; P-value: 0.03472248119018745; Valid Cases: 19
+Neighbor: 黑客; Correlation: 0.4673030034690109; P-value: 0.01216726164736526; Valid Cases: 28
+Neighbor: 正泰人; Correlation: 0.45124171619131526; P-value: 0.7019624542285432; Valid Cases: 3
+Neighbor: 扰医; Correlation: 0.44947921501543464; P-value: 0.5505207849845655; Valid Cases: 4
+Neighbor: 袭警; Correlation: 0.4174621296049629; P-value: 0.053224222666630114; Valid Cases: 22
+Neighbor: 涉枪; Correlation: 0.4052489123231341; P-value: 0.029192457692659997; Valid Cases: 29
+Neighbor: 涉医; Correlation: 0.4044441410333909; P-value: 0.24634660656146395; Valid Cases: 10
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 惨酷; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 何敢言; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 买办阶级; Correlation: 0.9309865120935884; P-value: 3.156023655734071e-05; Valid Cases: 11
+Neighbor: 忍受; Correlation: 0.9187188947599624; P-value: 5.851305270636763e-19; Valid Cases: 45
+Neighbor: 备受; Correlation: 0.9174290698223675; P-value: 8.101403810391467e-19; Valid Cases: 45
+Neighbor: 而动; Correlation: 0.8997372764766258; P-value: 4.392710060280534e-17; Valid Cases: 45
+Neighbor: 同化; Correlation: 0.897661255924709; P-value: 6.680902511132787e-17; Valid Cases: 45
+Neighbor: 痛恨; Correlation: 0.8936331226599988; P-value: 1.4700009631367843e-16; Valid Cases: 45
+Neighbor: 豪绅; Correlation: 0.8904706944224663; P-value: 1.1133453148625989e-09; Valid Cases: 26
+Neighbor: 永久化; Correlation: 0.8884309793684996; P-value: 2.5559675277507386e-11; Valid Cases: 31
+Neighbor: 身受; Correlation: 0.8869499043680921; P-value: 5.08597800690745e-16; Valid Cases: 45
+Neighbor: 显在; Correlation: 0.8852458684351534; P-value: 0.04585281141116857; Valid Cases: 5
+Neighbor: 政客; Correlation: 0.8824513986618701; P-value: 1.1233742888042154e-15; Valid Cases: 45
+Neighbor: 从于; Correlation: 0.8789707992733726; P-value: 3.469481690258693e-09; Valid Cases: 26
+Neighbor: 蟊贼; Correlation: 0.8764059556385946; P-value: 0.0004006111977025088; Valid Cases: 11
+Neighbor: 窘境; Correlation: 0.874078499182255; P-value: 4.521491072777362e-15; Valid Cases: 45
+Neighbor: 恣意; Correlation: 0.8710865258410336; P-value: 7.261623056351965e-15; Valid Cases: 45
+Neighbor: 万恶; Correlation: 0.865554851090464; P-value: 2.3226091876553675e-08; Valid Cases: 25
+Neighbor: 葬送; Correlation: 0.8598741261772354; P-value: 7.689888083957651e-14; Valid Cases: 44
+Neighbor: 剥削者; Correlation: 0.8595668801779579; P-value: 4.678702349120114e-09; Valid Cases: 28

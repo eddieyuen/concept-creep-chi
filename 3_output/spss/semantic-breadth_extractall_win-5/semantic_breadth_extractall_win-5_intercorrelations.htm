@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>semantic_breadth_extractall_win-5_intercorrelations.htm</title>
+<meta charset="utf-8"/>
+<style>
+.details {visibility:hidden;}
+.workbookSyntaxBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookSyntaxBlock p { margin:0 0;}
+.workbookRichTextBlock {background-color:#f2f2f2;margin:20px 0;padding:12px 0;} .workbookRichTextBlock p { margin:0 0;}
+.logItem {margin: 16px 0;font-family: monospace;}
+.procedureTitle{color: #1d3649;font-weight: 600;font-size: 20px;line-height: 24px;font-family: monospace;}
+.pivot{color:#264A60;background-color:#FFFFFF;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#E0E0E0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#F9F9FB;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#F9F9FB;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #AEAEAE;}
+.hDR{border-top:1px none #AEAEAE;}
+.vCR{border-left:1px none #AEAEAE;}
+.vDR{border-left:1px none #AEAEAE;}
+.hCC{border-bottom:1px none #AEAEAE;}
+.hDC{border-bottom:1px none #AEAEAE;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #AEAEAE;}
+.pivot{margin: 80px 0;}
+.pivot thead.tr.th {padding:0px;border-spacing:0px}
+.hal{text-align:left} .hac{text-align:center} .har{text-align:right}
+.val{vertical-align:left} .vac{vertical-align:center} .var{vertical-align:right}
+</style>
+</head>
+<body>
+<p class="procedureTitle"><head><style type="text/css">p{color:0;font-family:SansSerif;font-size:14pt;font-style:normal;font-weight:bold;text-decoration:none}</style></head><BR>Correlations</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+<div class="itemBody">
+<table summary="Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows" style="width:470px" class="default PivotTable" aria-label="Notes" role="complementary" data-lookName="default" data-rowLabelWidth="2" data-colLabelHeight="0" data-NumRows="13" data-NumCols="1" data-rowLabels="Corner" data-decimal-char="." data-col-labels="" data-row-labels="Output Created ;Comments ;Input Data; Active Dataset; Filter; Weight; Split File; N of Rows in Working Data File;Missing Value Handling Definition of Missing; Cases Used;Syntax ;Resources Processor Time; Elapsed Time" data-layer-dimension="" data-column-dimension="" data-row-dimension="Contents;" data-maxColWidth="162">
+<caption class="title" style="width:470px">Notes<span class="details">Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 14 rows</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<th class="rowLabels dataAreaTop role3" colspan="2">Output Created</th>
+<td class=" o dataAreaTop dataAreaLeft">26-APR-2024 13:42:25</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Comments</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&nbsp;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="6">Input</th>
+<th class="rowLabels hCR vCR role3">Data</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">C:\Users\s1155157933\Desktop\MAIN-FULL_extractall_sb-win-size-5.sav</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Active Dataset</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">DataSet1</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Filter</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Weight</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Split File</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">N of Rows in Working Data File</th>
+<td class=" e dataAreaLeft hCR">45</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Missing Value Handling</th>
+<th class="rowLabels hCR vCR role3">Definition of Missing</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">User-defined missing values are treated as missing.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Cases Used</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">Statistics for each pair of variables are based on all the cases with valid data for that pair.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Syntax</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">CORRELATIONS<br>  /VARIABLES=Year 偏见_Semantic_Breadth 欺凌_Semantic_Breadth 精神病_Semantic_Breadth 创伤_Semantic_Breadth<br>    分裂_Semantic_Breadth 阴谋_Semantic_Breadth 主权_Semantic_Breadth 恐怖主义_Semantic_Breadth<br>  /PRINT=TWOTAIL NOSIG LOWER<br>  /MISSING=PAIRWISE.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Resources</th>
+<th class="rowLabels hCR vCR role3">Processor Time</th>
+<td class=" e dataAreaLeft hCR">00:00:00.00</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Elapsed Time</th>
+<td class=" o dataAreaLeft hCR">00:00:00.00</td>
+</tr>
+<tr>
+<td  style="width:144px;padding:0px;border-spacing:0px"></td>
+<td  style="width:164px;padding:0px;border-spacing:0px"></td>
+<td  style="width:162px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tbody>
+</table>
+</div><p align="left"><head><style type="text/css">p{color:0;font-family:Monospaced;font-size:12pt;font-style:normal;font-weight:normal;text-decoration:none}</style></head><BR>[DataSet1]&nbsp;C:\Users\s1155157933\Desktop\MAIN-FULL_extractall_sb-win-size-5.sav</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+
+<div>
+
+<style>
+.pivot{color:#264a60;background-color:#ffffff;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#e0e0e0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#f9f9fb;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#f9f9fb;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #aeaeae;}
+.hDR{border-top:1px none #aeaeae;}
+.vCR{border-left:1px none #aeaeae;}
+.vDR{border-left:1px none #aeaeae;}
+.hCC{border-bottom:1px none #aeaeae;}
+.hDC{border-bottom:1px none #aeaeae;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #aeaeae;}
+</style>
+<table class="pivot" data-rows="1,0,1,26,0,2" data-cols="2,9" data-heights="24,0,49,534,40" data-widths="289,1141" data-curCounts="26,9" data-curSizess="26,9">
+<caption colspan="11">Correlations</caption>
+<thead>
+<tr><th class="cornerLabels" colspan="2">&nbsp;</th><th>Year</th><th>偏见_Semantic_Breadth</th><th>欺凌_Semantic_Breadth</th><th>精神病_Semantic_Breadth</th><th>创伤_Semantic_Breadth</th><th>分裂_Semantic_Breadth</th><th>阴谋_Semantic_Breadth</th><th>主权_Semantic_Breadth</th><th>恐怖主义_Semantic_Breadth</th></tr>
+</thead>
+<tbody data-rect="0,25,0,8">
+<tr><th rowspan="2" style="min-width:164px">Year</th><th style="min-width:125px">Pearson Correlation</th><td class=" hal" style="min-width:68px">--</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">偏见_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.410<sup>**</sup></td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.005</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">欺凌_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.602<sup>**</sup></td><td class=" har">.172</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">.269</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">43</td><td class=" har">43</td><td class=" har">43</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">精神病_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har">.047</td><td class=" har">.225</td><td class=" har">-.073</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.765</td><td class=" har">.151</td><td class=" har">.654</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">42</td><td class=" har">42</td><td class=" har">40</td><td class=" har">42</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">创伤_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.717<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.499<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.456<sup>**</sup></td><td class=" har">.133</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">&lt;.001</td><td class=" har">.002</td><td class=" har">.400</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">分裂_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har">.204</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.392<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.479<sup>**</sup></td><td class=" har">.172</td><td class=" har">.217</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.178</td><td class=" har">.008</td><td class=" har">.001</td><td class=" har">.277</td><td class=" har">.152</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">阴谋_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.632<sup>**</sup></td><td class=" har" title="*. Correlation is significant at the 0.05 level (2-tailed).">.371<sup>*</sup></td><td class=" har">.303</td><td class=" har">.153</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.713<sup>**</sup></td><td class=" har">.068</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">.013</td><td class=" har">.051</td><td class=" har">.333</td><td class=" har">&lt;.001</td><td class=" har">.663</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">44</td><td class=" har">44</td><td class=" har">42</td><td class=" har">42</td><td class=" har">44</td><td class=" har">44</td><td class=" har">44</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">主权_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.711<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.596<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.404<sup>**</sup></td><td class=" har">.205</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.677<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.546<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.639<sup>**</sup></td><td class=" hal">--</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">&lt;.001</td><td class=" har">.007</td><td class=" har">.193</td><td class=" har">&lt;.001</td><td class=" har">&lt;.001</td><td class=" har">&lt;.001</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" har">45</td><td class=" har">44</td><td class=" har">45</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">恐怖主义_Semantic_Breadth</th><th>Pearson Correlation</th><td class=" har">.253</td><td class=" har">.137</td><td class=" har">.292</td><td class=" har">.129</td><td class=" har">.172</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.398<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.404<sup>**</sup></td><td class=" har" title="*. Correlation is significant at the 0.05 level (2-tailed).">.362<sup>*</sup></td><td class=" hal">--</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.094</td><td class=" har">.369</td><td class=" har">.057</td><td class=" har">.414</td><td class=" har">.257</td><td class=" har">.007</td><td class=" har">.007</td><td class=" har">.015</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" har">45</td><td class=" har">44</td><td class=" har">45</td><td class=" har">45</td></tr>
+</tbody>
+<tfoot>
+<tr><td colspan="11">**.&nbsp;Correlation is significant at the 0.01 level (2-tailed).</td></tr>
+<tr><td colspan="11">*.&nbsp;Correlation is significant at the 0.05 level (2-tailed).</td></tr>
+</tfoot>
+</table>
+</div>
+</div><p class="procedureTitle"><head><style type="text/css">p{color:0;font-family:SansSerif;font-size:14pt;font-style:normal;font-weight:bold;text-decoration:none}</style></head><BR>Nonparametric&nbsp;Correlations</p>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+<div class="itemBody">
+<table summary="Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 16 rows" style="width:470px" class="default PivotTable" aria-label="Notes" role="complementary" data-lookName="default" data-rowLabelWidth="2" data-colLabelHeight="0" data-NumRows="14" data-NumCols="1" data-rowLabels="Corner" data-decimal-char="." data-col-labels="" data-row-labels="Output Created ;Comments ;Input Data; Active Dataset; Filter; Weight; Split File; N of Rows in Working Data File;Missing Value Handling Definition of Missing; Cases Used;Syntax ;Resources Processor Time; Elapsed Time; Number of Cases Allowed" data-layer-dimension="" data-column-dimension="" data-row-dimension="Contents;" data-maxColWidth="162">
+<caption class="title" style="width:470px">Notes<span class="details">Notes, table, 0 levels of column headers and 2 levels of row headers, table with 3 columns and 16 rows</span></caption>
+<tbody class="PivotBody defaultLayer innerFrameBd">
+<tr>
+<th class="rowLabels dataAreaTop role3" colspan="2">Output Created</th>
+<td class=" o dataAreaTop dataAreaLeft">26-APR-2024 13:42:25</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Comments</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&nbsp;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="6">Input</th>
+<th class="rowLabels hCR vCR role3">Data</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">C:\Users\s1155157933\Desktop\MAIN-FULL_extractall_sb-win-size-5.sav</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Active Dataset</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">DataSet1</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Filter</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Weight</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Split File</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">&lt;none&gt;</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">N of Rows in Working Data File</th>
+<td class=" e dataAreaLeft hCR">45</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="2">Missing Value Handling</th>
+<th class="rowLabels hCR vCR role3">Definition of Missing</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">User-defined missing values are treated as missing.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Cases Used</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;">Statistics for each pair of variables are based on all the cases with valid data for that pair.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role3" colspan="2">Syntax</th>
+<td class=" o dataAreaLeft hCR" style="text-align:left;">NONPAR CORR<br>  /VARIABLES=Year 偏见_Semantic_Breadth 欺凌_Semantic_Breadth 精神病_Semantic_Breadth 创伤_Semantic_Breadth<br>    分裂_Semantic_Breadth 阴谋_Semantic_Breadth 主权_Semantic_Breadth 恐怖主义_Semantic_Breadth<br>  /PRINT=SPEARMAN TWOTAIL NOSIG LOWER<br>  /MISSING=PAIRWISE.</td>
+</tr>
+<tr>
+<th class="rowLabels hCR role2" rowspan="3">Resources</th>
+<th class="rowLabels hCR vCR role3">Processor Time</th>
+<td class=" e dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Elapsed Time</th>
+<td class=" o dataAreaLeft hCR">00:00:00.02</td>
+</tr>
+<tr>
+<th class="rowLabels hCR vCR role3">Number of Cases Allowed</th>
+<td class=" e dataAreaLeft hCR" style="text-align:left;" title="a. Based on availability of workspace memory">262144 cases<sup>a</sup></td>
+</tr>
+</tbody><tfoot style="display:table-footer-group">
+<tr>
+<th class="footnotes" colspan="3">a. Based on availability of workspace memory</th>
+</tr>
+<tr>
+<td  style="width:144px;padding:0px;border-spacing:0px"></td>
+<td  style="width:164px;padding:0px;border-spacing:0px"></td>
+<td  style="width:162px;padding:0px;border-spacing:0px"></td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div>
+<style>
+*{
+border-collapse:collapse;
+}
+.default .title{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:bold;
+padding-left:6pt;
+vertical-align:middle;
+font-size:14pt;
+padding-bottom:6pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .layers{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .cornerLabels{
+background-color:#ffffff;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .columnLabels{
+background-color:#ffffff;
+padding-top:2pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:bottom;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:center;
+padding-right:8pt;
+}
+.default .rowLabels{
+background-color:#e0e0e0;
+padding-top:3pt;
+color:#264a60;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .o, .default .e{
+background-color:#f9f9fb;
+padding-top:3pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:2pt;
+font-family:sans-serif;
+padding-right:8pt;
+}
+.default .o{
+background-color:null;
+color:null;
+}
+.default .e{
+background-color:#f9f9fb;
+color:#010205;
+}
+.default .caption{
+background-color:#ffffff;
+padding-top:1pt;
+color:#010205;
+font-weight:normal;
+padding-left:6pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:1pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:8pt;
+}
+.default .footnotes{
+background-color:#ffffff;
+padding-top:2pt;
+color:#010205;
+font-weight:normal;
+padding-left:18pt;
+vertical-align:top;
+font-size:12pt;
+padding-bottom:3pt;
+font-family:sans-serif;
+text-align:left;
+padding-right:18pt;
+}
+.default .titleLayerSeparator{
+border-top:1px none #152935;
+}
+.default .innerFrameBd{
+border-top:1px none #152935;
+border-right:1px none #152935;
+border-left:1px none #152935;
+border-bottom:1px solid #152935;
+}
+.default .dataAreaLeft{
+border-left:1px none #152935;
+}
+.default .dataAreaTop{
+border-top:1px solid #152935;
+}
+.default .hCR{
+border-top:1px solid #aeaeae;
+}
+.default .hDR{
+border-top:1px none #aeaeae;
+}
+.default .vCR{
+border-left:1px none #aeaeae;
+}
+.default .vDR{
+border-left:1px none #aeaeae;
+}
+.default .hCC{
+border-bottom:1px none #aeaeae;
+}
+.default .hDC{
+border-bottom:1px none #aeaeae;
+}
+.default .vCC{
+border-right:1px solid #e0e0e0;
+}
+.default .vDC{
+border-right:1px none #aeaeae;
+}
+</style>
+</div>
+
+<div>
+
+<style>
+.pivot{color:#264a60;background-color:#ffffff;font-family:sans-serif;font-size:12pt;font-weight:normal;}
+.pivot th{font-weight:normal;}
+.pivot caption{padding-top:1pt;color:#010205;font-weight:bold;padding-left:6pt;vertical-align:middle;font-size:14pt;padding-bottom:6pt;text-align:center;padding-right:8pt;}
+.layers{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:bottom;padding-bottom:3pt;text-align:left;padding-right:8pt;}
+.cornerLabels{padding-top:3pt;padding-left:6pt;vertical-align:bottom;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot thead th:not:(.cornerLabels){padding-top:2pt;padding-left:6pt;vertical-align:bottom;padding-bottom:2pt;text-align:center;padding-right:8pt;}
+.pivot tbody th{background-color:#e0e0e0;padding-top:3pt;padding-left:6pt;vertical-align:top;padding-bottom:2pt;text-align:left;padding-right:8pt;}
+.pivot tbody td{background-color:#f9f9fb;padding-top:3pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:2pt;padding-right:8pt;}
+.pivot tbody tr:nth-child(even) td{background-color:#f9f9fb;color:#010205;}
+.caption{padding-top:1pt;color:#010205;padding-left:6pt;vertical-align:top;padding-bottom:1pt;text-align:left;padding-right:8pt;}
+.pivot tfoot tr td{padding-top:2pt;color:#010205;padding-left:18pt;vertical-align:top;padding-bottom:3pt;text-align:left;padding-right:18pt;}
+.titleLayerSeparator{border-top:1px none #152935;}
+.pivot tbody{border-top:1px none #152935;border-right:1px none #152935;border-left:1px none #152935;border-bottom:1px solid #152935;}
+.pivot tbody tr td:first-of-type{border-left:1px none #152935;}
+.pivot tbody tr:first-child{border-top:1px solid #152935;}
+.pivot tbody tr + tr{border-top:1px solid #aeaeae;}
+.hDR{border-top:1px none #aeaeae;}
+.vCR{border-left:1px none #aeaeae;}
+.vDR{border-left:1px none #aeaeae;}
+.hCC{border-bottom:1px none #aeaeae;}
+.hDC{border-bottom:1px none #aeaeae;}
+.pivot thead th:not(:last-child), .pivot td:not(:last-child){border-right:1px solid #e0e0e0;}
+.vDC{border-right:1px none #aeaeae;}
+</style>
+<table class="pivot" data-rows="1,0,1,27,0,2" data-cols="3,9" data-heights="24,0,49,554,40" data-widths="402,1254" data-curCounts="27,9" data-curSizess="27,9">
+<caption colspan="12">Correlations</caption>
+<thead>
+<tr><th class="cornerLabels" colspan="3">&nbsp;</th><th>Year</th><th>偏见_Semantic_Breadth</th><th>欺凌_Semantic_Breadth</th><th>精神病_Semantic_Breadth</th><th>创伤_Semantic_Breadth</th><th>分裂_Semantic_Breadth</th><th>阴谋_Semantic_Breadth</th><th>主权_Semantic_Breadth</th><th>恐怖主义_Semantic_Breadth</th></tr>
+</thead>
+<tbody data-rect="0,26,0,8">
+<tr><th rowspan="27" style="min-width:102px">Spearman's rho</th><th rowspan="3" style="min-width:164px">Year</th><th style="min-width:136px">Correlation Coefficient</th><td class=" hal" style="min-width:68px">--</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td><td class=" hal" style="min-width:98px">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">偏见_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.396<sup>**</sup></td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.007</td><td class=" har">.</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">欺凌_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.561<sup>**</sup></td><td class=" har">.228</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">.141</td><td class=" har">.</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">43</td><td class=" har">43</td><td class=" har">43</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">精神病_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har">.097</td><td class=" har">.182</td><td class=" har">.030</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.542</td><td class=" har">.249</td><td class=" har">.852</td><td class=" har">.</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">42</td><td class=" har">42</td><td class=" har">40</td><td class=" har">42</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">创伤_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.724<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.486<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.533<sup>**</sup></td><td class=" har">.211</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">&lt;.001</td><td class=" har">&lt;.001</td><td class=" har">.180</td><td class=" har">.</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">分裂_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har">.181</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.389<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.495<sup>**</sup></td><td class=" har">.173</td><td class=" har">.275</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.233</td><td class=" har">.008</td><td class=" har">&lt;.001</td><td class=" har">.274</td><td class=" har">.068</td><td class=" har">.</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" har">45</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">阴谋_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.655<sup>**</sup></td><td class=" har" title="*. Correlation is significant at the 0.05 level (2-tailed).">.323<sup>*</sup></td><td class=" har">.297</td><td class=" har">.139</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.575<sup>**</sup></td><td class=" har">.032</td><td class=" hal">--</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">.033</td><td class=" har">.056</td><td class=" har">.381</td><td class=" har">&lt;.001</td><td class=" har">.836</td><td class=" har">.</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">44</td><td class=" har">44</td><td class=" har">42</td><td class=" har">42</td><td class=" har">44</td><td class=" har">44</td><td class=" har">44</td><td class=" hal">&nbsp;</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">主权_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.729<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.514<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.406<sup>**</sup></td><td class=" har">.190</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.662<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.458<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.637<sup>**</sup></td><td class=" hal">--</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">&lt;.001</td><td class=" har">&lt;.001</td><td class=" har">.007</td><td class=" har">.228</td><td class=" har">&lt;.001</td><td class=" har">.002</td><td class=" har">&lt;.001</td><td class=" har">.</td><td class=" hal">&nbsp;</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" har">45</td><td class=" har">44</td><td class=" har">45</td><td class=" hal">&nbsp;</td></tr>
+<tr><th rowspan="3">恐怖主义_Semantic_Breadth</th><th>Correlation Coefficient</th><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.404<sup>**</sup></td><td class=" har">.166</td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.417<sup>**</sup></td><td class=" har">.075</td><td class=" har" title="*. Correlation is significant at the 0.05 level (2-tailed).">.300<sup>*</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.447<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.470<sup>**</sup></td><td class=" har" title="**. Correlation is significant at the 0.01 level (2-tailed).">.436<sup>**</sup></td><td class=" hal">--</td></tr>
+<tr><th>Sig. (2-tailed)</th><td class=" har">.006</td><td class=" har">.277</td><td class=" har">.005</td><td class=" har">.636</td><td class=" har">.046</td><td class=" har">.002</td><td class=" har">.001</td><td class=" har">.003</td><td class=" har">.</td></tr>
+<tr><th>N</th><td class=" har">45</td><td class=" har">45</td><td class=" har">43</td><td class=" har">42</td><td class=" har">45</td><td class=" har">45</td><td class=" har">44</td><td class=" har">45</td><td class=" har">45</td></tr>
+</tbody>
+<tfoot>
+<tr><td colspan="12">**.&nbsp;Correlation is significant at the 0.01 level (2-tailed).</td></tr>
+<tr><td colspan="12">*.&nbsp;Correlation is significant at the 0.05 level (2-tailed).</td></tr>
+</tfoot>
+</table>
+</div>
+</div>
+</body>
+</html>

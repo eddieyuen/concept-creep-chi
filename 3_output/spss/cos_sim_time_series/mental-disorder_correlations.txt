@@ -1,0 +1,43 @@
+Five largest positive correlations for Chinese concept:
+Neighbor: 精索; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 溶液剂; Correlation: 0.9998550973947027; P-value: 0.010837733366270998; Valid Cases: 3
+Neighbor: 种者; Correlation: 0.9939714494082365; P-value: 0.0005613840996979989; Valid Cases: 5
+Neighbor: 分诊台; Correlation: 0.9321666141285738; P-value: 0.0067459891645337946; Valid Cases: 6
+Neighbor: 病志; Correlation: 0.8882397635742088; P-value: 0.30385685510062677; Valid Cases: 3
+Neighbor: 糖尿病足; Correlation: 0.8497956579258623; P-value: 0.015462795332454982; Valid Cases: 7
+Neighbor: 平义; Correlation: 0.841165747912935; P-value: 0.15883425208706514; Valid Cases: 4
+Neighbor: 风心病; Correlation: 0.8185533267019136; P-value: 0.3895529186823336; Valid Cases: 3
+Neighbor: 但系; Correlation: 0.7588540547911863; P-value: 0.4515191358161119; Valid Cases: 3
+Neighbor: 认知障碍; Correlation: 0.7414359235863006; P-value: 0.03526880448044028; Valid Cases: 8
+Neighbor: 马西亚; Correlation: 0.7391108260295665; P-value: 0.26088917397043354; Valid Cases: 4
+Neighbor: 阻肺; Correlation: 0.7390451481130257; P-value: 0.47055399730687997; Valid Cases: 3
+Neighbor: 对慢; Correlation: 0.7299677903286761; P-value: 0.16144804028115112; Valid Cases: 5
+Neighbor: 造口; Correlation: 0.7193231409418266; P-value: 0.01903361770146904; Valid Cases: 10
+Neighbor: 外治法; Correlation: 0.7137039285625988; P-value: 0.07168255157108826; Valid Cases: 7
+Neighbor: 尘肺病; Correlation: 0.7006802698833392; P-value: 4.7008649614325346e-05; Valid Cases: 27
+Neighbor: 慢阻; Correlation: 0.6917647328782067; P-value: 0.008805072632937266; Valid Cases: 13
+Neighbor: 唐氏; Correlation: 0.6883515629772181; P-value: 0.004550341533853482; Valid Cases: 15
+Neighbor: 重性; Correlation: 0.6826757755511741; P-value: 0.007134991294908465; Valid Cases: 14
+Neighbor: 癌痛; Correlation: 0.6784377142898804; P-value: 0.06436744287114954; Valid Cases: 8
+
+Five largest negative correlations for Chinese concept:
+Neighbor: 马凡氏; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 陈光星; Correlation: 1.0; P-value: 1.0; Valid Cases: 2
+Neighbor: 低血糖症; Correlation: 0.9735514669026654; P-value: 0.14674313587398988; Valid Cases: 3
+Neighbor: 因练; Correlation: 0.9400454065454583; P-value: 0.059954593454541794; Valid Cases: 4
+Neighbor: 肛肠病; Correlation: 0.9028353024030192; P-value: 0.035823128432290186; Valid Cases: 5
+Neighbor: 医师; Correlation: 0.7831126058013866; P-value: 3.338532370024161e-10; Valid Cases: 44
+Neighbor: 放射疗法; Correlation: 0.7419899328450286; P-value: 0.05619759719995504; Valid Cases: 7
+Neighbor: 嫌疑人; Correlation: 0.7412039783052422; P-value: 6.78707101797731e-08; Valid Cases: 39
+Neighbor: 未成年人; Correlation: 0.6981315533417733; P-value: 1.9479252695120478e-07; Valid Cases: 43
+Neighbor: 就诊; Correlation: 0.6820707625034712; P-value: 3.426539557461203e-07; Valid Cases: 44
+Neighbor: 确诊; Correlation: 0.6772865821757625; P-value: 4.445135387547301e-07; Valid Cases: 44
+Neighbor: 传染病; Correlation: 0.6740966958579643; P-value: 5.273495221216744e-07; Valid Cases: 44
+Neighbor: 靶向; Correlation: 0.6642110117798701; P-value: 0.0007483229986515333; Valid Cases: 22
+Neighbor: 人因; Correlation: 0.6541793695055953; P-value: 1.4648185963613102e-06; Valid Cases: 44
+Neighbor: 慢性病; Correlation: 0.6505751028749369; P-value: 1.7483423207812975e-06; Valid Cases: 44
+Neighbor: 截瘫; Correlation: 0.6460293704056695; P-value: 2.178272100655198e-06; Valid Cases: 44
+Neighbor: 牛皮癣; Correlation: 0.6236556514706478; P-value: 2.2199975553623136e-05; Valid Cases: 39
+Neighbor: 诊治; Correlation: 0.6217750526699186; P-value: 6.639778602948341e-06; Valid Cases: 44
+Neighbor: 重度; Correlation: 0.6137579325725664; P-value: 1.9775976750216718e-05; Valid Cases: 41
+Neighbor: 罚不当罪; Correlation: 0.6131526592066795; P-value: 0.19553027801670614; Valid Cases: 6
