@@ -67,7 +67,7 @@ for file_number in range(1,11):
             # Step 2: Compute the context vectors for each specific usage of the concept
             if 'concept_usages' in locals():
                 contextualized_representations = []
-                window_size = 9
+                window_size = 5
 
                 for j, sentence in enumerate(concept_usages):  
                     context_words = []  # To store the words within the context window
@@ -85,7 +85,7 @@ for file_number in range(1,11):
                     context_words = [word for word in context_words if word != concept]
 
                     # Store the context window lists for each specific usage in a CSV file
-                    with open(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/context_window_lists_{file_number}.csv', 'a', newline='') as csvfile:
+                    with open(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic-breadth_window-size-5/context_window_lists_{file_number}.csv', 'a', newline='') as csvfile:
                         writer = csv.writer(csvfile)
                         # Check if the file is empty
                         if csvfile.tell() == 0:
@@ -120,7 +120,7 @@ for file_number in range(1,11):
     results_df = pd.DataFrame(results)
 
     # Define the path to the output CSV file
-    output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_{file_number}.csv'
+    output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic-breadth_window-size-5/semantic_breadth_{file_number}.csv'
 
     # Save the DataFrame as a CSV file
     results_df.to_csv(output_path, index=False)
@@ -138,6 +138,6 @@ for file_number in range(1,11):
     transposed_df.columns = [f"{col[1]}_{col[0].replace(' ', '_')}" for col in transposed_df.columns]
 
     # Save the transposed DataFrame to a new CSV file
-    transposed_df.to_csv(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_{file_number}_transposed.csv', index_label='Year')
+    transposed_df.to_csv(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic-breadth_window-size-5/semantic_breadth_{file_number}_transposed.csv', index_label='Year')
 
     print(f"CSV file with the desired structure has been created: Filenumber {file_number}")

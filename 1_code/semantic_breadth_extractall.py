@@ -75,7 +75,7 @@ for year in range(1979, 2024):
                 context_words = [word for word in context_words if word != concept]
 
                 # Store the context window lists for each specific usage in a CSV file
-                with open(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/context_window_lists_extractall.csv', 'a', newline='') as csvfile:
+                with open(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic-breadth_window-size-5/context_window_lists_extractall.csv', 'a', newline='') as csvfile:
                     writer = csv.writer(csvfile)
                     # Check if the file is empty
                     if csvfile.tell() == 0:
@@ -110,7 +110,7 @@ for year in range(1979, 2024):
 results_df = pd.DataFrame(results)
 
 # Define the path to the output CSV file
-output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_extractall.csv'
+output_path = f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic-breadth_window-size-5/semantic_breadth_extractall.csv'
 
 # Save the DataFrame as a CSV file
 results_df.to_csv(output_path, index=False)
@@ -128,6 +128,6 @@ transposed_df = df.pivot(index='Year', columns='Concept', values=['Mean Cosine S
 transposed_df.columns = [f"{col[1]}_{col[0].replace(' ', '_')}" for col in transposed_df.columns]
 
 # Save the transposed DataFrame to a new CSV file
-transposed_df.to_csv(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/preprocessed/semantic_breadth_samples/semantic_breadth_extractall_transposed.csv', index_label='Year')
+transposed_df.to_csv(f'/Users/kawaiyuen/nlpworkshop/concept-creep-chi/2_pipeline/tmp/semantic_breadth_extractall_window-size-5.csv', index_label='Year')
 
 print(f"CSV file with the desired structure has been created")
